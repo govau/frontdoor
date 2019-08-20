@@ -45,8 +45,8 @@ commands:
           command: |
             cd << parameters.path >>
             npm install
-            npm run build
             npm run lint
+            npm run build
 
   cf_deploy:
     description: "cf deploy"

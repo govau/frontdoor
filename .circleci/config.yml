@@ -98,7 +98,7 @@ jobs:
     
   deploy_to_rc:
     docker:
-      - image: circleci/node:8-stretch
+      - image: circleci/node:10.15.3-stretch
     steps:
       - cf_deploy:
           cf_app_name: rc-frontdoor-ui
@@ -106,7 +106,7 @@ jobs:
 
   deploy_to_pc:
     docker:
-      - image: circleci/node:8-stretch
+      - image: circleci/node:10.15.3-stretch
     steps:
       - cf_deploy:
           cf_app_name: pc-frontdoor-ui
@@ -114,14 +114,15 @@ jobs:
 
   deploy_to_dev:
     docker:
-      - image: circleci/node:8-stretch
+      - image: circleci/node:10.15.3-stretch
     steps:
       - cf_deploy:
           cf_app_name: dev-frontdoor-ui
           cf_manifest: ui/manifest.dev.yml
 
   deploy_to_production:
-    <<: *circleci_deploy
+    docker:
+      - image: circleci/node:10.15.3-stretch
     steps:
       - cf_deploy:
           cf_url: https://api.system.b.cld.gov.au

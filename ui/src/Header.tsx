@@ -1,5 +1,5 @@
-import React from 'react';
 import AUheader, { AUheaderBrand } from '@gov.au/header';
+import React from 'react';
 
 export default () => (
   <AUheader dark>
@@ -13,4 +13,4 @@ export default () => (
       />
     </div>
   </AUheader>
-)
+);

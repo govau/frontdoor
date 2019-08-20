@@ -1,14 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import logo from './logo.svg';
-import Header from './Header'
-import Footer from './Footer'
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import './App.css';
+import Footer from './Footer';
+import Header from './Header';
 
 const App: React.FC = () => {
-  const Index = () => <h2>Home</h2>
-  const About = () => <h2>About</h2>
-  const Users = () => <h2>Users</h2>
+  const Index = () => <h2>Home</h2>;
+  const About = () => <h2>About</h2>;
+  const Users = () => <h2>Users</h2>;
 
   return (
     <div className="au-grid">
@@ -39,6 +38,6 @@ const App: React.FC = () => {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

@@ -1,5 +1,5 @@
+import AUfooter, { AUfooterEnd, AUfooterNav } from '@gov.au/footer';
 import React from 'react';
-import AUfooter, { AUfooterNav, AUfooterEnd } from '@gov.au/footer';
 
 export default () => (
   <AUfooter dark>
@@ -9,17 +9,17 @@ export default () => (
           <div className="col-md-3 col-sm-6">
             <h3 className="au-display-lg">Section</h3>
             <ul className="au-link-list">
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
+              <li><a href="https://marketplace.gov.au">Link 1</a></li>
+              <li><a href="https://marketplace.gov.au">Link 2</a></li>
+              <li><a href="https://marketplace.gov.au">Link 3</a></li>
             </ul>
           </div>
           <div className="col-md-3 col-sm-6">
             <h3 className="au-display-lg">Section</h3>
             <ul className="au-link-list">
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
+              <li><a href="https://marketplace.gov.au">Link 1</a></li>
+              <li><a href="https://marketplace.gov.au">Link 2</a></li>
+              <li><a href="https://marketplace.gov.au">Link 3</a></li>
             </ul>
           </div>
         </div>
@@ -35,4 +35,4 @@ export default () => (
       </div>
     </div>
   </AUfooter>
-)
+);

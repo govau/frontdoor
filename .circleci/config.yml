@@ -150,7 +150,10 @@ workflows:
   version: 2
   build_test_deploy:
     jobs:
+      - get_code
       - run_npm_builds:
+          requires:
+            - get_code
           filters:
             tags:
               only: /[0-9]+(\.[0-9]+)*/

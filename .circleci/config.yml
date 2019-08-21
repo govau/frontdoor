@@ -81,7 +81,7 @@ commands:
       - run:
           name: Deploy
           command: |
-            cd << parameters.path >>
+            cd << parameters.cf_path >>
             cf login -a << parameters.cf_url >> -o dta -s marketplace -u << parameters.cf_user >> -p << parameters.cf_password >>
             cf zero-downtime-push << parameters.cf_app_name >> -f << parameters.cf_manifest >> --show-app-log
 

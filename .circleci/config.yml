@@ -93,10 +93,6 @@ jobs:
       - attach_workspace:
           at: .
       - checkout
-      - persist_to_workspace:
-          root: .
-          paths:
-            - "**/*"
 
   run_npm_builds:
     docker:
@@ -109,7 +105,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - "**/build/**/*"
+            - "**/*"
     
   deploy_to_rc:
     docker:

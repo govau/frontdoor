@@ -95,10 +95,10 @@ jobs:
       - checkout
       - npm_build:
           path: "ui"
-      # - persist_to_workspace:
-      #     root: .
-      #     paths:
-      #       - "**/*"
+      - persist_to_workspace:
+          root: .
+          paths:
+            - "**/*"
     
   deploy_to_rc:
     docker:

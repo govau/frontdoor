@@ -65,6 +65,8 @@ commands:
         type: string
       cf_manifest:
         type: string
+      cf_path:
+        type: string
     steps:
       - attach_workspace:
           at: .
@@ -79,6 +81,7 @@ commands:
       - run:
           name: Deploy
           command: |
+            cd << parameters.path >>
             cf login -a << parameters.cf_url >> -o dta -s marketplace -u << parameters.cf_user >> -p << parameters.cf_password >>
             cf zero-downtime-push << parameters.cf_app_name >> -f << parameters.cf_manifest >> --show-app-log
 
@@ -103,7 +106,8 @@ jobs:
     steps:
       - cf_deploy:
           cf_app_name: rc-frontdoor-ui
-          cf_manifest: ui/manifest.rc.yml
+          cf_manifest: manifest.rc.yml
+          cf_path: ui
 
   deploy_to_pc:
     docker:
@@ -111,7 +115,8 @@ jobs:
     steps:
       - cf_deploy:
           cf_app_name: pc-frontdoor-ui
-          cf_manifest: ui/manifest.pc.yml
+          cf_manifest: manifest.pc.yml
+          cf_path: ui
 
   deploy_to_alpha:
     docker:
@@ -119,7 +124,8 @@ jobs:
     steps:
       - cf_deploy:
           cf_app_name: alpha-frontdoor-ui
-          cf_manifest: ui/manifest.alpha.yml
+          cf_manifest: manifest.alpha.yml
+          cf_path: ui
 
   deploy_to_production:
     docker:
@@ -130,7 +136,8 @@ jobs:
           cf_user: $CF_USER_PROD
           cf_password: $CF_PASSWORD_PROD
           cf_app_name: frontdoor-ui
-          cf_manifest: ui/manifest.prod.yml
+          cf_manifest: manifest.prod.yml
+          cf_path: ui
 
 workflows:
   version: 2

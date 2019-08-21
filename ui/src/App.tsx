@@ -1,8 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import './App.css';
+import React, {lazy, Suspense} from 'react';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import Footer from './Footer';
 import Header from './Header';
+import './main.css';
+
+const SellerPage = lazy(() => import('./pages/seller/SellerPage'));
+const BuyerPage = lazy(() => import('./pages/buyer/BuyerPage'));
 
 const App: React.FC = () => {
   const Index = () => <h2>Home</h2>;
@@ -26,12 +29,24 @@ const App: React.FC = () => {
                 <li>
                   <Link to="/users/">Users</Link>
                 </li>
+                <li>
+                  <Link to="/buyer/">Buyer</Link>
+                </li>
+                <li>
+                  <Link to="/seller/">Seller</Link>
+                </li>
               </ul>
             </nav>
 
-            <Route path="/" exact component={Index} />
-            <Route path="/about/" component={About} />
-            <Route path="/users/" component={Users} />
+            <Suspense fallback={<div>Loading...</div>}>
+              <Switch>
+                <Route path="/" exact component={Index} />
+                <Route path="/about/" component={About} />
+                <Route path="/users/" component={Users} />
+                <Route path="/buyer/" component={BuyerPage} />
+                <Route path="/seller/" component={SellerPage} />
+              </Switch>
+            </Suspense>
           </div>
         </Router>
       </div>

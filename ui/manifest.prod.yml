@@ -1,4 +1,4 @@
-command:  node express.js
+command:  ui/node express.js
 buildpack: nodejs_buildpack
 memory: 256M
 disk_quota: 512M

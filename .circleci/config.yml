@@ -1,13 +1,13 @@
 version: 2.1
-references:
-  deploy_docker: &deploy_docker
-    docker:
-      - image: microsoft/dotnet:2.2-sdk
-        environment:
-          TZ: "/usr/share/zoneinfo/Australia/Sydney"
-  circleci_deploy: &circleci_deploy
-    docker:
-      - image: circleci/node:8-stretch
+# references:
+#   deploy_docker: &deploy_docker
+#     docker:
+#       - image: microsoft/dotnet:2.2-sdk
+#         environment:
+#           TZ: "/usr/share/zoneinfo/Australia/Sydney"
+#   circleci_deploy: &circleci_deploy
+#     docker:
+#       - image: circleci/node:8-stretch
 
 commands:
   dot_net_build:
@@ -88,21 +88,21 @@ commands:
 jobs:
   run_npm_builds:
     docker:
-      - image: circleci/node:10.15.3-stretch
+      - image: circleci/node:10-stretch
     steps:
       - attach_workspace:
           at: .
       - checkout
       - npm_build:
           path: "ui"
-      - persist_to_workspace:
-          root: .
-          paths:
-            - "**/*"
+      # - persist_to_workspace:
+      #     root: .
+      #     paths:
+      #       - "**/*"
     
   deploy_to_rc:
     docker:
-      - image: circleci/node:10.15.3-stretch
+      - image: circleci/node:10-stretch
     steps:
       - cf_deploy:
           cf_app_name: rc-frontdoor-ui
@@ -111,7 +111,7 @@ jobs:
 
   deploy_to_pc:
     docker:
-      - image: circleci/node:10.15.3-stretch
+      - image: circleci/node:10-stretch
     steps:
       - cf_deploy:
           cf_app_name: pc-frontdoor-ui
@@ -120,7 +120,7 @@ jobs:
 
   deploy_to_alpha:
     docker:
-      - image: circleci/node:10.15.3-stretch
+      - image: circleci/node:10-stretch
     steps:
       - cf_deploy:
           cf_app_name: alpha-frontdoor-ui
@@ -129,7 +129,7 @@ jobs:
 
   deploy_to_production:
     docker:
-      - image: circleci/node:10.15.3-stretch
+      - image: circleci/node:10-stretch
     steps:
       - cf_deploy:
           cf_url: https://api.system.b.cld.gov.au

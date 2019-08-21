@@ -86,19 +86,26 @@ commands:
             cf zero-downtime-push << parameters.cf_app_name >> -f << parameters.cf_manifest >> --show-app-log
 
 jobs:
-  run_npm_builds:
+  get_code:
     docker:
       - image: circleci/node:10-stretch
     steps:
       - attach_workspace:
           at: .
       - checkout
-      - npm_build:
-          path: "ui"
       - persist_to_workspace:
           root: .
           paths:
             - "**/*"
+
+  run_npm_builds:
+    docker:
+      - image: circleci/node:10-stretch
+    steps:
+      - attach_workspace:
+          at: .
+      - npm_build:
+          path: "ui"
     
   deploy_to_rc:
     docker:

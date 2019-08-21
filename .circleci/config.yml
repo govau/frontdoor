@@ -48,7 +48,6 @@ commands:
             npm run lint
             npm run build
             npm test
-            chmod 0600 ./node_modules
 
   cf_deploy:
     description: "cf deploy"

@@ -88,7 +88,7 @@ commands:
 jobs:
   run_npm_builds:
     docker:
-      - image: circleci/node:10.15.3-stretch-browsers
+      - image: circleci/node:10.15.3-stretch
     steps:
       - attach_workspace:
           at: .

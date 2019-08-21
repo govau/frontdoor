@@ -106,6 +106,10 @@ jobs:
           at: .
       - npm_build:
           path: "ui"
+      - persist_to_workspace:
+          root: .
+          paths:
+            - "**/build/**/*"
     
   deploy_to_rc:
     docker:

@@ -7,10 +7,12 @@
     "@gov.au/footer": "^3.0.5",
     "@gov.au/grid-12": "^2.1.0",
     "@gov.au/header": "^4.1.12",
+    "@gov.au/main-nav": "^1.0.8",
     "express": "^4.17.1",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-router-dom": "^5.0.1",
+    "node-sass": "^4.13.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.1.1"
   },
   "devDependencies": {
@@ -18,8 +20,8 @@
     "@types/node": "12.7.2",
     "@types/react": "16.9.2",
     "@types/react-dom": "16.8.5",
-    "@types/react-router-dom": "^4.3.4",
-    "tslint": "^5.18.0",
+    "@types/react-router-dom": "^4.3.5",
+    "tslint": "^5.20.0",
     "typescript": "3.5.3"
   },
   "scripts": {
@@ -80,6 +82,12 @@
     },
     "react": {
       "location": "pancake/react/"
+    },
+    "js": {
+      "minified": true,
+      "modules": false,
+      "location": "pancake/js/",
+      "name": "pancake.min.js"
     }
   }
 }

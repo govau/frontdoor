@@ -133,6 +133,10 @@ jobs:
           cf_app_name: rc-frontdoor-ui
           cf_manifest: manifest.rc.yml
           cf_path: ui
+      - cf_deploy:
+          cf_app_name: rc-frontdoor-api
+          cf_manifest: manifest.rc.yml
+          cf_path: api
 
   deploy_to_pc:
     docker:
@@ -142,6 +146,10 @@ jobs:
           cf_app_name: pc-frontdoor-ui
           cf_manifest: manifest.pc.yml
           cf_path: ui
+      - cf_deploy:
+          cf_app_name: pc-frontdoor-api
+          cf_manifest: manifest.pc.yml
+          cf_path: api
 
   deploy_to_alpha:
     docker:
@@ -151,6 +159,10 @@ jobs:
           cf_app_name: alpha-frontdoor-ui
           cf_manifest: manifest.alpha.yml
           cf_path: ui
+      - cf_deploy:
+          cf_app_name: alpha-frontdoor-api
+          cf_manifest: manifest.alpha.yml
+          cf_path: api
 
   deploy_to_production:
     docker:
@@ -163,6 +175,13 @@ jobs:
           cf_app_name: frontdoor-ui
           cf_manifest: manifest.prod.yml
           cf_path: ui
+      - cf_deploy:
+          cf_url: https://api.system.b.cld.gov.au
+          cf_user: $CF_USER_PROD
+          cf_password: $CF_PASSWORD_PROD
+          cf_app_name: frontdoor-api
+          cf_manifest: manifest.prod.yml
+          cf_path: api
 
 workflows:
   version: 2

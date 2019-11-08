@@ -100,7 +100,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - "**/*"
+            - "api/**/*"
 
   run_npm_builds:
     docker:
@@ -113,7 +113,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - "**/*"
+            - "ui/**/*"
     
   deploy_to_rc:
     docker:

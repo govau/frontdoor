@@ -98,6 +98,20 @@ jobs:
           paths:
             - "**/*"
 
+  run_dot_net_builds:
+    docker:
+      - image: microsoft/dotnet:2.2-sdk
+    steps:
+      - attach_workspace:
+          at: .
+      - checkout
+      - dot_net_build: 
+          path: "api"
+      - persist_to_workspace:
+          root: .
+          paths:
+            - "**/*"
+
   run_npm_builds:
     docker:
       - image: circleci/node:10-stretch
@@ -155,6 +169,12 @@ workflows:
   build_test_deploy:
     jobs:
       - get_code
+      - run_dot_net_builds:
+          requires:
+            - get_code
+          filters:
+            tags:
+              only: /[0-9]+(\.[0-9]+)*/
       - run_npm_builds:
           requires:
             - get_code
@@ -163,6 +183,7 @@ workflows:
               only: /[0-9]+(\.[0-9]+)*/
       - deploy_to_rc:
           requires:
+            - run_dot_net_builds
             - run_npm_builds
           filters:
             tags:
@@ -171,6 +192,7 @@ workflows:
               only: master
       - deploy_to_alpha:
           requires:
+            - run_dot_net_builds
             - run_npm_builds
           filters:
             tags:
@@ -179,6 +201,7 @@ workflows:
               only: alpha
       - deploy_to_production:
           requires:
+            - run_dot_net_builds
             - run_npm_builds
           filters:
             tags:

@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/api/bin/Debug/netcoreapp2.2/api.dll",
+            "program": "${workspaceFolder}/api/bin/Debug/netcoreapp2.2/Dta.Frontdoor.Api.dll",
             "args": [],
             "envFile": "${workspaceFolder}/config/local.env",
             "cwd": "",

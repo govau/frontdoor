@@ -18,15 +18,16 @@ namespace Dta.Frontdoor.Api.Controllers
             _configuration = configuration;
         }
 
-        // GET api/values/5
         [HttpGet]
-        public async Task<ActionResult<string>> Get(int id)
+        public async Task<dynamic> Get()
         {
             using (var client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("Authorization", $"BotConnector {_configuration["botConnector"]}");
                 var response = await client.GetStringAsync("https://webchat.botframework.com/api/tokens");
-                return response;
+                return new {
+                    token = response.Trim('"')
+                };
             }
         }
     }

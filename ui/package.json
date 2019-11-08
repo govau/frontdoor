@@ -8,6 +8,7 @@
     "@gov.au/grid-12": "^2.1.0",
     "@gov.au/header": "^4.1.12",
     "@gov.au/main-nav": "^1.0.8",
+    "axios": "^0.19.0",
     "botframework-webchat": "^4.6.0",
     "express": "^4.17.1",
     "node-sass": "^4.13.0",
@@ -33,6 +34,7 @@
     "lint": "tslint --config ./tslint.json --project ./",
     "lint:fix": "tslint --project ./ --fix"
   },
+  "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": "react-app"
   },

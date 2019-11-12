@@ -37,12 +37,12 @@ const BuyerPage: React.FC = () => {
                     .then((r) => {
                       // directLine.current = new DirectLine({ token: r.data.token });
                       setAnswers(r.data.answers.map((a: any) => a.answer));
-                      
+
                       setLoaded(true);
                     });
                   }
                 }
-                
+
               }}>Search</span></button>
           </div>
       </div>

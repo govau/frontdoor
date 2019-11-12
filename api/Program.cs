@@ -47,7 +47,7 @@ namespace Dta.Frontdoor.Api
                 .UseStartup<Startup>();
             
             if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("PORT"))) {
-                builder = builder.UseUrls($"https://*:{Environment.GetEnvironmentVariable("PORT")}");
+                builder = builder.UseUrls($"http://*:{Environment.GetEnvironmentVariable("PORT")}");
             }
             return builder;
         }

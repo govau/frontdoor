@@ -1,53 +1,94 @@
 import axios from 'axios';
 // import { DirectLine } from 'botframework-directlinejs';
 // import ReactWebChat from 'botframework-webchat';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import '../../main.scss';
 
 const BuyerPage: React.FC = () => {
-  const [loaded, setLoaded] = useState(false);
-  const [answers, setAnswers] = useState([]);
+  // const [loaded, setLoaded] = useState(false);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [qnas] = useState<any>([]);
   const inputEl = useRef(null);
+  // const answers = useRef<any>([]);
   // const directLine = useRef<DirectLine | null>(null);
-  useEffect(() => {
-    if (!loaded) {
-      // axios.get('/api/BotConnector')
-      //   .then((r) => {
-      //     // directLine.current = new DirectLine({ token: r.data.token });
-      //     setLoaded(true);
-      //   });
-    }
-  });
+  // useEffect(() => {
+  //   if (!loaded) {
+  //     // axios.get('/api/BotConnector')
+  //     //   .then((r) => {
+  //     //     // directLine.current = new DirectLine({ token: r.data.token });
+  //     //     setLoaded(true);
+  //     //   });
+  //   }
+  // });
+  const ask = (text: string, question: any) => {
+    setLoading(true);
+
+    qnas.push({
+      question: text,
+    });
+    axios.post('/api/answer', question)
+    .then((r: any) => {
+      qnas.push(r.data);
+      setLoading(false);
+    });
+  };
 
   return (
     <div>
       {'Buying digital products & services'}
-      {/* {loaded && <ReactWebChat directLine={directLine.current} />} */}
       <div role="search" aria-label="sitewide" className="au-search">
           <label htmlFor="standard" className="au-search__label">Search this website</label>
           <input type="search" id="standard" name="standard" className="au-text-input" ref={inputEl}/>
           <div className="au-search__btn">
-              <button className="au-btn" type="submit"><span className="au-search__submit-btn-text" onClick={() => {
-                if (inputEl.current) {
-                  const search: any = inputEl.current;
-                  if (search) {
-                    axios.post('/api/answer', {
-                      question: search.value,
-                    })
-                    .then((r) => {
-                      // directLine.current = new DirectLine({ token: r.data.token });
-                      setAnswers(r.data.answers.map((a: any) => a.answer));
-
-                      setLoaded(true);
-                    });
+              <button className="au-btn" onClick={() => {
+                  if (inputEl.current) {
+                    const search: any = inputEl.current;
+                    if (search) {
+                      ask(search.value, {
+                        question: search.value,
+                      });
+                    }
                   }
-                }
-
-              }}>Search</span></button>
+                }}>
+                <span className="au-search__submit-btn-text">
+                  Search
+                </span>
+              </button>
           </div>
       </div>
       <div>
-        {answers && answers.map((a: any) => <p>{a}</p>)}
+        {loading && 'Searching...'}
+        {qnas && qnas.map((qna: any) => (
+          <>
+            {qna.question && (
+              <div className="row">
+                <div className="col-md-7 margin-bottom-1 background-light-grey">
+                  {qna.question}
+                </div>
+              </div>
+            )}
+            {qna.answers && qna.answers.map((a: any) => (
+              <div className="row">
+                <div className="col-md-push-5 col-md-7 margin-bottom-1 background-blue text-colour-white">
+                  <div>{a.answer}</div>
+                  {a.context && (
+                    <div>
+                      {a.context.prompts && a.context.prompts.map((p: any) => (
+                        <button className="au-btn" data-id={p.qnaId} data-displaytext={p.displayText} onClick={(e: any) => {
+                          ask(e.target.dataset.displaytext, {
+                            qnaId: e.target.dataset.id,
+                          });
+                        }}>
+                          {p.displayText}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </>
+        ))}
       </div>
     </div>
   );

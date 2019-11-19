@@ -1,7 +1,7 @@
 import axios from 'axios';
 // import { DirectLine } from 'botframework-directlinejs';
 // import ReactWebChat from 'botframework-webchat';
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import '../../main.scss';
 
 const BuyerPage: React.FC = () => {

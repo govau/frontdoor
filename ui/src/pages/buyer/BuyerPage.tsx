@@ -5,17 +5,20 @@ import React, { useEffect, useRef, useState } from 'react';
 import '../../main.scss';
 
 const BuyerPage: React.FC = () => {
-  // const [loaded, setLoaded] = useState(false);
+  const [loaded, setLoaded] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
   const [qnas] = useState<any>([]);
   const inputEl = useRef(null);
   // const answers = useRef<any>([]);
   // const directLine = useRef<DirectLine | null>(null);
   useEffect(() => {
-    const q = 'What level of government do you work for?';
-    ask(q , {
-      question: q,
-    });
+    if (!loaded) {
+      const q = 'What level of government do you work for?';
+      ask(q , {
+        question: q,
+      });
+      setLoaded(true);
+    }
   });
 
   const ask = (text: string, question: any) => {
@@ -24,7 +27,7 @@ const BuyerPage: React.FC = () => {
     qnas.push({
       question: text,
     });
-    axios.post('/api/answer', question)
+    return axios.post('/api/answer', question)
     .then((r: any) => {
       qnas.push(r.data);
       setLoading(false);

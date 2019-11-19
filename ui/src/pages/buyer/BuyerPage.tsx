@@ -12,8 +12,7 @@ const BuyerPage: React.FC = () => {
   // const answers = useRef<any>([]);
   // const directLine = useRef<DirectLine | null>(null);
 
-
-  const ask = useCallback((text: string, question: any) => {
+  const askCallback = useCallback((text: string, question: any) => {
     setLoading(true);
 
     qnas.push({
@@ -30,12 +29,12 @@ const BuyerPage: React.FC = () => {
   useEffect(() => {
     if (!loaded) {
       const q = 'What level of government do you work for?';
-      ask(q , {
+      askCallback(q , {
         question: q,
       });
       setLoaded(true);
     }
-  }, [ask, loaded]);
+  }, [askCallback, loaded]);
 
   return (
     <div>
@@ -48,7 +47,7 @@ const BuyerPage: React.FC = () => {
                   if (inputEl.current) {
                     const search: any = inputEl.current;
                     if (search) {
-                      ask(search.value, {
+                      askCallback(search.value, {
                         question: search.value,
                       });
                     }
@@ -79,7 +78,7 @@ const BuyerPage: React.FC = () => {
                     <div>
                       {a.context.prompts && a.context.prompts.map((p: any) => (
                         <button className="au-btn" data-id={p.qnaId} data-displaytext={p.displayText} onClick={(e: any) => {
-                          ask(e.target.dataset.displaytext, {
+                          askCallback(e.target.dataset.displaytext, {
                             qnaId: e.target.dataset.id,
                           });
                         }}>

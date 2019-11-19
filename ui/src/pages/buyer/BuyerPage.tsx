@@ -1,7 +1,7 @@
 import axios from 'axios';
 // import { DirectLine } from 'botframework-directlinejs';
 // import ReactWebChat from 'botframework-webchat';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import '../../main.scss';
 
 const BuyerPage: React.FC = () => {
@@ -11,17 +11,9 @@ const BuyerPage: React.FC = () => {
   const inputEl = useRef(null);
   // const answers = useRef<any>([]);
   // const directLine = useRef<DirectLine | null>(null);
-  useEffect(() => {
-    if (!loaded) {
-      const q = 'What level of government do you work for?';
-      ask(q , {
-        question: q,
-      });
-      setLoaded(true);
-    }
-  });
 
-  const ask = (text: string, question: any) => {
+
+  const ask = useCallback((text: string, question: any) => {
     setLoading(true);
 
     qnas.push({
@@ -31,8 +23,19 @@ const BuyerPage: React.FC = () => {
     .then((r: any) => {
       qnas.push(r.data);
       setLoading(false);
+      return r;
     });
-  };
+  }, [qnas]);
+
+  useEffect(() => {
+    if (!loaded) {
+      const q = 'What level of government do you work for?';
+      ask(q , {
+        question: q,
+      });
+      setLoaded(true);
+    }
+  }, [ask, loaded]);
 
   return (
     <div>

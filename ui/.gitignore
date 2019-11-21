@@ -4,6 +4,7 @@
 
 # Build directory
 public/
+pancake/
 
 # Gatsby cache
 .cache/

@@ -2,11 +2,9 @@ import { graphql, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
-// import 'modern-normalize'
-// import '../styles/normalize'
-
-import Footer from '../components/Footer';
 import Header from '../components/Header';
+import NavigationBar from '../components/NavigationBar';
+import Footer from '../components/Footer';
 
 interface IStaticQueryProps {
   site: {
@@ -40,6 +38,7 @@ const DefaultLayout: React.FC = ({ children }) => (
           ]}
         />
         <Header title={data.site.siteMetadata.title} />
+        <NavigationBar />
         <div className="container">{children}</div>
         <Footer />
       </div>

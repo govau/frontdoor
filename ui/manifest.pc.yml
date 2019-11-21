@@ -1,7 +1,7 @@
-command:  node express.js
-buildpack: nodejs_buildpack
+buildpack: staticfile_buildpack
 memory: 256M
 disk_quota: 512M
 instances: 2
+root: public
 routes:
 - route: fd-pc.apps.y.cld.gov.au

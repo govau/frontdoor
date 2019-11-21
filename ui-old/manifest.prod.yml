@@ -1,0 +1,7 @@
+command:  node express.js
+buildpack: nodejs_buildpack
+memory: 256M
+disk_quota: 512M
+instances: 2
+routes:
+- route: frontdoor.apps.b.cld.gov.au

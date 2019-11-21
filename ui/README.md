@@ -1,44 +1,89 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="https://www.gatsbyjs.org">
+    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  fd cms
+</h1>
 
-## Available Scripts
+> front door cms
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🗒️ Features
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- TypeScript
+- ESLint (with custom ESLint rules)
+- Markdown rendering with Remark
+- Basic component structure
 
-### `npm test`
+## 🚀 Quick start
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> A nodejs >= 6.0.0 setup with [yarn](https://yarnpkg.com/) is recommended.
 
-### `npm run build`
+1.  **Create a Gatsby site.**
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    Install `gatsby-cli` package globally on your machine.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+    ```bash
+    # using NPM
+    npm install -g gatsby-cli
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    # using YARN
+    yarn global add gatsby-cli
+    ```
 
-### `npm run eject`
+    Use the `gatsby-cli` to create a new site and install its dependencies.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2.  **Start developing.**
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    Move to project's directory.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    ```bash
+    cd project-name/
+    ```
 
-## Learn More
+    Start your site.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```bash
+    # using npm
+    npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    # using yarn
+    yarn start
+    ```
+
+    Open source code using your favorite IDE/Text editor and navigate to `src/` directory, this is where your application live.
+
+3.  **Build your application for production.**
+
+    Once you're finished, you can make production build of your app using:
+
+    ```bash
+    # using npm
+    npm run build
+
+    # using yarn
+    yarn build
+    ```
+
+4.  **Deploy your app to Github pages!**
+
+    After building your application in step 3, you're ready to publish your app and go online!
+
+    ```bash
+    # using npm
+    npm run deploy
+
+    # using yarn
+    yarn deploy
+    ```
+
+## ❤️ Credits
+
+Built with [Gatsby](https://www.gatsbyjs.org/) - the blazing-fast static site generator for [React](https://facebook.github.io/react/).
+
+## 💫 Deploy
+

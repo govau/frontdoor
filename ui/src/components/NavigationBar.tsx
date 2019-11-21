@@ -4,7 +4,7 @@ import * as React from 'react';
 
 
 interface INavigationBarProps {
-  title: string;
+  title?: string;
 }
 
 const NavigationBar: React.FC<INavigationBarProps> = () => (

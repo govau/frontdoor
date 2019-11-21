@@ -2,7 +2,7 @@ import axios from 'axios';
 // import { DirectLine } from 'botframework-directlinejs';
 // import ReactWebChat from 'botframework-webchat';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import DefaultLayout from '../layouts';
+import DefaultLayout from '../layouts/defaultLayout';
 
 const BuyerPage: React.FC = () => {
   const [loaded, setLoaded] = useState<boolean>(false);

@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import * as React from 'react';
 
-import DefaultLayout from '../layouts';
+import DefaultLayout from '../layouts/defaultLayout';
 
 const NotFoundPage = () => (
   <DefaultLayout>

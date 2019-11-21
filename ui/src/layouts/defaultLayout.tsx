@@ -21,7 +21,7 @@ interface IStaticQueryProps {
 const DefaultLayout: React.FC = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query IndexLayoutQuery {
+      query DefaultLayoutQuery {
         site {
           siteMetadata {
             title

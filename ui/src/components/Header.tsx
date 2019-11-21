@@ -1,6 +1,6 @@
 import AUheader, { AUheaderBrand } from '@gov.au/header';
 import AUmainNav, { AUmainNavContent } from '@gov.au/main-nav';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 import * as React from 'react';
 
 
@@ -8,11 +8,8 @@ interface IHeaderProps {
   title: string;
 }
 
-const Header: React.FC<IHeaderProps> = ({ title }) => (
+const Header: React.FC<IHeaderProps> = () => (
   <>
-    {/* <Container>
-      <Link to="/">{title}</Link>
-    </Container> */}
     <AUheader dark>
       <div className="container">
         <div className="row">

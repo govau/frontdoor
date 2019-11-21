@@ -4,8 +4,11 @@ title: 'Example Markdown page'
 ---
 
 Now we're writing in Markdown! Pretty nice, huh?
+
 # H1
+
 ## H2
+
 ### H3
 
 <p>

@@ -121,7 +121,7 @@ jobs:
     steps:
       - cf_deploy:
           cf_app_name: fd-rc-ui
-          cf_manifest: manifest.rc.yml
+          cf_manifest: ../manifest.rc.yml
           cf_path: ui
       - cf_deploy:
           cf_app_name: fd-rc-api
@@ -134,7 +134,7 @@ jobs:
     steps:
       - cf_deploy:
           cf_app_name: fd-pc-ui
-          cf_manifest: manifest.pc.yml
+          cf_manifest: ../manifest.pc.yml
           cf_path: ui
       - cf_deploy:
           cf_app_name: fd-pc-api
@@ -147,7 +147,7 @@ jobs:
     steps:
       - cf_deploy:
           cf_app_name: fd-alpha-ui
-          cf_manifest: manifest.alpha.yml
+          cf_manifest: ../manifest.alpha.yml
           cf_path: ui
       - cf_deploy:
           cf_app_name: fd-alpha-api
@@ -163,7 +163,7 @@ jobs:
           cf_user: $CF_USER_PROD
           cf_password: $CF_PASSWORD_PROD
           cf_app_name: fd-ui
-          cf_manifest: manifest.prod.yml
+          cf_manifest: ../manifest.prod.yml
           cf_path: ui
       - cf_deploy:
           cf_url: https://api.system.b.cld.gov.au

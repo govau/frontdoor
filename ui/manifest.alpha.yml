@@ -2,6 +2,5 @@ buildpack: staticfile_buildpack
 memory: 256M
 disk_quota: 512M
 instances: 2
-root: public
 routes:
 - route: fd-alpha.apps.y.cld.gov.au

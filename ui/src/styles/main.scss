@@ -1,0 +1,99 @@
+// .App {
+//   text-align: center;
+// }
+
+// .App-logo {
+//   animation: App-logo-spin infinite 20s linear;
+//   height: 40vmin;
+//   pointer-events: none;
+// }
+
+// .App-header {
+//   background-color: #282c34;
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: calc(10px + 2vmin);
+//   color: white;
+// }
+
+// .App-link {
+//   color: #61dafb;
+// }
+
+// @keyframes App-logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+
+
+$AU-color-foreground-text:   #313131;
+$AU-color-foreground-action: #00698F;
+$AU-color-background:        #FFFFFF;
+$AU-colordark-foreground-text:   #FFFFFF;
+$AU-colordark-foreground-action: #61DAFF;
+$AU-colordark-background:        #313131;
+
+@import '../../pancake/sass/pancake.scss';
+
+body {
+    margin: 0px;
+}
+
+.margin-1 {
+    margin: 1rem;
+}
+
+.margin-2 {
+    margin: 2rem;
+}
+
+.margin-left-1 {
+    margin-left: 1rem;
+}
+
+.margin-left-2 {
+    margin-left: 2rem;
+}
+
+.margin-right-1 {
+    margin-right: 1rem;
+}
+
+.margin-right-2 {
+    margin-right: 2rem;
+}
+
+.margin-top-1 {
+    margin-top: 1rem;
+}
+
+.margin-top-2 {
+    margin-top: 2rem;
+}
+
+.margin-bottom-1 {
+    margin-bottom: 1rem;
+}
+
+.margin-bottom-2 {
+    margin-bottom: 2rem;
+}
+
+.background-light-grey {
+    background-color: #C4C4C4;
+}
+
+.background-blue {
+    background-color: #00698F;
+}
+
+.text-colour-white {
+    color: #FFFFFF;
+}

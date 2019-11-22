@@ -8,53 +8,52 @@ interface INavigationBarProps {
 }
 
 const NavigationBar: React.FC<INavigationBarProps> = () => (
-  <nav className="au-main-nav" aria-label="main">
+  <nav className="au-main-nav au-main-nav--dark" aria-label="main">
     <div className="container">
       <div className="row">
         <div className="col-md-12">
           <div id="main-nav-default" className="au-main-nav__content">
-            <button
+            {/* <button
               aria-controls="main-nav-default"
               aria-expanded="false"
               className="au-main-nav__toggle au-main-nav__toggle--open"
               onClick="return AU.mainNav.Toggle( this )">
                 Menu
-            </button>
+            </button> */}
             <div className="au-main-nav__menu">
               <div className="au-main-nav__menu-inner">
                 <div className="au-main-nav__focus-trap-top"></div>
-                <button
+                {/* <button
                   aria-controls="main-nav-default"
                   className="au-main-nav__toggle au-main-nav__toggle--close"
                   onClick="return AU.mainNav.Toggle( this )">
                     Close
-                </button>
+                </button> */}
                 <ul className="au-link-list">
                   <li>
-                    <a href="#">About</a>
-                    <Link to="/" activeClassName="active">Home</Link>
+                    <Link to="/" partiallyActive={true}>Home</Link>
                   </li>
                   <li>
-                    <Link to="/buyer" activeClassName="active">Buyer</Link>
+                    <Link to="/buyer" partiallyActive={true}>Buyer</Link>
                   </li>
                   <li>
-                    <Link to="/seller" activeClassName="active">Seller</Link>
+                    <Link to="/seller" partiallyActive={true}>Seller</Link>
                   </li>
                   <li>
-                    <Link to="/news" activeClassName="active">News</Link>
+                    <Link to="/news" partiallyActive={true}>News</Link>
                   </li>
                   <li>
-                    <Link to="/Events" activeClassName="active">events</Link>
+                    <Link to="/events" partiallyActive={true}>Events</Link>
                   </li>
                 </ul>
                 <div className="au-main-nav__focus-trap-bottom"></div>
               </div>
             </div>
-            <div
+            {/* <div
               className="au-main-nav__overlay"
               aria-controls="main-nav-default"
               onClick="return AU.mainNav.Toggle( this )">
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

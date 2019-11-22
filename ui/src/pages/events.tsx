@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import * as React from 'react';
 
 import DefaultLayout from '../layouts/defaultLayout';
@@ -26,16 +26,11 @@ interface IEventsTemplateProps {
 
 const EventsTemplate: React.SFC<IEventsTemplateProps> = ({ data }) => (
   <DefaultLayout>
-    {JSON.stringify(data, null, 4)}
     {data.allMarkdownRemark.edges.map((e) => (
-      <>
-        <div>{e.node.frontmatter.title}</div>
-        <div>{e.node.fields.slug}</div>
-      </>
+      <p>
+        <Link to={e.node.fields.slug}>{e.node.frontmatter.title}</Link>
+      </p>
     ))}
-    {/* <h1>{data.markdownRemark.frontmatter.title}</h1> */}
-    {/* eslint-disable-next-line react/no-danger */}
-    {/* <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} /> */}
   </DefaultLayout>
 );
 
@@ -43,7 +38,7 @@ export default EventsTemplate;
 
 export const query = graphql`
   {
-    allMarkdownRemark(filter: {frontmatter: {layout: {eq: "events"}}}, sort: {fields: frontmatter___eventDate, order: ASC}) {
+    allMarkdownRemark(filter: {frontmatter: {layout: {eq: "event"}}}, sort: {fields: frontmatter___eventDate, order: ASC}) {
       edges {
         node {
           frontmatter {

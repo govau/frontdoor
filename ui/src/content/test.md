@@ -3,8 +3,6 @@ layout: page
 title: 'Test adding from git'
 ---
 
-
-
 # H1
 
 ## H2
@@ -26,7 +24,7 @@ Telecommunications services
 Arrangements
 Back to top
 Marketplaces and panels
-It is mandatory for Non-corporate Commonwealth entities (NCEs) to use the following marketplaces and panels to purchase certain products and services.  Using these marketplaces and panels to purchase other products and services is optional.
+It is mandatory for Non-corporate Commonwealth entities (NCEs) to use the following marketplaces and panels to purchase certain products and services. Using these marketplaces and panels to purchase other products and services is optional.
 
 Corporate Commonwealth entities (CCEs) and state and territory government agencies and other Australia government bodies may be able to use these marketplaces and panels on a case-by-case basis.
 

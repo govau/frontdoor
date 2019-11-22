@@ -20,7 +20,7 @@ interface IEventTemplateProps {
       excerpt: string
       frontmatter: {
         title: string,
-        eventDate: Date
+        eventDate: Date,
       },
     },
   };

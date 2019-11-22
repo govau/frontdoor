@@ -19,7 +19,8 @@
     "test": "npm run type-check && npm run lint",
     "type-check": "tsc",
     "lint": "tslint --config ./tslint.json --project ./",
-    "lint:fix": "tslint --project ./ --fix"
+    "lint:fix": "tslint --project ./ --fix",
+    "check": "npm run type-check && npm run format && npm run lint:fix"
   },
   "engines": {
     "node": ">=8.0.0"

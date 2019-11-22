@@ -1,6 +1,5 @@
-// import AUmainNav, { AUmainNavContent } from '@gov.au/main-nav';
 import { Link } from 'gatsby';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 
 interface INavigationBarProps {

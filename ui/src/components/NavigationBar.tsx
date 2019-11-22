@@ -17,17 +17,17 @@ const NavigationBar: React.FC<INavigationBarProps> = () => {
     const updateParent = (ref: any) => {
       if (ref && ref.current) {
         if (ref.current.className === 'active') {
-          ref.current.parentElement.className = 'active'
+          ref.current.parentElement.className = 'active';
         }
       }
-    }
+    };
     updateParent(homeLinkRef);
     updateParent(buyerLinkRef);
     updateParent(sellerLinkRef);
     updateParent(newsLinkRef);
     updateParent(eventLinkRef);
-  })
-  
+  });
+
   return (
     <nav className="au-main-nav au-main-nav--dark" aria-label="main">
       <div className="container">
@@ -80,7 +80,7 @@ const NavigationBar: React.FC<INavigationBarProps> = () => {
         </div>
       </div>
     </nav>
-  )
+  );
 };
 
 export default NavigationBar;

@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import DefaultLayout from '../layouts/defaultLayout';
 
-interface IEventsTemplateProps {
+interface IEventsPageProps {
   data: {
     allMarkdownRemark: {
       edges: [
@@ -24,17 +24,17 @@ interface IEventsTemplateProps {
   };
 }
 
-const EventsTemplate: React.SFC<IEventsTemplateProps> = ({ data }) => (
+const EventsPage: React.SFC<IEventsPageProps> = ({ data }) => (
   <DefaultLayout>
     {data.allMarkdownRemark.edges.map((e) => (
-      <p>
+      <p key={e.node.fields.slug}>
         <Link to={e.node.fields.slug}>{e.node.frontmatter.title}</Link>
       </p>
     ))}
   </DefaultLayout>
 );
 
-export default EventsTemplate;
+export default EventsPage;
 
 export const query = graphql`
   {

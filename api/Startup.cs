@@ -27,7 +27,7 @@ namespace Dta.Frontdoor.Api
         {
             services.AddCors(options => {
             options.AddPolicy(_devOrigins, builder => {
-                builder.WithOrigins("http://localhost:3000")
+                builder.WithOrigins("http://localhost:9001")
                        .AllowAnyHeader()
                        .AllowAnyMethod();
             });

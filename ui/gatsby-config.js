@@ -3,12 +3,12 @@
 module.exports = {
   proxy: {
     prefix: "/api",
-    url: "http://localhost:3001",
+    url: "http://api:5000",
   },
   siteMetadata: {
-    title: 'fd cms',
-    description: 'front door cms',
-    keywords: 'sourcing',
+    title: 'Digital Sourcing Front Door',
+    description: 'Digital Sourcing Front Door',
+    keywords: 'digital sourcing',
     siteUrl: 'http://fd-rc',
     author: {
       name: 'Sam',

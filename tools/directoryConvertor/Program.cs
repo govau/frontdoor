@@ -37,10 +37,11 @@ title: 'Agencies'
             foreach (var group in agencies)
             {
                 sb.AppendLine($"#{group.Key}");
+                sb.AppendLine($"##The following agencies are {group.Key}");
                 Console.WriteLine(group.Key);
                 foreach (var i in group) {   
-                    sb.AppendLine($"* {i.title}");
-                    Console.WriteLine("* " + i.title);
+                    sb.AppendLine($"{i.title}  ");
+                    Console.WriteLine(i.title);
                 }
                 sb.AppendLine("");
             }

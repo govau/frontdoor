@@ -9,7 +9,7 @@ module.exports = {
     title: 'Digital Sourcing Front Door',
     description: 'Digital Sourcing Front Door',
     keywords: 'digital sourcing',
-    siteUrl: 'http://fd-rc',
+    siteUrl: 'https://fd-rc.apps.y.cld.gov.au/',
     author: {
       name: 'Sam',
       url: '',
@@ -52,7 +52,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'http://fd-rc'
+        siteUrl: 'https://fd-rc.apps.y.cld.gov.au/'
       }
     },
     // 'gatsby-plugin-emotion',
@@ -60,6 +60,7 @@ module.exports = {
     // 'gatsby-plugin-sharp',
     // 'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-remove-trailing-slashes`
   ]
 }

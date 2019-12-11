@@ -11,16 +11,6 @@ export default () => (
               <h3 className="au-display-lg">Section</h3>
               <ul className="au-link-list">
                 <li><a href="https://marketplace.gov.au">Link 1</a></li>
-                <li><a href="https://marketplace.gov.au">Link 2</a></li>
-                <li><a href="https://marketplace.gov.au">Link 3</a></li>
-              </ul>
-            </div>
-            <div className="col-md-3 col-sm-6">
-              <h3 className="au-display-lg">Section</h3>
-              <ul className="au-link-list">
-                <li><a href="https://marketplace.gov.au">Link 1</a></li>
-                <li><a href="https://marketplace.gov.au">Link 2</a></li>
-                <li><a href="https://marketplace.gov.au">Link 3</a></li>
               </ul>
             </div>
           </div>

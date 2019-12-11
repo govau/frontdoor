@@ -29,24 +29,46 @@ namespace Dta.Frontdoor.Tools.DirectoryConvertor
 
 
             var sb = new StringBuilder();
-            sb.AppendLine(@"---
-layout: page
-title: 'Agencies'
----
-            ");
+            sb.AppendLine(string.Join("\t", "Question", "Answer", "Source", "Metadata", "SuggestedQuestions", "IsContextOnly", "Prompts", "QnaId"));
+
             foreach (var group in agencies)
             {
-                sb.AppendLine($"#{group.Key}");
-                sb.AppendLine($"##The following agencies are {group.Key}");
                 Console.WriteLine(group.Key);
+                var cce = true;
+                var qnaId = 0;
+                switch(group.Key) {
+                    case "A. Non Corporate Commonwealth Entity":
+                        cce = false;
+                        qnaId = 10000;
+                        break;
+                    case "B. Corporate Commonwealth Entity":
+                        cce = true;
+                        qnaId = 10001;
+                        break;
+                }
                 foreach (var i in group) {   
-                    sb.AppendLine($"{i.title}  ");
+                    sb.AppendLine(
+                        string.Join(
+                            "\t",
+                            Escape(i.title),
+                            Escape(group.Key),
+                            "https://www.directory.gov.au/sites/default/files/export.xml",
+                            $"cce:{cce.ToString().ToLower()}",
+                            "[]",
+                            "false",
+                            "[]",
+                            qnaId
+                        )
+                    );
                     Console.WriteLine(i.title);
                 }
                 sb.AppendLine("");
             }
 
-            File.WriteAllText(Path.Combine("data", "agencies.md"), sb.ToString());
+            File.WriteAllText(Path.Combine("data", "agencies.tsv"), sb.ToString());
+        }
+        private static string Escape(string input) {
+            return input.Replace("\n", @"\n").Replace("\t", @"\t").Replace("\r", @"\r").Replace("\\", @"\\");
         }
     }
 }

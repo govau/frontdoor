@@ -29,8 +29,8 @@ export default () => (
           <div className="col-sm-12">
             <AUfooterEnd>
               <p>Footer text</p>
-              <img className="au-responsive-media-img" src="https://designsystem.gov.au/assets/img/placeholder/157x80.png" alt="Brand" />
-              <p><small>&copy; Commonwealth of Australia, <a href="https://github.com/govau/design-system-components/blob/master/LICENSE.md" rel="external license">MIT licensed</a></small></p>
+              {/* <img className="au-responsive-media-img" alt="Brand" /> */}
+              {/* <p><small>&copy; Commonwealth of Australia, <a href="https://github.com/govau/design-system-components/blob/master/LICENSE.md" rel="external license">MIT licensed</a></small></p> */}
             </AUfooterEnd>
           </div>
         </div>

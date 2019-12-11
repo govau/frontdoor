@@ -15,8 +15,6 @@ const Header: React.FC<IHeaderProps> = () => (
           <AUheaderBrand
             title="Digital Sourcing Front Door"
             subline="Service sub-title that could be a little longer"
-            link="/"
-            brandImage="https://designsystem.gov.au/assets/img/placeholder/256x80.png"
             brandImageAlt="Insert alternate text here"
           />
         </div>

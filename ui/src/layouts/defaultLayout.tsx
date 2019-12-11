@@ -2,7 +2,7 @@ import { graphql, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 import Header from '../components/Header';
 import NavigationBar from '../components/NavigationBar';
 

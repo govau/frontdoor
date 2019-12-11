@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: ncce
 title: 'Cloud contractors'
 ---
 

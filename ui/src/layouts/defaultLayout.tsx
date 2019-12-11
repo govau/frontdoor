@@ -40,7 +40,7 @@ const DefaultLayout: React.FC = ({ children }) => (
         <Header title={data.site.siteMetadata.title} />
         <NavigationBar />
         <div className="container">{children}</div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     )}
   />

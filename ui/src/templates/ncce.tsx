@@ -1,7 +1,8 @@
 import { graphql } from 'gatsby';
 import * as React from 'react';
 
-// import DefaultLayout from '../layouts/defaultLayout';
+import BuyerChat from '../components/BuyerChat';
+import DefaultLayout from '../layouts/defaultLayout';
 
 interface INcceTemplateProps {
   data: {
@@ -26,7 +27,8 @@ interface INcceTemplateProps {
 }
 
 const NcceTemplate: React.SFC<INcceTemplateProps> = ({ data }) => (
-  <div>
+  <DefaultLayout>
+    <BuyerChat />
     <h1>{data.markdownRemark.frontmatter.title}</h1>
     {/* eslint-disable-next-line react/no-danger */}
     <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
@@ -41,7 +43,7 @@ const NcceTemplate: React.SFC<INcceTemplateProps> = ({ data }) => (
       <h3>Relevant policies</h3>
       NCCEs must comply with the Digital Sourcing Framework, which contrains four policies to help buyers purchase digital products and services.
     </div>
-  </div>
+  </DefaultLayout>
 );
 
 export default NcceTemplate;

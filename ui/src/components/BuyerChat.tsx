@@ -1,92 +1,113 @@
-import axios from 'axios';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import axios, { AxiosResponse } from 'axios';
+import React, { useCallback, useState } from 'react';
+import SearchField from './SearchField';
 
 const BuyerChat: React.FC = () => {
-  const [loaded, setLoaded] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
-  const [qnas] = useState<any>([]);
-  const inputEl = useRef(null);
-  // const answers = useRef<any>([]);
-  // const directLine = useRef<DirectLine | null>(null);
+  const [agencies] = useState<any>([]);
+  const [products] = useState<any>([]);
 
-  const askCallback = useCallback((text: string, question: any) => {
+  const askCallback = (ref: React.MutableRefObject<null>, filters: any[]): Promise<AxiosResponse<any>> => {
+    if (ref.current) {
+      const search: any = ref.current;
+
+      if (search) {
+        return axios.post('/api/answer', {
+          question: search.value,
+          strictFilters: filters,
+        });
+      }
+    }
+    return Promise.reject();
+  };
+
+  const askAgencyCallback = useCallback((inputEl) => {
+    agencies.splice(0, agencies.length);
+    products.splice(0, products.length);
+    setLoading(true);
+    askCallback(inputEl, [{
+      name: 'result',
+      value: 'agency',
+    }]).then((r: any) => {
+      agencies.push(r.data);
+      setLoading(false);
+      return r;
+    }, () => '');
+  }, [agencies, products]);
+
+  const askProductCallback = useCallback((inputEl) => {
+    products.splice(0, products.length);
     setLoading(true);
 
-    qnas.push({
-      question: text,
-    });
-    return axios.post('/api/answer', question)
+    let filters: any[] = [];
+    if (agencies) {
+      agencies.map((agency: any) => (
+        agency.answers && agency.answers.forEach((a: any) => (
+          filters = a.metadata.filter((i: any) => i.name === 'typeofbody')
+        ))
+      ));
+    }
+    askCallback(inputEl, filters)
       .then((r: any) => {
-        qnas.push(r.data);
+        products.push(r.data);
         setLoading(false);
         return r;
-      });
-  }, [qnas]);
+      }, () => '');
 
-  useEffect(() => {
-    if (!loaded) {
-      const q = 'What level of government do you work for?';
-      askCallback(q, {
-        question: q,
-      });
-      setLoaded(true);
-    }
-  }, [askCallback, loaded]);
+  }, [products]);
 
   return (
     <>
       <div>
         {loading && 'Searching...'}
-        {qnas && qnas.map((qna: any) => (
-          <>
-            {qna.question && (
-              <div className="row">
-                <div className="col-md-7 margin-bottom-1 background-light-grey">
-                  {qna.question}
-                </div>
-              </div>
-            )}
-            {qna.answers && qna.answers.map((a: any) => (
-              <div className="row">
-                <div className="col-md-push-5 col-md-7 margin-bottom-1 background-blue text-colour-white">
-                  <div>{a.answer}</div>
-                  {a.context && (
-                    <div>
-                      {a.context.prompts && a.context.prompts.map((p: any) => (
-                        <button className="au-btn" data-id={p.qnaId} data-displaytext={p.displayText} onClick={(e: any) => {
-                          askCallback(e.target.dataset.displaytext, {
-                            qnaId: e.target.dataset.id,
-                          });
-                        }}>
-                          {p.displayText}
-                        </button>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </>
-        ))}
       </div>
-      <div role="search" aria-label="sitewide" className="au-search">
-        <label htmlFor="standard" className="au-search__label">Ask me a question</label>
-        <input type="search" id="standard" name="standard" className="au-text-input" ref={inputEl} />
-        <div className="au-search__btn">
-          <button className="au-btn" onClick={() => {
-            if (inputEl.current) {
-              const search: any = inputEl.current;
-              if (search) {
-                askCallback(search.value, {
-                  question: search.value,
-                });
-              }
-            }
-          }}>
-            <span className="au-search__submit-btn-text">
-              Search
-            </span>
-          </button>
+      <div className="row">
+        <div className="col-sm-6">
+          Which government agency do you work for?
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-sm-6">
+          <SearchField searchFunc={askAgencyCallback} label="Which government agency do you work for?" />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-sm-12">
+          {agencies && agencies.map((agency: any) => (
+            <>
+              {agency.answers && agency.answers.map((a: any) => (
+                <div className="margin-bottom-2 margin-top-2">
+                  <div>{a.answer}</div>
+                </div>
+              ))}
+            </>
+          ))}
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-sm-6">
+          What product or service do you want to buy?
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-sm-6">
+          <SearchField
+            searchFunc={askProductCallback}
+            label="What product or service do you want to buy?"
+          />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-sm-12">
+          {products && products.map((product: any) => (
+            <>
+              {product.answers && product.answers.map((a: any) => (
+                <div className="margin-top-2 margin-bottom-2">
+                  <div>{a.answer}</div>
+                </div>
+              ))}
+            </>
+          ))}
         </div>
       </div>
     </>

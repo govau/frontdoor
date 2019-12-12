@@ -27,11 +27,11 @@ namespace Dta.Frontdoor.Api
         {
             services.AddCors(options => {
             options.AddPolicy(_devOrigins, builder => {
-                builder.WithOrigins("http://localhost:9001")
-                       .AllowAnyHeader()
-                       .AllowAnyMethod();
+                    builder.WithOrigins("http://localhost:8000")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
             });
-        });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddOptions();
@@ -50,9 +50,9 @@ namespace Dta.Frontdoor.Api
             {
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
+                app.UseHttpsRedirection();
             }
             app.UseCors(_devOrigins);
-            app.UseHttpsRedirection();
             app.UseMvc();
         }
     }

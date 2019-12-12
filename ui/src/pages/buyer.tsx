@@ -5,7 +5,6 @@ import DefaultLayout from '../layouts/defaultLayout';
 const BuyerPage: React.FC = () => {
   return (
     <DefaultLayout>
-      {'Buying digital products & services'}
       <BuyerChat />
     </DefaultLayout>
   );

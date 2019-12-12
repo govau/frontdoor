@@ -29,21 +29,18 @@ namespace Dta.Frontdoor.Tools.DirectoryConvertor
 
 
             var sb = new StringBuilder();
-            sb.AppendLine(string.Join("\t", "Question", "Answer", "Source", "Metadata", "SuggestedQuestions", "IsContextOnly", "Prompts", "QnaId"));
+            sb.AppendLine(string.Join("\t", "Question", "Answer", "Metadata"));
 
             foreach (var group in agencies)
             {
                 Console.WriteLine(group.Key);
-                var cce = true;
-                var qnaId = 0;
+                var typeOfBody = "";
                 switch(group.Key) {
                     case "A. Non Corporate Commonwealth Entity":
-                        cce = false;
-                        qnaId = 10000;
+                        typeOfBody = "ncce";
                         break;
                     case "B. Corporate Commonwealth Entity":
-                        cce = true;
-                        qnaId = 10001;
+                        typeOfBody = "cce";
                         break;
                 }
                 foreach (var i in group) {   
@@ -51,13 +48,8 @@ namespace Dta.Frontdoor.Tools.DirectoryConvertor
                         string.Join(
                             "\t",
                             Escape(i.title),
-                            Escape(group.Key),
-                            "https://www.directory.gov.au/sites/default/files/export.xml",
-                            $"cce:{cce.ToString().ToLower()}",
-                            "[]",
-                            "false",
-                            "[]",
-                            qnaId
+                            Escape($"{i.title} is a {group.Key}"),
+                            $"typeofbody:{typeOfBody}|result:agency"
                         )
                     );
                     Console.WriteLine(i.title);

@@ -3,7 +3,7 @@
 module.exports = {
   proxy: {
     prefix: "/api",
-    url: "http://api:5000",
+    url: "http://localhost:5000",
   },
   siteMetadata: {
     title: 'Digital Sourcing Front Door',

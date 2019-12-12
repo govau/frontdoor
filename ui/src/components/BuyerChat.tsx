@@ -1,4 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
+// import IframeResizer from 'iframe-resizer-react';
 import React, { useCallback, useState } from 'react';
 import SearchField from './SearchField';
 
@@ -6,6 +7,8 @@ const BuyerChat: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [agencies] = useState<any>([]);
   const [products] = useState<any>([]);
+  // const [productHtml, setProductHtml] = useState<string>('');
+  // const productEl = useRef(null);
 
   const askCallback = (ref: React.MutableRefObject<null>, filters: any[]): Promise<AxiosResponse<any>> => {
     if (ref.current) {
@@ -50,11 +53,33 @@ const BuyerChat: React.FC = () => {
     askCallback(inputEl, filters)
       .then((r: any) => {
         products.push(r.data);
+        // getContentCallback()
         setLoading(false);
         return r;
       }, () => '');
-
   }, [products]);
+
+
+  // const getContentCallback = useCallback((product: any) => {
+  //   setLoading(true);
+  //   let url:string = '';
+  //   if (product.answers) {
+  //     product.answers.map((p: any) => {
+  //       url = `/buyer/${p.answer}`;
+  //     })
+  //   }
+  //   if (url) {
+  //     axios
+  //     .get(url)
+  //     .then((r: any) => {
+  //       setProductHtml(r.data);
+  //       //if (productEl && productEl.current) {
+  //         // /productEl.current.innerHtml = r.data;
+  //       //}
+  //       setLoading(false);
+  //     }, () => '');
+  //   }
+  // }, [agencies, products]);
 
   return (
     <>
@@ -101,9 +126,32 @@ const BuyerChat: React.FC = () => {
         <div className="col-sm-12">
           {products && products.map((product: any) => (
             <>
-              {product.answers && product.answers.map((a: any) => (
+              {product.answers && product.answers.map((p: any) => (
                 <div className="margin-top-2 margin-bottom-2">
-                  <div>{a.answer}</div>
+                  {`/buyer/${p.answer}`}
+                  {/* <IframeResizer
+                    src={`/buyer/${p.answer}`}
+                    style={{ width: '1px', minWidth: '100%'}}
+                    heightCalculationMethod="max"
+                  /> */}
+                   {/* <object data={`/buyer/${p.answer}`} type="text/html" onLoad={(e) => {
+                     console.log(e)
+                   }}
+                   onLoadedData={(e) => {
+                    console.log(e)
+                   }}
+                   onWaiting={(e) => {
+                     console.log(e);
+                   }}>
+                    {`/buyer/${p.answer}`}
+                  </object> */}
+                  {/* {productHtml} */}
+                  {/* <iframe src={`/buyer/${p.answer}`} onLoad={(e) => {
+                    console.log(e.currentTarget.contentDocument.body.innerHTML)
+                  }}/> */}
+                  {/* <object data={`data:text/html;charset=utf-8,${escape(productHtml)}`} >
+
+                  </object> */}
                 </div>
               ))}
             </>

@@ -15,9 +15,9 @@ const SearchField: React.FC<ISearchFieldProps> = ({ searchFunc, label }) => {
       aria-label="field"
       className="au-search au-search--icon"
       onSubmit={(e) => {
-      e.preventDefault();
-      searchFunc(inputEl);
-      return false;
+        e.preventDefault();
+        searchFunc(inputEl);
+        return false;
       }}
     >
       <label htmlFor="standard" className="au-search__label">{label}</label>

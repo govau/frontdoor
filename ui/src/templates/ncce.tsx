@@ -35,8 +35,6 @@ const NcceTemplate: React.SFC<INcceTemplateProps> = ({ data }) => (
 
     {/* <Link to="/events" partiallyActive={true}>Back to Events</Link> */}
     <div>
-               
-
       <h3>Relevant policies</h3>
       Non-corporate Commonwealth Entities are mandated to apply these policies when using DTA panels:
       <ul>

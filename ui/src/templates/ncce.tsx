@@ -35,13 +35,13 @@ const NcceTemplate: React.SFC<INcceTemplateProps> = ({ data }) => (
 
     {/* <Link to="/events" partiallyActive={true}>Back to Events</Link> */}
     <div>
-      As a Non-Corporate Commonwealth Entity, you should also consider:
-
-      <h3>Contracting through volume sourcing arrangements</h3>
-      There are whole of government sourcing arrangements which can provide discounts for NCCEs when you choose participating providers.
-
-      <h3>Relevant policies</h3>
-      NCCEs must comply with the Digital Sourcing Framework, which contrains four policies to help buyers purchase digital products and services.
+      <h3>Policies</h3>
+      Non-corporate Commonwealth Entities are mandated to apply these policies when using DTA panels:
+      
+      * Consider first policy
+      * Fair criteria policy
+      * ICT contract capped term and value policy
+      * Panels policy
     </div>
   </DefaultLayout>
 );

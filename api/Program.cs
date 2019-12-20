@@ -18,7 +18,6 @@ namespace Dta.Frontdoor.Api
         public static void Main(string[] args)
         {
             var vcapServicesString = Environment.GetEnvironmentVariable("VCAP_SERVICES");
-            Console.WriteLine(vcapServicesString);
             if (!string.IsNullOrEmpty(vcapServicesString))
             {
                 dynamic vcapServices = JsonConvert.DeserializeObject<IDictionary<string, dynamic>>(vcapServicesString);

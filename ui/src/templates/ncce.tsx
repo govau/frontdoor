@@ -42,7 +42,7 @@ const NcceTemplate: React.SFC<INcceTemplateProps> = ({ data }) => (
         <li>Fair criteria policy</li>
         <li>ICT contract capped term and value policy</li>
         <li>Panels policy</li>s
-      </ul>  
+      </ul>
     </div>
   </DefaultLayout>
 );

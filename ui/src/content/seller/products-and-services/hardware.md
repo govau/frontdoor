@@ -1,6 +1,6 @@
 ---
-layout: cce
-title: 'Cloud contractors'
+layout: seller
+title: 'Hardware'
 ---
 
 This covers contractors, consultants, advisory services for Cloud products and services

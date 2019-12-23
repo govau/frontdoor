@@ -1,6 +1,6 @@
 ---
-layout: ncce
-title: 'Cloud contractors'
+layout: seller
+title: 'Software'
 ---
 
 This covers contractors, consultants, advisory services for Cloud products and services

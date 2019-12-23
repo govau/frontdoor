@@ -3,6 +3,7 @@ using System.Linq;
 using System.IO;
 using System.Xml.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Dta.Frontdoor.Tools.DirectoryConvertor
 {
@@ -22,22 +23,22 @@ namespace Dta.Frontdoor.Tools.DirectoryConvertor
                                          {
                                              title = (string)i.Element("title"),
                                              typeOfBody = (string)i.Element("type_of_body"),
+                                             website = (string)i.Element("website"),
                                          })
                                          .OrderBy(i => i.title)
-                                         .GroupBy(i => i.typeOfBody)
-                                         ;
+                                         .GroupBy(i => i.typeOfBody);
 
 
             var sb = new StringBuilder();
             sb.AppendLine(string.Join("\t", "Question", "Answer", "Metadata"));
-
+            var regex = new Regex(@"(https?:\/\/)?(w{0,3}\.){0,1}(.*?)(\..*)", RegexOptions.IgnoreCase);
             foreach (var group in agencies)
             {
                 Console.WriteLine(group.Key);
                 var typeOfBody = "";
                 switch(group.Key) {
                     case "A. Non Corporate Commonwealth Entity":
-                        typeOfBody = "ncce";
+                        typeOfBody = "nce";
                         break;
                     case "B. Corporate Commonwealth Entity":
                         typeOfBody = "cce";
@@ -52,7 +53,21 @@ namespace Dta.Frontdoor.Tools.DirectoryConvertor
                             $"typeofbody:{typeOfBody}|result:agency"
                         )
                     );
-                    Console.WriteLine(i.title);
+                    Console.Write(i.title);
+                    if (string.IsNullOrWhiteSpace(i.website) == false) {
+                        var match = regex.Match(i.website);
+                        var shortName = match.Groups[3].Value;
+                        sb.AppendLine(
+                            string.Join(
+                                "\t",
+                                Escape(shortName),
+                                Escape($"{i.title} is a {group.Key}"),
+                                $"typeofbody:{typeOfBody}|result:agency"
+                            )
+                        );
+                        Console.Write($": {shortName}");
+                    }
+                    Console.WriteLine();
                 }
                 sb.AppendLine("");
             }

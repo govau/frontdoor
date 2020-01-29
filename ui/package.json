@@ -27,10 +27,12 @@
   },
   "dependencies": {
     "@gov.au/body": "^2.2.0",
+    "@gov.au/buttons": "^3.0.7",
     "@gov.au/card": "^0.3.2",
     "@gov.au/footer": "^3.0.5",
     "@gov.au/grid-12": "^2.1.0",
     "@gov.au/header": "^4.1.12",
+    "@gov.au/headings": "^2.0.11",
     "@gov.au/main-nav": "^1.0.8",
     "@gov.au/searchbox": "^0.2.2",
     "@gov.au/text-inputs": "^2.1.2",

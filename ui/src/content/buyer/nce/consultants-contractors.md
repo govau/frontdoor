@@ -13,7 +13,8 @@ For sourcing consultants, contractors or advisory services to assist with digita
 # Digital sourcing policies
 
 Non-corporate Commonwealth Entities are mandated to apply these policies when using DTA panels:
-* Consider first policy
-* Fair criteria policy
-* ICT contract capped term and value policy
-* Panels policy
+
+- Consider first policy
+- Fair criteria policy
+- ICT contract capped term and value policy
+- Panels policy

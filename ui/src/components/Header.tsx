@@ -13,8 +13,8 @@ const Header: React.FC<IHeaderProps> = () => (
       <div className="row">
         <div className="col-md-12">
           <AUheaderBrand
-            title="Digital Sourcing Front Door"
-            subline="Service sub-title that could be a little longer"
+            title="Digital Sourcing for Government"
+            subline="An initiative of the Digital Transformation Agency"
             brandImageAlt="Insert alternate text here"
           />
         </div>

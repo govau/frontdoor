@@ -1,3 +1,4 @@
+import AUcard, { AUcardInner, AUcardTitle } from '@gov.au/card';
 import { Link } from 'gatsby';
 import * as React from 'react';
 
@@ -11,6 +12,20 @@ const Index = () => (
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
     <Link to="/page-two/">Go to page 2</Link>
+    <AUcard>
+      <AUcardInner>
+        <AUcardTitle>Buyer</AUcardTitle>
+        <p>Some text</p>
+        <p>Additional content</p>
+      </AUcardInner>
+    </AUcard>
+    <AUcard>
+      <AUcardInner>
+        <AUcardTitle>Seller</AUcardTitle>
+        <p>Some text</p>
+        <p>Additional content</p>
+      </AUcardInner>
+    </AUcard>
   </DefaultLayout>
 );
 

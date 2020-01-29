@@ -6,25 +6,24 @@ import SearchField from './SearchField';
 const BuyerChat: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [agencies] = useState<any>([]);
+  const [products] = useState<any>([]);
+  const [selectedAgency, setSelectedAgency] = useState<any>(null);
 
-  const askCallback = (ref: React.MutableRefObject<null>, filters: any[]): Promise<AxiosResponse<any>> => {
-    if (ref.current) {
-      const search: any = ref.current;
-
-      if (search) {
-        return axios.post('/api/answer', {
-          question: search.value,
-          strictFilters: filters,
-        });
-      }
+  const askCallback = (searchValue: string, filters: any[]): Promise<AxiosResponse<any>> => {
+    if (searchValue) {
+      return axios.post('/api/answer', {
+        question: searchValue,
+        strictFilters: filters,
+        top: 10,
+      });
     }
     return Promise.reject();
   };
 
-  const askAgencyCallback = useCallback((inputEl) => {
+  const askAgencyCallback = useCallback((searchValue) => {
     agencies.splice(0, agencies.length);
     setLoading(true);
-    askCallback(inputEl, [{
+    return askCallback(searchValue, [{
       name: 'result',
       value: 'agency',
     }]).then((r: any) => {
@@ -34,29 +33,38 @@ const BuyerChat: React.FC = () => {
     }, () => '');
   }, [agencies]);
 
-  const askProductCallback = (inputEl: React.MutableRefObject<null>) => {
+  const askProductCallback = (searchValue: string) => {
     setLoading(true);
+    if (selectedAgency) {
+      const filters = selectedAgency.metadata.filter((i: any) => i.name === 'typeofbody');
+      return askCallback(searchValue, filters)
+        .then((r: any) => {
+          products.push(r.data);
+          setLoading(false);
+          return r.data;
+        }, () => '');
+        // .then((product) => {
 
-    let filters: any[] = [];
-    if (agencies) {
-      agencies.map((agency: any) => (
-        agency.answers && agency.answers.forEach((a: any) => (
-          filters = a.metadata.filter((i: any) => i.name === 'typeofbody')
-        ))
-      ));
+        //   if (product.answers) {
+        //     product.answers.map((p: any) => {
+        //         navigate(`/buyer/${p.answer}`);
+        //     });
+        //   }
+        // });
     }
-    askCallback(inputEl, filters)
-      .then((r: any) => {
-        setLoading(false);
-        return r.data;
-      }, () => '')
-      .then((product) => {
-        if (product.answers) {
-          product.answers.map((p: any) => {
-              navigate(`/buyer/${p.answer}`);
-          });
-        }
-      });
+    return Promise.reject();
+  };
+
+  const agencySelected = (a: any) => {
+    setSelectedAgency(a);
+  };
+
+  const productSelected = (product: any) => {
+    // setSelectedAgency(a);
+    // navigate(`/buyer/${p.answer}`);
+    product.answers.map((p: any) => {
+        navigate(`/buyer/${p.answer}`);
+    });
   };
 
   return (
@@ -71,10 +79,16 @@ const BuyerChat: React.FC = () => {
       </div>
       <div className="row">
         <div className="col-sm-6">
-          <SearchField searchFunc={askAgencyCallback} label="Which government agency do you work for?" />
+          <SearchField
+            searchFunc={askAgencyCallback}
+            itemSelectedFunc={agencySelected}
+            label="Which government agency do you work for?"
+            list={agencies}
+          />
         </div>
       </div>
-      <div className="row">
+
+      {/* <div className="row">
         <div className="col-sm-12">
           {agencies && agencies.map((agency: any) => (
             <>
@@ -86,6 +100,11 @@ const BuyerChat: React.FC = () => {
             </>
           ))}
         </div>
+      </div> */}
+      <div className="row">
+        <div className="col-sm-6">
+          {selectedAgency && selectedAgency.answer}
+        </div>
       </div>
       <div className="row">
         <div className="col-sm-6">
@@ -96,6 +115,8 @@ const BuyerChat: React.FC = () => {
         <div className="col-sm-6">
           <SearchField
             searchFunc={askProductCallback}
+            itemSelectedFunc={productSelected}
+            list={products}
             label="What product or service do you want to buy?"
           />
         </div>

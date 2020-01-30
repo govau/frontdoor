@@ -31,7 +31,7 @@ const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc
             }}
           >
             <label htmlFor="standard" className="au-search__label">{label}</label>
-            <input type="search" id="standard" name="standard" className="au-text-input" ref={inputEl} onFocus={(e) => e.target.value && setModalVisibility(true)} onKeyUp={(e) => e.key === 'Escape' && setModalVisibility(false) } />
+            <input type="search" name="standard" className="au-text-input" ref={inputEl} onFocus={(e) => e.target.value && setModalVisibility(true)} onKeyUp={(e) => e.key === 'Escape' && setModalVisibility(false) } />
             <div className="au-search__btn">
               <button className="au-btn">
                 <span className="au-search__submit-btn-text">Search</span>

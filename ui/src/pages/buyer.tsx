@@ -1,6 +1,7 @@
 import { graphql, Link } from 'gatsby';
 import React from 'react';
 import BuyerChat from '../components/BuyerChat';
+import Events from '../components/Events';
 import DefaultLayout from '../layouts/defaultLayout';
 
 interface IBuyerPageProps {
@@ -28,6 +29,7 @@ const BuyerPage: React.SFC<IBuyerPageProps>  = ({ data }) => {
   return (
     <DefaultLayout>
       <BuyerChat />
+      <Events />
       {data.allMarkdownRemark.edges.map((e) => (
       <p key={e.node.fields.slug}>
         <Link to={e.node.fields.slug}>{e.node.frontmatter.title}</Link>

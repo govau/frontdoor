@@ -44,63 +44,49 @@ $AU-colordark-background:        #313131;
 
 body {
     margin: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
 }
 
-.margin-1 {
-    margin: 1rem;
-}
+.height-1 { height: 1rem; }
+.height-2 { height: 2rem; }
+.height-3 { height: 3rem; }
+.height-4 { height: 4rem; }
 
-.margin-2 {
-    margin: 2rem;
-}
+.margin-1 { margin: 1rem; }
+.margin-2 { margin: 2rem; }
 
-.margin-left-1 {
-    margin-left: 1rem;
-}
+.margin-left-1 { margin-left: 1rem; }
+.margin-left-2 { margin-left: 2rem; }
 
-.margin-left-2 {
-    margin-left: 2rem;
-}
+.margin-right-1 { margin-right: 1rem; }
+.margin-right-2 { margin-right: 2rem; }
 
-.margin-right-1 {
-    margin-right: 1rem;
-}
+.margin-top-1 { margin-top: 1rem; }
+.margin-top-2 { margin-top: 2rem; }
 
-.margin-right-2 {
-    margin-right: 2rem;
-}
+.margin-bottom-1 { margin-bottom: 1rem; }
+.margin-bottom-2 { margin-bottom: 2rem; }
 
-.margin-top-1 {
-    margin-top: 1rem;
-}
+.padding-1 { padding: 1rem; }
+.padding-2 { padding: 2rem; }
 
-.margin-top-2 {
-    margin-top: 2rem;
-}
+.background-light-grey { background-color: #C4C4C4; }
 
-.margin-bottom-1 {
-    margin-bottom: 1rem;
-}
+.background-blue { background-color: #00698F; }
 
-.margin-bottom-2 {
-    margin-bottom: 2rem;
-}
+.text-align-center { text-align: center; }
 
-.background-light-grey {
-    background-color: #C4C4C4;
-}
+.text-colour-white { color: #FFFFFF; }
 
-.background-blue {
-    background-color: #00698F;
-}
-
-.text-align-center {
-  text-align: center;
-}
-
-.text-colour-white {
-    color: #FFFFFF;
-}
+.font-weight-1 { font-weight: 100; }
+.font-weight-2 { font-weight: 200; }
+.font-weight-3 { font-weight: 300; }
+.font-weight-4 { font-weight: 400; }
+.font-weight-5 { font-weight: 500; }
+.font-weight-6 { font-weight: 600; }
+.font-weight-7 { font-weight: 700; }
+.font-weight-8 { font-weight: 800; }
+.font-weight-9 { font-weight: 900; }
 
 .modal {
     background-color: rgb(255,255,255); 

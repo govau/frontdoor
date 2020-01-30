@@ -57,7 +57,7 @@ const Events: React.FC = () => {
             </div>
             <div className="row">
               <div className="col-xs-12">
-                <a href={e.url}>{e.name.text}</a>
+                <a href={e.url} target="_blank">{e.name.text}</a>
               </div>
             </div>
 

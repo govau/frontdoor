@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json;
 using Dta.Frontdoor.Api.Models;
 
@@ -16,9 +17,13 @@ namespace Dta.Frontdoor.Api.Controllers
     public class EventController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        public EventController(IConfiguration configuration)
+        private IMemoryCache _cache;
+        private const string CACHE_KEY = "EventbriteCache";
+
+        public EventController(IConfiguration configuration, IMemoryCache cache)
         {
             _configuration = configuration;
+            _cache = cache;
         }
 
         [HttpGet]
@@ -29,14 +34,26 @@ namespace Dta.Frontdoor.Api.Controllers
             {
                 return new List<Event>();
             }
-            using (var client = new HttpClient())
-            using (var stream = await client.GetStreamAsync(new Uri($"https://www.eventbriteapi.com/v3/users/me/events?token={eventbriteToken}&status=live&expand=venue,format")))
-            using (var reader = new StreamReader(stream))
+
+            string cacheEntry;
+
+            if (!_cache.TryGetValue(CACHE_KEY, out cacheEntry))
             {
-                string s = reader.ReadToEnd();
-                var events = JsonConvert.DeserializeObject<Events>(s);
-                return events.EventList.Where(e => e.Listed).ToList();
+                using (var client = new HttpClient())
+                using (var stream = await client.GetStreamAsync(new Uri($"https://www.eventbriteapi.com/v3/users/me/events?token={eventbriteToken}&status=live&expand=venue,format")))
+                using (var reader = new StreamReader(stream))
+                {
+                    string s = reader.ReadToEnd();
+                    cacheEntry = s;
+                }
+
+                var cacheEntryOptions = new MemoryCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromHours(4));
+
+                _cache.Set(CACHE_KEY, cacheEntry, cacheEntryOptions);
             }
+
+            var events = JsonConvert.DeserializeObject<Events>(cacheEntry);
+            return events.EventList.Where(e => e.Listed).ToList();
         }
 
         // [HttpGet("text")]

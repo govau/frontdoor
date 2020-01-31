@@ -1,4 +1,4 @@
-declare module '@gov.au/button';
+declare module '@gov.au/buttons';
 declare module '@gov.au/card';
 declare module '@gov.au/footer';
 declare module '@gov.au/header';

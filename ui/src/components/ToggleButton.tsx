@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
 import AUbutton from '@gov.au/buttons';
+import React, { useEffect, useState } from 'react';
 
 interface IOption {
   key: string;
@@ -24,19 +24,19 @@ const ToggleButton: React.FC<IToggleButtonProps> = ({optionSelectedFunc, options
 
   useEffect(() => {
     if (initialKey) {
-      setSelectedOption(options.find(o => o.key == initialKey));
+      setSelectedOption(options.find((o) => o.key === initialKey));
     }
   }, [initialKey]);
 
-  const getButtonStyle = (i: number, a: IOption[]) : string => {
-    if (i === 0 ){
+  const getButtonStyle = (i: number, a: IOption[]): string => {
+    if (i === 0 ) {
       return 'border-radius-left';
-    } else if (a.length -1 === i) {
+    } else if (a.length - 1 === i) {
       return 'border-radius-right';
     } else {
       return 'border-radius-none';
     }
-  }
+  };
 
   return (
     <>
@@ -46,11 +46,11 @@ const ToggleButton: React.FC<IToggleButtonProps> = ({optionSelectedFunc, options
             <AUbutton
               className={getButtonStyle(i, a)}
               onClick={() => selected(o)}
-              as={o.key == selectedOption?.key ? 'primary' : 'secondary'}>
+              as={o.key === selectedOption?.key ? 'primary' : 'secondary'}>
                 {o.text}
             </AUbutton>
           ))}
-        </div>  
+        </div>
       </div>
     </>
   );

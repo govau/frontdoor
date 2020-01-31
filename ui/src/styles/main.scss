@@ -78,6 +78,10 @@ body {
 
 .text-colour-white { color: #FFFFFF; }
 
+.border-radius-left { border-radius: 4px 0px 0px 4px; }
+.border-radius-right { border-radius: 0px 4px 4px 0px; }
+.border-radius-none { border-radius: 0px; }
+
 .font-weight-1 { font-weight: 100; }
 .font-weight-2 { font-weight: 200; }
 .font-weight-3 { font-weight: 300; }

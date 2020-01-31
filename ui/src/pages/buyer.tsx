@@ -1,6 +1,7 @@
 import { graphql, Link } from 'gatsby';
 import React from 'react';
 import BuyerChat from '../components/BuyerChat';
+import ToggleButton from '../components/ToggleButton';
 import Events from '../components/Events';
 import DefaultLayout from '../layouts/defaultLayout';
 
@@ -28,6 +29,17 @@ interface IBuyerPageProps {
 const BuyerPage: React.SFC<IBuyerPageProps>  = ({ data }) => {
   return (
     <DefaultLayout>
+      <ToggleButton
+        options={[{
+          key: 'federal',
+          text: 'Federal government'
+        }, {
+          key: 'state',
+          text: 'State or local government'
+        }]}
+        initialKey="federal"
+        optionSelectedFunc={(o) => console.log(o.key)}
+      />
       <BuyerChat />
       <Events />
       {data.allMarkdownRemark.edges.map((e) => (

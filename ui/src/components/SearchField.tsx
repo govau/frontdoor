@@ -1,7 +1,8 @@
 import React, { useRef, useState } from 'react';
 
+
 interface ISearchFieldProps {
-  searchFunc: (inputEl: string) => Promise<any>;
+  searchFunc: (text: string) => Promise<any>;
   clearFunc?: () => void;
   itemSelectedFunc?: (item: any) => void;
   list?: any[];
@@ -11,6 +12,36 @@ interface ISearchFieldProps {
 const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc, label, list }) => {
   const inputEl = useRef<HTMLInputElement>(null);
   const [modalVisible, setModalVisibility] = useState(false);
+  const [searchingVisible, setSearchingVisible] = useState(false);
+  const timer = useRef<any>(null);
+
+  const search = (field?: HTMLInputElement): Promise<any> => {
+    setModalVisibility(true);
+    if (field) {
+      setSearchingVisible(true);
+      return searchFunc(field.value).then(() => {
+        field.focus();
+        setSearchingVisible(false);
+      });
+    }
+    return Promise.reject();
+  };
+
+  const onKeyUp = (e: any) => {
+    if (timer) {
+      clearTimeout(timer.current);
+    }
+    switch (e.key) {
+      case 'Escape':
+        setModalVisibility(false);
+      default:
+        timer.current = setTimeout(() => {
+          if (inputEl && inputEl.current) {
+            search(inputEl.current);
+          }
+        }, 1000);
+    }
+  };
 
   return (
     <>
@@ -23,15 +54,21 @@ const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc
             onSubmit={(e) => {
               e.preventDefault();
               if (inputEl && inputEl.current) {
-                searchFunc(inputEl.current.value).then(() => {
-                  inputEl?.current?.focus();
-                });
+                search(inputEl.current);
               }
               return false;
             }}
           >
             <label htmlFor="standard" className="au-search__label">{label}</label>
-            <input type="search" name="standard" className="au-text-input" ref={inputEl} onFocus={(e) => e.target.value && setModalVisibility(true)} onKeyUp={(e) => e.key === 'Escape' && setModalVisibility(false) } />
+            <input
+              type="search"
+              name="standard"
+              className="au-text-input"
+              autoComplete="off"
+              ref={inputEl}
+              onFocus={(e) => e.target.value && setModalVisibility(true)}
+              onKeyUp={onKeyUp}
+            />
             <div className="au-search__btn">
               <button className="au-btn">
                 <span className="au-search__submit-btn-text">Search</span>
@@ -46,20 +83,23 @@ const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc
           <div className={`modal ${modalVisible ? 'modal-visible' : ''}`} onClick={() => setModalVisibility(false)}></div>
           <div className="search-field">
             <div className={`search-field-float-box ${modalVisible ? 'search-field-float-box-shown' : ''}`}>
-              <ul>
-                {list && list.map((l: any) => (
-                  <>
-                    {l.answers && l.answers.map((a: any) => (
-                      <li onClick={() => {
-                        if (itemSelectedFunc) {
-                          itemSelectedFunc(a);
-                        }
-                        setModalVisibility(false);
-                      }}>{a.answer}</li>
-                    ))}
-                  </>
-                ))}
-              </ul>
+              {searchingVisible ?
+                <ul><li>Searching...</li></ul> : (
+                <ul>
+                  {list && list.map((l: any) => (
+                    <>
+                      {l.answers && l.answers.map((a: any) => (
+                        <li onClick={() => {
+                          if (itemSelectedFunc) {
+                            itemSelectedFunc(a);
+                          }
+                          setModalVisibility(false);
+                        }}>{a.answer}</li>
+                      ))}
+                    </>
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
         </div>

@@ -42,7 +42,7 @@ const Events: React.FC = () => {
       </div>
       {events && events.map((e: any) => (
         <div key={e.id} className="row margin-1">
-          <div className="col-xs-2 background-light-grey text-align-center font-weight-6 padding-1">
+          <div className="col-xs-2 background-dark-grey text-align-center font-weight-6 padding-1">
             {moment(e.start.local).format('D')}<br/>
             {moment(e.start.local).format('MMMM')}
           </div>

@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import * as React from 'react';
 
-import BuyerChat from '../components/BuyerChat';
+import BuyerSearch from '../components/BuyerSearch';
 import DefaultLayout from '../layouts/defaultLayout';
 
 interface IBuyerTemplateProps {
@@ -28,7 +28,7 @@ interface IBuyerTemplateProps {
 
 const BuyerTemplate: React.SFC<IBuyerTemplateProps> = ({ data }) => (
   <DefaultLayout>
-    <BuyerChat />
+    <BuyerSearch />
     <h1>{data.markdownRemark.frontmatter.title}</h1>
     {/* eslint-disable-next-line react/no-danger */}
     <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />

@@ -1,7 +1,7 @@
 import AUbutton from '@gov.au/buttons';
 import React, { useEffect, useState } from 'react';
 
-interface IOption {
+export interface IOption {
   key: string;
   text: string;
 }

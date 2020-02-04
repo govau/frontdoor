@@ -53,7 +53,7 @@ namespace Dta.Frontdoor.Api.Controllers
             }
 
             var events = JsonConvert.DeserializeObject<Events>(cacheEntry);
-            return events.EventList.Where(e => e.Listed).ToList();
+            return events.EventList.Where(e => e.Listed).Take(3).ToList();
         }
 
         // [HttpGet("text")]

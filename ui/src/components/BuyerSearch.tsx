@@ -1,3 +1,4 @@
+import AUbutton from '@gov.au/buttons';
 import AUheading from '@gov.au/headings';
 import axios, { AxiosResponse } from 'axios';
 import { navigate } from 'gatsby';
@@ -101,6 +102,27 @@ const BuyerSearch: React.FC = () => {
     setSessionObject('selectedAgency', null);
   };
 
+  const getTypeOfBodyName = (agency: any): string => {
+    const typeOfBody = agency.metadata.filter((i: any) => i.name === 'typeofbody');
+
+    if (typeOfBody && typeOfBody.length > 0) {
+      switch (typeOfBody[0].value) {
+        case 'cce':
+          return 'Commonwealth Corporate Entity';
+        case 'nce':
+          return 'Non-corporate Commonwealth Entity';
+        default:
+          return `${typeOfBody[0].value} unknown`;
+      }
+    }
+    return 'agency is missing type of body';
+  };
+
+  const changeOrganisationClick = () => {
+    setSelectedAgency(null);
+    setSessionObject('selectedAgency', null);
+  };
+
   return (
     <>
       <div className="row margin-top-2">
@@ -121,7 +143,13 @@ const BuyerSearch: React.FC = () => {
       {selectedAgency ? (
         <div className="row margin-top-2">
           <div className="col-sm-12 text-align-center">
-            {selectedAgency && selectedAgency.answer}
+            <AUheading size="sm" level="1">{selectedAgency.answer}</AUheading>
+            <p className="font-style-italics">{getTypeOfBodyName(selectedAgency)}</p>
+            <AUbutton
+              onClick={() => changeOrganisationClick()}
+              as="tertiary">
+                Change organisation
+            </AUbutton>
           </div>
         </div>
       ) : (

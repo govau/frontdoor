@@ -11,7 +11,7 @@ namespace Dta.Frontdoor.Tools.DirectoryConvertor
     {
         static void Main(string[] args)
         {
-            var filename = "data/directory.gov.au.xml";
+            var filename = "data/export.xml";
             var currentDirectory = Directory.GetCurrentDirectory();
             var directoryGovAuFilepath = Path.Combine(currentDirectory, filename);
 
@@ -49,7 +49,7 @@ namespace Dta.Frontdoor.Tools.DirectoryConvertor
                         string.Join(
                             "\t",
                             Escape(i.title),
-                            Escape($"{i.title} is a {group.Key}"),
+                            Escape($"{i.title}"),
                             $"typeofbody:{typeOfBody}|result:agency"
                         )
                     );
@@ -61,7 +61,7 @@ namespace Dta.Frontdoor.Tools.DirectoryConvertor
                             string.Join(
                                 "\t",
                                 Escape(shortName),
-                                Escape($"{i.title} is a {group.Key}"),
+                                Escape($"{i.title}"),
                                 $"typeofbody:{typeOfBody}|result:agency"
                             )
                         );

@@ -99,7 +99,7 @@ const BuyerSearch: React.FC = () => {
   const toggleSelected = (option: IOption) => {
     setSelectedAgencyType(option.key);
     setSessionObject('selectedAgencyType', option);
-    setSessionObject('selectedAgency', null);
+    clearAgency();
   };
 
   const getTypeOfBodyName = (agency: any): string => {
@@ -118,7 +118,7 @@ const BuyerSearch: React.FC = () => {
     return 'agency is missing type of body';
   };
 
-  const changeOrganisationClick = () => {
+  const clearAgency = () => {
     setSelectedAgency(null);
     setSessionObject('selectedAgency', null);
   };
@@ -146,7 +146,7 @@ const BuyerSearch: React.FC = () => {
             <AUheading size="sm" level="1">{selectedAgency.answer}</AUheading>
             <p className="font-style-italics">{getTypeOfBodyName(selectedAgency)}</p>
             <AUbutton
-              onClick={() => changeOrganisationClick()}
+              onClick={() => clearAgency()}
               as="tertiary">
                 Change organisation
             </AUbutton>

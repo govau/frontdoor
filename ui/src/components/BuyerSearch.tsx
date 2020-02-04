@@ -1,7 +1,7 @@
 import AUbutton from '@gov.au/buttons';
 import AUheading from '@gov.au/headings';
 import axios, { AxiosResponse } from 'axios';
-import { navigate } from 'gatsby';
+// import { navigate } from 'gatsby';
 import React, { useCallback, useEffect, useState } from 'react';
 import SearchField from './SearchField';
 import ToggleButton, { IOption } from './ToggleButton';
@@ -11,6 +11,8 @@ const BuyerSearch: React.FC = () => {
   const [loaded, setLoaded] = useState<boolean>(false);
   const [agencies] = useState<any>([]);
   const [products] = useState<any>([]);
+  const [panels] = useState<any>([]);
+  // const [selectedProducts, setSelectedProducts] = useState<any>(null);
   const [selectedAgency, setSelectedAgency] = useState<any>(null);
   const [selectedAgencyType, setSelectedAgencyType] = useState<string>('federal');
 
@@ -43,42 +45,72 @@ const BuyerSearch: React.FC = () => {
     }
   });
 
-  const askCallback = (searchValue: string, filters: any[]): Promise<AxiosResponse<any>> => {
-    if (searchValue) {
-      return axios.post('/api/answer', {
-        question: searchValue,
-        strictFilters: filters,
-        top: 10,
-      });
+  const searchCallback = (search: any): Promise<AxiosResponse<any>> => {
+    if (search) {
+      return axios.post('/api/answer', search);
     }
     return Promise.reject();
   };
 
-  const askAgencyCallback = useCallback((searchValue) => {
+  const agencySearchCallback = useCallback((searchValue) => {
     agencies.splice(0, agencies.length);
     products.splice(0, products.length);
     setLoading(true);
-    return askCallback(searchValue, [{
-      name: 'result',
-      value: 'agency',
-    }]).then((r: any) => {
+    return searchCallback({
+      question: searchValue,
+      strictFilters: [{
+        name: 'result',
+        value: 'agency',
+      }],
+      top: 10,
+    }).then((r: any) => {
       agencies.push(r.data);
       setLoading(false);
       return r;
     }, () => '');
   }, [agencies]);
 
-  const askProductCallback = (searchValue: string) => {
+  const productSearchCallback = (searchValue: string) => {
     products.splice(0, products.length);
     setLoading(true);
     if ((selectedAgency && selectedAgencyType === 'federal') || selectedAgencyType === 'state') {
-      const filters = selectedAgencyType === 'federal' ? selectedAgency.metadata.filter((i: any) => i.name === 'typeofbody') : [];
-      return askCallback(searchValue, filters)
+      // const filters = selectedAgencyType === 'federal' ? selectedAgency.metadata.filter((i: any) => i.name === 'typeofbody') : [];
+      return searchCallback({
+        question: searchValue,
+        strictFilters: [{
+          name: 'result',
+          value: 'product',
+        }],
+        top: 10,
+      })
         .then((r: any) => {
           products.push(r.data);
           setLoading(false);
           return r.data;
         }, () => '');
+    }
+    return Promise.resolve({});
+  };
+
+  const panelSearchCallback = (searchValue: string) => {
+    panels.splice(0, panels.length);
+    setLoading(true);
+    if ((selectedAgency && selectedAgencyType === 'federal') || selectedAgencyType === 'state') {
+      // const filters = selectedAgencyType === 'federal' ? selectedAgency.metadata.filter((i: any) => i.name === 'typeofbody') : [];
+      return searchCallback({
+        question: searchValue,
+        scoreThreshold: 90,
+        strictFilters: [{
+          name: 'result',
+          value: 'panel',
+        }],
+        top: 10,
+      })
+      .then((r: any) => {
+        panels.push(r.data.answers);
+        setLoading(false);
+        return r.data;
+      }, () => '');
     }
     return Promise.resolve({});
   };
@@ -91,9 +123,10 @@ const BuyerSearch: React.FC = () => {
   const productSelected = (product: any) => {
     // setSelectedAgency(a);
     // navigate(`/buyer/${p.answer}`);
-    product.answers.map((p: any) => {
-      navigate(`/buyer/${p.answer}`);
-    });
+    // product.answers.map((p: any) => {
+    //   navigate(`/buyer/${p.answer}`);
+    // });
+    panelSearchCallback(product.answer);
   };
 
   const toggleSelected = (option: IOption) => {
@@ -167,7 +200,7 @@ const BuyerSearch: React.FC = () => {
               <div className="row margin-top-1">
                 <div className="col-sm-8 col-sm-push-2">
                   <SearchField
-                    searchFunc={askAgencyCallback}
+                    searchFunc={agencySearchCallback}
                     itemSelectedFunc={agencySelected}
                     label="Which government agency do you work for?"
                     list={agencies}
@@ -189,11 +222,23 @@ const BuyerSearch: React.FC = () => {
       <div className="row margin-top-1">
         <div className="col-sm-8 col-sm-push-2">
           <SearchField
-            searchFunc={askProductCallback}
+            searchFunc={productSearchCallback}
             itemSelectedFunc={productSelected}
             list={products}
             label="What product or service do you want to buy?"
           />
+        </div>
+      </div>
+      <div className="row margin-top-1">
+        <div className="col-sm-8 col-sm-push-2">
+          {panels.map((a: any) => (
+            <>
+              {a.map((p: any) => (
+                p.answer
+              ))}
+            </>
+          ))}
+          {/* {JSON.stringify(panels)} */}
         </div>
       </div>
       <div>

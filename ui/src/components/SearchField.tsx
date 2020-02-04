@@ -90,10 +90,12 @@ const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc
                     l.answers && l.answers.map((a: any) => (
                       <div>
                         <AUbutton
+                          block
                           onClick={() => {
                             if (itemSelectedFunc) {
                               itemSelectedFunc(a);
                             }
+                            setModalVisibility(false);
                           }}
                           as="tertiary">
                           {a.answer}

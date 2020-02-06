@@ -1,6 +1,8 @@
 ---
 layout: buyer
 title: 'Cloud'
+summary: 'For sourcing cloud products and associated services.'
+panel: 'cloud'
 ---
 
 We established the Cloud marketplace for government buyers looking to buy cloud products and services. The Standing Offer Notice (SON) number for Cloud Services Panel is SON2914302.

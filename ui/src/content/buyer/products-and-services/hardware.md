@@ -1,6 +1,8 @@
 ---
 layout: buyer
 title: 'Hardware'
+summary: 'Buy some hardware'
+panel: 'hardware'
 ---
 
 This covers contractors, consultants, advisory services for Cloud products and services

@@ -1,6 +1,8 @@
 ---
 layout: buyer
 title: 'Digital marketplace'
+summary: 'For sourcing digital marketplace products and associated services.'
+panel: 'digital-marketplace'
 ---
 
 This covers contractors, consultants, advisory services for Cloud products and services

@@ -1,6 +1,8 @@
 ---
 layout: buyer
 title: 'Software'
+summary: 'Buy software'
+panel: 'software'
 ---
 
 This covers contractors, consultants, advisory services for Cloud products and services

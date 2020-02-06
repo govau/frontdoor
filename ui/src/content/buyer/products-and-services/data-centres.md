@@ -1,6 +1,8 @@
 ---
 layout: buyer
 title: 'Data centres'
+summary: 'Data centres summary'
+panel: 'data-centres'
 ---
 
 This covers contractors, consultants, advisory services for Cloud products and services

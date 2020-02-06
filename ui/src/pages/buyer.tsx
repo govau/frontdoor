@@ -66,7 +66,7 @@ export default BuyerPage;
 
 export const query = graphql`
 {
-  allMarkdownRemark(filter: {fields: {slug: {regex: "/buyer/panels/"}}}) {
+  allMarkdownRemark(filter: {fields: {slug: {regex: "/buyer/products-and-services/"}}}) {
     edges {
       node {
         frontmatter {

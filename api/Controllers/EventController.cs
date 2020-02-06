@@ -29,31 +29,29 @@ namespace Dta.Frontdoor.Api.Controllers
         [HttpGet]
         public async Task<List<Event>> Get()
         {
+            if (_cache.TryGetValue(CACHE_KEY, out List<Event> cacheEntry))
+            {
+                return cacheEntry;
+            }
             var eventbriteToken = _configuration["EventbriteToken"];
             if (string.IsNullOrWhiteSpace(eventbriteToken) == true)
             {
                 return new List<Event>();
             }
 
-            string cacheEntry;
-
-            if (!_cache.TryGetValue(CACHE_KEY, out cacheEntry))
+            using (var client = new HttpClient())
+            using (var stream = await client.GetStreamAsync(new Uri($"https://www.eventbriteapi.com/v3/users/me/events?token={eventbriteToken}&status=live&expand=venue,format")))
+            using (var reader = new StreamReader(stream))
             {
-                using (var client = new HttpClient())
-                using (var stream = await client.GetStreamAsync(new Uri($"https://www.eventbriteapi.com/v3/users/me/events?token={eventbriteToken}&status=live&expand=venue,format")))
-                using (var reader = new StreamReader(stream))
-                {
-                    string s = reader.ReadToEnd();
-                    cacheEntry = s;
-                }
+                string s = reader.ReadToEnd();
+                var events = JsonConvert.DeserializeObject<Events>(s);
+                var result = events.EventList.Where(e => e.Listed).Take(3).ToList();
 
                 var cacheEntryOptions = new MemoryCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromHours(4));
-
-                _cache.Set(CACHE_KEY, cacheEntry, cacheEntryOptions);
+                _cache.Set<List<Event>>(CACHE_KEY, result, cacheEntryOptions);
+                
+                return result;
             }
-
-            var events = JsonConvert.DeserializeObject<Events>(cacheEntry);
-            return events.EventList.Where(e => e.Listed).Take(3).ToList();
         }
 
         // [HttpGet("text")]

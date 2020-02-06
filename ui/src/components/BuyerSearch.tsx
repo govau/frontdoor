@@ -49,7 +49,7 @@ const BuyerSearch: React.FC<IBuyerSearchProps> = ({ itemSelectedFunc }) => {
 
   const searchCallback = (search: any): Promise<AxiosResponse<any>> => {
     if (search) {
-      return axios.post('/api/answer', search);
+      return axios.post('/api/search', search);
     }
     return Promise.reject();
   };

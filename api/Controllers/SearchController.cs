@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Azure.CognitiveServices.Knowledge.QnAMaker;
 using Microsoft.Azure.CognitiveServices.Knowledge.QnAMaker.Models;
 using Dta.Frontdoor.Api.Models;
@@ -13,17 +14,24 @@ namespace Dta.Frontdoor.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AnswerController : ControllerBase
+    public class SearchController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        public AnswerController(IConfiguration configuration)
+        private IMemoryCache _cache;
+        private const string CACHE_KEY = "SearchCache";
+        public SearchController(IConfiguration configuration, IMemoryCache cache)
         {
             _configuration = configuration;
+            _cache = cache;
         }
 
         [HttpPost]
         public async Task<IEnumerable<SearchResult>> Post(SearchQuery searchQuery)
         {
+            if (_cache.TryGetValue(searchQuery.ToString(), out List<SearchResult> cacheEntry))
+            {
+                return cacheEntry;
+            }
             var endpointKey = _configuration["QnAMakerEndpointKey"];
             var endpoint = Environment.GetEnvironmentVariable("QnAMakerEndpoint");
             var kbId = Environment.GetEnvironmentVariable("QnAMakerKbId");
@@ -71,6 +79,9 @@ namespace Dta.Frontdoor.Api.Controllers
                 }
                 result.Add(searchResult);
             }
+
+            var cacheEntryOptions = new MemoryCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromHours(4));
+            _cache.Set<List<SearchResult>>(searchQuery.ToString(), result, cacheEntryOptions);
             return result;
         }
     }

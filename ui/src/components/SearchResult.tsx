@@ -30,9 +30,9 @@ interface ISearchResultProps {
 
 const SearchResult: React.SFC<ISearchResultProps> = ({ data, panels, product }) => {
   return (
-    <>
-      <div className="row">
-        <div className="col-sm-8">
+    <div className="margin-1">
+      <div className="row padding-2">
+        <div className="col-sm-12 text-align-center">
           <AUheading size="lg" level="2">{product && product.text}</AUheading>
           {product && product.metadata.summary}
         </div>
@@ -40,21 +40,27 @@ const SearchResult: React.SFC<ISearchResultProps> = ({ data, panels, product }) 
       {panels.map((p) => (
         data.allMarkdownRemark.edges.map((e) => (
           e.node.frontmatter.panel === p.metadata.panel &&
-          <div key={e.node.fields.slug} className="row border-top-width-1 border-dark-grey">
+          <div key={e.node.fields.slug} className="row border-top-width-1 border-light-grey padding-1">
             <div className="col-sm-8">
-              {p.metadata.mandatory ? 'Mandatory' : 'Optional'}
-              <AUheading size="md" level="2">
-                Use the <Link to={e.node.fields.slug}>{e.node.frontmatter.title}</Link>
-              </AUheading>
-              {e.node.frontmatter.summary}
+              <p>
+                {p.metadata.mandatory ? 'Mandatory' : 'Optional'}
+              </p>
+              <p>
+                <AUheading size="md" level="2">
+                  Use the <Link to={e.node.fields.slug}>{e.node.frontmatter.title}</Link>
+                </AUheading>
+              </p>
+              <p>
+                {e.node.frontmatter.summary}
+              </p>
             </div>
-            <div className="col-sm-4">
+            <div className="col-sm-4 text-align-right">
               <Link to={e.node.fields.slug}>Find out more about the {e.node.frontmatter.title}</Link>
             </div>
           </div>
         ))
       ))}
-    </>
+    </div>
   );
 };
 

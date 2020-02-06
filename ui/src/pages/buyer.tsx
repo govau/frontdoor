@@ -1,4 +1,4 @@
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import React, {useState} from 'react';
 import BuyerSearch from '../components/BuyerSearch';
 import Events from '../components/Events';
@@ -33,7 +33,7 @@ const BuyerPage: React.SFC<IBuyerPageProps>  = ({ data }) => {
 
   return (
     <DefaultLayout>
-      <div className="row background-light-grey">
+      <div className="row">
         <div className="col-sm-12">
           <BuyerSearch itemSelectedFunc={(product, panels) => {
             setSearchResult({
@@ -43,21 +43,21 @@ const BuyerPage: React.SFC<IBuyerPageProps>  = ({ data }) => {
           }} />
         </div>
       </div>
-      <div className="row">
-        <div className="col-sm-12">
+      <div className="row margin-top-1">
+        <div className="col-sm-12 background-white">
           {searchResult && <SearchResult data={data} panels={searchResult.panels} product={searchResult.product} />}
         </div>
       </div>
-      <div className="row">
-        <div className="col-sm-12">
+      <div className="row margin-top-1">
+        <div className="col-sm-6 background-white padding-1">
           <Events />
         </div>
       </div>
-      {data.allMarkdownRemark.edges.map((e) => (
+      {/* {data.allMarkdownRemark.edges.map((e) => (
         <p key={e.node.fields.slug}>
           <Link to={e.node.fields.slug}>{e.node.frontmatter.title}</Link>
         </p>
-      ))}
+      ))} */}
     </DefaultLayout>
   );
 };

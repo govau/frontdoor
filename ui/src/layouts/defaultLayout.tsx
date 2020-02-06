@@ -29,7 +29,7 @@ const DefaultLayout: React.FC = ({ children }) => (
       }
     `}
     render={(data: IStaticQueryProps) => (
-      <div className="au-grid">
+      <div className="au-body au-grid background-light-grey">
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[

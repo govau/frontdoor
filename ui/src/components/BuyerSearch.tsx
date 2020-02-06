@@ -76,11 +76,11 @@ const BuyerSearch: React.FC<IBuyerSearchProps> = ({ itemSelectedFunc }) => {
         top: 10,
         type: 'product',
       })
-      .then((r: any) => {
-        setProducts(r.data);
-        setLoading(false);
-        return r.data;
-      }, () => '');
+        .then((r: any) => {
+          setProducts(r.data);
+          setLoading(false);
+          return r.data;
+        }, () => '');
     }
     return Promise.resolve({});
   };
@@ -93,13 +93,13 @@ const BuyerSearch: React.FC<IBuyerSearchProps> = ({ itemSelectedFunc }) => {
         top: 10,
         type: 'panel',
       })
-      .then((r: any) => {
-        if (itemSelectedFunc) {
-          itemSelectedFunc(product, r.data);
-        }
-        setLoading(false);
-        return r.data;
-      });
+        .then((r: any) => {
+          if (itemSelectedFunc) {
+            itemSelectedFunc(product, r.data);
+          }
+          setLoading(false);
+          return r.data;
+        });
     }
     return Promise.resolve({});
   };
@@ -161,7 +161,7 @@ const BuyerSearch: React.FC<IBuyerSearchProps> = ({ itemSelectedFunc }) => {
         <div className="row margin-top-2">
           <div className="col-sm-12 text-align-center">
             <AUheading size="sm" level="1">{selectedAgency.text}</AUheading>
-            <p className="font-style-italics">{getTypeOfBodyName(selectedAgency)}</p>
+            <div className="font-style-italics">{getTypeOfBodyName(selectedAgency)}</div>
             <AUbutton
               onClick={() => clearAgency()}
               as="tertiary">
@@ -213,8 +213,10 @@ const BuyerSearch: React.FC<IBuyerSearchProps> = ({ itemSelectedFunc }) => {
           />
         </div>
       </div>
-      <div>
-        {loading && 'Searching...'}
+      <div className="row margin-top-1">
+        <div className="col-sm-8 col-sm-push-2">
+          {loading && 'Searching...'}
+        </div>
       </div>
     </>
   );

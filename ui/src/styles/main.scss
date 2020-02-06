@@ -67,15 +67,29 @@ body {
 .margin-bottom-1 { margin-bottom: 1rem; }
 .margin-bottom-2 { margin-bottom: 2rem; }
 
+.padding-0 { padding: 0rem; }
 .padding-1 { padding: 1rem; }
 .padding-2 { padding: 2rem; }
 
+.padding-left-0 { padding-left: 0rem; }
+.padding-left-1 { padding-left: 1rem; }
+.padding-left-2 { padding-left: 2rem; }
+
+.padding-top-1 { padding-top: 1rem; }
+.padding-top-2 { padding-top: 2rem; }
+
+.padding-bottom-1 { padding-bottom: 1rem; }
+.padding-bottom-2 { padding-bottom: 2rem; }
+
+.background-white { background-color: #FFFFFF; }
 .background-light-grey { background-color: #F5F5F5; }
 .background-dark-grey { background-color: #979797; }
 
 .background-blue { background-color: #00698F; }
 
+.text-align-left { text-align: left; }
 .text-align-center { text-align: center; }
+.text-align-right { text-align: right; }
 
 .text-colour-white { color: #FFFFFF; }
 
@@ -84,7 +98,7 @@ body {
 .border-radius-none { border-radius: 0px; }
 .border-top-width-1 { border-top-style: solid; border-top-width: 0.5px; }
 .border-top-width-1 { border-top-style: solid; border-top-width: 1px; }
-.border-light-grey { border-color: #F5F5F5;}
+.border-light-grey { border-color: #D8D8D8;}
 .border-dark-grey { border-color: #979797;}
 
 .font-style-italics { font-style: italic; }

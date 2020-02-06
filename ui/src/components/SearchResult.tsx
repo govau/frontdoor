@@ -1,5 +1,5 @@
-import { Link } from 'gatsby';
 import AUheading from '@gov.au/headings';
+import { Link } from 'gatsby';
 import React from 'react';
 import { ISearchResult } from './SearchField';
 

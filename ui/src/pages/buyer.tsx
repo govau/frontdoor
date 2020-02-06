@@ -29,7 +29,7 @@ interface IBuyerPageProps {
 }
 
 const BuyerPage: React.SFC<IBuyerPageProps>  = ({ data }) => {
-  const [searchResult, setSearchResult] = useState<{product: ISearchResult, panels: Array<ISearchResult>}|null>(null);
+  const [searchResult, setSearchResult] = useState<{product: ISearchResult, panels: ISearchResult[]}|null>(null);
 
   return (
     <DefaultLayout>
@@ -37,9 +37,9 @@ const BuyerPage: React.SFC<IBuyerPageProps>  = ({ data }) => {
         <div className="col-sm-12">
           <BuyerSearch itemSelectedFunc={(product, panels) => {
             setSearchResult({
+              panels,
               product,
-              panels
-            })
+            });
           }} />
         </div>
       </div>

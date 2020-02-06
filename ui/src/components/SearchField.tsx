@@ -18,9 +18,9 @@ const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc
   const inputEl = useRef<HTMLInputElement>(null);
   const [modalVisible, setModalVisibility] = useState(false);
   const [searchingVisible, setSearchingVisible] = useState(false);
-  const timer = useRef<any>(null);
+  let timer: any = null;
 
-  const search = (field?: HTMLInputElement): Promise<any> => {
+  const search = (field?: HTMLInputElement | null): Promise<any> => {
     setModalVisibility(true);
     if (field) {
       setSearchingVisible(true);
@@ -34,17 +34,20 @@ const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc
 
   const onKeyUp = (e: any) => {
     if (timer) {
-      clearTimeout(timer.current);
+      clearTimeout(timer);
     }
     switch (e.key) {
       case 'Escape':
         setModalVisibility(false);
+        break;
+      case 'Enter':
+        search(inputEl.current);
+        break;
       default:
-        timer.current = setTimeout(() => {
-          if (inputEl && inputEl.current) {
-            search(inputEl.current);
-          }
+        timer = setTimeout(() => {
+          search(inputEl.current);
         }, 1000);
+        break;
     }
   };
 
@@ -52,17 +55,10 @@ const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc
     <>
       <div className="row">
         <div className="col-sm-12">
-          <form
+          <div
             role="search"
             aria-label="field"
             className="au-search au-search--icon"
-            onSubmit={(e) => {
-              e.preventDefault();
-              if (inputEl && inputEl.current) {
-                search(inputEl.current);
-              }
-              return false;
-            }}
           >
             <label htmlFor="standard" className="au-search__label">{label}</label>
             <input
@@ -75,13 +71,12 @@ const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc
               onKeyUp={onKeyUp}
             />
             <div className="au-search__btn">
-              <button className="au-btn">
+              <button className="au-btn" onClick={() => search(inputEl.current)}>
                 <span className="au-search__submit-btn-text">Search</span>
               </button>
             </div>
-          </form>
+          </div>
         </div>
-
       </div>
       <div className="row">
         <div className="col-sm-12">
@@ -109,7 +104,6 @@ const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc
             </div>
           </div>
         </div>
-
       </div>
     </>
   );

@@ -82,6 +82,10 @@ body {
 .border-radius-left { border-radius: 4px 0px 0px 4px; }
 .border-radius-right { border-radius: 0px 4px 4px 0px; }
 .border-radius-none { border-radius: 0px; }
+.border-top-width-1 { border-top-style: solid; border-top-width: 0.5px; }
+.border-top-width-1 { border-top-style: solid; border-top-width: 1px; }
+.border-light-grey { border-color: #F5F5F5;}
+.border-dark-grey { border-color: #979797;}
 
 .font-style-italics { font-style: italic; }
 

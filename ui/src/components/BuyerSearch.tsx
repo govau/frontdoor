@@ -1,14 +1,13 @@
 import AUbutton from '@gov.au/buttons';
 import AUheading from '@gov.au/headings';
 import axios, { AxiosResponse } from 'axios';
-// import { navigate } from 'gatsby';
 import React, { useCallback, useEffect, useState } from 'react';
 import SearchField, { ISearchResult } from './SearchField';
 import ToggleButton, { IOption } from './ToggleButton';
 
 
 interface IBuyerSearchProps {
-  itemSelectedFunc?: (item: ISearchResult[]) => void;
+  itemSelectedFunc?: (product: ISearchResult, panels: ISearchResult[]) => void;
 }
 
 const BuyerSearch: React.FC<IBuyerSearchProps> = ({ itemSelectedFunc }) => {
@@ -16,10 +15,8 @@ const BuyerSearch: React.FC<IBuyerSearchProps> = ({ itemSelectedFunc }) => {
   const [loaded, setLoaded] = useState<boolean>(false);
   const [agencies, setAgencies] = useState<ISearchResult[]>([]);
   const [products, setProducts] = useState<ISearchResult[]>([]);
-  const [panels, setPanels] = useState<ISearchResult[]>([]);
-  // const [selectedProducts, setSelectedProducts] = useState<any>(null);
-  const [selectedAgency, setSelectedAgency] = useState<ISearchResult | null>();
   const [selectedAgencyType, setSelectedAgencyType] = useState<string>('federal');
+  const [selectedAgency, setSelectedAgency] = useState<ISearchResult | null>();
 
   const getSessionObject = (key: string): any => {
     if (sessionStorage) {
@@ -79,28 +76,26 @@ const BuyerSearch: React.FC<IBuyerSearchProps> = ({ itemSelectedFunc }) => {
         top: 10,
         type: 'product',
       })
-        .then((r: any) => {
-          setProducts(r.data);
-          setLoading(false);
-          return r.data;
-        }, () => '');
+      .then((r: any) => {
+        setProducts(r.data);
+        setLoading(false);
+        return r.data;
+      }, () => '');
     }
     return Promise.resolve({});
   };
 
-  const panelSearchCallback = (searchValue: string) => {
-    panels.splice(0, panels.length);
+  const panelSearchCallback = (product: ISearchResult) => {
     setLoading(true);
     if ((selectedAgency && selectedAgencyType === 'federal') || selectedAgencyType === 'state') {
       return searchCallback({
-        query: searchValue,
+        query: product.text,
         top: 10,
         type: 'panel',
       })
       .then((r: any) => {
-        setPanels(r.data);
         if (itemSelectedFunc) {
-          itemSelectedFunc(r.data);
+          itemSelectedFunc(product, r.data);
         }
         setLoading(false);
         return r.data;
@@ -115,7 +110,7 @@ const BuyerSearch: React.FC<IBuyerSearchProps> = ({ itemSelectedFunc }) => {
   };
 
   const productSelected = (product: ISearchResult) => {
-    panelSearchCallback(product.text);
+    panelSearchCallback(product);
   };
 
   const toggleSelected = (option: IOption) => {
@@ -218,15 +213,6 @@ const BuyerSearch: React.FC<IBuyerSearchProps> = ({ itemSelectedFunc }) => {
           />
         </div>
       </div>
-      {/* <div className="row margin-top-1">
-        <div className="col-sm-8 col-sm-push-2">
-          {panels.map((p) => (
-            <>
-              {p.text}
-            </>
-          ))}
-        </div>
-      </div> */}
       <div>
         {loading && 'Searching...'}
       </div>

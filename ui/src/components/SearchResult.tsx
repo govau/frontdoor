@@ -36,6 +36,7 @@ const SearchResult: React.SFC<ISearchResultProps> = ({ data, panels }) => {
         data.allMarkdownRemark.edges.map((e) => (
           e.node.frontmatter.panel === p.metadata.panel &&
           <div key={e.node.fields.slug}>
+            {p.metadata.mandatory ? 'Mandatory' : 'Optional'}
             <p>
               Use the <Link to={e.node.fields.slug}>{e.node.frontmatter.title}</Link>
             </p>

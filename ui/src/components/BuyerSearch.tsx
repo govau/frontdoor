@@ -74,7 +74,6 @@ const BuyerSearch: React.FC<IBuyerSearchProps> = ({ itemSelectedFunc }) => {
   const productSearchCallback = (searchValue: string) => {
     setLoading(true);
     if ((selectedAgency && selectedAgencyType === 'federal') || selectedAgencyType === 'state') {
-      // const filters = selectedAgencyType === 'federal' ? selectedAgency.metadata.filter((i: any) => i.name === 'typeofbody') : [];
       return searchCallback({
         query: searchValue,
         top: 10,
@@ -93,7 +92,6 @@ const BuyerSearch: React.FC<IBuyerSearchProps> = ({ itemSelectedFunc }) => {
     panels.splice(0, panels.length);
     setLoading(true);
     if ((selectedAgency && selectedAgencyType === 'federal') || selectedAgencyType === 'state') {
-      // const filters = selectedAgencyType === 'federal' ? selectedAgency.metadata.filter((i: any) => i.name === 'typeofbody') : [];
       return searchCallback({
         query: searchValue,
         top: 10,

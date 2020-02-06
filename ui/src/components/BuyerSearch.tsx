@@ -3,17 +3,22 @@ import AUheading from '@gov.au/headings';
 import axios, { AxiosResponse } from 'axios';
 // import { navigate } from 'gatsby';
 import React, { useCallback, useEffect, useState } from 'react';
-import SearchField from './SearchField';
+import SearchField, { ISearchResult } from './SearchField';
 import ToggleButton, { IOption } from './ToggleButton';
 
-const BuyerSearch: React.FC = () => {
+
+interface IBuyerSearchProps {
+  itemSelectedFunc?: (item: ISearchResult[]) => void;
+}
+
+const BuyerSearch: React.FC<IBuyerSearchProps> = ({ itemSelectedFunc }) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [loaded, setLoaded] = useState<boolean>(false);
-  const [agencies] = useState<any>([]);
-  const [products] = useState<any>([]);
-  const [panels] = useState<any>([]);
+  const [agencies, setAgencies] = useState<ISearchResult[]>([]);
+  const [products, setProducts] = useState<ISearchResult[]>([]);
+  const [panels, setPanels] = useState<ISearchResult[]>([]);
   // const [selectedProducts, setSelectedProducts] = useState<any>(null);
-  const [selectedAgency, setSelectedAgency] = useState<any>(null);
+  const [selectedAgency, setSelectedAgency] = useState<ISearchResult | null>();
   const [selectedAgencyType, setSelectedAgencyType] = useState<string>('federal');
 
   const getSessionObject = (key: string): any => {
@@ -53,38 +58,30 @@ const BuyerSearch: React.FC = () => {
   };
 
   const agencySearchCallback = useCallback((searchValue) => {
-    agencies.splice(0, agencies.length);
     products.splice(0, products.length);
     setLoading(true);
     return searchCallback({
-      question: searchValue,
-      strictFilters: [{
-        name: 'result',
-        value: 'agency',
-      }],
+      query: searchValue,
       top: 10,
+      type: 'agency',
     }).then((r: any) => {
-      agencies.push(r.data);
+      setAgencies(r.data);
       setLoading(false);
       return r;
     }, () => '');
   }, [agencies]);
 
   const productSearchCallback = (searchValue: string) => {
-    products.splice(0, products.length);
     setLoading(true);
     if ((selectedAgency && selectedAgencyType === 'federal') || selectedAgencyType === 'state') {
       // const filters = selectedAgencyType === 'federal' ? selectedAgency.metadata.filter((i: any) => i.name === 'typeofbody') : [];
       return searchCallback({
-        question: searchValue,
-        strictFilters: [{
-          name: 'result',
-          value: 'product',
-        }],
+        query: searchValue,
         top: 10,
+        type: 'product',
       })
         .then((r: any) => {
-          products.push(r.data);
+          setProducts(r.data);
           setLoading(false);
           return r.data;
         }, () => '');
@@ -98,35 +95,29 @@ const BuyerSearch: React.FC = () => {
     if ((selectedAgency && selectedAgencyType === 'federal') || selectedAgencyType === 'state') {
       // const filters = selectedAgencyType === 'federal' ? selectedAgency.metadata.filter((i: any) => i.name === 'typeofbody') : [];
       return searchCallback({
-        question: searchValue,
-        scoreThreshold: 90,
-        strictFilters: [{
-          name: 'result',
-          value: 'panel',
-        }],
+        query: searchValue,
         top: 10,
+        type: 'panel',
       })
       .then((r: any) => {
-        panels.push(r.data.answers);
+        setPanels(r.data);
+        if (itemSelectedFunc) {
+          itemSelectedFunc(r.data);
+        }
         setLoading(false);
         return r.data;
-      }, () => '');
+      });
     }
     return Promise.resolve({});
   };
 
-  const agencySelected = (a: any) => {
+  const agencySelected = (a: ISearchResult) => {
     setSelectedAgency(a);
     setSessionObject('selectedAgency', a);
   };
 
-  const productSelected = (product: any) => {
-    // setSelectedAgency(a);
-    // navigate(`/buyer/${p.answer}`);
-    // product.answers.map((p: any) => {
-    //   navigate(`/buyer/${p.answer}`);
-    // });
-    panelSearchCallback(product.answer);
+  const productSelected = (product: ISearchResult) => {
+    panelSearchCallback(product.text);
   };
 
   const toggleSelected = (option: IOption) => {
@@ -135,17 +126,17 @@ const BuyerSearch: React.FC = () => {
     clearAgency();
   };
 
-  const getTypeOfBodyName = (agency: any): string => {
-    const typeOfBody = agency.metadata.filter((i: any) => i.name === 'typeofbody');
+  const getTypeOfBodyName = (agency: ISearchResult): string => {
+    const typeOfBody = agency.metadata.typeofbody;
 
-    if (typeOfBody && typeOfBody.length > 0) {
-      switch (typeOfBody[0].value) {
+    if (typeOfBody) {
+      switch (typeOfBody) {
         case 'cce':
           return 'Commonwealth Corporate Entity';
         case 'nce':
           return 'Non-corporate Commonwealth Entity';
         default:
-          return `${typeOfBody[0].value} unknown`;
+          return `${typeOfBody} unknown`;
       }
     }
     return 'agency is missing type of body';
@@ -176,41 +167,41 @@ const BuyerSearch: React.FC = () => {
       {selectedAgency ? (
         <div className="row margin-top-2">
           <div className="col-sm-12 text-align-center">
-            <AUheading size="sm" level="1">{selectedAgency.answer}</AUheading>
+            <AUheading size="sm" level="1">{selectedAgency.text}</AUheading>
             <p className="font-style-italics">{getTypeOfBodyName(selectedAgency)}</p>
             <AUbutton
               onClick={() => clearAgency()}
               as="tertiary">
-                Change organisation
+              Change organisation
             </AUbutton>
           </div>
         </div>
       ) : (
-        <>
-          {selectedAgencyType === 'federal' && (
-            <>
-              <div className="row margin-top-2">
-                <div className="col-sm-8 col-sm-push-2 text-align-center">
-                  <AUheading size="lg" level="1" className="margin-bottom-1">
-                    Which federal government organisation do you work for?
+          <>
+            {selectedAgencyType === 'federal' && (
+              <>
+                <div className="row margin-top-2">
+                  <div className="col-sm-8 col-sm-push-2 text-align-center">
+                    <AUheading size="lg" level="1" className="margin-bottom-1">
+                      Which federal government organisation do you work for?
                   </AUheading>
-                  Some DTA panels and arrangements are mandatory for non-corporate Commonwealth entities.
+                    Some DTA panels and arrangements are mandatory for non-corporate Commonwealth entities.
                 </div>
-              </div>
-              <div className="row margin-top-1">
-                <div className="col-sm-8 col-sm-push-2">
-                  <SearchField
-                    searchFunc={agencySearchCallback}
-                    itemSelectedFunc={agencySelected}
-                    label="Which government agency do you work for?"
-                    list={agencies}
-                  />
                 </div>
-              </div>
-            </>
-          )}
-        </>
-      )}
+                <div className="row margin-top-1">
+                  <div className="col-sm-8 col-sm-push-2">
+                    <SearchField
+                      searchFunc={agencySearchCallback}
+                      itemSelectedFunc={agencySelected}
+                      label="Which government agency do you work for?"
+                      list={agencies}
+                    />
+                  </div>
+                </div>
+              </>
+            )}
+          </>
+        )}
       <div className="row margin-top-2">
         <div className="col-sm-8 col-sm-push-2 text-align-center">
           <AUheading size="lg" level="1" className="margin-bottom-1">
@@ -229,18 +220,15 @@ const BuyerSearch: React.FC = () => {
           />
         </div>
       </div>
-      <div className="row margin-top-1">
+      {/* <div className="row margin-top-1">
         <div className="col-sm-8 col-sm-push-2">
-          {panels.map((a: any) => (
+          {panels.map((p) => (
             <>
-              {a.map((p: any) => (
-                p.answer
-              ))}
+              {p.text}
             </>
           ))}
-          {/* {JSON.stringify(panels)} */}
         </div>
-      </div>
+      </div> */}
       <div>
         {loading && 'Searching...'}
       </div>

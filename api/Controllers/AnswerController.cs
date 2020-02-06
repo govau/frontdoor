@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Azure.CognitiveServices.Knowledge.QnAMaker;
 using Microsoft.Azure.CognitiveServices.Knowledge.QnAMaker.Models;
+using Dta.Frontdoor.Api.Models;
 
 namespace Dta.Frontdoor.Api.Controllers
 {
@@ -21,16 +22,56 @@ namespace Dta.Frontdoor.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<QnASearchResultList> Post(QueryDTO data)
+        public async Task<IEnumerable<SearchResult>> Post(SearchQuery searchQuery)
         {
             var endpointKey = _configuration["QnAMakerEndpointKey"];
             var endpoint = Environment.GetEnvironmentVariable("QnAMakerEndpoint");
             var kbId = Environment.GetEnvironmentVariable("QnAMakerKbId");
-            var client = new QnAMakerRuntimeClient(new EndpointKeyServiceClientCredentials(endpointKey)) {
+            var client = new QnAMakerRuntimeClient(new EndpointKeyServiceClientCredentials(endpointKey))
+            {
                 RuntimeEndpoint = endpoint
             };
-            var response = await client.Runtime.GenerateAnswerAsync(kbId, data);
-            return response;
+            var queryDto = new QueryDTO()
+            {
+                Question = searchQuery.Query,
+                Top = searchQuery.Top,
+                StrictFilters = new List<MetadataDTO>()
+            };
+
+            switch (searchQuery.Type)
+            {
+                case "agency":
+                    queryDto.StrictFilters.Add(new MetadataDTO("result", "agency"));
+                    break;
+                case "product":
+                    queryDto.StrictFilters.Add(new MetadataDTO("result", "product"));
+                    break;
+                case "panel":
+                    queryDto.ScoreThreshold = 90;
+                    queryDto.StrictFilters.Add(new MetadataDTO("result", "panel"));
+                    break;
+                default:
+                    throw new Exception("Search type required");
+            }
+
+            var response = await client.Runtime.GenerateAnswerAsync(kbId, queryDto);
+
+            var result = new List<SearchResult>();
+            foreach (var a in response.Answers)
+            {
+                var searchResult = new SearchResult()
+                {
+                    Text = a.Answer,
+                    Metadata = new Dictionary<string, string>()
+                };
+                searchResult.Metadata = new Dictionary<string, string>();
+                foreach (var m in a.Metadata)
+                {
+                    searchResult.Metadata.Add(m.Name, m.Value);
+                }
+                result.Add(searchResult);
+            }
+            return result;
         }
     }
 }

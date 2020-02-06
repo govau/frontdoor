@@ -44,6 +44,7 @@ const ToggleButton: React.FC<IToggleButtonProps> = ({optionSelectedFunc, options
         <div className="col-xs-12">
           {options.map((o, i, a) => (
             <AUbutton
+              key={i}
               className={getButtonStyle(i, a)}
               onClick={() => selected(o)}
               as={o.key === selectedOption?.key ? 'primary' : 'secondary'}>

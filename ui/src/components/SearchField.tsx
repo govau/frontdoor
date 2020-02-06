@@ -1,12 +1,16 @@
 import AUbutton from '@gov.au/buttons';
 import React, { useRef, useState } from 'react';
 
+export interface ISearchResult {
+  text: string;
+  metadata: any;
+}
 
 interface ISearchFieldProps {
   searchFunc: (text: string) => Promise<any>;
   clearFunc?: () => void;
   itemSelectedFunc?: (item: any) => void;
-  list?: any[];
+  list: ISearchResult[];
   label: string;
 }
 
@@ -86,22 +90,20 @@ const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc
             <div className={`search-field-float-box ${modalVisible ? 'search-field-float-box-shown' : ''}`}>
               {searchingVisible ?
                 <>Searching...</> : (
-                  list && list.map((l: any) => (
-                    l.answers && l.answers.map((a: any) => (
-                      <div>
-                        <AUbutton
-                          block
-                          onClick={() => {
-                            if (itemSelectedFunc) {
-                              itemSelectedFunc(a);
-                            }
-                            setModalVisibility(false);
-                          }}
-                          as="tertiary">
-                          {a.answer}
-                        </AUbutton>
-                      </div>
-                    ))
+                  list && list.map((l, i) => (
+                    <div key={i}>
+                      <AUbutton
+                        block
+                        onClick={() => {
+                          if (itemSelectedFunc) {
+                            itemSelectedFunc(l);
+                          }
+                          setModalVisibility(false);
+                        }}
+                        as="tertiary">
+                        {l.text}
+                      </AUbutton>
+                    </div>
                   ))
                 )}
             </div>

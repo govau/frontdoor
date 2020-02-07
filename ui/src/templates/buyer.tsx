@@ -28,10 +28,18 @@ interface IBuyerTemplateProps {
 
 const BuyerTemplate: React.SFC<IBuyerTemplateProps> = ({ data }) => (
   <DefaultLayout>
-    <BuyerSearch />
-    <h1>{data.markdownRemark.frontmatter.title}</h1>
-    {/* eslint-disable-next-line react/no-danger */}
-    <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+    <div className="row">
+      <div className="col-sm-12">
+        <BuyerSearch />
+      </div>
+    </div>
+    <div className="row">
+      <div className="col-sm-12">
+        <h1>{data.markdownRemark.frontmatter.title}</h1>
+        {/* eslint-disable-next-line react/no-danger */}
+        <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+      </div>
+    </div>
   </DefaultLayout>
 );
 

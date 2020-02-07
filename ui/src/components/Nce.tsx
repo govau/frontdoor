@@ -18,7 +18,7 @@ const Nce: React.SFC = () => {
           If you choose a participating vendor after a proper approach-to-market process, you must use the relevant whole-of-government arrangement.
         </div>
         <div className="col-sm-5 text-align-right">
-          <Link to="#">Find out more about whole-of-government arrangements</Link>
+          <Link to="#">[TODO]Find out more about whole-of-government arrangements</Link>
         </div>
       </div>
       <div className="row margin-top-1">
@@ -29,7 +29,7 @@ const Nce: React.SFC = () => {
           Non-corporate Commonwealth entities must comply with four mandatory policies when using DTA panels.
         </div>
         <div className="col-sm-5 text-align-right">
-          <Link to="#">Find out more about sourcing policies</Link>
+          <Link to="#">[TODO]Find out more about sourcing policies</Link>
         </div>
       </div>
     </>

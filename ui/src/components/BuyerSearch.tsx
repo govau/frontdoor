@@ -2,21 +2,19 @@ import AUbutton from '@gov.au/buttons';
 import AUheading from '@gov.au/headings';
 import axios, { AxiosResponse } from 'axios';
 import React, { useCallback, useEffect, useState } from 'react';
+import SearchResult from '../components/SearchResult';
 import SearchField, { ISearchResult } from './SearchField';
 import ToggleButton, { IOption } from './ToggleButton';
 
-
-interface IBuyerSearchProps {
-  itemSelectedFunc?: (agency: ISearchResult, product: ISearchResult, panels: ISearchResult[]) => void;
-}
-
-const BuyerSearch: React.FC<IBuyerSearchProps> = ({ itemSelectedFunc }) => {
+const BuyerSearch: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [loaded, setLoaded] = useState<boolean>(false);
   const [agencies, setAgencies] = useState<ISearchResult[]>([]);
   const [products, setProducts] = useState<ISearchResult[]>([]);
   const [selectedAgencyType, setSelectedAgencyType] = useState<string>('federal');
   const [selectedAgency, setSelectedAgency] = useState<ISearchResult | null>();
+  const [selectedProduct, setSelectedProduct] = useState<ISearchResult | null>();
+  const [panels, setPanels] = useState<ISearchResult[]>();
 
   const getSessionObject = (key: string): any => {
     if (sessionStorage) {
@@ -94,9 +92,7 @@ const BuyerSearch: React.FC<IBuyerSearchProps> = ({ itemSelectedFunc }) => {
         type: 'panel',
       })
         .then((r: any) => {
-          if (itemSelectedFunc && selectedAgency) {
-            itemSelectedFunc(selectedAgency, product, r.data);
-          }
+          setPanels(r.data);
           setLoading(false);
           return r.data;
         });
@@ -111,6 +107,7 @@ const BuyerSearch: React.FC<IBuyerSearchProps> = ({ itemSelectedFunc }) => {
 
   const productSelected = (product: ISearchResult) => {
     panelSearchCallback(product);
+    setSelectedProduct(product);
   };
 
   const toggleSelected = (option: IOption) => {
@@ -218,6 +215,16 @@ const BuyerSearch: React.FC<IBuyerSearchProps> = ({ itemSelectedFunc }) => {
           {loading && 'Searching...'}
         </div>
       </div>
+      {selectedAgency && panels && selectedProduct && (
+      <div className="row margin-top-1">
+        <div className="col-sm-12 background-white border-width-1 border-light-grey">
+            <SearchResult
+              agency={selectedAgency}
+              panels={panels}
+              product={selectedProduct} />
+        </div>
+      </div>
+      )}
     </>
   );
 };

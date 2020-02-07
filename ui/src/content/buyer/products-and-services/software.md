@@ -1,6 +1,6 @@
 ---
 layout: buyer
-title: 'Software'
+title: 'Software Marketplace'
 summary: 'Buy software'
 panel: 'software'
 ---

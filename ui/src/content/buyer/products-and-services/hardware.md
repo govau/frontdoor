@@ -1,6 +1,6 @@
 ---
 layout: buyer
-title: 'Hardware'
+title: 'Hardware Marketplace'
 summary: 'Buy some hardware'
 panel: 'hardware'
 ---

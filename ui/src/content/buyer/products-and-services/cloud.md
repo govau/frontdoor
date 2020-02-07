@@ -1,6 +1,6 @@
 ---
 layout: buyer
-title: 'Cloud'
+title: 'Cloud Marketplace'
 summary: 'For sourcing cloud products and associated services.'
 panel: 'cloud'
 ---

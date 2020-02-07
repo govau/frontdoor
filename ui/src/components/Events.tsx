@@ -27,7 +27,7 @@ const Events: React.FC = () => {
   });
 
   return (
-    <>
+    <div className="padding-1">
       {loading && (
         <div>
           Loading...
@@ -64,7 +64,7 @@ const Events: React.FC = () => {
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 

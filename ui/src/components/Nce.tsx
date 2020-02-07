@@ -15,12 +15,10 @@ const Nce: React.SFC = () => {
           <AUheading size="sm" level="3">
             Contracting through whole of government arrangements
           </AUheading>
-          <p>
-            If you choose a participating vendor after a proper approach-to-market process, you must use the relevant whole-of-government arrangement.
-          </p>
+          If you choose a participating vendor after a proper approach-to-market process, you must use the relevant whole-of-government arrangement.
         </div>
         <div className="col-sm-5 text-align-right">
-        <Link to="#">Find out more about whole-of-government arrangements</Link>
+          <Link to="#">Find out more about whole-of-government arrangements</Link>
         </div>
       </div>
       <div className="row margin-top-1">
@@ -28,9 +26,7 @@ const Nce: React.SFC = () => {
           <AUheading size="sm" level="3">
             Sourcing policies for DTA panels
           </AUheading>
-          <p>
-            Non-corporate Commonwealth entities must comply with four mandatory policies when using DTA panels.
-          </p>
+          Non-corporate Commonwealth entities must comply with four mandatory policies when using DTA panels.
         </div>
         <div className="col-sm-5 text-align-right">
           <Link to="#">Find out more about sourcing policies</Link>
@@ -41,6 +37,3 @@ const Nce: React.SFC = () => {
 };
 
 export default Nce;
-
-
-

@@ -45,7 +45,7 @@ const BuyerPage: React.SFC<IBuyerPageProps>  = ({ data }) => {
         </div>
       </div>
       <div className="row margin-top-1">
-        <div className="col-sm-12 background-white">
+        <div className="col-sm-12 background-white border-width-1 border-light-grey">
           {searchResult && (
             <SearchResult
               data={data}
@@ -56,7 +56,7 @@ const BuyerPage: React.SFC<IBuyerPageProps>  = ({ data }) => {
         </div>
       </div>
       <div className="row margin-top-1">
-        <div className="col-sm-6 background-white padding-1">
+        <div className="col-sm-6 background-white border-width-1 border-light-grey">
           <Events />
         </div>
       </div>

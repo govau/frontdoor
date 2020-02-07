@@ -87,17 +87,36 @@ body {
 
 .background-blue { background-color: #00698F; }
 
+.badge {
+    border-radius: 16px;
+    padding: 0.3rem 1rem;
+    font-size: 0.8rem;
+}
+.badge-blue {
+    background-color: #00698F;
+    color: #FFFFFF;
+}
+.badge-red {
+    background-color: #CC0000;
+    color: #FFFFFF;
+}
+
 .text-align-left { text-align: left; }
 .text-align-center { text-align: center; }
 .text-align-right { text-align: right; }
 
 .text-colour-white { color: #FFFFFF; }
 
+.border-radius-1 { border-radius: 4px 4px 4px 4px; }
+.border-radius-2 { border-radius: 8px 8px 8px 8px; }
 .border-radius-left { border-radius: 4px 0px 0px 4px; }
 .border-radius-right { border-radius: 0px 4px 4px 0px; }
 .border-radius-none { border-radius: 0px; }
+
+.border-width-1 { border-style: solid; border-width: 1px; }
 .border-top-width-1 { border-top-style: solid; border-top-width: 0.5px; }
-.border-top-width-1 { border-top-style: solid; border-top-width: 1px; }
+.border-top-width-2 { border-top-style: solid; border-top-width: 1px; }
+
 .border-light-grey { border-color: #D8D8D8;}
 .border-dark-grey { border-color: #979797;}
 

@@ -29,14 +29,15 @@ interface IBuyerPageProps {
 }
 
 const BuyerPage: React.SFC<IBuyerPageProps>  = ({ data }) => {
-  const [searchResult, setSearchResult] = useState<{product: ISearchResult, panels: ISearchResult[]}|null>(null);
+  const [searchResult, setSearchResult] = useState<{agency: ISearchResult | null, product: ISearchResult, panels: ISearchResult[]}|null>(null);
 
   return (
     <DefaultLayout>
       <div className="row">
         <div className="col-sm-12">
-          <BuyerSearch itemSelectedFunc={(product, panels) => {
+          <BuyerSearch itemSelectedFunc={(agency, product, panels) => {
             setSearchResult({
+              agency,
               panels,
               product,
             });
@@ -45,7 +46,13 @@ const BuyerPage: React.SFC<IBuyerPageProps>  = ({ data }) => {
       </div>
       <div className="row margin-top-1">
         <div className="col-sm-12 background-white">
-          {searchResult && <SearchResult data={data} panels={searchResult.panels} product={searchResult.product} />}
+          {searchResult && (
+            <SearchResult
+              data={data}
+              agency={searchResult.agency}
+              panels={searchResult.panels}
+              product={searchResult.product} />
+          )}
         </div>
       </div>
       <div className="row margin-top-1">

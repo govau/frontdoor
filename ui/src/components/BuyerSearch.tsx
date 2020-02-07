@@ -7,7 +7,7 @@ import ToggleButton, { IOption } from './ToggleButton';
 
 
 interface IBuyerSearchProps {
-  itemSelectedFunc?: (product: ISearchResult, panels: ISearchResult[]) => void;
+  itemSelectedFunc?: (agency: ISearchResult, product: ISearchResult, panels: ISearchResult[]) => void;
 }
 
 const BuyerSearch: React.FC<IBuyerSearchProps> = ({ itemSelectedFunc }) => {
@@ -94,8 +94,8 @@ const BuyerSearch: React.FC<IBuyerSearchProps> = ({ itemSelectedFunc }) => {
         type: 'panel',
       })
         .then((r: any) => {
-          if (itemSelectedFunc) {
-            itemSelectedFunc(product, r.data);
+          if (itemSelectedFunc && selectedAgency) {
+            itemSelectedFunc(selectedAgency, product, r.data);
           }
           setLoading(false);
           return r.data;

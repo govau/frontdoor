@@ -1,10 +1,12 @@
 import AUheading from '@gov.au/headings';
 import { Link } from 'gatsby';
 import React from 'react';
+import Nce from './Nce';
 import { ISearchResult } from './SearchField';
 
 
 interface ISearchResultProps {
+  agency: ISearchResult | null;
   panels: ISearchResult[];
   product: ISearchResult | null;
   data: {
@@ -28,7 +30,7 @@ interface ISearchResultProps {
   };
 }
 
-const SearchResult: React.SFC<ISearchResultProps> = ({ data, panels, product }) => {
+const SearchResult: React.SFC<ISearchResultProps> = ({ data, agency, panels, product }) => {
   return (
     <div className="margin-1">
       <div className="row padding-2">
@@ -60,6 +62,13 @@ const SearchResult: React.SFC<ISearchResultProps> = ({ data, panels, product }) 
           </div>
         ))
       ))}
+      {agency && agency.metadata.typeofbody === 'nce' && (
+        <div className="row border-top-width-1 border-light-grey padding-1">
+          <div className="col-sm-12">
+            <Nce />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

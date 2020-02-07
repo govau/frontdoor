@@ -1,4 +1,3 @@
-import AUcard, { AUcardInner } from '@gov.au/card';
 import AUheading from '@gov.au/headings';
 import { Link } from 'gatsby';
 import * as React from 'react';
@@ -9,40 +8,36 @@ import '../styles/main.scss';
 
 const Index = () => (
   <DefaultLayout>
-    <div className="row">
+    <div className="row margin-top-2">
       <div className="col-xs-12 text-align-center">
         <AUheading size="xl" level="1">
           Are you a buyer or a seller?
         </AUheading>
-        <p>
+        <div>
           We can help you find out where to source or provide digital products and services for government.
-        </p>
+        </div>
       </div>
     </div>
-    <div className="row margin-1">
-      <div className="col-xs-6">
-        <AUcard>
-          <AUcardInner>
+    <div className="row margin-top-2 margin-bottom-2">
+      <div className="col-sm-5 background-white border-width-1 border-light-grey margin-1">
+        <div className="padding-2 height-7">  
+          <AUheading size="xxxl" level="2">
             <Link to="/buyer">
-              <AUheading size="xxxl" level="2">
-                Buyer
-              </AUheading>
-            </Link>
-            <div>Source or purchase products and services for government.</div>
-          </AUcardInner>
-        </AUcard>
+              Buyer
+        </Link>
+          </AUheading>
+          <div>Source or purchase products and services for government.</div>
+        </div>
       </div>
-      <div className="col-xs-6">
-        <AUcard>
-          <AUcardInner>
-            <Link to="/seller">
-              <AUheading size="xxxl" level="2">
-                Seller
-              </AUheading>
-            </Link>
-            <div>Sell products and services to government.</div>
-          </AUcardInner>
-        </AUcard>
+      <div className="col-sm-5 background-white border-width-1 border-light-grey margin-1">
+        <div className="padding-2 height-7">
+          <Link to="/seller">
+            <AUheading size="xxxl" level="2">
+              Seller
+            </AUheading>
+          </Link>
+          <div>Sell products and services to government.</div>
+        </div>
       </div>
     </div>
   </DefaultLayout>

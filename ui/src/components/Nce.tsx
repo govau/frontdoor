@@ -15,7 +15,7 @@ const Nce: React.SFC = () => {
           <AUheading size="sm" level="3">
             Contracting through whole of government arrangements
           </AUheading>
-          If you choose a participating vendor after a proper approach-to-market process, you must use the relevant whole-of-government arrangement.
+          If you choose a participating vendor after a formal approach-to-market process, you must use the relevant whole-of-government arrangement.
         </div>
         <div className="col-sm-5 text-align-right">
           <Link to="#">[TODO]Find out more about whole-of-government arrangements</Link>

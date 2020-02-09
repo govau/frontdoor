@@ -1,4 +1,3 @@
-import AUdirectionLink from '@gov.au/direction-links';
 import AUheading from '@gov.au/headings';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
@@ -62,11 +61,14 @@ const CommonInterestGroup: React.SFC = () => {
               </div>
             </div>
           </div>
-        ))
-        }
+        ))}
         <div className="row border-top-width-1 border-light-grey padding-top-1">
           <div className="col-sm-12 text-align-right">
-            <AUdirectionLink to="#" text="[TODO]See more groups"></AUdirectionLink>
+            <Link to="#" className="au-direction-link">
+              <span className="au-direction-link__arrow">
+                [TODO]See more groups
+              </span>
+            </Link>
           </div>
         </div>
       </div>

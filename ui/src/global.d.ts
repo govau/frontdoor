@@ -1,5 +1,6 @@
 declare module '@gov.au/buttons';
 declare module '@gov.au/card';
+declare module '@gov.au/direction-links';
 declare module '@gov.au/footer';
 declare module '@gov.au/header';
 declare module '@gov.au/headings';

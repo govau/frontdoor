@@ -23,7 +23,7 @@ interface IStaticQueryProps {
       },
     ],
 
-};
+  };
 }
 
 interface ISearchResultProps {
@@ -55,14 +55,14 @@ const SearchResult: React.SFC<ISearchResultProps> = ({ agency, panels, product }
 
   return (
     <>
-    <div className="margin-2">
-      <div className="row padding-2">
-        <div className="col-sm-12 text-align-center">
-          <AUheading size="lg" level="2">{product && product.text}</AUheading>
-          {product && product.metadata.summary}
+      <div className="margin-2">
+        <div className="row padding-2">
+          <div className="col-sm-12 text-align-center">
+            <AUheading size="lg" level="2">{product && product.text}</AUheading>
+            {product && product.metadata.summary}
+          </div>
         </div>
-      </div>
-      {panels.map((p) => (
+        {panels.map((p) => (
           data.allMarkdownRemark.edges.map((e) => (
             e.node.frontmatter.panel === p.metadata.panel &&
             <div key={e.node.fields.slug} className="row border-top-width-1 border-light-grey padding-top-2 padding-bottom-2">
@@ -86,22 +86,25 @@ const SearchResult: React.SFC<ISearchResultProps> = ({ agency, panels, product }
                 </div>
               </div>
               <div className="col-sm-4 text-align-right">
-                <Link to={e.node.fields.slug}>Find out more about the {e.node.frontmatter.title}</Link>
+                <Link to={e.node.fields.slug} className="au-direction-link">
+                  <span className="au-direction-link__arrow">
+                    Find out more about the {e.node.frontmatter.title}
+                  </span>
+                </Link>
               </div>
             </div>
           ))
-        ))
-      }
-      {agency && agency.metadata.typeofbody === 'nce' && (
-        <div className="row border-top-width-1 border-light-grey padding-top-2 padding-bottom-2">
-          <div className="col-sm-12">
-            <Nce />
+        ))}
+        {agency && agency.metadata.typeofbody === 'nce' && (
+          <div className="row border-top-width-1 border-light-grey padding-top-2 padding-bottom-2">
+            <div className="col-sm-12">
+              <Nce />
+            </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
 
-    <div className="row border-top-width-1 border-light-grey padding-2 background-light-grey">
+      <div className="row border-top-width-1 border-light-grey padding-2 background-light-grey">
         <div className="col-sm-12">
           <CannotFind />
         </div>

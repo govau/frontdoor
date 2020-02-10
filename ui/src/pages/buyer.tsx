@@ -31,12 +31,6 @@ const BuyerPage: React.SFC = () => {
           <StartSouring />
         </div>
       </div>
-      <div className="row margin-top-2">
-        <div className="col-sm-12">
-
-            <Feedback />
-        </div>
-      </div>
     </DefaultLayout>
   );
 };

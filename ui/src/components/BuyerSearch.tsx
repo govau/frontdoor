@@ -1,7 +1,7 @@
 import AUbutton from '@gov.au/buttons';
 import AUheading from '@gov.au/headings';
 import axios, { AxiosResponse } from 'axios';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SearchResult from '../components/SearchResult';
 import SearchField, { ISearchResult } from './SearchField';
 import ToggleButton, { IOption } from './ToggleButton';
@@ -45,59 +45,57 @@ const BuyerSearch: React.FC = () => {
     }
   });
 
-  const searchCallback = (search: any): Promise<AxiosResponse<any>> => {
+  const searchCallback = (search: any): Promise<AxiosResponse<ISearchResult[]>> => {
     if (search) {
       return axios.post('/api/search', search);
     }
     return Promise.reject();
   };
 
-  const agencySearchCallback = useCallback((searchValue) => {
+  const agencySearchCallback = (searchValue: string): Promise<ISearchResult[]> => {
     products.splice(0, products.length);
     setLoading(true);
     return searchCallback({
       query: searchValue,
       top: 10,
       type: 'agency',
-    }).then((r: any) => {
+    }).then((r) => {
       setAgencies(r.data);
       setLoading(false);
-      return r;
-    }, () => '');
-  }, [agencies]);
+      return r.data;
+    });
+  };
 
-  const productSearchCallback = (searchValue: string) => {
+  const productSearchCallback = (searchValue: string): Promise<ISearchResult[]> => {
     setLoading(true);
     if ((selectedAgency && selectedAgencyType === 'federal') || selectedAgencyType === 'state') {
       return searchCallback({
         query: searchValue,
         top: 10,
         type: 'product',
-      })
-        .then((r: any) => {
-          setProducts(r.data);
-          setLoading(false);
-          return r.data;
-        }, () => '');
+      }).then((r) => {
+        setProducts(r.data);
+        setLoading(false);
+        return r.data;
+      });
     }
-    return Promise.resolve({});
+    return Promise.resolve([]);
   };
 
-  const panelSearchCallback = (product: ISearchResult) => {
+  const panelSearchCallback = (product: ISearchResult): Promise<ISearchResult[]> => {
     setLoading(true);
     if ((selectedAgency && selectedAgencyType === 'federal') || selectedAgencyType === 'state') {
       return searchCallback({
         query: product.text,
         top: 10,
         type: 'panel',
-      })
-        .then((r: any) => {
-          setPanels(r.data);
-          setLoading(false);
-          return r.data;
-        });
+      }).then((r) => {
+        setPanels(r.data);
+        setLoading(false);
+        return r.data;
+      });
     }
-    return Promise.resolve({});
+    return Promise.resolve([]);
   };
 
   const agencySelected = (a: ISearchResult) => {

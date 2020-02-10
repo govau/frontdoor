@@ -144,8 +144,8 @@ body {
 .font-weight-9 { font-weight: 900; }
 
 .modal {
-    background-color: rgb(255,255,255); 
-    background-color: rgba(255,255,255,0); 
+    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255,0);
     width: 100%;
     height: 100%;
     position: fixed;
@@ -157,12 +157,16 @@ body {
 .modal-visible {
     visibility: visible;
 }
+.z-index-1 { z-index: 1000; }
+.z-index-2 { z-index: 2000; }
+.z-index-3 { z-index: 3000; }
+.z-index-4 { z-index: 4000; }
+.z-index-5 { z-index: 5000; }
 
 .search-field {
     .search-field-float-box {
         position: absolute;
         float: left;
-        z-index: 100;
         background: rgb(255, 255, 255);
         visibility: hidden;
         width: 100%;

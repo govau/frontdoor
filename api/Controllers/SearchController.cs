@@ -67,6 +67,9 @@ namespace Dta.Frontdoor.Api.Controllers
             var result = new List<SearchResult>();
             foreach (var a in response.Answers)
             {
+                if (a.Score == 0) {
+                    continue;
+                }
                 var searchResult = new SearchResult()
                 {
                     Text = a.Answer,

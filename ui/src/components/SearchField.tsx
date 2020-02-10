@@ -1,4 +1,5 @@
 import AUbutton from '@gov.au/buttons';
+import AUheading from '@gov.au/headings';
 import React, { useRef, useState } from 'react';
 
 export interface ISearchResult {
@@ -7,7 +8,7 @@ export interface ISearchResult {
 }
 
 interface ISearchFieldProps {
-  searchFunc: (text: string) => Promise<any>;
+  searchFunc: (text: string) => Promise<ISearchResult[]>;
   clearFunc?: () => void;
   itemSelectedFunc?: (item: any) => void;
   list: ISearchResult[];
@@ -18,15 +19,19 @@ const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc
   const inputEl = useRef<HTMLInputElement>(null);
   const [modalVisible, setModalVisibility] = useState(false);
   const [searchingVisible, setSearchingVisible] = useState(false);
+  const [noData, setNoData] = useState(false);
   let timer: any = null;
 
   const search = (field?: HTMLInputElement | null): Promise<any> => {
     setModalVisibility(true);
     if (field) {
       setSearchingVisible(true);
-      return searchFunc(field.value).then(() => {
+      return searchFunc(field.value).then((data) => {
         field.focus();
         setSearchingVisible(false);
+        return data;
+      }).then((data) => {
+        setNoData(data.length === 0 ? true : false);
       });
     }
     return Promise.reject();
@@ -54,7 +59,7 @@ const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc
   return (
     <>
       <div className="row">
-        <div className="col-sm-12">
+        <div className="col-sm-12 z-index-5">
           <div
             role="search"
             aria-label="field"
@@ -80,26 +85,34 @@ const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc
       </div>
       <div className="row">
         <div className="col-sm-12">
-          <div className={`modal ${modalVisible ? 'modal-visible' : ''}`} onClick={() => setModalVisibility(false)}></div>
-          <div className="search-field">
-            <div className={`search-field-float-box ${modalVisible ? 'search-field-float-box-shown' : ''}`}>
+          <div className={`modal ${modalVisible ? 'modal-visible' : ''} z-index-1`} onClick={() => setModalVisibility(false)}></div>
+          <div className="search-field z-index-5">
+            <div className={`search-field-float-box ${modalVisible ? 'search-field-float-box-shown' : ''} z-index-5`}>
               {searchingVisible ?
                 <>Searching...</> : (
-                  list && list.map((l, i) => (
-                    <div key={i}>
-                      <AUbutton
-                        block
-                        onClick={() => {
-                          if (itemSelectedFunc) {
-                            itemSelectedFunc(l);
-                          }
-                          setModalVisibility(false);
-                        }}
-                        as="tertiary">
-                        {l.text}
-                      </AUbutton>
+                  noData ? (
+                    <div className="margin-2">
+                      <AUheading size="sm" level="3">
+                        Sorry, '{inputEl?.current?.value}' could not be found
+                      </AUheading>
                     </div>
-                  ))
+                  ) : (
+                      list && list.map((l, i) => (
+                        <div key={i}>
+                          <AUbutton
+                            block
+                            onClick={() => {
+                              if (itemSelectedFunc) {
+                                itemSelectedFunc(l);
+                              }
+                              setModalVisibility(false);
+                            }}
+                            as="tertiary">
+                            <div className="text-align-left">{l.text}</div>
+                          </AUbutton>
+                        </div>
+                      ))
+                    )
                 )}
             </div>
           </div>

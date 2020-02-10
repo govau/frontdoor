@@ -2,9 +2,9 @@ import React from 'react';
 import BuyerSearch from '../components/BuyerSearch';
 import CommonInterestGroup from '../components/CommonInterestGroup';
 import Events from '../components/Events';
+import Feedback from '../components/Feedback';
 import StartSouring from '../components/StartSourcing';
 import DefaultLayout from '../layouts/defaultLayout';
-
 
 const BuyerPage: React.SFC = () => {
   return (
@@ -29,6 +29,12 @@ const BuyerPage: React.SFC = () => {
       <div className="row margin-top-2">
         <div className="col-sm-12 margin-left-1">
           <StartSouring />
+        </div>
+      </div>
+      <div className="row margin-top-2">
+        <div className="col-sm-12">
+
+            <Feedback />
         </div>
       </div>
     </DefaultLayout>

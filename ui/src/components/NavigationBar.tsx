@@ -11,7 +11,7 @@ const NavigationBar: React.FC<INavigationBarProps> = () => {
   const buyerLinkRef = useRef(null);
   const sellerLinkRef = useRef(null);
   const newsLinkRef = useRef(null);
-  const eventLinkRef = useRef(null);
+  const feedbackLinkRef = useRef(null);
 
   useEffect(() => {
     const updateParent = (ref: any) => {
@@ -25,7 +25,7 @@ const NavigationBar: React.FC<INavigationBarProps> = () => {
     updateParent(buyerLinkRef);
     updateParent(sellerLinkRef);
     updateParent(newsLinkRef);
-    updateParent(eventLinkRef);
+    updateParent(feedbackLinkRef);
   });
 
   return (
@@ -64,7 +64,7 @@ const NavigationBar: React.FC<INavigationBarProps> = () => {
                       <Link to="/news" ref={newsLinkRef} activeClassName="active" partiallyActive={true}>News</Link>
                     </li>
                     <li>
-                      <Link to="/events" ref={eventLinkRef} activeClassName="active" partiallyActive={true}>Events</Link>
+                      <Link to="/feedback" ref={feedbackLinkRef} activeClassName="active" partiallyActive={true}>Feedback</Link>
                     </li>
                   </ul>
                   <div className="au-main-nav__focus-trap-bottom"></div>

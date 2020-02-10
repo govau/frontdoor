@@ -50,9 +50,20 @@ const Feedback: React.SFC = () => {
     <>
       <div className="row">
         <div className="col-sm-12">
-          <AUheading size="md" level="3">
+          <AUheading size="xl" level="1">
+            Feedback
+          </AUheading>
+        </div>
+      </div>
+      <div className="row margin-top-2">
+        <div className="col-sm-12">
+          <AUheading size="md" level="2">
             How was your experience finding the information you needed?
           </AUheading>
+        </div>
+      </div>
+      <div className="row margin-top-1">
+        <div className="col-sm-12">
           <ToggleButton
             options={[{
               key: '1',
@@ -69,10 +80,10 @@ const Feedback: React.SFC = () => {
           />
         </div>
       </div>
-      <div className="row margin-top-1">
+      <div className="row margin-top-2">
         <div className="col-sm-12">
           <label htmlFor="suggestedImprovement">
-            <AUheading size="sm" level="4">How would you improve this experience?</AUheading>
+            <AUheading size="sm" level="2">How would you improve this experience?</AUheading>
           </label>
           <textarea
             className="au-text-input au-text-input--block"
@@ -87,7 +98,7 @@ const Feedback: React.SFC = () => {
       <div className="row margin-top-2">
         <div className="col-sm-12">
           <label htmlFor="email">
-            <AUheading size="sm" level="4">Email address (optional)</AUheading>
+            <AUheading size="sm" level="2">Email address (optional)</AUheading>
             Supply your email address if you want to be followed up about this feedback.
           </label>
           <input

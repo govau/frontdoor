@@ -32,9 +32,9 @@ const ToggleButton: React.FC<IToggleButtonProps> = ({optionSelectedFunc, options
     if (i === 0 ) {
       return 'border-radius-left';
     } else if (a.length - 1 === i) {
-      return 'border-radius-right';
+      return 'border-radius-right border-left-none';
     } else {
-      return 'border-radius-none';
+      return 'border-radius-none border-left-none';
     }
   };
 

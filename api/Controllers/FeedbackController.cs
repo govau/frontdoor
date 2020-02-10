@@ -1,12 +1,7 @@
-﻿using System;
-using System.IO;
-using System.Net.Http;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json;
 using Dta.Frontdoor.Api.Models;
 
@@ -31,10 +26,22 @@ namespace Dta.Frontdoor.Api.Controllers
             {
                 return new object();
             }
+            var face = "";
+            switch(feedback.Ease) {
+                case 1:
+                    face = ":smile:";
+                    break;
+                case 2:
+                    face = ":neutral_face:";
+                    break;
+                default:
+                    face = ":disappointed:";
+                    break;
+            }
 
             var slackMessage =
 $@":rotating_light:*Feedback has been recieved*:rotating_light:
-ease: {feedback.Ease}
+ease: {face}
 improvements: {feedback.SuggestedImprovement}
 email: {feedback.Email}";
 

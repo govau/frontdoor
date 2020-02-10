@@ -2,7 +2,6 @@ import React from 'react';
 import BuyerSearch from '../components/BuyerSearch';
 import CommonInterestGroup from '../components/CommonInterestGroup';
 import Events from '../components/Events';
-import Feedback from '../components/Feedback';
 import StartSouring from '../components/StartSourcing';
 import DefaultLayout from '../layouts/defaultLayout';
 

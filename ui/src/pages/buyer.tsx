@@ -27,7 +27,7 @@ const BuyerPage: React.SFC = () => {
         </div>
       </div>
       <div className="row margin-top-2">
-        <div className="col-sm-12 margin-left-2">
+        <div className="col-sm-12 margin-left-1">
           <StartSouring />
         </div>
       </div>

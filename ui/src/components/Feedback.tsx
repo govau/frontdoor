@@ -79,7 +79,8 @@ const Feedback: React.SFC = () => {
             id="suggestedImprovement"
             onChange={(e) => setSuggestedImprovement(e.target.value)}
             value={suggestedImprovement}
-            autoComplete="off">
+            autoComplete="off"
+            required>
           </textarea>
         </div>
       </div>
@@ -93,7 +94,7 @@ const Feedback: React.SFC = () => {
             className="au-text-input au-text-input--block"
             name="text-input-block"
             id="email"
-            type="text"
+            type="email"
             onChange={(e) => setEmail(e.target.value)}
             value={email} />
 

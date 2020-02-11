@@ -100,14 +100,13 @@ const Feedback: React.SFC = () => {
             <AUheading size="sm" level="2">Email address (optional)</AUheading>
             Supply your email address if you want to be followed up about this feedback.
           </label>
-          
+          <input
             className="au-text-input au-text-input--block margin-top-05"
             name="text-input-block"
             id="email"
             type="email"
             onChange={(e) => setEmail(e.target.value)}
             value={email} />
-
         </div>
       </div>
       <div className="row margin-top-2">

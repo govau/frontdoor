@@ -190,38 +190,42 @@ const BuyerSearch: React.FC = () => {
             )}
           </>
         )}
-      <div className="row margin-top-2">
-        <div className="col-sm-8 col-sm-push-2 text-align-center">
-          <AUheading size="lg" level="1" className="margin-bottom-1">
-            What digital product or service do you need to buy?
-          </AUheading>
-          If your requirements are not well-defined, ask sellers for innovative solutions or ideas.
-        </div>
-      </div>
-      <div className="row margin-top-1">
-        <div className="col-sm-8 col-sm-push-2">
-          <SearchField
-            searchFunc={productSearchCallback}
-            itemSelectedFunc={productSelected}
-            list={products}
-            label="What product or service do you want to buy?"
-          />
-        </div>
-      </div>
-      <div className="row margin-top-1">
-        <div className="col-sm-8 col-sm-push-2">
-          {loading && 'Searching...'}
-        </div>
-      </div>
-      {selectedAgency && panels && selectedProduct && (
-      <div className="row margin-top-1">
-        <div className="col-sm-12 background-white border-width-1 border-light-grey">
-            <SearchResult
-              agency={selectedAgency}
-              panels={panels}
-              product={selectedProduct} />
-        </div>
-      </div>
+      {(selectedAgency || selectedAgencyType === 'state') && (
+        <>
+          <div className="row margin-top-2">
+            <div className="col-sm-8 col-sm-push-2 text-align-center">
+              <AUheading size="lg" level="1" className="margin-bottom-1">
+                What digital product or service do you need to buy?
+              </AUheading>
+              If your requirements are not well-defined, ask sellers for innovative solutions or ideas.
+            </div>
+          </div>
+          <div className="row margin-top-1">
+            <div className="col-sm-8 col-sm-push-2">
+              <SearchField
+                searchFunc={productSearchCallback}
+                itemSelectedFunc={productSelected}
+                list={products}
+                label="What product or service do you want to buy?"
+              />
+            </div>
+          </div>
+          <div className="row margin-top-1">
+            <div className="col-sm-8 col-sm-push-2">
+              {loading && 'Searching...'}
+            </div>
+          </div>
+          {panels && selectedProduct && (
+            <div className="row margin-top-1">
+              <div className="col-sm-12 background-white border-width-1 border-light-grey">
+                <SearchResult
+                  agency={selectedAgency}
+                  panels={panels}
+                  product={selectedProduct} />
+              </div>
+            </div>
+          )}
+        </>
       )}
     </>
   );

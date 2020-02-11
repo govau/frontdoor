@@ -27,7 +27,7 @@ interface IStaticQueryProps {
 }
 
 interface ISearchResultProps {
-  agency: ISearchResult | null;
+  agency: ISearchResult | null | undefined;
   panels: ISearchResult[];
   product: ISearchResult | null;
 }

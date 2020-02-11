@@ -86,10 +86,8 @@ const SearchResult: React.SFC<ISearchResultProps> = ({ agency, panels, product }
                 </div>
               </div>
               <div className="col-sm-4 text-align-right">
-                <Link to={e.node.fields.slug} className="au-direction-link">
-                  <span className="au-direction-link__arrow">
-                    Find out more about the {e.node.frontmatter.title}
-                  </span>
+                <Link to={e.node.fields.slug} className="au-cta-link">
+                  Find out more about the {e.node.frontmatter.title}
                 </Link>
               </div>
             </div>

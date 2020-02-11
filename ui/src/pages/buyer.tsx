@@ -8,7 +8,7 @@ import DefaultLayout from '../layouts/defaultLayout';
 const BuyerPage: React.SFC = () => {
   return (
     <DefaultLayout>
-      <div className="row margin-top-3">
+      <div className="row">
         <div className="col-sm-12">
           <BuyerSearch />
         </div>

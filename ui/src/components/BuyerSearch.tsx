@@ -217,11 +217,13 @@ const BuyerSearch: React.FC = () => {
           </div>
           {panels && selectedProduct && (
             <div className="row margin-top-1">
-              <div className="col-sm-12 background-white border-width-1 border-light-grey">
-                <SearchResult
-                  agency={selectedAgency}
-                  panels={panels}
-                  product={selectedProduct} />
+              <div className="col-sm-12">
+                <div className="background-white border-width-1 border-light-grey">
+                  <SearchResult
+                    agency={selectedAgency}
+                    panels={panels}
+                    product={selectedProduct} />
+                </div>
               </div>
             </div>
           )}

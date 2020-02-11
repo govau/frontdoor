@@ -51,22 +51,26 @@ const CommonInterestGroup: React.SFC = () => {
           </div>
         </div>
         {data.allMarkdownRemark.edges.map((e) => (
-          <div key={e.node.fields.slug} className="row border-top-width-1 border-light-grey padding-top-2 padding-bottom-2">
+          <div key={e.node.fields.slug} className="row">
             <div className="col-sm-12">
-              <AUheading size="sm" level="3">
-                <Link to={e.node.fields.slug}>{e.node.frontmatter.title}</Link>
-              </AUheading>
-              <div>
-                {e.node.frontmatter.summary}
+              <div className="border-top-width-1 border-light-grey padding-top-2 padding-bottom-2">
+                <AUheading size="sm" level="3">
+                  <Link to={e.node.fields.slug}>{e.node.frontmatter.title}</Link>
+                </AUheading>
+                <div className="margin-top-05">
+                  {e.node.frontmatter.summary}
+                </div>
               </div>
             </div>
           </div>
         ))}
-        <div className="row border-top-width-1 border-light-grey padding-top-1">
+        <div className="row">
           <div className="col-sm-12 text-align-right">
-            <Link to="#">
-              [TODO]See more groups
+            <div className="border-top-width-1 border-light-grey padding-top-1">
+              <Link to="#">
+                [TODO]See more groups
             </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -18,10 +18,10 @@ const Index = () => (
         </div>
       </div>
     </div>
-    <div className="row margin-top-1 margin-bottom-4 home-links">
+    <div className="row margin-top-2 margin-bottom-4 home-links">
       <div className="col-sm-6">
         <Link to="/buyer">
-          <div className="padding-2 height-9 background-white border-width-1 border-light-grey margin-1">
+          <div className="padding-2 height-9 background-white border-width-1 border-light-grey margin-right-1">
             <AUheading size="xxxl" level="2">
               Buyer
             </AUheading>
@@ -31,7 +31,7 @@ const Index = () => (
       </div>
       <div className="col-sm-6">
         <Link to="/seller">
-          <div className="padding-2 height-9 background-white border-width-1 border-light-grey margin-1">
+          <div className="padding-2 height-9 background-white border-width-1 border-light-grey">
             <AUheading size="xxxl" level="2">
               Seller
             </AUheading>

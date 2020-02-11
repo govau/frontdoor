@@ -57,12 +57,12 @@ const Feedback: React.SFC = () => {
       </div>
       <div className="row margin-top-2">
         <div className="col-sm-12">
-          <AUheading size="md" level="2">
+          <AUheading size="sm" level="2">
             How was your experience finding the information you needed?
           </AUheading>
         </div>
       </div>
-      <div className="row margin-top-1">
+      <div className="row margin-top-05">
         <div className="col-sm-12">
           <ToggleButton
             options={[{
@@ -86,12 +86,11 @@ const Feedback: React.SFC = () => {
             <AUheading size="sm" level="2">How would you improve this experience?</AUheading>
           </label>
           <textarea
-            className="au-text-input au-text-input--block"
+            className="au-text-input au-text-input--block margin-top-05"
             id="suggestedImprovement"
             onChange={(e) => setSuggestedImprovement(e.target.value)}
             value={suggestedImprovement}
-            autoComplete="off"
-            required>
+            autoComplete="off">
           </textarea>
         </div>
       </div>
@@ -101,8 +100,8 @@ const Feedback: React.SFC = () => {
             <AUheading size="sm" level="2">Email address (optional)</AUheading>
             Supply your email address if you want to be followed up about this feedback.
           </label>
-          <input
-            className="au-text-input au-text-input--block"
+          
+            className="au-text-input au-text-input--block margin-top-05"
             name="text-input-block"
             id="email"
             type="email"

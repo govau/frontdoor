@@ -8,7 +8,7 @@ import '../styles/main.scss';
 
 const Index = () => (
   <DefaultLayout>
-    <div className="row margin-top-2">
+    <div className="row margin-top-4">
       <div className="col-xs-12 text-align-center">
         <AUheading size="xl" level="1">
           Are you a buyer or a seller?
@@ -18,26 +18,26 @@ const Index = () => (
         </div>
       </div>
     </div>
-    <div className="row margin-top-2 margin-bottom-2">
-      <div className="col-sm-5 background-white border-width-1 border-light-grey margin-1">
-        <div className="padding-2 height-7">
-          <AUheading size="xxxl" level="2">
-            <Link to="/buyer">
+    <div className="row margin-top-1 margin-bottom-4 home-links">
+      <div className="col-sm-6">
+        <Link to="/buyer">
+          <div className="padding-2 height-9 background-white border-width-1 border-light-grey margin-1">
+            <AUheading size="xxxl" level="2">
               Buyer
+            </AUheading>
+            <div className="margin-top-1">Source or purchase products and services for government.</div>
+          </div>
         </Link>
-          </AUheading>
-          <div>Source or purchase products and services for government.</div>
-        </div>
       </div>
-      <div className="col-sm-5 background-white border-width-1 border-light-grey margin-1">
-        <div className="padding-2 height-7">
-          <Link to="/seller">
+      <div className="col-sm-6">
+        <Link to="/seller">
+          <div className="padding-2 height-9 background-white border-width-1 border-light-grey margin-1">
             <AUheading size="xxxl" level="2">
               Seller
             </AUheading>
-          </Link>
-          <div>Sell products and services to government.</div>
-        </div>
+            <div className="margin-top-1">Sell products and services to government.</div>
+          </div>
+        </Link>
       </div>
     </div>
   </DefaultLayout>

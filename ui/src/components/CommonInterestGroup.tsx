@@ -64,7 +64,7 @@ const CommonInterestGroup: React.SFC = () => {
         ))}
         <div className="row border-top-width-1 border-light-grey padding-top-1">
           <div className="col-sm-12 text-align-right">
-            <Link to="#" className="au-cta-link">
+            <Link to="#">
               [TODO]See more groups
             </Link>
           </div>

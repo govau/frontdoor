@@ -38,6 +38,7 @@
     "@gov.au/grid-12": "^2.1.0",
     "@gov.au/header": "^4.1.12",
     "@gov.au/headings": "^2.0.11",
+    "@gov.au/inpage-nav": "^3.0.6",
     "@gov.au/main-nav": "^1.0.8",
     "@gov.au/searchbox": "^0.2.2",
     "@gov.au/text-inputs": "^2.1.2",

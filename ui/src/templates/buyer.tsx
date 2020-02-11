@@ -34,8 +34,7 @@ const BuyerTemplate: React.SFC<IBuyerTemplateProps> = ({ data }) => (
       </div>
     </div>
     <div className="row">
-      <div className="col-sm-12">
-        <h1>{data.markdownRemark.frontmatter.title}</h1>
+      <div className="col-sm-12 background-white padding-2">
         {/* eslint-disable-next-line react/no-danger */}
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       </div>

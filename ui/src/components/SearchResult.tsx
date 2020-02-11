@@ -66,7 +66,7 @@ const SearchResult: React.SFC<ISearchResultProps> = ({ agency, panels, product }
           data.allMarkdownRemark.edges.map((e) => (
             e.node.frontmatter.panel === p.metadata.panel &&
             <div key={e.node.fields.slug} className="row border-top-width-1 border-light-grey padding-top-2 padding-bottom-2">
-              <div className="col-sm-8">
+              <div className="col-sm-12">
                 {p.metadata.mandatory ? (
                   <span className="badge badge-red">
                     Mandatory
@@ -78,17 +78,12 @@ const SearchResult: React.SFC<ISearchResultProps> = ({ agency, panels, product }
                   )}
                 <div className="margin-top-1">
                   <AUheading size="md" level="2">
-                    Use the <Link to={e.node.fields.slug}>{e.node.frontmatter.title}</Link>
+                    <Link to={e.node.fields.slug}>Use the {e.node.frontmatter.title}</Link>
                   </AUheading>
                 </div>
                 <div>
                   {e.node.frontmatter.summary}
                 </div>
-              </div>
-              <div className="col-sm-4 text-align-right">
-                <Link to={e.node.fields.slug} className="au-cta-link">
-                  Find out more about the {e.node.frontmatter.title}
-                </Link>
               </div>
             </div>
           ))

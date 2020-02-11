@@ -8,7 +8,7 @@ const CannotFind: React.SFC = () => {
       <div className="row">
         <div className="col-sm-12">
           <AUheading size="md" level="3">
-            Can’t find what you are after?
+            Can’t find what you're after?
           </AUheading>
         </div>
       </div>

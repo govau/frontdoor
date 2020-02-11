@@ -176,7 +176,7 @@ const BuyerSearch: React.FC = () => {
                     Some DTA panels and arrangements are mandatory for non-corporate Commonwealth entities.
                 </div>
                 </div>
-                <div className="row margin-top-1">
+                <div className="row margin-top-05">
                   <div className="col-sm-8 col-sm-push-2">
                     <SearchField
                       searchFunc={agencySearchCallback}
@@ -200,7 +200,7 @@ const BuyerSearch: React.FC = () => {
               If your requirements are not well-defined, ask sellers for innovative solutions or ideas.
             </div>
           </div>
-          <div className="row margin-top-1">
+          <div className="row margin-top-05">
             <div className="col-sm-8 col-sm-push-2">
               <SearchField
                 searchFunc={productSearchCallback}

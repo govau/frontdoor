@@ -14,7 +14,7 @@ const StartSourcing: React.FC = () => {
         <div className="col-sm-12">
           <div className="float-left"><Link to="/buyer/products-and-services/digital-marketplace/" className="margin-right-2">Digital Marketplace</Link></div>
           <div className="float-left"><Link to="#" className="margin-right-2">[TODO]ICT Procurement Portal</Link></div>
-          <div className="float-left"><Link to="/contact-us">List of DTA panels and portals</Link></div>
+          <div className="float-left"><Link to="/buyer/contact-us">List of DTA panels and portals</Link></div>
         </div>
       </div>
     </>

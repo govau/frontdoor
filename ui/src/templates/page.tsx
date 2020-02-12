@@ -25,7 +25,7 @@ interface IPageTemplateProps {
   };
 }
 
-const PageTemplate: React.SFC<IPageTemplateProps> = ({ data }) => (
+const PageTemplate: React.FC<IPageTemplateProps> = ({ data }) => (
   <DefaultLayout>
     <h1>{data.markdownRemark.frontmatter.title}</h1>
     {/* eslint-disable-next-line react/no-danger */}

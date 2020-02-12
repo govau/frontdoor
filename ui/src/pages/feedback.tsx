@@ -2,7 +2,7 @@ import React from 'react';
 import Feedback from '../components/Feedback';
 import DefaultLayout from '../layouts/defaultLayout';
 
-const FeedbackPage: React.SFC = () => {
+const FeedbackPage: React.FC = () => {
   return (
     <DefaultLayout>
       <div className="row">

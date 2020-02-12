@@ -5,10 +5,19 @@ import Events from '../../components/Events';
 import StartSouring from '../../components/StartSourcing';
 import BuyerLayout from '../../layouts/buyerLayout';
 
-const ProductsAndServicesPage: React.SFC = () => {
+const ProductsAndServicesPage: React.FC = () => {
   return (
-    <BuyerLayout bottomSection={(
+    <BuyerLayout>
       <>
+        <div className="au-grid">
+          <div className="container margin-top-3 margin-bottom-3">
+            <div className="row">
+              <div className="col-sm-12">
+                <BuyerSearch />
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="au-grid padding-top-1 padding-bottom-1 background-white margin-top-3">
           <div className="container">
             <div className="row">
@@ -35,14 +44,7 @@ const ProductsAndServicesPage: React.SFC = () => {
           </div>
         </div>
       </>
-    )}
-    children={(
-      <div className="row">
-        <div className="col-sm-12">
-          <BuyerSearch />
-        </div>
-      </div>
-    )}/>
+    </BuyerLayout>
   );
 };
 

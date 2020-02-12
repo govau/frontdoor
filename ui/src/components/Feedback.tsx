@@ -11,7 +11,7 @@ interface IFeedback {
   email: string;
 }
 
-const Feedback: React.SFC = () => {
+const Feedback: React.FC = () => {
   const [selectedEase, setSelectedEase] = useState<string>('1');
   const [email, setEmail] = useState<string>('');
   const [suggestedImprovement, setSuggestedImprovement] = useState<string>('');

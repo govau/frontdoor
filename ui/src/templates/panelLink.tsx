@@ -25,7 +25,7 @@ interface IPanelLinkTemplateProps {
   };
 }
 
-const PanelLinkTemplate: React.SFC<IPanelLinkTemplateProps> = ({ data }) => (
+const PanelLinkTemplate: React.FC<IPanelLinkTemplateProps> = ({ data }) => (
   <DefaultLayout>
     <h1>{data.markdownRemark.frontmatter.title}</h1>
     {/* eslint-disable-next-line react/no-danger */}

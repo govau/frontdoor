@@ -22,7 +22,7 @@ interface IStaticQueryProps {
   };
 }
 
-const CommonInterestGroup: React.SFC = () => {
+const CommonInterestGroup: React.FC = () => {
   const data: IStaticQueryProps = useStaticQuery(graphql`
     query CommonInterestGroup {
       allMarkdownRemark(filter: {fields: {slug: {regex: "/buyer/cig/"}}}) {

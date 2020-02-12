@@ -2,7 +2,7 @@ import AUheading from '@gov.au/headings';
 import { Link} from 'gatsby';
 import React from 'react';
 
-const StartSourcing: React.SFC = () => {
+const StartSourcing: React.FC = () => {
   return (
     <>
       <div className="row">

@@ -64,7 +64,7 @@ const NavigationBarBuyer: React.FC<INavigationBarBuyerProps> = () => {
                       <Link to="/contact-us" ref={newsLinkRef} activeClassName="active" partiallyActive={true}>Contact us</Link>
                     </li>
                     <li>
-                      <Link to="/feedback" ref={feedbackLinkRef} activeClassName="active" partiallyActive={true}>Feedback</Link>
+                      <Link to="/buyer/feedback" ref={feedbackLinkRef} activeClassName="active" partiallyActive={true}>Feedback</Link>
                     </li>
                   </ul>
                   <div className="au-main-nav__focus-trap-bottom"></div>

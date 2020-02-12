@@ -24,7 +24,7 @@ interface IEventsPageProps {
   };
 }
 
-const EventsPage: React.SFC<IEventsPageProps> = ({ data }) => (
+const EventsPage: React.FC<IEventsPageProps> = ({ data }) => (
   <DefaultLayout>
     {data.allMarkdownRemark.edges.map((e) => (
       <p key={e.node.fields.slug}>

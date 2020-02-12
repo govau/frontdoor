@@ -16,11 +16,7 @@ interface IStaticQueryProps {
   };
 }
 
-interface IBuyerLayoutProps {
-  bottomSection?: React.ReactNode;
-}
-
-const BuyerLayout: React.SFC<IBuyerLayoutProps> = ({ children, bottomSection }) => {
+const BuyerLayout: React.FC = ({ children }) => {
   const data: IStaticQueryProps = useStaticQuery(graphql`
     query BuyerLayoutQuery {
       site {
@@ -44,11 +40,8 @@ const BuyerLayout: React.SFC<IBuyerLayoutProps> = ({ children, bottomSection }) 
         <Header title={data.site.siteMetadata.title} />
         <NavigationBarBuyer />
       </div>
+      <div>{children}</div>
       <div className="au-grid">
-        <div className="container margin-top-3 margin-bottom-3">{children}</div>
-      </div>
-      {bottomSection && <>{bottomSection}</>}
-      <div className=" au-grid">
         <Footer />
       </div>
     </div>

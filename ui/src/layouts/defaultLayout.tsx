@@ -15,11 +15,7 @@ interface IStaticQueryProps {
   };
 }
 
-interface IDefaultLayoutProps {
-  bottomSection?: React.ReactNode;
-}
-
-const DefaultLayout: React.SFC<IDefaultLayoutProps> = ({ children, bottomSection }) => {
+const DefaultLayout: React.FC = ({ children }) => {
   const data: IStaticQueryProps = useStaticQuery(graphql`
     query DefaultLayoutQuery {
       site {
@@ -45,8 +41,7 @@ const DefaultLayout: React.SFC<IDefaultLayoutProps> = ({ children, bottomSection
       <div className="au-grid">
         <div className="container margin-top-3 margin-bottom-3">{children}</div>
       </div>
-      {bottomSection && <>{bottomSection}</>}
-      <div className=" au-grid">
+      <div className="au-grid">
         <Footer />
       </div>
     </div>

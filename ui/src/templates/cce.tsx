@@ -25,7 +25,7 @@ interface ICceTemplateProps {
   };
 }
 
-const CceTemplate: React.SFC<ICceTemplateProps> = ({ data }) => (
+const CceTemplate: React.FC<ICceTemplateProps> = ({ data }) => (
   <DefaultLayout>
     <BuyerSearch />
     <h1>{data.markdownRemark.frontmatter.title}</h1>

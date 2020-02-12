@@ -32,7 +32,7 @@ interface ISearchResultProps {
   product: ISearchResult | null;
 }
 
-const SearchResult: React.SFC<ISearchResultProps> = ({ agency, panels, product }) => {
+const SearchResult: React.FC<ISearchResultProps> = ({ agency, panels, product }) => {
   const data: IStaticQueryProps = useStaticQuery(graphql`
     query SearchResult {
       allMarkdownRemark(filter: {fields: {slug: {regex: "/buyer/products-and-services/"}}}) {

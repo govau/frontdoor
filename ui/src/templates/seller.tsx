@@ -26,7 +26,7 @@ interface ISellerTemplateProps {
   };
 }
 
-const SellerTemplate: React.SFC<ISellerTemplateProps> = ({ data }) => (
+const SellerTemplate: React.FC<ISellerTemplateProps> = ({ data }) => (
   <DefaultLayout>
     <BuyerSearch />
     <h1>{data.markdownRemark.frontmatter.title}</h1>

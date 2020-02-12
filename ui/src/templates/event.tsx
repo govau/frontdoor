@@ -26,7 +26,7 @@ interface IEventTemplateProps {
   };
 }
 
-const EventTemplate: React.SFC<IEventTemplateProps> = ({ data }) => (
+const EventTemplate: React.FC<IEventTemplateProps> = ({ data }) => (
   <DefaultLayout>
     <h1>{data.markdownRemark.frontmatter.title}</h1>
     {/* eslint-disable-next-line react/no-danger */}

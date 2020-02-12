@@ -15,12 +15,7 @@ interface IStaticQueryProps {
     },
   };
 }
-
-interface ISellerLayoutProps {
-  bottomSection?: React.ReactNode;
-}
-
-const SellerLayout: React.SFC<ISellerLayoutProps> = ({ children, bottomSection }) => {
+const SellerLayout: React.FC = ({ children }) => {
   const data: IStaticQueryProps = useStaticQuery(graphql`
     query SellerLayoutQuery {
       site {
@@ -44,11 +39,8 @@ const SellerLayout: React.SFC<ISellerLayoutProps> = ({ children, bottomSection }
         <Header title={data.site.siteMetadata.title} />
         <NavigationBarSeller />
       </div>
+      <div>{children}</div>
       <div className="au-grid">
-        <div className="container margin-top-3 margin-bottom-3">{children}</div>
-      </div>
-      {bottomSection && <>{bottomSection}</>}
-      <div className=" au-grid">
         <Footer />
       </div>
     </div>

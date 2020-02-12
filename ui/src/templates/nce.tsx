@@ -26,7 +26,7 @@ interface INcceTemplateProps {
   };
 }
 
-const NcceTemplate: React.SFC<INcceTemplateProps> = ({ data }) => (
+const NcceTemplate: React.FC<INcceTemplateProps> = ({ data }) => (
   <DefaultLayout>
     <BuyerSearch />
     <h1>{data.markdownRemark.frontmatter.title}</h1>

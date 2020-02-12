@@ -3,10 +3,17 @@ import Events from '../components/Events';
 import WorkingWithGovernment from '../components/WorkingWithGovernment';
 import SellerLayout from '../layouts/sellerLayout';
 
-const SellerPage: React.SFC  = () => {
+const SellerPage: React.FC = () => {
   return (
-    <SellerLayout bottomSection={(
+    <SellerLayout>
       <>
+        <div className="au-grid">
+          <div className="container margin-top-3 margin-bottom-3">
+            <div className="col-sm-12">
+              {/* <BuyerSearch /> */}
+            </div>
+          </div>
+        </div>
         <div className="au-grid padding-top-1 padding-bottom-1 background-white margin-top-3">
           <div className="container">
             <div className="row">
@@ -33,14 +40,7 @@ const SellerPage: React.SFC  = () => {
           </div>
         </div>
       </>
-    )}
-    children={(
-      <div className="row">
-        <div className="col-sm-12">
-          {/* <BuyerSearch /> */}
-        </div>
-      </div>
-    )}/>
+    </SellerLayout>
   );
 };
 

@@ -33,7 +33,7 @@ const Events: React.FC = () => {
           <div className="padding-bottom-1 padding-bottom-1">
             <AUheading size="md" level="2">
               What's on
-          </AUheading>
+            </AUheading>
           </div>
         </div>
       </div>
@@ -44,20 +44,18 @@ const Events: React.FC = () => {
       )}
       {events && events.map((e: any, i: number) => (
         <div key={e.id} className={`row margin-top-05 background-${i % 2 === 0 ? 'light-grey' : 'white'}`}>
-          <div className="col-sm-3 background-dark-grey text-align-center font-weight-6 padding-top-2 padding-bottom-2">
-            <div className="">
-                {moment(e.start.local).format('D')}<br />
-                {moment(e.start.local).format('MMMM')}
-              </div>
+          <div className="col-sm-3 background-dark-grey text-align-center font-weight-6 padding-top-1 padding-bottom-2">
+            <div className="font-size-2">{moment(e.start.local).format('D')}</div>
+            <div>{moment(e.start.local).format('MMMM')}</div>
           </div>
           <div className="col-sm-9">
-              <div className="margin-top-05">
-                <div className="width-25 float-left">{e.format.shortName}</div>
-                <div className="width-25 float-left text-align-right">{`${e.venue.address.city}${e.onlineEvent ? '/Online' : ''}`}</div><br />
-                <div><a href={e.url} target="_blank">{e.name.text}</a></div>
-              </div>
+            <div className="margin-top-05">
+              <div className="width-25 float-left">{e.format.shortName}</div>
+              <div className="width-25 float-left text-align-right">{`${e.venue.address.city}${e.onlineEvent ? '/Online' : ''}`}</div><br />
+              <div><a href={e.url} target="_blank">{e.name.text}</a></div>
             </div>
           </div>
+        </div>
       ))}
       <div className="row margin-top-05">
         <div className="col-sm-12 text-align-right">

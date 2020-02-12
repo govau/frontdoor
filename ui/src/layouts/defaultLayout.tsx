@@ -47,7 +47,7 @@ const DefaultLayout: React.SFC<IDefaultLayoutProps> = ({ children, bottomSection
       <div className="au-grid">
         <div className="container margin-top-3 margin-bottom-3">{children}</div>
       </div>
-      {bottomSection && <div className="margin-top-3 margin-bottom-3">{bottomSection}</div>}
+      {bottomSection && <>{bottomSection}</>}
       <div className=" au-grid">
         <Footer />
       </div>

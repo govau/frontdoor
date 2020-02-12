@@ -9,7 +9,7 @@ const BuyerPage: React.SFC = () => {
   return (
     <DefaultLayout bottomSection={(
       <>
-        <div className="au-grid padding-top-1 padding-bottom-1 background-white">
+        <div className="au-grid padding-top-1 padding-bottom-1 background-white margin-top-3">
           <div className="container">
             <div className="row">
               <div className="col-sm-6">
@@ -25,9 +25,9 @@ const BuyerPage: React.SFC = () => {
             </div>
           </div>
         </div>
-        <div className="au-grid background-light-grey">
+        <div className="au-grid background-light-grey margin-top-3 margin-bottom-3">
           <div className="container">
-            <div className="row margin-top-2">
+            <div className="row">
               <div className="col-sm-12 margin-left-1">
                 <StartSouring />
               </div>

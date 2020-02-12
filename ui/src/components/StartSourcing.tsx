@@ -12,9 +12,9 @@ const StartSourcing: React.SFC = () => {
       </div>
       <div className="row">
         <div className="col-sm-12">
-          <Link to="#" className="margin-right-2">[TODO]Digital Marketplace</Link>
-          <Link to="#" className="margin-right-2">[TODO]ICT Procurement Portal</Link>
-          <Link to="#">[TODO]List of DTA panels and portals</Link>
+          <div className="float-left"><Link to="#" className="margin-right-2">[TODO]Digital Marketplace</Link></div>
+          <div className="float-left"><Link to="#" className="margin-right-2">[TODO]ICT Procurement Portal</Link></div>
+          <div className="float-left"><Link to="#">[TODO]List of DTA panels and portals</Link></div>
         </div>
       </div>
     </>

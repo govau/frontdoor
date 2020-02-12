@@ -45,10 +45,10 @@ const NavigationBarSeller: React.FC<INavigationBarSellerProps> = () => {
                       <Link to="/seller/working-with-government" ref={sellerLinkRef} activeClassName="active" partiallyActive={true}>Guidance for working with government</Link>
                     </li>
                     <li>
-                      <Link to="/contact-us" ref={newsLinkRef} activeClassName="active" partiallyActive={true}>Contact us</Link>
+                      <Link to="/seller/contact-us" ref={newsLinkRef} activeClassName="active" partiallyActive={true}>Contact us</Link>
                     </li>
                     <li>
-                      <Link to="/feedback" ref={feedbackLinkRef} activeClassName="active" partiallyActive={true}>Feedback</Link>
+                      <Link to="/seller/feedback" ref={feedbackLinkRef} activeClassName="active" partiallyActive={true}>Feedback</Link>
                     </li>
                   </ul>
                   <div className="au-main-nav__focus-trap-bottom"></div>

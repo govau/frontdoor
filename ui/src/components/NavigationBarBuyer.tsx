@@ -61,7 +61,7 @@ const NavigationBarBuyer: React.FC<INavigationBarBuyerProps> = () => {
                       <Link to="/buyer/sourcing-capability-and-community" ref={sellerLinkRef} activeClassName="active" partiallyActive={true}>Sourcing capability and community</Link>
                     </li>
                     <li>
-                      <Link to="/contact-us" ref={newsLinkRef} activeClassName="active" partiallyActive={true}>Contact us</Link>
+                      <Link to="/buyer/contact-us" ref={newsLinkRef} activeClassName="active" partiallyActive={true}>Contact us</Link>
                     </li>
                     <li>
                       <Link to="/buyer/feedback" ref={feedbackLinkRef} activeClassName="active" partiallyActive={true}>Feedback</Link>

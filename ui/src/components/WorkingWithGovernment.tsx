@@ -19,7 +19,7 @@ const WorkingWithGovernment: React.FC = () => {
           </AUheading>
           <div className="margin-top-1">
             <div className="margin-top-05"><Link to="#">[TODO]How to work with government through panels</Link></div>
-            <div className="margin-top-05"><Link to="#">[TODO]List of DTA panels and portals</Link></div>
+            <div className="margin-top-05"><Link to="/seller/contact-us">List of DTA panels and portals</Link></div>
             <div className="margin-top-05"><Link to="#">[TODO]Preparing to join a panel</Link></div>
             <div className="margin-top-05"><Link to="#">[TODO]What are government priorities?</Link></div>
           </div>

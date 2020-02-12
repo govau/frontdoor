@@ -1,9 +1,9 @@
 import React from 'react';
-import Events from '../components/Events';
-import WorkingWithGovernment from '../components/WorkingWithGovernment';
-import SellerLayout from '../layouts/sellerLayout';
+import Events from '../../components/Events';
+import WorkingWithGovernment from '../../components/WorkingWithGovernment';
+import SellerLayout from '../../layouts/sellerLayout';
 
-const SellerPage: React.FC = () => {
+const ProductsAndServicesPage: React.FC = () => {
   return (
     <SellerLayout>
       <>
@@ -44,4 +44,4 @@ const SellerPage: React.FC = () => {
   );
 };
 
-export default SellerPage;
+export default ProductsAndServicesPage;

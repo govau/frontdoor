@@ -2,11 +2,11 @@ import { Link } from 'gatsby';
 import React, { useEffect, useRef } from 'react';
 
 
-interface INavigationBarProps {
+interface INavigationBarSellerProps {
   title?: string;
 }
 
-const NavigationBar: React.FC<INavigationBarProps> = () => {
+const NavigationBarSeller: React.FC<INavigationBarSellerProps> = () => {
   const homeLinkRef = useRef(null);
   const buyerLinkRef = useRef(null);
   const sellerLinkRef = useRef(null);
@@ -34,22 +34,9 @@ const NavigationBar: React.FC<INavigationBarProps> = () => {
         <div className="row">
           <div className="col-md-12">
             <div id="main-nav-default" className="au-main-nav__content">
-              {/* <button
-                aria-controls="main-nav-default"
-                aria-expanded="false"
-                className="au-main-nav__toggle au-main-nav__toggle--open"
-                onClick="return AU.mainNav.Toggle( this )">
-                  Menu
-              </button> */}
               <div className="au-main-nav__menu">
                 <div className="au-main-nav__menu-inner">
                   <div className="au-main-nav__focus-trap-top"></div>
-                  {/* <button
-                    aria-controls="main-nav-default"
-                    className="au-main-nav__toggle au-main-nav__toggle--close"
-                    onClick="return AU.mainNav.Toggle( this )">
-                      Close
-                  </button> */}
                   <ul className="au-link-list">
                     <li>
                       <Link to="/" ref={homeLinkRef} activeClassName="active">Home</Link>
@@ -70,11 +57,6 @@ const NavigationBar: React.FC<INavigationBarProps> = () => {
                   <div className="au-main-nav__focus-trap-bottom"></div>
                 </div>
               </div>
-              {/* <div
-                className="au-main-nav__overlay"
-                aria-controls="main-nav-default"
-                onClick="return AU.mainNav.Toggle( this )">
-              </div> */}
             </div>
           </div>
         </div>
@@ -83,4 +65,4 @@ const NavigationBar: React.FC<INavigationBarProps> = () => {
   );
 };
 
-export default NavigationBar;
+export default NavigationBarSeller;

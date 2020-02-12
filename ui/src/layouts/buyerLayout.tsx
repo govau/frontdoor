@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import NavigationBarBuyer from '../components/NavigationBarBuyer';
 
 interface IStaticQueryProps {
   site: {
@@ -15,13 +16,13 @@ interface IStaticQueryProps {
   };
 }
 
-interface IDefaultLayoutProps {
+interface IBuyerLayoutProps {
   bottomSection?: React.ReactNode;
 }
 
-const DefaultLayout: React.SFC<IDefaultLayoutProps> = ({ children, bottomSection }) => {
+const BuyerLayout: React.SFC<IBuyerLayoutProps> = ({ children, bottomSection }) => {
   const data: IStaticQueryProps = useStaticQuery(graphql`
-    query DefaultLayoutQuery {
+    query BuyerLayoutQuery {
       site {
         siteMetadata {
           title
@@ -41,6 +42,7 @@ const DefaultLayout: React.SFC<IDefaultLayoutProps> = ({ children, bottomSection
           ]}
         />
         <Header title={data.site.siteMetadata.title} />
+        <NavigationBarBuyer />
       </div>
       <div className="au-grid">
         <div className="container margin-top-3 margin-bottom-3">{children}</div>
@@ -53,4 +55,4 @@ const DefaultLayout: React.SFC<IDefaultLayoutProps> = ({ children, bottomSection
   );
 };
 
-export default DefaultLayout;
+export default BuyerLayout;

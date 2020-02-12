@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 import * as React from 'react';
-import DefaultLayout from '../layouts/defaultLayout';
+import BuyerLayout from '../layouts/buyerLayout';
 
 interface IBuyerTemplateProps {
   data: {
@@ -25,7 +25,7 @@ interface IBuyerTemplateProps {
 }
 
 const BuyerTemplate: React.SFC<IBuyerTemplateProps> = ({ data }) => (
-  <DefaultLayout>
+  <BuyerLayout>
     <div className="row margin-top-1">
       <div className="col-sm-12">
         <div className=" background-white padding-2">
@@ -34,7 +34,7 @@ const BuyerTemplate: React.SFC<IBuyerTemplateProps> = ({ data }) => (
         </div>
       </div>
     </div>
-  </DefaultLayout>
+  </BuyerLayout>
 );
 
 export default BuyerTemplate;

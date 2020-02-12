@@ -1,7 +1,6 @@
-import { graphql, Link } from 'gatsby';
-import WorkingWithGovernment from '../components/WorkingWithGovernment';
-import Events from '../components/Events';
 import React from 'react';
+import Events from '../components/Events';
+import WorkingWithGovernment from '../components/WorkingWithGovernment';
 import DefaultLayout from '../layouts/defaultLayout';
 
 const SellerPage: React.SFC  = () => {

@@ -1,13 +1,13 @@
 import React from 'react';
-import BuyerSearch from '../components/BuyerSearch';
-import CommonInterestGroup from '../components/CommonInterestGroup';
-import Events from '../components/Events';
-import StartSouring from '../components/StartSourcing';
-import DefaultLayout from '../layouts/defaultLayout';
+import BuyerSearch from '../../components/BuyerSearch';
+import CommonInterestGroup from '../../components/CommonInterestGroup';
+import Events from '../../components/Events';
+import StartSouring from '../../components/StartSourcing';
+import BuyerLayout from '../../layouts/buyerLayout';
 
-const BuyerPage: React.SFC = () => {
+const ProductsAndServicesPage: React.SFC = () => {
   return (
-    <DefaultLayout bottomSection={(
+    <BuyerLayout bottomSection={(
       <>
         <div className="au-grid padding-top-1 padding-bottom-1 background-white margin-top-3">
           <div className="container">
@@ -46,4 +46,4 @@ const BuyerPage: React.SFC = () => {
   );
 };
 
-export default BuyerPage;
+export default ProductsAndServicesPage;

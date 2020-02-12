@@ -20,7 +20,7 @@ const Index = () => (
     </div>
     <div className="row margin-top-2 margin-bottom-4 home-links">
       <div className="col-sm-6">
-        <Link to="/buyer">
+        <Link to="/buyer/buy-products-and-services">
           <div className="padding-2 height-9 background-white border-width-1 border-light-grey margin-right-1">
             <AUheading size="xxxl" level="2">
               Buyer

@@ -1,7 +1,5 @@
 import { graphql } from 'gatsby';
 import * as React from 'react';
-
-import BuyerSearch from '../components/BuyerSearch';
 import DefaultLayout from '../layouts/defaultLayout';
 
 interface IBuyerTemplateProps {
@@ -28,15 +26,12 @@ interface IBuyerTemplateProps {
 
 const BuyerTemplate: React.SFC<IBuyerTemplateProps> = ({ data }) => (
   <DefaultLayout>
-    <div className="row">
+    <div className="row margin-top-1">
       <div className="col-sm-12">
-        <BuyerSearch />
-      </div>
-    </div>
-    <div className="row">
-      <div className="col-sm-12 background-white padding-2">
-        {/* eslint-disable-next-line react/no-danger */}
-        <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        <div className=" background-white padding-2">
+          {/* eslint-disable-next-line react/no-danger */}
+          <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        </div>
       </div>
     </div>
   </DefaultLayout>

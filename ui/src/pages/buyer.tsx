@@ -7,30 +7,42 @@ import DefaultLayout from '../layouts/defaultLayout';
 
 const BuyerPage: React.SFC = () => {
   return (
-    <DefaultLayout>
+    <DefaultLayout bottomSection={(
+      <>
+        <div className="au-grid padding-top-1 padding-bottom-1 background-white">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-6">
+                <div className="background-white">
+                  <Events />
+                </div>
+              </div>
+              <div className="col-sm-6">
+                <div className="background-white">
+                  <CommonInterestGroup />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="au-grid background-light-grey">
+          <div className="container">
+            <div className="row margin-top-2">
+              <div className="col-sm-12 margin-left-1">
+                <StartSouring />
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    )}
+    children={(
       <div className="row">
         <div className="col-sm-12">
           <BuyerSearch />
         </div>
       </div>
-      <div className="row margin-top-2">
-        <div className="col-sm-6">
-          <div className="background-white border-width-1 border-light-grey">
-            <Events />
-          </div>
-        </div>
-        <div className="col-sm-6">
-          <div className="background-white border-width-1 border-light-grey">
-            <CommonInterestGroup />
-          </div>
-        </div>
-      </div>
-      <div className="row margin-top-2">
-        <div className="col-sm-12 margin-left-1">
-          <StartSouring />
-        </div>
-      </div>
-    </DefaultLayout>
+    )}/>
   );
 };
 

@@ -8,7 +8,7 @@ import '../styles/main.scss';
 
 const Index = () => (
   <DefaultLayout>
-    <div className="row margin-top-4">
+    <div className="row margin-top-1">
       <div className="col-xs-12 text-align-center">
         <AUheading size="xl" level="1">
           Are you a buyer or a seller?

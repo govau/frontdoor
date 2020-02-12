@@ -1,4 +1,4 @@
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
@@ -16,20 +16,24 @@ interface IStaticQueryProps {
   };
 }
 
-const DefaultLayout: React.FC = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query DefaultLayoutQuery {
-        site {
-          siteMetadata {
-            title
-            description
-          }
+interface IDefaultLayoutProps {
+  bottomSection?: React.ReactNode;
+}
+
+const DefaultLayout: React.SFC<IDefaultLayoutProps> = ({ children, bottomSection }) => {
+  const data: IStaticQueryProps = useStaticQuery(graphql`
+    query DefaultLayoutQuery {
+      site {
+        siteMetadata {
+          title
+          description
         }
       }
-    `}
-    render={(data: IStaticQueryProps) => (
-      <div className="au-body au-grid background-light-grey">
+    }
+  `);
+  return (
+    <div className="au-body background-light-grey">
+      <div className="au-grid">
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -39,11 +43,16 @@ const DefaultLayout: React.FC = ({ children }) => (
         />
         <Header title={data.site.siteMetadata.title} />
         <NavigationBar />
+      </div>
+      <div className="au-grid">
         <div className="container margin-top-3 margin-bottom-3">{children}</div>
+      </div>
+      {bottomSection && <div className="margin-top-3 margin-bottom-3">{bottomSection}</div>}
+      <div className=" au-grid">
         <Footer />
       </div>
-    )}
-  />
-);
+    </div>
+  );
+};
 
 export default DefaultLayout;

@@ -1,57 +1,48 @@
 import { graphql, Link } from 'gatsby';
+import WorkingWithGovernment from '../components/WorkingWithGovernment';
+import Events from '../components/Events';
 import React from 'react';
 import DefaultLayout from '../layouts/defaultLayout';
 
-interface ISellerPageProps {
-  data: {
-    allMarkdownRemark: {
-      edges: [
-        {
-          node: {
-            frontmatter: {
-              title: string,
-              layout: string,
-              eventDate: string,
-            },
-            fields: {
-              slug: string,
-            },
-          },
-        },
-      ],
-    },
-  };
-}
-
-const SellerPage: React.SFC<ISellerPageProps>  = ({ data }) => {
+const SellerPage: React.SFC  = () => {
   return (
-    <DefaultLayout>
-    {data.allMarkdownRemark.edges.map((e) => (
-      <p key={e.node.fields.slug}>
-        <Link to={e.node.fields.slug}>{e.node.frontmatter.title}</Link>
-      </p>
-    ))}
-    </DefaultLayout>
+    <DefaultLayout bottomSection={(
+      <>
+        <div className="au-grid padding-top-1 padding-bottom-1 background-white margin-top-3">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-6">
+                <div className="background-white">
+                  <WorkingWithGovernment />
+                </div>
+              </div>
+              <div className="col-sm-6">
+                <div className="background-white">
+                  <Events />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="au-grid background-light-grey margin-top-3 margin-bottom-3">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-12 margin-left-1">
+                {/* <StartSouring /> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    )}
+    children={(
+      <div className="row">
+        <div className="col-sm-12">
+          {/* <BuyerSearch /> */}
+        </div>
+      </div>
+    )}/>
   );
 };
 
 export default SellerPage;
-
-
-export const query = graphql`
-{
-  allMarkdownRemark(filter: {fields: {slug: {regex: "/seller/"}}}) {
-    edges {
-      node {
-        frontmatter {
-          title
-          layout
-        }
-        fields {
-          slug
-        }
-      }
-    }
-  }
-}
-`;

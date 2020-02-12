@@ -39,16 +39,13 @@ const NavigationBarSeller: React.FC<INavigationBarSellerProps> = () => {
                   <div className="au-main-nav__focus-trap-top"></div>
                   <ul className="au-link-list">
                     <li>
-                      <Link to="/" ref={homeLinkRef} activeClassName="active">Home</Link>
+                      <Link to="/seller/products-and-services" ref={buyerLinkRef} activeClassName="active" partiallyActive={true}>Sell products and services</Link>
                     </li>
                     <li>
-                      <Link to="/buyer" ref={buyerLinkRef} activeClassName="active" partiallyActive={true}>Buyer</Link>
+                      <Link to="/seller/working-with-government" ref={sellerLinkRef} activeClassName="active" partiallyActive={true}>Guidance for working with government</Link>
                     </li>
                     <li>
-                      <Link to="/seller" ref={sellerLinkRef} activeClassName="active" partiallyActive={true}>Seller</Link>
-                    </li>
-                    <li>
-                      <Link to="/news" ref={newsLinkRef} activeClassName="active" partiallyActive={true}>News</Link>
+                      <Link to="/contact-us" ref={newsLinkRef} activeClassName="active" partiallyActive={true}>Contact us</Link>
                     </li>
                     <li>
                       <Link to="/feedback" ref={feedbackLinkRef} activeClassName="active" partiallyActive={true}>Feedback</Link>

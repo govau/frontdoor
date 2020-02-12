@@ -1,11 +1,11 @@
 import React from 'react';
 import Events from '../components/Events';
 import WorkingWithGovernment from '../components/WorkingWithGovernment';
-import DefaultLayout from '../layouts/defaultLayout';
+import SellerLayout from '../layouts/sellerLayout';
 
 const SellerPage: React.SFC  = () => {
   return (
-    <DefaultLayout bottomSection={(
+    <SellerLayout bottomSection={(
       <>
         <div className="au-grid padding-top-1 padding-bottom-1 background-white margin-top-3">
           <div className="container">

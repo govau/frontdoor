@@ -1,3 +1,4 @@
+import AUheading from '@gov.au/headings';
 import React from 'react';
 import BuyerSearch from '../../components/BuyerSearch';
 import CommonInterestGroup from '../../components/CommonInterestGroup';
@@ -22,8 +23,23 @@ const ProductsAndServicesPage: React.FC = () => {
           <div className="container">
             <div className="row">
               <div className="col-sm-6">
-                <div className="background-white">
-                  <Events />
+                <div className="background-white padding-left-2 padding-top-1 padding-right-2 padding-bottom-1">
+                  <div className="row">
+                    <div className="col-sm-12">
+                      <div className="padding-bottom-1 padding-bottom-1">
+                        <AUheading size="md" level="2">
+                          What's on
+                        </AUheading>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-sm-12">
+                      <div className="padding-bottom-1 padding-bottom-1">
+                        <Events />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="col-sm-6">

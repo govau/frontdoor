@@ -1,4 +1,3 @@
-import AUheading from '@gov.au/headings';
 import axios from 'axios';
 import moment from 'moment';
 import React, { useCallback, useEffect, useState } from 'react';
@@ -27,16 +26,7 @@ const Events: React.FC = () => {
   });
 
   return (
-    <div className="padding-left-2 padding-top-1 padding-right-2 padding-bottom-1">
-      <div className="row">
-        <div className="col-sm-12">
-          <div className="padding-bottom-1 padding-bottom-1">
-            <AUheading size="md" level="2">
-              What's on
-            </AUheading>
-          </div>
-        </div>
-      </div>
+    <>
       {loading && (
         <div>
           Loading...
@@ -64,7 +54,7 @@ const Events: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

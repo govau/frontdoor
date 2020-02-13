@@ -54,20 +54,17 @@ const BuyerSearch: React.FC = () => {
 
   const agencySearchCallback = (searchValue: string): Promise<ISearchResult[]> => {
     products.splice(0, products.length);
-    setLoading(true);
     return searchCallback({
       query: searchValue,
       top: 10,
       type: 'agency',
     }).then((r) => {
       setAgencies(r.data);
-      setLoading(false);
       return r.data;
     });
   };
 
   const productSearchCallback = (searchValue: string): Promise<ISearchResult[]> => {
-    setLoading(true);
     if ((selectedAgency && selectedAgencyType === 'federal') || selectedAgencyType === 'state') {
       return searchCallback({
         query: searchValue,
@@ -75,7 +72,6 @@ const BuyerSearch: React.FC = () => {
         type: 'product',
       }).then((r) => {
         setProducts(r.data);
-        setLoading(false);
         return r.data;
       });
     }
@@ -212,7 +208,7 @@ const BuyerSearch: React.FC = () => {
           </div>
           <div className="row margin-top-1">
             <div className="col-sm-8 col-sm-push-2">
-              {loading && 'Searching...'}
+              {loading && 'Loading...'}
             </div>
           </div>
           {panels && selectedProduct && (

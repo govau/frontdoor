@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import NavigationBarDefault from '../components/NavigationBarDefault';
 
 interface IStaticQueryProps {
   site: {
@@ -37,6 +38,7 @@ const DefaultLayout: React.FC = ({ children }) => {
           ]}
         />
         <Header title={data.site.siteMetadata.title} />
+        <NavigationBarDefault />
       </div>
       <div className="au-grid">
         <div className="container margin-top-3 margin-bottom-3">{children}</div>

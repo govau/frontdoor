@@ -168,9 +168,9 @@ const BuyerSearch: React.FC = () => {
                   <div className="col-sm-8 col-sm-push-2 text-align-center">
                     <AUheading size="lg" level="1" className="margin-bottom-1">
                       Which federal government organisation do you work for?
-                  </AUheading>
+                    </AUheading>
                     Some DTA panels and arrangements are mandatory for non-corporate Commonwealth entities.
-                </div>
+                  </div>
                 </div>
                 <div className="row margin-top-05">
                   <div className="col-sm-8 col-sm-push-2">

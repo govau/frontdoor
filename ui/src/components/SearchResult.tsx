@@ -73,10 +73,10 @@ const SearchResult: React.FC<ISearchResultProps> = ({ agency, panels, product })
                       Mandatory
                     </span>
                   ) : (
-                      <span className="badge badge-blue">
-                        Optional
+                    <span className="badge badge-blue">
+                      Optional
                     </span>
-                    )}
+                  )}
                   <div className="margin-top-1">
                     <AUheading size="md" level="2">
                       <Link to={e.node.fields.slug}>Use the {e.node.frontmatter.title}</Link>

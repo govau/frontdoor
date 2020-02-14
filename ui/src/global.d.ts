@@ -8,8 +8,3 @@ declare module '@gov.au/headings';
 declare module '@gov.au/main-nav';
 declare module '@gov.au/searchbox';
 declare module '@gov.au/text-inputs';
-
-declare module '*.mp4' {
-    const videoFiles: any;
-    export default videoFiles;
-}

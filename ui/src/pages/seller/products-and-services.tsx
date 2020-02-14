@@ -1,7 +1,7 @@
 import React from 'react';
 import Events from '../../components/Events';
 import Search from '../../components/seller/Search';
-import WorkingWithGovernment from '../../components/WorkingWithGovernment';
+import WorkingWithGovernment from '../../components/seller/WorkingWithGovernment';
 import SellerLayout from '../../layouts/sellerLayout';
 
 const ProductsAndServicesPage: React.FC = () => {

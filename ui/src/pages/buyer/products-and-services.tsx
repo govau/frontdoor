@@ -1,9 +1,9 @@
 import AUheading from '@gov.au/headings';
 import React from 'react';
-import BuyerSearch from '../../components/BuyerSearch';
-import CommonInterestGroup from '../../components/CommonInterestGroup';
+import CommonInterestGroup from '../../components/buyer/CommonInterestGroup';
+import Search from '../../components/buyer/Search';
+import StartSouring from '../../components/buyer/StartSourcing';
 import Events from '../../components/Events';
-import StartSouring from '../../components/StartSourcing';
 import BuyerLayout from '../../layouts/buyerLayout';
 
 const ProductsAndServicesPage: React.FC = () => {
@@ -14,7 +14,7 @@ const ProductsAndServicesPage: React.FC = () => {
           <div className="container margin-top-3 margin-bottom-3">
             <div className="row">
               <div className="col-sm-12">
-                <BuyerSearch />
+                <Search />
               </div>
             </div>
           </div>

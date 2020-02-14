@@ -1,9 +1,9 @@
 import AUheading from '@gov.au/headings';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
+import { ISearchResult } from '../SearchField';
 import CannotFind from './CannotFind';
 import Nce from './Nce';
-import { ISearchResult } from './SearchField';
 
 interface IStaticQueryProps {
   allMarkdownRemark: {

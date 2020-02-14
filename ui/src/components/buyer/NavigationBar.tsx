@@ -2,11 +2,11 @@ import { Link } from 'gatsby';
 import React, { useEffect, useRef } from 'react';
 
 
-interface INavigationBarBuyerProps {
+interface INavigationBarProps {
   title?: string;
 }
 
-const NavigationBarBuyer: React.FC<INavigationBarBuyerProps> = () => {
+const NavigationBar: React.FC<INavigationBarProps> = () => {
   const buyLinkRef = useRef(null);
   const buyerLinkRef = useRef(null);
   const sellerLinkRef = useRef(null);
@@ -83,4 +83,4 @@ const NavigationBarBuyer: React.FC<INavigationBarBuyerProps> = () => {
   );
 };
 
-export default NavigationBarBuyer;
+export default NavigationBar;

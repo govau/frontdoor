@@ -1,4 +1,10 @@
-Whole-of-government sourcing arrangements
+---
+layout: buyer
+title: 'Whole-of-government sourcing arrangements'
+---
+
+
+# Whole-of-government sourcing arrangements
 
 We established whole-of-government arrangements to make it easier for Australian Government agencies buy digital products and services commonly used across government.
 

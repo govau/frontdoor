@@ -6,6 +6,16 @@ title: 'Guidance for working with government'
 
 # Guidance for working with government
 
+<nav class="au-inpage-nav-links" aria-label="in page navigation">
+  <h2 class="au-inpage-nav-links__heading">On this page:</h2>
+  <ul class="au-link-list">
+    <li><a href="#section1">What can you buy from the Digital Marketplace?</a></li>
+    <li><a href="#section2">Who can use this panel?</a></li>
+    <li><a href="#section3">Register or log in to source digital services</a></li>
+    <li><a href="#section4">Contact the team</a></li>
+  </ul>
+</nav>
+
 ## Before you join a panel
 
 ### How to work with government through panels

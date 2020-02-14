@@ -4,6 +4,8 @@ title: 'Digital Sourcing Policy Group'
 summary: 'Gives digital sourcing practitioners the chance to exchange ideas about how to adopt the new digital sourcing policies and implement them within their own agency.'
 ---
 
+# Digital Sourcing Policy Group
+
 We established the Cloud marketplace for government buyers looking to buy cloud products and services. The Standing Offer Notice (SON) number for Cloud Services Panel is SON2914302.
 
 Read the Cloud Marketplace head agreement.

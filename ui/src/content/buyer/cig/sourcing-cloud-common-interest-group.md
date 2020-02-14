@@ -4,6 +4,8 @@ title: 'Sourcing Cloud Common Interest Group'
 summary: 'Provides government sourcing practitioners with access to a community of peers with a shared interest in sourcing cloud-based technologies and services.'
 ---
 
+# Sourcing Cloud Common Interest Group
+
 We established the Cloud marketplace for government buyers looking to buy cloud products and services. The Standing Offer Notice (SON) number for Cloud Services Panel is SON2914302.
 
 Read the Cloud Marketplace head agreement.

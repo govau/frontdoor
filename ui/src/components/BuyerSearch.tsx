@@ -47,7 +47,7 @@ const BuyerSearch: React.FC = () => {
 
   const searchCallback = (search: any): Promise<AxiosResponse<ISearchResult[]>> => {
     if (search) {
-      return axios.post('/api/search', search);
+      return axios.post('/api/buyersearch', search);
     }
     return Promise.reject();
   };
@@ -79,8 +79,8 @@ const BuyerSearch: React.FC = () => {
   };
 
   const panelSearchCallback = (product: ISearchResult): Promise<ISearchResult[]> => {
-    setLoading(true);
     if ((selectedAgency && selectedAgencyType === 'federal') || selectedAgencyType === 'state') {
+      setLoading(true);
       return searchCallback({
         query: product.text,
         top: 10,

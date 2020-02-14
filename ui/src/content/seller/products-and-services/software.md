@@ -1,6 +1,8 @@
 ---
-layout: seller
-title: 'Software'
+layout: buyer
+title: 'Software Marketplace'
+summary: 'Buy software'
+panel: 'software'
 ---
 
 This covers contractors, consultants, advisory services for Cloud products and services

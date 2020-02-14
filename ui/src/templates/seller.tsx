@@ -1,4 +1,3 @@
-import AUheading from '@gov.au/headings';
 import { graphql } from 'gatsby';
 import * as React from 'react';
 import SellerLayout from '../layouts/sellerLayout';
@@ -32,7 +31,6 @@ const SellerTemplate: React.FC<ISellerTemplateProps> = ({ data }) => (
         <div className="row margin-top-1">
           <div className="col-sm-12">
             <div className=" background-white padding-2">
-              <AUheading size="xl" level="1">{data.markdownRemark.frontmatter.title}</AUheading>
               {/* eslint-disable-next-line react/no-danger */}
               <div className="margin-top-2" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
             </div>

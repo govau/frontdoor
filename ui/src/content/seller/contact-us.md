@@ -3,7 +3,9 @@ layout: seller
 title: 'Panels and contact information'
 ---
 
-<table class="au-table au-table--striped">
+# Panels and contact information
+
+<table class="au-table au-table--striped margin-top-2">
     <thead class="au-table__head">
         <tr class="au-table__row">
             <th scope="col" class="au-table__header">Panel</th>

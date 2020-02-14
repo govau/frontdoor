@@ -30,7 +30,7 @@ const BuyerTemplate: React.FC<IBuyerTemplateProps> = ({ data }) => (
       <div className="container margin-top-3 margin-bottom-3">
         <div className="row margin-top-1">
           <div className="col-sm-12">
-            <div className=" background-white padding-2">
+            <div className="background-white padding-2">
               {/* eslint-disable-next-line react/no-danger */}
               <div className="margin-top-2" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
             </div>

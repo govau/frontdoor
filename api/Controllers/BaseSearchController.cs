@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Net.Http;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -12,29 +10,30 @@ using Dta.Frontdoor.Api.Models;
 
 namespace Dta.Frontdoor.Api.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class SearchController : ControllerBase
+    public class BaseSearchController : ControllerBase
     {
         private readonly IConfiguration _configuration;
         private IMemoryCache _cache;
-        private const string CACHE_KEY = "SearchCache";
-        public SearchController(IConfiguration configuration, IMemoryCache cache)
+        private readonly string _cacheKey;
+        private readonly string _kbIdEnvName;
+        public BaseSearchController(IConfiguration configuration, IMemoryCache cache, string kbIdEnvName, string cacheKey)
         {
             _configuration = configuration;
             _cache = cache;
+            _kbIdEnvName = kbIdEnvName;
+            _cacheKey = cacheKey;
         }
 
-        [HttpPost]
-        public async Task<IEnumerable<SearchResult>> Post(SearchQuery searchQuery)
+        public async Task<IEnumerable<SearchResult>> Search(SearchQuery searchQuery)
         {
-            if (_cache.TryGetValue(searchQuery.ToString(), out List<SearchResult> cacheEntry))
+            var cacheKey = $"{_cacheKey}-{searchQuery.ToString()}";
+            if (_cache.TryGetValue(cacheKey, out List<SearchResult> cacheEntry))
             {
                 return cacheEntry;
             }
             var endpointKey = _configuration["QnAMakerEndpointKey"];
             var endpoint = Environment.GetEnvironmentVariable("QnAMakerEndpoint");
-            var kbId = Environment.GetEnvironmentVariable("QnAMakerKbId");
+            var kbId = Environment.GetEnvironmentVariable(_kbIdEnvName);
             var client = new QnAMakerRuntimeClient(new EndpointKeyServiceClientCredentials(endpointKey))
             {
                 RuntimeEndpoint = endpoint
@@ -70,6 +69,7 @@ namespace Dta.Frontdoor.Api.Controllers
                 if (a.Score == 0) {
                     continue;
                 }
+                Console.WriteLine(a.Score);
                 var searchResult = new SearchResult()
                 {
                     Text = a.Answer,
@@ -84,7 +84,7 @@ namespace Dta.Frontdoor.Api.Controllers
             }
 
             var cacheEntryOptions = new MemoryCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromHours(4));
-            _cache.Set<List<SearchResult>>(searchQuery.ToString(), result, cacheEntryOptions);
+            _cache.Set<List<SearchResult>>(cacheKey, result, cacheEntryOptions);
             return result;
         }
     }

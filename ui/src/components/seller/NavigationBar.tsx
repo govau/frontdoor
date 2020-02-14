@@ -2,11 +2,11 @@ import { Link } from 'gatsby';
 import React, { useEffect, useRef } from 'react';
 
 
-interface INavigationBarSellerProps {
+interface INavigationBarProps {
   title?: string;
 }
 
-const NavigationBarSeller: React.FC<INavigationBarSellerProps> = () => {
+const NavigationBar: React.FC<INavigationBarProps> = () => {
   const homeLinkRef = useRef(null);
   const buyerLinkRef = useRef(null);
   const sellerLinkRef = useRef(null);
@@ -42,7 +42,7 @@ const NavigationBarSeller: React.FC<INavigationBarSellerProps> = () => {
                       <Link to="/seller/products-and-services" ref={buyerLinkRef} activeClassName="active" partiallyActive={true}>Sell products and services</Link>
                     </li>
                     <li>
-                      <Link to="/seller/working-with-government" ref={sellerLinkRef} activeClassName="active" partiallyActive={true}>Guidance for working with government</Link>
+                      <Link to="/seller/working-with-government" ref={sellerLinkRef} activeClassName="active" partiallyActive={true}>Working with government</Link>
                     </li>
                     <li>
                       <Link to="/seller/contact-us" ref={newsLinkRef} activeClassName="active" partiallyActive={true}>Contact us</Link>
@@ -62,4 +62,4 @@ const NavigationBarSeller: React.FC<INavigationBarSellerProps> = () => {
   );
 };
 
-export default NavigationBarSeller;
+export default NavigationBar;

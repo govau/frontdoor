@@ -1,5 +1,6 @@
 import React from 'react';
 import Events from '../../components/Events';
+import Search from '../../components/seller/Search';
 import WorkingWithGovernment from '../../components/WorkingWithGovernment';
 import SellerLayout from '../../layouts/sellerLayout';
 
@@ -10,7 +11,7 @@ const ProductsAndServicesPage: React.FC = () => {
         <div className="au-grid">
           <div className="container margin-top-3 margin-bottom-3">
             <div className="col-sm-12">
-              {/* <BuyerSearch /> */}
+              <Search />
             </div>
           </div>
         </div>

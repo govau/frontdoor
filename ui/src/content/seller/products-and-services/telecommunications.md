@@ -1,6 +1,8 @@
 ---
-layout: seller
+layout: buyer
 title: 'Telecommunications'
+summary: 'Buy your latest mobile here'
+panel: 'telecommunications'
 ---
 
 This covers contractors, consultants, advisory services for Cloud products and services

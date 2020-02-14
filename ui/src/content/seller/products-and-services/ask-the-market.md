@@ -1,8 +1,6 @@
 ---
 layout: buyer
-title: 'Hardware Marketplace'
-summary: 'Buy some hardware'
-panel: 'hardware'
+title: 'Ask the market'
 ---
 
 This covers contractors, consultants, advisory services for Cloud products and services

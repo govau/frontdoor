@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import NavigationBar from '../components/seller/NavigationBar';
+import FeedbackButton from '../components/FeedbackButton';
 
 interface IStaticQueryProps {
   site: {
@@ -40,6 +41,15 @@ const SellerLayout: React.FC = ({ children }) => {
         <NavigationBar />
       </div>
       <div>{children}</div>
+      <div className="au-grid">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12">
+              <FeedbackButton />
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="au-grid">
         <Footer />
       </div>

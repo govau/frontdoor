@@ -43,21 +43,15 @@ const BuyerLayout: React.FC = ({ children }) => {
         <NavigationBar />
       </div>
       <div>{children}</div>
-      <Location>
-        {({ location }) =>
-          !location.pathname.endsWith('/feedback') && (
-            <div className="au-grid">
-              <div className="container">
-                <div className="row">
-                  <div className="col-sm-12">
-                    <FeedbackButton />
-                  </div>
-                </div>
-              </div>
+      <div className="au-grid">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12">
+              <FeedbackButton />
             </div>
-          )
-        }
-      </Location>
+          </div>
+        </div>
+      </div>
       <div className="au-grid">
         <Footer />
       </div>

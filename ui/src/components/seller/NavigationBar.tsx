@@ -47,9 +47,6 @@ const NavigationBar: React.FC<INavigationBarProps> = () => {
                     <li>
                       <Link to="/seller/contact-us" ref={newsLinkRef} activeClassName="active" partiallyActive={true}>Contact us</Link>
                     </li>
-                    <li>
-                      <Link to="/seller/feedback" ref={feedbackLinkRef} activeClassName="active" partiallyActive={true}>Feedback</Link>
-                    </li>
                   </ul>
                   <div className="au-main-nav__focus-trap-bottom"></div>
                 </div>

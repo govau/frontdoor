@@ -1,3 +1,4 @@
+import { Location } from '@reach/router';
 import { graphql, useStaticQuery } from 'gatsby';
 import * as React from 'react';
 import Helmet from 'react-helmet';
@@ -41,15 +42,21 @@ const SellerLayout: React.FC = ({ children }) => {
         <NavigationBar />
       </div>
       <div>{children}</div>
-      <div className="au-grid">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12">
-              <FeedbackButton />
+      <Location>
+        {({ location }) =>
+          !location.pathname.endsWith('/feedback') && (
+            <div className="au-grid">
+              <div className="container">
+                <div className="row">
+                  <div className="col-sm-12">
+                    <FeedbackButton />
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
+          )
+        }
+      </Location>
       <div className="au-grid">
         <Footer />
       </div>

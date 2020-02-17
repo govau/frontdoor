@@ -1,4 +1,3 @@
-import AUbutton from '@gov.au/buttons';
 import React, { useState } from 'react';
 import Feedback from './Feedback';
 
@@ -14,12 +13,9 @@ const FeedbackButton: React.FC<IFeedbackButtonProps> = () => {
     <>
       <div className="row">
         <div className="col-sm-12">
-          <AUbutton
-            className="border-radius-bottom-none"
-            onClick={() => setOpened(!opened)}
-            block>
+          <button className="border-radius-bottom-none au-btn au-btn--block" onClick={() => setOpened(!opened)}>
             <div className="text-align-left">Send us feedback</div>
-          </AUbutton>
+          </button>
         </div>
       </div>
       {opened && <div className="row">

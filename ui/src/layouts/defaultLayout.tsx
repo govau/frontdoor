@@ -28,7 +28,7 @@ const DefaultLayout: React.FC = ({ children }) => {
     }
   `);
   return (
-    <div className="au-body background-light-grey">
+    <div className="au-body">
       <div className="au-grid">
         <Helmet
           title={data.site.siteMetadata.title}
@@ -40,8 +40,8 @@ const DefaultLayout: React.FC = ({ children }) => {
         <Header title={data.site.siteMetadata.title} />
         <NavigationBarDefault />
       </div>
-      <div className="au-grid">
-        <div className="container margin-top-3 margin-bottom-3">{children}</div>
+      <div className="au-grid background-light-grey">
+        <div className="container padding-top-3 padding-bottom-3">{children}</div>
       </div>
       <div className="au-grid">
         <Footer />

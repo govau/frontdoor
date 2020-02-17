@@ -4,8 +4,6 @@ import * as React from 'react';
 
 import DefaultLayout from '../layouts/defaultLayout';
 
-import '../styles/main.scss';
-
 const Index = () => (
   <DefaultLayout>
     <div className="au-grid">

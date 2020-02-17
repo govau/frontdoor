@@ -3,7 +3,6 @@ import * as React from 'react';
 import Helmet from 'react-helmet';
 
 import NavigationBar from '../components/buyer/NavigationBar';
-import FeedbackButton from '../components/FeedbackButton';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
@@ -30,30 +29,17 @@ const BuyerLayout: React.FC = ({ children }) => {
   `);
   return (
     <div className="au-body">
-      <div className="au-grid background-light-grey">
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: data.site.siteMetadata.description },
-            { name: 'keywords', content: data.site.siteMetadata.keywords },
-          ]}
-        />
-        <Header title={data.site.siteMetadata.title} />
-        <NavigationBar />
-      </div>
+      <Helmet
+        title={data.site.siteMetadata.title}
+        meta={[
+          { name: 'description', content: data.site.siteMetadata.description },
+          { name: 'keywords', content: data.site.siteMetadata.keywords },
+        ]}
+      />
+      <Header title={data.site.siteMetadata.title} />
+      <NavigationBar />
       <div className="background-light-grey">{children}</div>
-      <div className="au-grid background-light-grey">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12">
-              <FeedbackButton />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="au-grid">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 };

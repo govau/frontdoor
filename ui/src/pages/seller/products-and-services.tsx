@@ -9,37 +9,25 @@ const ProductsAndServicesPage: React.FC = () => {
     <SellerLayout>
       <>
         <div className="au-grid">
-          <div className="container margin-top-3 margin-bottom-3">
+          <div className="container padding-top-3 margin-bottom-3">
             <div className="col-sm-12">
               <Search />
             </div>
           </div>
         </div>
-        <div className="au-grid padding-top-1 padding-bottom-1 background-white margin-top-3">
+        <div className="au-grid padding-top-2 padding-bottom-2 background-white">
           <div className="container">
             <div className="row">
               <div className="col-sm-6">
-                <div className="background-white">
-                  <WorkingWithGovernment />
-                </div>
+                <WorkingWithGovernment />
               </div>
               <div className="col-sm-6">
-                <div className="background-white">
-                  <Events />
-                </div>
+                <Events />
               </div>
             </div>
           </div>
         </div>
-        <div className="au-grid background-light-grey margin-top-3 margin-bottom-3">
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-12 margin-left-1">
-                {/* <StartSouring /> */}
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="padding-top-2"></div>
       </>
     </SellerLayout>
   );

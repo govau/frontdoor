@@ -7,9 +7,11 @@ interface INavigationBarProps {
 }
 
 const NavigationBar: React.FC<INavigationBarProps> = () => {
-  const productsAndServicesLinkRef = useRef(null);
-  const workingWithGovernmentLinkRef = useRef(null);
-  const contactUsLinkRef = useRef(null);
+  const buyLinkRef = useRef(null);
+  const buyerLinkRef = useRef(null);
+  const sellerLinkRef = useRef(null);
+  const newsLinkRef = useRef(null);
+  const feedbackLinkRef = useRef(null);
 
   useEffect(() => {
     const updateParent = (ref: any) => {
@@ -19,9 +21,11 @@ const NavigationBar: React.FC<INavigationBarProps> = () => {
         }
       }
     };
-    updateParent(productsAndServicesLinkRef);
-    updateParent(workingWithGovernmentLinkRef);
-    updateParent(contactUsLinkRef);
+    updateParent(buyLinkRef);
+    updateParent(buyerLinkRef);
+    updateParent(sellerLinkRef);
+    updateParent(newsLinkRef);
+    updateParent(feedbackLinkRef);
   });
 
   return (
@@ -36,13 +40,16 @@ const NavigationBar: React.FC<INavigationBarProps> = () => {
                     <div className="au-main-nav__focus-trap-top"></div>
                     <ul className="au-link-list">
                       <li>
-                        <Link to="/seller/products-and-services" ref={productsAndServicesLinkRef} activeClassName="active" partiallyActive={true}>Sell products and services</Link>
+                        <Link to="/buyer/products-and-services" ref={buyLinkRef} activeClassName="active" partiallyActive={true}>Buy products and services</Link>
                       </li>
                       <li>
-                        <Link to="/seller/working-with-government" ref={workingWithGovernmentLinkRef} activeClassName="active" partiallyActive={true}>Working with government</Link>
+                        <Link to="/buyer/sourcing-resources-and-policies" ref={buyerLinkRef} activeClassName="active" partiallyActive={true}>Sourcing resources and policies</Link>
                       </li>
                       <li>
-                        <Link to="/seller/contact-us" ref={contactUsLinkRef} activeClassName="active" partiallyActive={true}>Contact us</Link>
+                        <Link to="/buyer/sourcing-capability-and-community" ref={sellerLinkRef} activeClassName="active" partiallyActive={true}>Sourcing capability and community</Link>
+                      </li>
+                      <li>
+                        <Link to="/buyer/contact-us" ref={newsLinkRef} activeClassName="active" partiallyActive={true}>Contact us</Link>
                       </li>
                     </ul>
                     <div className="au-main-nav__focus-trap-bottom"></div>

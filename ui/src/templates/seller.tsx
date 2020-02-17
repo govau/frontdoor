@@ -27,7 +27,7 @@ interface ISellerTemplateProps {
 const SellerTemplate: React.FC<ISellerTemplateProps> = ({ data }) => (
   <SellerLayout>
     <div className="au-grid">
-      <div className="container margin-top-3 margin-bottom-3">
+      <div className="container">
         <div className="row margin-top-1">
           <div className="col-sm-12">
             <div className=" background-white padding-2">

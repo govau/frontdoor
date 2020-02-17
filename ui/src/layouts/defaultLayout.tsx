@@ -28,24 +28,20 @@ const DefaultLayout: React.FC = ({ children }) => {
     }
   `);
   return (
-    <div className="au-body background-light-grey">
-      <div className="au-grid">
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: data.site.siteMetadata.description },
-            { name: 'keywords', content: data.site.siteMetadata.keywords },
-          ]}
-        />
-        <Header title={data.site.siteMetadata.title} />
-        <NavigationBarDefault />
+    <div className="au-body">
+      <Helmet
+        title={data.site.siteMetadata.title}
+        meta={[
+          { name: 'description', content: data.site.siteMetadata.description },
+          { name: 'keywords', content: data.site.siteMetadata.keywords },
+        ]}
+      />
+      <Header title={data.site.siteMetadata.title} />
+      <NavigationBarDefault />
+      <div className="au-grid background-light-grey">
+        <div className="container padding-top-3 padding-bottom-3">{children}</div>
       </div>
-      <div className="au-grid">
-        <div className="container margin-top-3 margin-bottom-3">{children}</div>
-      </div>
-      <div className="au-grid">
-        <Footer />
-      </div>
+      <Footer hideFeedback/>
     </div>
   );
 };

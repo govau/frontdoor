@@ -2,9 +2,9 @@ import { graphql, useStaticQuery } from 'gatsby';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
+import NavigationBar from '../components/buyer/NavigationBar';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import NavigationBarBuyer from '../components/NavigationBarBuyer';
 
 interface IStaticQueryProps {
   site: {
@@ -28,22 +28,18 @@ const BuyerLayout: React.FC = ({ children }) => {
     }
   `);
   return (
-    <div className="au-body background-light-grey">
-      <div className="au-grid">
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: data.site.siteMetadata.description },
-            { name: 'keywords', content: data.site.siteMetadata.keywords },
-          ]}
-        />
-        <Header title={data.site.siteMetadata.title} />
-        <NavigationBarBuyer />
-      </div>
-      <div>{children}</div>
-      <div className="au-grid">
-        <Footer />
-      </div>
+    <div className="au-body">
+      <Helmet
+        title={data.site.siteMetadata.title}
+        meta={[
+          { name: 'description', content: data.site.siteMetadata.description },
+          { name: 'keywords', content: data.site.siteMetadata.keywords },
+        ]}
+      />
+      <Header title={data.site.siteMetadata.title} />
+      <NavigationBar />
+      <div className="background-light-grey">{children}</div>
+      <Footer />
     </div>
   );
 };

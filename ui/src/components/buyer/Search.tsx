@@ -2,11 +2,11 @@ import AUbutton from '@gov.au/buttons';
 import AUheading from '@gov.au/headings';
 import axios, { AxiosResponse } from 'axios';
 import React, { useEffect, useState } from 'react';
-import SearchResult from '../components/SearchResult';
-import SearchField, { ISearchResult } from './SearchField';
-import ToggleButton, { IOption } from './ToggleButton';
+import SearchField, { ISearchResult } from '../SearchField';
+import ToggleButton, { IOption } from '../ToggleButton';
+import SearchResult from './SearchResult';
 
-const BuyerSearch: React.FC = () => {
+const Search: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [loaded, setLoaded] = useState<boolean>(false);
   const [agencies, setAgencies] = useState<ISearchResult[]>([]);
@@ -133,7 +133,7 @@ const BuyerSearch: React.FC = () => {
 
   return (
     <>
-      <div className="row margin-top-2">
+      <div className="row padding-top-2">
         <div className="col-sm-12 text-align-center">
           <ToggleButton
             options={[{
@@ -229,4 +229,4 @@ const BuyerSearch: React.FC = () => {
   );
 };
 
-export default BuyerSearch;
+export default Search;

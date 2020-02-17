@@ -6,7 +6,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 const Events: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [loaded, setLoaded] = useState<boolean>(false);
-  const [events, setEvents] = useState<any>([]);
+  const [events, setEvents] = useState<any>(null);
 
   const getEventCallback = useCallback(() => {
     setLoading(true);
@@ -15,7 +15,7 @@ const Events: React.FC = () => {
       setLoading(false);
 
       return r;
-    }, () => '');
+    });
   }, [events]);
 
   useEffect(() => {

@@ -7,12 +7,12 @@ const SourcingCapabilityAndCommunityPage: React.FC = () => {
   return (
     <BuyerLayout>
       <div className="au-grid">
-        <div className="container margin-top-3 margin-bottom-3">
+        <div className="container">
           <div className="row margin-top-1">
             <div className="col-sm-12">
               <div className="background-white padding-2">
                 <div className="row">
-                  <div className="col-sm-12">
+                  <div className="col-sm-12 padding-top-2">
                     <AUheading size="xxl" level="1">Sourcing capability and community</AUheading>
                   </div>
                 </div>

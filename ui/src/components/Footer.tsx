@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default () => (
-  <footer className="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
+  <footer className="au-body au-body--dark au-footer au-footer--dark" role="contentinfo">
     <div className="container">
       <div className="row">
         <div className="col-sm-2">

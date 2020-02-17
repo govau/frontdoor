@@ -7,7 +7,7 @@ interface IHeaderProps {
 }
 
 const Header: React.FC<IHeaderProps> = () => (
-  <header className="au-body au-body--dark au-grid au-header au-header--dark" role="banner">
+  <header className="au-grid au-header au-header--dark" role="banner">
     <div className="container">
       <div className="row">
         <div className="col-md-12">

@@ -42,7 +42,7 @@ const BuyerLayout: React.FC = ({ children }) => {
         <NavigationBar />
       </div>
       <div>{children}</div>
-      <div className="au-grid">
+      {/* <div className="au-grid">
         <div className="container">
           <div className="row">
             <div className="col-sm-12">
@@ -50,7 +50,7 @@ const BuyerLayout: React.FC = ({ children }) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="au-grid">
         <Footer />
       </div>

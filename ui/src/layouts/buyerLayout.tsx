@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
-// import FeedbackButton from '../components/FeedbackButton';
+import FeedbackButton from '../components/FeedbackButton';
 import NavigationBar from '../components/buyer/NavigationBar';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -29,8 +29,8 @@ const BuyerLayout: React.FC = ({ children }) => {
     }
   `);
   return (
-    <div className="au-body background-light-grey">
-      <div className="au-grid">
+    <div className="au-body">
+      <div className="au-grid background-light-grey">
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -41,8 +41,8 @@ const BuyerLayout: React.FC = ({ children }) => {
         <Header title={data.site.siteMetadata.title} />
         <NavigationBar />
       </div>
-      <div>{children}</div>
-      {/* <div className="au-grid">
+      <div className="background-light-grey">{children}</div>
+      <div className="au-grid background-light-grey">
         <div className="container">
           <div className="row">
             <div className="col-sm-12">
@@ -50,7 +50,7 @@ const BuyerLayout: React.FC = ({ children }) => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
       <div className="au-grid">
         <Footer />
       </div>

@@ -11,7 +11,7 @@ const ProductsAndServicesPage: React.FC = () => {
     <BuyerLayout>
       <>
         <div className="au-grid">
-          <div className="container margin-top-3 margin-bottom-3">
+          <div className="container padding-top-3 margin-bottom-3">
             <div className="row">
               <div className="col-sm-12">
                 <Search />
@@ -50,7 +50,7 @@ const ProductsAndServicesPage: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="au-grid background-light-grey margin-top-3 margin-bottom-3">
+        <div className="au-grid background-light-grey margin-top-3 padding-bottom-3">
           <div className="container">
             <div className="row">
               <div className="col-sm-12 margin-left-1">

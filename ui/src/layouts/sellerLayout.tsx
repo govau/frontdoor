@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
-// import FeedbackButton from '../components/FeedbackButton';
+import FeedbackButton from '../components/FeedbackButton';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import NavigationBar from '../components/seller/NavigationBar';
@@ -41,7 +41,7 @@ const SellerLayout: React.FC = ({ children }) => {
         <NavigationBar />
       </div>
       <div>{children}</div>
-      {/* <div className="au-grid">
+      <div className="au-grid">
         <div className="container">
           <div className="row">
             <div className="col-sm-12">
@@ -49,7 +49,7 @@ const SellerLayout: React.FC = ({ children }) => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
       <div className="au-grid">
         <Footer />
       </div>

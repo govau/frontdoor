@@ -133,7 +133,7 @@ const Search: React.FC = () => {
 
   return (
     <>
-      <div className="row margin-top-2">
+      <div className="row padding-top-2">
         <div className="col-sm-12 text-align-center">
           <ToggleButton
             options={[{

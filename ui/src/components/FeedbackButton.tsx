@@ -25,7 +25,7 @@ const FeedbackButton: React.FC<IFeedbackButtonProps> = () => {
       {opened && <div className="row">
         <div className="col-sm-12">
           <div className="background-white padding-2 border-1 border-width-1 border-light-grey">
-            <Feedback />
+            <Feedback onCancel={() => setOpened(false)} />
           </div>
         </div>
       </div>

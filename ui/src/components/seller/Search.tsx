@@ -50,13 +50,15 @@ const Search: React.FC = () => {
     <>
       <div className="row margin-md-top-2">
         <div className="col-sm-8 col-sm-push-2 text-align-center">
-          <AUheading size="lg" level="1" className="margin-md-bottom-1">
+          <AUheading size="lg" level="1">
             What do you want to sell to government?
           </AUheading>
-          Find out where to sell your products or services through DTA panels.
+          <div className="margin-sm-top-1 margin-md-top-1">
+            Find out where to sell your products or services through DTA panels.
+          </div>
         </div>
       </div>
-      <div className="row margin-md-top-05">
+      <div className="row margin-sm-top-1 margin-md-top-05">
         <div className="col-sm-8 col-sm-push-2">
           <SearchField
             searchFunc={productSearchCallback}
@@ -66,13 +68,13 @@ const Search: React.FC = () => {
           />
         </div>
       </div>
-      <div className="row margin-md-top-1">
+      <div className="row margin-sm-top-1 margin-md-top-1">
         <div className="col-sm-8 col-sm-push-2">
           {loading && 'Loading...'}
         </div>
       </div>
       {panels && selectedProduct && (
-        <div className="row margin-md-top-1">
+        <div className="row margin-sm-top-1 margin-md-top-1">
           <div className="col-sm-12">
             <div className="background-white border-width-1 border-light-grey">
               <SearchResult

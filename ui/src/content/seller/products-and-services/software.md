@@ -1,7 +1,7 @@
 ---
-layout: buyer
+layout: seller
 title: 'Software Marketplace'
-summary: 'Buy software'
+summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
 panel: 'software'
 ---
 

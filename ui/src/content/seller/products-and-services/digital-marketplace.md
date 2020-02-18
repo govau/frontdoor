@@ -1,5 +1,5 @@
 ---
-layout: buyer
+layout: seller
 title: 'Digital Marketplace'
 summary: 'For sourcing digital marketplace products and associated services.'
 panel: 'digital-marketplace'

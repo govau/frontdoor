@@ -1,5 +1,5 @@
 ---
-layout: buyer
+layout: seller
 title: 'Data centres'
 summary: 'Data centres summary'
 panel: 'data-centres'

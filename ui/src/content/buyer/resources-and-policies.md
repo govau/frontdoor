@@ -1,6 +1,6 @@
 ---
 layout: buyer
-title: 'Sourcing resources and policies'
+title: 'Resources and policies'
 ---
 
 # Sourcing resources and policies

@@ -42,10 +42,10 @@ const NavigationBar: React.FC<INavigationBarProps> = () => {
                       <Link to="/buyer/products-and-services" ref={productsAndServicesLinkRef} activeClassName="active" partiallyActive={true}>Buy products and services</Link>
                     </li>
                     <li>
-                      <Link to="/buyer/sourcing-resources-and-policies" ref={resourcesAndPoliciesLinkRef} activeClassName="active" partiallyActive={true}>Sourcing resources and policies</Link>
+                      <Link to="/buyer/resources-and-policies" ref={resourcesAndPoliciesLinkRef} activeClassName="active" partiallyActive={true}>Resources and policies</Link>
                     </li>
                     <li>
-                      <Link to="/buyer/sourcing-capability-and-community" ref={capabilityAndCommunityLinkRef} activeClassName="active" partiallyActive={true}>Sourcing capability and community</Link>
+                      <Link to="/buyer/capability-and-community" ref={capabilityAndCommunityLinkRef} activeClassName="active" partiallyActive={true}>Capability and community</Link>
                     </li>
                     <li>
                       <Link to="/buyer/contact-us" ref={contactUsLinkRef} activeClassName="active" partiallyActive={true}>Contact us</Link>

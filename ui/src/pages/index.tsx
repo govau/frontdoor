@@ -6,7 +6,7 @@ import DefaultLayout from '../layouts/defaultLayout';
 
 const Index = () => (
   <DefaultLayout>
-    <div className="container margin-md-top-3 margin-md-bottom-3">
+    <div className="container margin-md-top-3 margin-md-bottom-3 margin-sm-top-1">
       <div className="row margin-md-top-1">
         <div className="col-xs-12 text-align-center">
           <AUheading size="xl" level="1">
@@ -17,10 +17,10 @@ const Index = () => (
             </div>
         </div>
       </div>
-      <div className="row margin-md-top-2 margin-md-bottom-4 home-links">
+      <div className="row home-links margin-md-top-2 margin-md-bottom-4">
         <div className="col-sm-6">
           <Link to="/buyer/products-and-services">
-            <div className="padding-md-2 height-9 background-white border-width-1 border-light-grey margin-md-right-1">
+            <div className="background-white height-9 border-width-1 border-light-grey padding-md-2 margin-md-right-1">
               <AUheading size="xxxl" level="2">
                 Buyer
                 </AUheading>
@@ -30,7 +30,7 @@ const Index = () => (
         </div>
         <div className="col-sm-6">
           <Link to="/seller/products-and-services">
-            <div className="padding-md-2 height-9 background-white border-width-1 border-light-grey margin-md-right-1">
+            <div className="background-white height-9 border-width-1 border-light-grey padding-md-2 margin-md-right-1">
               <AUheading size="xxxl" level="2">
                 Seller
                 </AUheading>

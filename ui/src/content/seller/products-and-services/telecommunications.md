@@ -1,5 +1,5 @@
 ---
-layout: buyer
+layout: seller
 title: 'Telecommunications'
 summary: 'Buy your latest mobile here'
 panel: 'telecommunications'

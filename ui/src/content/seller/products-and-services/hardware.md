@@ -1,5 +1,5 @@
 ---
-layout: buyer
+layout: seller
 title: 'Hardware Marketplace'
 summary: 'Buy some hardware'
 panel: 'hardware'

@@ -3,7 +3,7 @@ import React from 'react';
 import Events from '../../components/Events';
 import BuyerLayout from '../../layouts/buyerLayout';
 
-const SourcingCapabilityAndCommunityPage: React.FC = () => {
+const CapabilityAndCommunityPage: React.FC = () => {
   return (
     <BuyerLayout>
       <div className="container">
@@ -12,7 +12,7 @@ const SourcingCapabilityAndCommunityPage: React.FC = () => {
             <div className="background-white padding-md-2">
               <div className="row">
                 <div className="col-sm-12 padding-md-top-2">
-                  <AUheading size="xxl" level="1">Sourcing capability and community</AUheading>
+                  <AUheading size="xxl" level="1">Capability and community</AUheading>
                 </div>
               </div>
               <div className="row margin-md-top-3">
@@ -82,4 +82,4 @@ const SourcingCapabilityAndCommunityPage: React.FC = () => {
   );
 };
 
-export default SourcingCapabilityAndCommunityPage;
+export default CapabilityAndCommunityPage;

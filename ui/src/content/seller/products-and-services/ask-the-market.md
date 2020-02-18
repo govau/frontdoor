@@ -1,5 +1,5 @@
 ---
-layout: buyer
+layout: seller
 title: 'Ask the market'
 ---
 

@@ -55,9 +55,9 @@ const SearchResult: React.FC<ISearchResultProps> = ({ agency, panels, product })
 
   return (
     <>
-      <div className="padding-md-left-2 padding-md-right-2 padding-md-top-2">
+      <div className="">
         <div className="row">
-          <div className="col-sm-12 text-align-center padding-md-bottom-2">
+          <div className="col-sm-12 text-align-center padding-sm-1 padding-md-2">
             <AUheading size="lg" level="2">{product && product.text}</AUheading>
             {product && product.metadata.summary}
           </div>
@@ -67,7 +67,7 @@ const SearchResult: React.FC<ISearchResultProps> = ({ agency, panels, product })
             e.node.frontmatter.panel === p.metadata.panel &&
             <div key={e.node.fields.slug} className="row">
               <div className="col-sm-12">
-                <div className="border-top-width-1 border-light-grey padding-md-top-1 padding-md-bottom-2">
+                <div className="border-top-width-1 border-light-grey padding-sm-1 padding-md-2">
                   {p.metadata.mandatory ? (
                     <span className="badge badge-red">
                       Mandatory
@@ -77,7 +77,7 @@ const SearchResult: React.FC<ISearchResultProps> = ({ agency, panels, product })
                       Optional
                     </span>
                   )}
-                  <div className="margin-md-top-1">
+                  <div className="margin-sm-top-05 margin-md-top-1">
                     <AUheading size="md" level="2">
                       <Link to={e.node.fields.slug}>Use the {e.node.frontmatter.title}</Link>
                     </AUheading>
@@ -93,7 +93,7 @@ const SearchResult: React.FC<ISearchResultProps> = ({ agency, panels, product })
         {agency && agency.metadata.typeofbody === 'nce' && (
           <div className="row">
             <div className="col-sm-12">
-              <div className="border-top-width-1 border-light-grey padding-md-top-1 padding-md-bottom-2">
+              <div className="border-top-width-1 border-light-grey padding-sm-1 padding-md-2">
                 <Nce />
               </div>
             </div>
@@ -102,7 +102,7 @@ const SearchResult: React.FC<ISearchResultProps> = ({ agency, panels, product })
       </div>
       <div className="row">
         <div className="col-sm-12">
-          <div className="border-top-width-1 border-light-grey padding-md-2 background-light-grey">
+          <div className="border-top-width-1 border-light-grey padding-sm-1 padding-md-2 background-light-grey">
             <CannotFind />
           </div>
         </div>

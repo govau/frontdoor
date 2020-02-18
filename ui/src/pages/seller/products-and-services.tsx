@@ -8,7 +8,7 @@ const ProductsAndServicesPage: React.FC = () => {
   return (
     <SellerLayout>
       <>
-        <div className="container padding-md-top-3 margin-md-bottom-3">
+        <div className="container padding-sm-top-1 padding-md-top-3 margin-md-bottom-3">
           <div className="col-sm-12">
             <Search />
           </div>

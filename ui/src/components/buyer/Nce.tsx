@@ -10,7 +10,7 @@ const Nce: React.FC = () => {
           As a non-corporate Commonwealth entity, you should also be aware of:
         </div>
       </div>
-      <div className="row margin-md-top-1">
+      <div className="row margin-sm-top-1 margin-md-top-1">
         <div className="col-sm-12">
           <AUheading size="sm" level="3">
             Contracting through whole of government arrangements
@@ -22,7 +22,7 @@ const Nce: React.FC = () => {
           </Link>
         </div>
       </div>
-      <div className="row margin-md-top-1">
+      <div className="row margin-sm-top-1 margin-md-top-1">
         <div className="col-sm-12">
           <AUheading size="sm" level="3">
             Sourcing policies for DTA panels

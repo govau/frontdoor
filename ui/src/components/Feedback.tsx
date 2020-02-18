@@ -72,12 +72,12 @@ const Feedback: React.FC<IFeedbackProps> = ({onCancel}) => {
         </div>
       </div>
       {feedbackSubmitted ? (
-        <div className="row margin-md-top-2">
+        <div className="row margin-sm-top-2 margin-md-top-2">
           <div className="col-xs-12 col-sm-6">
             <AUpageAlert as="success">
               <h3>Feedback submitted successful</h3>
               <p>Your feedback has been successfully submitted.</p>
-              <div className="margin-md-top-1">
+              <div className="margin-sm-top-1 margin-md-top-1">
                 <AUbutton onClick={() => onCancelClick()}>Return</AUbutton>
               </div>
             </AUpageAlert>
@@ -85,14 +85,14 @@ const Feedback: React.FC<IFeedbackProps> = ({onCancel}) => {
         </div>
       ) : (
         <>
-          <div className="row margin-md-top-2">
+          <div className="row margin-sm-top-2 margin-md-top-2">
             <div className="col-sm-12">
               <AUheading size="sm" level="2">
                 How was your experience finding the information you needed?
               </AUheading>
             </div>
           </div>
-          <div className="row margin-md-top-05">
+          <div className="row margin-sm-top-1 margin-md-top-05">
             <div className="col-sm-12">
               <ToggleButton
                 options={[{
@@ -110,13 +110,13 @@ const Feedback: React.FC<IFeedbackProps> = ({onCancel}) => {
               />
             </div>
           </div>
-          <div className="row margin-md-top-2">
+          <div className="row margin-sm-top-2 margin-md-top-2">
             <div className="col-sm-12">
               <label htmlFor="suggestedImprovement">
                 <AUheading size="sm" level="2">How would you improve this experience?</AUheading>
               </label>
               <textarea
-                className="au-text-input au-text-input--block margin-md-top-05"
+                className="au-text-input au-text-input--block margin-sm-top-05 margin-md-top-05"
                 id="suggestedImprovement"
                 name="suggestedImprovement"
                 onChange={(e) => setSuggestedImprovement(e.target.value)}
@@ -125,14 +125,14 @@ const Feedback: React.FC<IFeedbackProps> = ({onCancel}) => {
               </textarea>
             </div>
           </div>
-          <div className="row margin-md-top-2">
+          <div className="row margin-sm-top-2 margin-md-top-2">
             <div className="col-sm-12">
               <label htmlFor="email">
                 <AUheading size="sm" level="2">Email address (optional)</AUheading>
                 Supply your email address if you want to be followed up about this feedback.
               </label>
               <input
-                className="au-text-input au-text-input--block margin-md-top-05"
+                className="au-text-input au-text-input--block margin-sm-top-05 margin-md-top-05"
                 id="email"
                 name="email"
                 type="email"
@@ -140,9 +140,9 @@ const Feedback: React.FC<IFeedbackProps> = ({onCancel}) => {
                 value={email} />
             </div>
           </div>
-          <div className="row margin-md-top-2">
+          <div className="row margin-sm-top-2 margin-md-top-2">
             <div className="col-sm-12">
-              <AUbutton className="margin-md-right-1" type="submit">Send feedback</AUbutton>
+              <AUbutton className="margin-sm-right-1 margin-md-right-1" type="submit">Send feedback</AUbutton>
               <AUbutton as="secondary" onClick={() => onCancelClick()}>Cancel feedback</AUbutton>
             </div>
           </div>

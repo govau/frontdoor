@@ -44,20 +44,20 @@ const CommonInterestGroup: React.FC = () => {
 
   return (
     <>
-      <div className="padding-left-2 padding-top-1 padding-right-2 padding-bottom-1">
+      <div className="padding-md-left-2 padding-md-top-1 padding-md-right-2 padding-md-bottom-1">
         <div className="row">
-          <div className="col-sm-12 margin-bottom-1">
+          <div className="col-sm-12 margin-md-bottom-1">
             <AUheading size="md" level="2">Common interest groups</AUheading>
           </div>
         </div>
         {data.allMarkdownRemark.edges.map((e) => (
           <div key={e.node.fields.slug} className="row">
             <div className="col-sm-12">
-              <div className="border-top-width-1 border-light-grey padding-top-2 padding-bottom-2">
+              <div className="border-top-width-1 border-light-grey padding-md-top-2 padding-md-bottom-2">
                 <AUheading size="sm" level="3">
                   <Link to={e.node.fields.slug}>{e.node.frontmatter.title}</Link>
                 </AUheading>
-                <div className="margin-top-05">
+                <div className="margin-md-top-05">
                   {e.node.frontmatter.summary}
                 </div>
               </div>
@@ -66,7 +66,7 @@ const CommonInterestGroup: React.FC = () => {
         ))}
         <div className="row">
           <div className="col-sm-12 text-align-right">
-            <div className="border-top-width-1 border-light-grey padding-top-1">
+            <div className="border-top-width-1 border-light-grey padding-md-top-1">
               <Link to="#">
                 [TODO]See more groups
             </Link>

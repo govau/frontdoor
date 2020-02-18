@@ -40,7 +40,7 @@ const DefaultLayout: React.FC = ({ children }) => {
       <NavigationBarDefault />
       <div className="au-body">
         <div className="background-light-grey">
-          <div className="container padding-top-3 padding-bottom-3">{children}</div>
+          <div className="container padding-md-top-3 padding-md-bottom-3">{children}</div>
         </div>
       </div>
       <Footer hideFeedback />

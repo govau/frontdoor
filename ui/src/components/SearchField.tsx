@@ -91,7 +91,7 @@ const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc
               {searchingVisible ?
                 <>Searching...</> : (
                   noData ? (
-                    <div className="margin-2">
+                    <div className="margin-md-2">
                       <AUheading size="sm" level="3">
                         Sorry, '{inputEl?.current?.value}' could not be found
                       </AUheading>

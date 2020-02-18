@@ -15,7 +15,7 @@ Find out more about:
 - [[TODO]Market research and engagement](#)
 - [[TODO]Digital sourcing capability measurement](#)
 
-<div class="margin-top-2 margin-bottom-05"><span class="badge badge-green margin-bottom-05">In progress</span></div>
+<div class="margin-md-top-2 margin-md-bottom-05"><span class="badge badge-green margin-md-bottom-05">In progress</span></div>
 Help us to write content for difficult sourcing topics through our upcoming working groups.
 
 - [[TODO]Working with digital sourcing specialists as strategic partners](#)

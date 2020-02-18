@@ -8,13 +8,13 @@ const ProductsAndServicesPage: React.FC = () => {
   return (
     <SellerLayout>
       <>
-        <div className="container padding-top-3 margin-bottom-3">
+        <div className="container padding-md-top-3 margin-md-bottom-3">
           <div className="col-sm-12">
             <Search />
           </div>
         </div>
         <div className="background-white">
-          <div className="container padding-top-2 padding-bottom-2 ">
+          <div className="container padding-md-top-2 padding-md-bottom-2 ">
             <div className="row">
               <div className="col-sm-6">
                 <WorkingWithGovernment />
@@ -25,7 +25,7 @@ const ProductsAndServicesPage: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="padding-top-2"></div>
+        <div className="padding-md-top-2"></div>
       </>
     </SellerLayout>
   );

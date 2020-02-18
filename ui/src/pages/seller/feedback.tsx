@@ -5,7 +5,7 @@ import SellerLayout from '../../layouts/sellerLayout';
 const FeedbackPage: React.FC = () => {
   return (
     <SellerLayout>
-      <div className="container margin-top-3 margin-bottom-3">
+      <div className="container margin-md-top-3 margin-md-bottom-3">
         <div className="row">
           <div className="col-sm-12">
             <Feedback />

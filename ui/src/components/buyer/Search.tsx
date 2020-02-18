@@ -133,7 +133,7 @@ const Search: React.FC = () => {
 
   return (
     <>
-      <div className="row padding-top-2">
+      <div className="row padding-md-top-2">
         <div className="col-sm-12 text-align-center">
           <ToggleButton
             options={[{
@@ -149,7 +149,7 @@ const Search: React.FC = () => {
         </div>
       </div>
       {selectedAgency ? (
-        <div className="row margin-top-2">
+        <div className="row margin-md-top-2">
           <div className="col-sm-12 text-align-center">
             <AUheading size="sm" level="1">{selectedAgency.text}</AUheading>
             <div className="font-style-italics">{getTypeOfBodyName(selectedAgency)}</div>
@@ -164,15 +164,15 @@ const Search: React.FC = () => {
           <>
             {selectedAgencyType === 'federal' && (
               <>
-                <div className="row margin-top-2">
+                <div className="row margin-md-top-2">
                   <div className="col-sm-8 col-sm-push-2 text-align-center">
-                    <AUheading size="lg" level="1" className="margin-bottom-1">
+                    <AUheading size="lg" level="1" className="margin-md-bottom-1">
                       Which federal government organisation do you work for?
                     </AUheading>
                     Some DTA panels and arrangements are mandatory for non-corporate Commonwealth entities.
                   </div>
                 </div>
-                <div className="row margin-top-05">
+                <div className="row margin-md-top-05">
                   <div className="col-sm-8 col-sm-push-2">
                     <SearchField
                       searchFunc={agencySearchCallback}
@@ -188,15 +188,15 @@ const Search: React.FC = () => {
         )}
       {(selectedAgency || selectedAgencyType === 'state') && (
         <>
-          <div className="row margin-top-2">
+          <div className="row margin-md-top-2">
             <div className="col-sm-8 col-sm-push-2 text-align-center">
-              <AUheading size="lg" level="1" className="margin-bottom-1">
+              <AUheading size="lg" level="1" className="margin-md-bottom-1">
                 What digital product or service do you need to buy?
               </AUheading>
               If your requirements are not well-defined, ask sellers for innovative solutions or ideas.
             </div>
           </div>
-          <div className="row margin-top-05">
+          <div className="row margin-md-top-05">
             <div className="col-sm-8 col-sm-push-2">
               <SearchField
                 searchFunc={productSearchCallback}
@@ -206,13 +206,13 @@ const Search: React.FC = () => {
               />
             </div>
           </div>
-          <div className="row margin-top-1">
+          <div className="row margin-md-top-1">
             <div className="col-sm-8 col-sm-push-2">
               {loading && 'Loading...'}
             </div>
           </div>
           {panels && selectedProduct && (
-            <div className="row margin-top-1">
+            <div className="row margin-md-top-1">
               <div className="col-sm-12">
                 <div className="background-white border-width-1 border-light-grey">
                   <SearchResult

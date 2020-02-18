@@ -108,7 +108,7 @@
       "name": "pancake.min.js"
     },
     "css": {
-      "minified": true,
+      "minified": false,
       "modules": false,
       "browsers": [
         "last 2 versions",

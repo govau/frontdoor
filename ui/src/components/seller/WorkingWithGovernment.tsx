@@ -12,26 +12,26 @@ const WorkingWithGovernment: React.FC = () => {
           </AUheading>
         </div>
       </div>
-      <div className="row margin-top-2">
+      <div className="row margin-md-top-2">
         <div className="col-sm-12">
           <AUheading size="sm" level="3">
             Before you join a panel
           </AUheading>
-          <div className="margin-top-1">
-            <div className="margin-top-05"><Link to="#">[TODO]How to work with government through panels</Link></div>
-            <div className="margin-top-05"><Link to="/seller/contact-us">List of DTA panels and portals</Link></div>
-            <div className="margin-top-05"><Link to="#">[TODO]Preparing to join a panel</Link></div>
-            <div className="margin-top-05"><Link to="#">[TODO]What are government priorities?</Link></div>
+          <div className="margin-md-top-1">
+            <div className="margin-md-top-05"><Link to="#">[TODO]How to work with government through panels</Link></div>
+            <div className="margin-md-top-05"><Link to="/seller/contact-us">List of DTA panels and portals</Link></div>
+            <div className="margin-md-top-05"><Link to="#">[TODO]Preparing to join a panel</Link></div>
+            <div className="margin-md-top-05"><Link to="#">[TODO]What are government priorities?</Link></div>
           </div>
 
-          <div className="row margin-top-2">
+          <div className="row margin-md-top-2">
             <div className="col-sm-12">
               <AUheading size="sm" level="3">
                 Once you are on a panel
               </AUheading>
-              <div className="margin-top-1">
-                <div className="margin-top-05"><Link to="#">[TODO]Winning work with government</Link></div>
-                <div className="margin-top-05"><Link to="#">[TODO]Current opportunities on the Digital Marketplace</Link></div>
+              <div className="margin-md-top-1">
+                <div className="margin-md-top-05"><Link to="#">[TODO]Winning work with government</Link></div>
+                <div className="margin-md-top-05"><Link to="#">[TODO]Current opportunities on the Digital Marketplace</Link></div>
               </div>
             </div>
           </div>

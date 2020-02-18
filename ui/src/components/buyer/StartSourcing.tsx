@@ -6,14 +6,14 @@ const StartSourcing: React.FC = () => {
   return (
     <>
       <div className="row">
-        <div className="col-sm-12 margin-bottom-1">
+        <div className="col-sm-12 margin-md-bottom-1">
           <AUheading size="md" level="2">Start sourcing through DTA portals</AUheading>
         </div>
       </div>
       <div className="row">
         <div className="col-sm-12">
-          <div className="float-left"><Link to="/buyer/products-and-services/digital-marketplace/" className="margin-right-2">Digital Marketplace</Link></div>
-          <div className="float-left"><Link to="#" className="margin-right-2">[TODO]ICT Procurement Portal</Link></div>
+          <div className="float-left"><Link to="/buyer/products-and-services/digital-marketplace/" className="margin-md-right-2">Digital Marketplace</Link></div>
+          <div className="float-left"><Link to="#" className="margin-md-right-2">[TODO]ICT Procurement Portal</Link></div>
           <div className="float-left"><Link to="/buyer/contact-us">List of DTA panels and portals</Link></div>
         </div>
       </div>

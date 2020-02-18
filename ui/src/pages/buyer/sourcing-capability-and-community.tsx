@@ -7,21 +7,21 @@ const SourcingCapabilityAndCommunityPage: React.FC = () => {
   return (
     <BuyerLayout>
       <div className="container">
-        <div className="row margin-top-1">
+        <div className="row margin-md-top-1">
           <div className="col-sm-12">
-            <div className="background-white padding-2">
+            <div className="background-white padding-md-2">
               <div className="row">
-                <div className="col-sm-12 padding-top-2">
+                <div className="col-sm-12 padding-md-top-2">
                   <AUheading size="xxl" level="1">Sourcing capability and community</AUheading>
                 </div>
               </div>
-              <div className="row margin-top-3">
+              <div className="row margin-md-top-3">
                 <div className="col-sm-12">
                   <AUheading size="lg" level="2">Digital Sourcing Network</AUheading>
                   <p>The Digital Sourcing Network (DSN) helps practitioners obtain information, form connections with the sourcing community, and discover new tools and resources.</p>
                 </div>
               </div>
-              <div className="row margin-top-3">
+              <div className="row margin-md-top-3">
                 <div className="col-sm-12">
                   <nav className="au-inpage-nav-links" aria-label="in page navigation">
                     <h2 className="au-inpage-nav-links__heading">On this page:</h2>
@@ -50,20 +50,20 @@ const SourcingCapabilityAndCommunityPage: React.FC = () => {
                     </p>
                 </div>
               </div>
-              <div className="row margin-top-3">
+              <div className="row margin-md-top-3">
                 <div className="col-sm-12">
                   <AUheading size="lg" level="2">What's on</AUheading>
                   <Events />
                 </div>
               </div>
-              <div className="row margin-top-3">
+              <div className="row margin-md-top-3">
                 <div className="col-sm-6">
                   <AUheading size="lg" level="2">Common Interest Groups</AUheading>
                   <p>Common Interest Groups (CIGs) create networks of practitioners across the Australian Public Service who have shared experiences and want to exchange knowledge and resources around specific sourcing topics. CIGs comprise an online forum supported by informational and networking events.</p>
                   <p>Register</p>
                 </div>
               </div>
-              <div className="row margin-top-3">
+              <div className="row margin-md-top-3">
                 <div className="col-sm-6">
                   <AUheading size="lg" level="2">Sourcing professionalisation</AUheading>
                   <p>

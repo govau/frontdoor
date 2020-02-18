@@ -9,7 +9,7 @@ interface IFooterProps {
 const Footer: React.FC<IFooterProps> = ({ hideFeedback }) => (
   <>
     { !hideFeedback && (
-      <div className="au-grid background-light-grey">
+      <div className="background-light-grey">
         <div className="container">
           <div className="row">
             <div className="col-sm-12">
@@ -19,7 +19,7 @@ const Footer: React.FC<IFooterProps> = ({ hideFeedback }) => (
         </div>
       </div>
     )}
-    <footer className="au-grid au-footer au-footer--dark" role="contentinfo">
+    <footer className="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
       <div className="container">
         <div className="row">
           <div className="col-sm-2">
@@ -30,7 +30,7 @@ const Footer: React.FC<IFooterProps> = ({ hideFeedback }) => (
           <div className="col-sm-10">
             <div className="row">
               <div className="col-sm-12">
-                <ul className="au-body au-body--dark au-link-list au-link-list--inline">
+                <ul className="au-link-list au-link-list--inline">
                   <li><a href="#">[TODO]Contact us</a></li>
                   <li><a href="#">[TODO]Accessibility</a></li>
                   <li><a href="#">[TODO]Cookies</a></li>

@@ -6,3 +6,7 @@ $AU-colordark-foreground-action: #61DAFF;
 $AU-colordark-background:        #313131;
 
 @import '../../pancake/sass/pancake.scss';
+
+.au-body.au-body--dark {
+    background-color: $AU-colordark-background !important;
+}

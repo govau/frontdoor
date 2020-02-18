@@ -28,7 +28,7 @@ const DefaultLayout: React.FC = ({ children }) => {
     }
   `);
   return (
-    <div className="au-body">
+    <div className="au-grid">
       <Helmet
         title={data.site.siteMetadata.title}
         meta={[
@@ -38,10 +38,12 @@ const DefaultLayout: React.FC = ({ children }) => {
       />
       <Header title={data.site.siteMetadata.title} />
       <NavigationBarDefault />
-      <div className="au-grid background-light-grey">
-        <div className="container padding-top-3 padding-bottom-3">{children}</div>
+      <div className="au-body">
+        <div className="background-light-grey">
+          <div className="container padding-top-3 padding-bottom-3">{children}</div>
+        </div>
       </div>
-      <Footer hideFeedback/>
+      <Footer hideFeedback />
     </div>
   );
 };

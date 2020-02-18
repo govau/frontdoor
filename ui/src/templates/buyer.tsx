@@ -26,14 +26,12 @@ interface IBuyerTemplateProps {
 
 const BuyerTemplate: React.FC<IBuyerTemplateProps> = ({ data }) => (
   <BuyerLayout>
-    <div className="au-grid">
-      <div className="container">
-        <div className="row margin-top-1">
-          <div className="col-sm-12">
-            <div className="background-white padding-2">
-              {/* eslint-disable-next-line react/no-danger */}
-              <div className="margin-top-2" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-            </div>
+    <div className="container">
+      <div className="row margin-top-1">
+        <div className="col-sm-12">
+          <div className="background-white padding-2">
+            {/* eslint-disable-next-line react/no-danger */}
+            <div className="margin-top-2" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           </div>
         </div>
       </div>

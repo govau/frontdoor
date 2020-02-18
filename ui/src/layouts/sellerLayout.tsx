@@ -27,7 +27,7 @@ const SellerLayout: React.FC = ({ children }) => {
     }
   `);
   return (
-    <div className="au-body">
+    <div className="au-grid">
       <Helmet
         title={data.site.siteMetadata.title}
         meta={[
@@ -37,7 +37,9 @@ const SellerLayout: React.FC = ({ children }) => {
       />
       <Header title={data.site.siteMetadata.title} />
       <NavigationBar />
-      <div className="background-light-grey">{children}</div>
+      <div className="au-body">
+        <div className="background-light-grey">{children}</div>
+      </div>
       <Footer />
     </div>
   );

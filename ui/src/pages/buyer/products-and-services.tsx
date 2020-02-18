@@ -10,8 +10,8 @@ const ProductsAndServicesPage: React.FC = () => {
   return (
     <BuyerLayout>
       <>
-        <div className="au-grid">
-          <div className="container padding-top-3 margin-bottom-3">
+        <div className="padding-top-3 margin-bottom-3">
+          <div className="container">
             <div className="row">
               <div className="col-sm-12">
                 <Search />
@@ -19,7 +19,7 @@ const ProductsAndServicesPage: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="au-grid padding-top-1 padding-bottom-1 background-white margin-top-3">
+        <div className="padding-top-1 padding-bottom-1 background-white margin-top-3">
           <div className="container">
             <div className="row">
               <div className="col-sm-6">
@@ -50,7 +50,7 @@ const ProductsAndServicesPage: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="au-grid background-light-grey margin-top-3 padding-bottom-3">
+        <div className="background-light-grey margin-top-3 padding-bottom-3">
           <div className="container">
             <div className="row">
               <div className="col-sm-12 margin-left-1">

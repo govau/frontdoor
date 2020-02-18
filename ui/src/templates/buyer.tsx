@@ -27,9 +27,9 @@ interface IBuyerTemplateProps {
 const BuyerTemplate: React.FC<IBuyerTemplateProps> = ({ data }) => (
   <BuyerLayout>
     <div className="container">
-      <div className="row margin-sm-top-1 margin-md-top-1">
+      <div className="row background-white margin-sm-top-1 margin-md-top-1">
         <div className="col-sm-12">
-          <div className="background-white padding-sm-top-2 padding-sm-bottom-2 padding-md-2">
+          <div className="padding-sm-top-2 padding-sm-bottom-2 padding-md-2">
             {/* eslint-disable-next-line react/no-danger */}
             <div className="margin-md-top-2" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           </div>

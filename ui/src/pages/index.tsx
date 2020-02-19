@@ -17,7 +17,7 @@ const Index = () => (
             </div>
         </div>
       </div>
-      <div className="row home-links margin-sm-top-1 margin-md-top-2 margin-md-bottom-4">
+      <div className="row margin-sm-top-1 margin-md-top-2 margin-md-bottom-4">
         <div className="col-sm-6">
           <Link to="/buyer/products-and-services">
             <div className="background-white height-9 border-width-1 border-light-grey padding-sm-1 margin-sm-bottom-1 padding-md-2 margin-md-right-1">

@@ -41,14 +41,16 @@
 
         button:first-child {
             border-radius: 4px 0px 0px 4px;
+            border-right-width: 1.5px;
         }
         button:last-child {
             border-radius: 0px 4px 4px 0px;
+            border-left-width: 1.5px;
         }
         button:not(:first-child):not(:last-child) {
             border-radius: 0px;
-            border-left-width: 1px;
-            border-right-width: 1px;
+            border-left-width: 1.5px;
+            border-right-width: 1.5px;
         }
     }
 }

@@ -2,8 +2,8 @@ import AUbutton from '@gov.au/buttons';
 import AUheading from '@gov.au/headings';
 import axios, { AxiosResponse } from 'axios';
 import React, { useEffect, useState } from 'react';
-import SearchField, { ISearchResult } from '../SearchField';
 import { getSessionObject, setSessionObject } from '../../utils/Browser';
+import SearchField, { ISearchResult } from '../SearchField';
 import ToggleButton, { IOption } from '../ToggleButton';
 import SearchResult from './SearchResult';
 

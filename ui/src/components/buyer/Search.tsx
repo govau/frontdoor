@@ -3,6 +3,7 @@ import AUheading from '@gov.au/headings';
 import axios, { AxiosResponse } from 'axios';
 import React, { useEffect, useState } from 'react';
 import SearchField, { ISearchResult } from '../SearchField';
+import { getSessionObject, setSessionObject } from '../../utils/Browser';
 import ToggleButton, { IOption } from '../ToggleButton';
 import SearchResult from './SearchResult';
 
@@ -15,21 +16,6 @@ const Search: React.FC = () => {
   const [selectedAgency, setSelectedAgency] = useState<ISearchResult | null>();
   const [selectedProduct, setSelectedProduct] = useState<ISearchResult | null>();
   const [panels, setPanels] = useState<ISearchResult[]>();
-
-  const getSessionObject = (key: string): any => {
-    if (sessionStorage) {
-      const stored = sessionStorage.getItem(key);
-      if (stored) {
-        return JSON.parse(stored);
-      }
-    }
-    return null;
-  };
-  const setSessionObject = (key: string, value: any) => {
-    if (sessionStorage) {
-      sessionStorage.setItem(key, JSON.stringify(value));
-    }
-  };
 
   useEffect(() => {
     if (!loaded) {

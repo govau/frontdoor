@@ -1,3 +1,4 @@
+import AUheading from '@gov.au/headings';
 import axios from 'axios';
 import moment from 'moment';
 import React, { useCallback, useEffect, useState } from 'react';
@@ -33,18 +34,25 @@ const Events: React.FC = () => {
         </div>
       )}
       {events && events.map((e: any, i: number) => (
-        <div key={e.id} className={`row margin-sm-top-05 margin-md-top-05 background-${i % 2 === 0 ? 'light-grey' : 'white'}`}>
-          <div className="col-xs-3 col-sm-3 background-dark-grey text-align-center font-weight-6 padding-sm-top-2 padding-sm-bottom-2 padding-md-top-1 padding-md-bottom-2">
-            <div className="font-size-2">{moment(e.start.local).format('D')}</div>
-            <div>{moment(e.start.local).format('MMMM')}</div>
-          </div>
-          <div className="col-xs-9 col-sm-9">
-            <div className="row margin-md-top-05">
-              <div className="col-xs-6 col-sm-6">{e.format.shortName}</div>
-              <div className="col-xs-6 col-sm-6">{`${e.venue.address.city}${e.onlineEvent ? '/Online' : ''}`}</div>
+        <div key={e.id} className={`row padding-sm-bottom-1 padding-md-top-05 padding-md-bottom-05 background-${i % 2 === 0 ? 'light-grey' : 'white'}`}>
+          <div className="col-sm-12">
+            <div className="row margin-sm-top-05 margin-md-top-05">
+              <div className="col-sm-12">
+                <AUheading size="sm" level="3">
+                  <a href={e.url} target="_blank">{e.name.text}</a>
+                </AUheading>
+              </div>
             </div>
-            <div className="row margin-md-top-05">
-              <div className="col-sm-12"><a href={e.url} target="_blank">{e.name.text}</a></div>
+            <div className="row margin-sm-top-05 margin-md-top-05">
+              <div className="col-sm-12 font-style-italic">{e.format.shortName}</div>
+            </div>
+            <div className="row margin-sm-top-05 margin-md-top-05 margin-md-bottom-1">
+              <div className="col-xs-6 col-sm-6">
+                {moment(e.start.local).format('D')} {moment(e.start.local).format('MMMM')}  {moment(e.start.local).format('YYYY')}
+              </div>
+              <div className="col-xs-6 col-sm-6">
+                {`${e.venue.address.city}${e.onlineEvent ? '/Online' : ''}`}
+              </div>
             </div>
           </div>
         </div>

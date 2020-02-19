@@ -138,7 +138,7 @@ const Search: React.FC = () => {
         <div className="row margin-sm-top-1 margin-md-top-2">
           <div className="col-sm-12 text-align-center">
             <AUheading size="sm" level="1">{selectedAgency.text}</AUheading>
-            <div className="font-style-italics">{getTypeOfBodyName(selectedAgency)}</div>
+            <div className="font-style-italic">{getTypeOfBodyName(selectedAgency)}</div>
             <AUbutton
               onClick={() => clearAgency()}
               as="tertiary">

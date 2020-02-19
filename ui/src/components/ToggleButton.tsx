@@ -28,32 +28,17 @@ const ToggleButton: React.FC<IToggleButtonProps> = ({optionSelectedFunc, options
     }
   }, [initialKey]);
 
-  const getButtonStyle = (i: number, a: IOption[]): string => {
-    if (i === 0 ) {
-      return 'border-radius-left';
-    } else if (a.length - 1 === i) {
-      return 'border-radius-right border-left-none';
-    } else {
-      return 'border-radius-none border-left-none';
-    }
-  };
-
   return (
-    <>
-      <div className="row">
-        <div className="col-xs-12">
-          {options.map((o, i, a) => (
-            <AUbutton
-              key={i}
-              className={getButtonStyle(i, a)}
-              onClick={() => selected(o)}
-              as={o.key === selectedOption?.key ? 'primary' : 'secondary'}>
-                {o.text}
-            </AUbutton>
-          ))}
-        </div>
-      </div>
-    </>
+    <div className="toggle-button">
+      {options.map((o, i) => (
+        <AUbutton
+          key={i}
+          onClick={() => selected(o)}
+          as={o.key === selectedOption?.key ? 'primary' : 'secondary'}>
+            {o.text}
+        </AUbutton>
+      ))}
+    </div>
   );
 };
 

@@ -27,7 +27,7 @@ interface ISellerTemplateProps {
 const SellerTemplate: React.FC<ISellerTemplateProps> = ({ data }) => (
   <SellerLayout>
     <div className="container">
-      <div className="row background-white margin-sm-top-1 margin-sm-bottom-2 margin-md-top-1 margin-md-bottom-1">
+      <div className="row background-white margin-sm-top-2 margin-sm-bottom-2 margin-md-top-1 margin-md-bottom-1">
         <div className="col-sm-12">
           <div className="padding-sm-top-2 padding-sm-bottom-2 padding-md-2">
             {/* eslint-disable-next-line react/no-danger */}

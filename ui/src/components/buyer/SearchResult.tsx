@@ -67,7 +67,7 @@ const SearchResult: React.FC<ISearchResultProps> = ({ agency, panels, product })
             e.node.frontmatter.panel === p.metadata.panel &&
             <div key={e.node.fields.slug} className="row">
               <div className="col-sm-12">
-                <div className="border-top-width-1 border-light-grey padding-sm-1 padding-md-2">
+                <div className="border-top-width-1 border-light-grey padding-sm-1 padding-sm-top-2 padding-sm-bottom-2 padding-md-2">
                   {p.metadata.mandatory ? (
                     <span className="badge badge-red">
                       Mandatory
@@ -77,12 +77,12 @@ const SearchResult: React.FC<ISearchResultProps> = ({ agency, panels, product })
                       Optional
                     </span>
                   )}
-                  <div className="margin-sm-top-05 margin-md-top-1">
+                  <div className="margin-sm-top-1 margin-md-top-1">
                     <AUheading size="md" level="2">
                       <Link to={e.node.fields.slug}>Use the {e.node.frontmatter.title}</Link>
                     </AUheading>
                   </div>
-                  <div>
+                  <div className="margin-sm-top-05">
                     {e.node.frontmatter.summary}
                   </div>
                 </div>

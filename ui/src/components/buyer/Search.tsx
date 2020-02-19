@@ -150,7 +150,7 @@ const Search: React.FC = () => {
           <>
             {selectedAgencyType === 'federal' && (
               <>
-                <div className="row margin-sm-top-1 margin-md-top-2">
+                <div className="row margin-sm-top-2 margin-md-top-2">
                   <div className="col-sm-8 col-sm-push-2 text-align-center">
                     <AUheading size="lg" level="1">
                       Which federal government organisation do you work for?
@@ -176,7 +176,7 @@ const Search: React.FC = () => {
         )}
       {(selectedAgency || selectedAgencyType === 'state') && (
         <>
-          <div className="row margin-sm-top-1 margin-md-top-2">
+          <div className="row margin-sm-top-2 margin-md-top-2">
             <div className="col-sm-8 col-sm-push-2 text-align-center">
               <AUheading size="lg" level="1">
                 What digital product or service do you need to buy?

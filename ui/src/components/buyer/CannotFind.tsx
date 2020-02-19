@@ -17,10 +17,10 @@ const CannotFind: React.FC = () => {
           <AUheading size="sm" level="3">
             Test the market
           </AUheading>
-          <div className="margin-sm-top-1 margin-md-top-1">
+          <div className="margin-sm-top-05 margin-md-top-1">
             If you can't find what you need, ask sellers to help define your digital requirements.
           </div>
-          <div className="margin-sm-top-1 margin-md-top-1">
+          <div className="margin-sm-top-05 margin-md-top-1">
             <Link to="/buyer/products-and-services/ask-the-market" className="au-btn">Learn more</Link>
           </div>
         </div>
@@ -28,10 +28,10 @@ const CannotFind: React.FC = () => {
           <AUheading size="sm" level="3">
             View full list of products and services
           </AUheading>
-          <div className="margin-sm-top-1 margin-md-top-1">
+          <div className="margin-sm-top-05 margin-md-top-1">
             Can’t find the product or service you are after? You can view our list on our website.
           </div>
-          <div className="margin-sm-top-1 margin-md-top-1">
+          <div className="margin-sm-top-05 margin-md-top-1">
             <Link to="#" className="au-btn">[TODO]View products and services</Link>
           </div>
         </div>

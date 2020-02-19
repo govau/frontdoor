@@ -10,7 +10,7 @@ const ProductsAndServicesPage: React.FC = () => {
   return (
     <BuyerLayout>
       <>
-        <div className="padding-sm-top-2 padding-md-top-3 margin-md-bottom-3">
+        <div className="padding-sm-top-2 margin-sm-bottom-3 padding-md-top-3 margin-md-bottom-3">
           <div className="container">
             <div className="row">
               <div className="col-sm-12">

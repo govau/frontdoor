@@ -68,11 +68,13 @@ const Search: React.FC = () => {
           />
         </div>
       </div>
-      <div className="row margin-sm-top-1 margin-md-top-1">
-        <div className="col-sm-8 col-sm-push-2">
-          {loading && 'Loading...'}
+      {loading && 
+        <div className="row margin-sm-top-1 margin-md-top-1">
+          <div className="col-sm-8 col-sm-push-2">
+            Loading...
+          </div>
         </div>
-      </div>
+      }
       {panels && selectedProduct && (
         <div className="row margin-sm-top-1 margin-md-top-1">
           <div className="col-sm-12">

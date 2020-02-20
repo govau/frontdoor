@@ -135,7 +135,7 @@ const Search: React.FC = () => {
         </div>
       </div>
       {selectedAgency ? (
-        <div className="row margin-sm-top-1 margin-md-top-2">
+        <div className="row margin-sm-top-2 margin-md-top-2">
           <div className="col-sm-12 text-align-center">
             <AUheading size="sm" level="1">{selectedAgency.text}</AUheading>
             <div className="font-style-italic">{getTypeOfBodyName(selectedAgency)}</div>
@@ -196,11 +196,13 @@ const Search: React.FC = () => {
               />
             </div>
           </div>
-          <div className="row margin-sm-top-1 margin-md-top-1">
-            <div className="col-sm-8 col-sm-push-2">
-              {loading && 'Loading...'}
+          {loading && 
+            <div className="row margin-sm-top-1 margin-md-top-1">
+              <div className="col-sm-8 col-sm-push-2">
+                Loading...
+              </div>
             </div>
-          </div>
+          }
           {panels && selectedProduct && (
             <div className="row margin-sm-top-1 margin-md-top-1">
               <div className="col-sm-12">

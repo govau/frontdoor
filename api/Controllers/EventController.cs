@@ -27,16 +27,16 @@ namespace Dta.Frontdoor.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<List<Event>> Get()
+        public async Task<List<EventGroup>> Get()
         {
-            if (_cache.TryGetValue(CACHE_KEY, out List<Event> cacheEntry))
+            if (_cache.TryGetValue(CACHE_KEY, out List<EventGroup> cacheEntry))
             {
                 return cacheEntry;
             }
             var eventbriteToken = _configuration["EventbriteToken"];
             if (string.IsNullOrWhiteSpace(eventbriteToken) == true)
             {
-                return new List<Event>();
+                return new List<EventGroup>();
             }
 
             using (var client = new HttpClient())
@@ -46,11 +46,17 @@ namespace Dta.Frontdoor.Api.Controllers
                 string s = reader.ReadToEnd();
                 var events = JsonConvert.DeserializeObject<Events>(s);
                 var result = events.EventList.Where(e => e.Listed).Take(3).ToList();
-
+                var grouped = result.GroupBy(
+                    e => string.Format("{0:MMMM}", e.Start.Local),
+                    e => e,
+                    (g, e) => new EventGroup {
+                        Key=g,
+                        Events=e
+                    }).ToList();
                 var cacheEntryOptions = new MemoryCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromHours(4));
-                _cache.Set<List<Event>>(CACHE_KEY, result, cacheEntryOptions);
+                _cache.Set<List<EventGroup>>(CACHE_KEY, grouped, cacheEntryOptions);
                 
-                return result;
+                return grouped;
             }
         }
 

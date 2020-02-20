@@ -44,10 +44,10 @@ const Events: React.FC = () => {
               </div>
               {g.events.map((e: any) => (
                 <div key={e.id} className="row padding-sm-top-1 padding-sm-bottom-1 padding-md-top-1 padding-md-bottom-1">
-                  <div className="col-xs-2 col-sm-2">
+                  <div className="col-xs-2 col-sm-2 col-lg-1">
                     <AUheading size="lg" className="text-align-center">{moment(e.start.local).format('D')}</AUheading>
                   </div>
-                  <div className="col-xs-10 col-sm-10">
+                  <div className="col-xs-10 col-sm-10 col-lg-11">
                     <div className="row">
                       <div className="col-sm-12">
                         <a href={e.url} target="_blank">{e.name.text}</a>

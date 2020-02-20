@@ -35,7 +35,7 @@ const Events: React.FC = () => {
       )}
       {events && events.map((e: any, i: number) => (
         <>
-          <div key={e.id} className={`row hide-sm margin-md-top-05 background-${i % 2 === 0 ? 'light-grey' : 'white'}`}>
+          <div key={`md-${e.id}`} className={`row hide-sm margin-md-top-05 background-${i % 2 === 0 ? 'light-grey' : 'white'}`}>
             <div className="col-sm-12">
               <div className="row height-6">
                 <div className="col-sm-3 width-6 height-6 text-align-center background-dark-grey padding-md-top-05">
@@ -58,7 +58,7 @@ const Events: React.FC = () => {
               </div>
             </div>
           </div>
-          <div key={e.id} className={`row hide-md padding-sm-bottom-1 padding-md-top-05 padding-md-bottom-05 background-${i % 2 === 0 ? 'light-grey' : 'white'}`}>
+          <div key={`sm-${e.id}`} className={`row hide-md padding-sm-bottom-1 padding-md-top-05 padding-md-bottom-05 background-${i % 2 === 0 ? 'light-grey' : 'white'}`}>
             <div className="col-sm-12">
               <div className="row margin-sm-top-05 margin-md-top-05">
                 <div className="col-sm-12">

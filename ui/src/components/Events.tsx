@@ -34,28 +34,53 @@ const Events: React.FC = () => {
         </div>
       )}
       {events && events.map((e: any, i: number) => (
-        <div key={e.id} className={`row padding-sm-bottom-1 padding-md-top-05 padding-md-bottom-05 background-${i % 2 === 0 ? 'light-grey' : 'white'}`}>
-          <div className="col-sm-12">
-            <div className="row margin-sm-top-05 margin-md-top-05">
-              <div className="col-sm-12">
-                <AUheading size="sm" level="3">
-                  <a href={e.url} target="_blank">{e.name.text}</a>
-                </AUheading>
-              </div>
-            </div>
-            <div className="row margin-sm-top-05 margin-md-top-05">
-              <div className="col-sm-12 font-style-italic">{e.format.shortName}</div>
-            </div>
-            <div className="row margin-sm-top-05 margin-md-top-05 margin-md-bottom-1">
-              <div className="col-xs-6 col-sm-6">
-                {moment(e.start.local).format('D')} {moment(e.start.local).format('MMMM')}  {moment(e.start.local).format('YYYY')}
-              </div>
-              <div className="col-xs-6 col-sm-6">
-                {`${e.venue.address.city}${e.onlineEvent ? '/Online' : ''}`}
+        <>
+          <div key={e.id} className={`row hide-sm margin-md-top-05 background-${i % 2 === 0 ? 'light-grey' : 'white'}`}>
+            <div className="col-sm-12">
+              <div className="row height-6">
+                <div className="col-sm-3 width-6 height-6 text-align-center background-dark-grey padding-md-top-05">
+                  <div className="font-size-2">{moment(e.start.local).format('D')}</div>
+                  <div className="font-size-1">{moment(e.start.local).format('MMMM')}</div>
+                </div>
+                <div className="col-sm-9">
+                  <div className="row padding-md-top-05">
+                    <div className="col-sm-6 font-style-italic">{e.format.shortName}</div>
+                    <div className="col-sm-6">
+                      {`${e.venue.address.city}${e.onlineEvent ? '/Online' : ''}`}
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-sm-12">
+                      <a href={e.url} target="_blank">{e.name.text}</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+          <div key={e.id} className={`row hide-md padding-sm-bottom-1 padding-md-top-05 padding-md-bottom-05 background-${i % 2 === 0 ? 'light-grey' : 'white'}`}>
+            <div className="col-sm-12">
+              <div className="row margin-sm-top-05 margin-md-top-05">
+                <div className="col-sm-12">
+                  <AUheading size="sm" level="3">
+                    <a href={e.url} target="_blank">{e.name.text}</a>
+                  </AUheading>
+                </div>
+              </div>
+              <div className="row margin-sm-top-05 margin-md-top-05">
+                <div className="col-sm-12 font-style-italic">{e.format.shortName}</div>
+              </div>
+              <div className="row margin-sm-top-05 margin-md-top-05 margin-md-bottom-1">
+                <div className="col-xs-6 col-sm-6">
+                  {moment(e.start.local).format('D')} {moment(e.start.local).format('MMMM')} {moment(e.start.local).format('YYYY')}
+                </div>
+                <div className="col-xs-6 col-sm-6">
+                  {`${e.venue.address.city}${e.onlineEvent ? '/Online' : ''}`}
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
       ))}
       <div className="row margin-sm-top-1 margin-md-top-05">
         <div className="col-sm-12 text-align-right">

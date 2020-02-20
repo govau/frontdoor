@@ -69,7 +69,6 @@ namespace Dta.Frontdoor.Api.Controllers
                 if (a.Score == 0) {
                     continue;
                 }
-                Console.WriteLine(a.Score);
                 var searchResult = new SearchResult()
                 {
                     Text = a.Answer,

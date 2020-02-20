@@ -1,8 +1,8 @@
 import AUheading from '@gov.au/headings';
 import React from 'react';
-import CommonInterestGroup from '../../components/buyer/CommonInterestGroup';
 import Search from '../../components/buyer/Search';
 import StartSouring from '../../components/buyer/StartSourcing';
+import KeyLink from '../../components/buyer/KeyLink';
 import Events from '../../components/Events';
 import BuyerLayout from '../../layouts/buyerLayout';
 
@@ -44,7 +44,7 @@ const ProductsAndServicesPage: React.FC = () => {
               </div>
               <div className="col-sm-6">
                 <div className="background-white">
-                  <CommonInterestGroup />
+                  <KeyLink />
                 </div>
               </div>
             </div>

@@ -68,7 +68,7 @@ const Search: React.FC = () => {
           />
         </div>
       </div>
-      {loading && 
+      {loading &&
         <div className="row margin-sm-top-1 margin-md-top-1">
           <div className="col-sm-8 col-sm-push-2">
             Loading...

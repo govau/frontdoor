@@ -31,14 +31,7 @@
 }
 
 .toggle-button {
-    @media (max-width: 768px) {
-        button {
-            border-radius: 0px;
-        }
-    }
-
-    @media (min-width: 768px) {
-
+    @media (min-width: 769px) {
         button:first-child {
             border-radius: 4px 0px 0px 4px;
             border-right-width: 1.5px;

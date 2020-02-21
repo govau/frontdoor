@@ -12,7 +12,7 @@ const QuickLink: React.FC = () => {
       </div>
       <div className="row">
         <div className="col-sm-12">
-          <div>You need to buy:</div>
+          <div>What do you need to buy?</div>
           <div className="margin-sm-top-1 margin-md-top-05">
             <Link to="#">[TODO]Cloud services</Link>
             <span className="text-colour-grey"> (software as a service, customer relationship management, development tools)</span>

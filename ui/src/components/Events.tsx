@@ -39,7 +39,7 @@ const Events: React.FC = () => {
             <div className="col-sm-12">
               <div className="row">
                 <div className="col-sm-12">
-                  <AUheading size="md">{g.key}</AUheading>
+                  <AUheading size="md" level="3">{g.key}</AUheading>
                 </div>
               </div>
               {g.events.map((e: any) => (

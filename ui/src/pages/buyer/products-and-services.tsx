@@ -1,8 +1,8 @@
 import AUheading from '@gov.au/headings';
 import React from 'react';
+import KeyLink from '../../components/buyer/KeyLink';
 import Search from '../../components/buyer/Search';
 import StartSouring from '../../components/buyer/StartSourcing';
-import KeyLink from '../../components/buyer/KeyLink';
 import Events from '../../components/Events';
 import BuyerLayout from '../../layouts/buyerLayout';
 

@@ -8,7 +8,7 @@ interface IFooterProps {
 
 const Footer: React.FC<IFooterProps> = ({ hideFeedback }) => (
   <>
-    { !hideFeedback && (
+    {!hideFeedback && (
       <div className="background-light-grey">
         <div className="container">
           <div className="row">
@@ -29,15 +29,11 @@ const Footer: React.FC<IFooterProps> = ({ hideFeedback }) => (
           </div>
           <div className="col-sm-10">
             <div className="row">
-              <div className="col-sm-12">
-                <ul className="au-link-list au-link-list--inline">
-                  <li><a href="#">[TODO]Contact us</a></li>
-                  <li><a href="#">[TODO]Accessibility</a></li>
-                  <li><a href="#">[TODO]Cookies</a></li>
-                  <li><a href="#">[TODO]Privacy</a></li>
-                  <li><a href="#">[TODO]Disclaimer and copyright</a></li>
-                </ul>
-              </div>
+              <div className="col-xs-12 col-sm-2"><a href="#">[TODO]Contact us</a></div>
+              <div className="col-xs-12 col-sm-2"><a href="#">[TODO]Accessibility</a></div>
+              <div className="col-xs-12 col-sm-2"><a href="#">[TODO]Cookies</a></div>
+              <div className="col-xs-12 col-sm-2"><a href="#">[TODO]Privacy</a></div>
+              <div className="col-xs-12 col-sm-4"><a href="#">[TODO]Disclaimer and copyright</a></div>
             </div>
             <div className="row">
               <div className="col-sm-12 au-footer__end">

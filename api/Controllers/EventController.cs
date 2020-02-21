@@ -45,7 +45,7 @@ namespace Dta.Frontdoor.Api.Controllers
             {
                 string s = reader.ReadToEnd();
                 var events = JsonConvert.DeserializeObject<Events>(s);
-                var result = events.EventList.Where(e => e.Listed).Take(3).ToList();
+                var result = events.EventList.Where(e => e.Listed).Take(4).ToList();
                 var grouped = result.GroupBy(
                     e => string.Format("{0:MMMM}", e.Start.Local),
                     e => e,

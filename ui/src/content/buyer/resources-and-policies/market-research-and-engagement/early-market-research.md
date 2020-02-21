@@ -30,7 +30,8 @@ title: 'Early market research'
         <h1 class="au-display-xl">Early market research</h1>
         <div class="margin-sm-top-1 margin-md-top-1">
             <video width="400" height="4000" controls class="width-100 height-auto">
-                <source src="/dta_concept.mp4" type="video/mp4">
+                <source src="/buyer/resources-and-policies/market-research-and-engagement/dta_20191216.mp4" type="video/mp4">
+                <track label="English" kind="subtitles" srclang="en" src="/buyer/resources-and-policies/market-research-and-engagement/dta_20191216.vtt" default>
                 Your browser does not support the video tag.
             </video>
         </div>

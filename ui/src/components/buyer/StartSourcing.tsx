@@ -11,7 +11,7 @@ const StartSourcing: React.FC = () => {
         </div>
       </div>
       <div className="row">
-        <div className="col-xs-12 col-sm-2">
+        <div className="col-xs-12 col-sm-3">
           <div className="float-left"><a href="https://marketplace.service.gov.au" className="margin-sm-right-2 margin-md-right-2">Digital Marketplace</a></div>
         </div>
         <div className="col-xs-12 col-sm-3">

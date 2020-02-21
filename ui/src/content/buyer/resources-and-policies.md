@@ -12,7 +12,7 @@ Learn more about your whole-of-government requirements and best practice at each
 Find out more about:
 
 - [[TODO]How DTA panels and portals work](#)
-- [[TODO]Market research and engagement](#)
+- [[TODO]Market research and engagement](/buyer/market-research-and-engagement)
 - [[TODO]Digital sourcing capability measurement](#)
 
 <div class="margin-md-top-2 margin-md-bottom-05"><span class="badge badge-green margin-md-bottom-05">In progress</span></div>

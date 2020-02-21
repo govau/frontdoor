@@ -13,7 +13,7 @@ const GoogleAnalytics = () => {
         gtag('config', 'UA-61222473-29');
         `}</script>
     </Helmet>
-  )
+  );
 };
 
-export default GoogleAnalytics
+export default GoogleAnalytics;

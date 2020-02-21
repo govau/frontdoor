@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import * as React from 'react';
-import GoogleAnalytics from './GoogleAnalytics'
+import GoogleAnalytics from './GoogleAnalytics';
 
 
 interface IHeaderProps {

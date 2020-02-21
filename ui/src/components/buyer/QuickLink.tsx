@@ -2,12 +2,12 @@ import AUheading from '@gov.au/headings';
 import { Link } from 'gatsby';
 import React from 'react';
 
-const KeyLink: React.FC = () => {
+const QuickLink: React.FC = () => {
   return (
     <div className="padding-md-1">
       <div className="row">
         <div className="col-sm-12 margin-sm-bottom-1 margin-md-bottom-1">
-          <AUheading size="md" level="2">Key Links</AUheading>
+          <AUheading size="md" level="2">Quick Links</AUheading>
         </div>
       </div>
       <div className="row">
@@ -61,4 +61,4 @@ const KeyLink: React.FC = () => {
   );
 };
 
-export default KeyLink;
+export default QuickLink;

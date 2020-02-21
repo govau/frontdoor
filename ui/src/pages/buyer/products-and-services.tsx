@@ -1,6 +1,6 @@
 import AUheading from '@gov.au/headings';
 import React from 'react';
-import KeyLink from '../../components/buyer/KeyLink';
+import QuickLink from '../../components/buyer/QuickLink';
 import Search from '../../components/buyer/Search';
 import StartSouring from '../../components/buyer/StartSourcing';
 import Events from '../../components/Events';
@@ -44,7 +44,7 @@ const ProductsAndServicesPage: React.FC = () => {
               </div>
               <div className="col-sm-6">
                 <div className="background-white">
-                  <KeyLink />
+                  <QuickLink />
                 </div>
               </div>
             </div>

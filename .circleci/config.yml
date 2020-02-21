@@ -115,7 +115,7 @@ jobs:
           paths:
             - "ui/**/*"
     
-  deploy_to_rc:
+  deploy_ui_to_rc:
     docker:
       - image: circleci/node:10-stretch
     steps:
@@ -123,6 +123,11 @@ jobs:
           cf_app_name: fd-rc-ui
           cf_manifest: ../manifest.rc.yml
           cf_path: ui/public
+    
+  deploy_api_to_rc:
+    docker:
+      - image: circleci/node:10-stretch
+    steps:
       - cf_deploy:
           cf_app_name: fd-rc-api
           cf_manifest: manifest.rc.yml
@@ -190,7 +195,16 @@ workflows:
           filters:
             tags:
               only: /[0-9]+(\.[0-9]+)*/
-      - deploy_to_rc:
+      - deploy_ui_to_rc:
+          requires:
+            - run_dot_net_builds
+            - run_npm_builds
+          filters:
+            tags:
+              ignore: /.*/
+            branches:
+              only: master
+      - deploy_api_to_rc:
           requires:
             - run_dot_net_builds
             - run_npm_builds

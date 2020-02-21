@@ -7,7 +7,7 @@ const QuickLink: React.FC = () => {
     <div className="padding-md-1">
       <div className="row">
         <div className="col-sm-12 margin-sm-bottom-1 margin-md-bottom-1">
-          <AUheading size="md" level="2">Quick Links</AUheading>
+          <AUheading size="md" level="2">Quick links</AUheading>
         </div>
       </div>
       <div className="row">

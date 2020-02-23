@@ -82,7 +82,7 @@ namespace Dta.Frontdoor.Api.Controllers
                 result.Add(searchResult);
             }
 
-            var cacheEntryOptions = new MemoryCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromHours(4));
+            var cacheEntryOptions = new MemoryCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromMinutes(30));
             _cache.Set<List<SearchResult>>(cacheKey, result, cacheEntryOptions);
             return result;
         }

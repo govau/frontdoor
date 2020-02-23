@@ -53,7 +53,7 @@ namespace Dta.Frontdoor.Api.Controllers
                         Key=g,
                         Events=e
                     }).ToList();
-                var cacheEntryOptions = new MemoryCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromHours(4));
+                var cacheEntryOptions = new MemoryCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromMinutes(20));
                 _cache.Set<List<EventGroup>>(CACHE_KEY, grouped, cacheEntryOptions);
                 
                 return grouped;

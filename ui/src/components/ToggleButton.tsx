@@ -2,6 +2,7 @@ import AUbutton from '@gov.au/buttons';
 import React, { useEffect, useState } from 'react';
 
 export interface IOption {
+  imgComponent?: React.ReactNode;
   key: string;
   text: string;
 }
@@ -46,6 +47,7 @@ const ToggleButton: React.FC<IToggleButtonProps> = ({ optionSelectedFunc, option
             onClick={() => selected(o)}
             as={o.key === selectedOption?.key ? 'primary' : 'secondary'}>
             {o.text}
+            {o.imgComponent}
           </AUbutton>
         ))}
       </div>

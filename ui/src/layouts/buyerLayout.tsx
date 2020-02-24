@@ -8,6 +8,21 @@ import Header from '../components/Header';
 
 interface IStaticQueryProps {
   site: {
+    allMarkdownRemark: {
+      nodes: {
+        frontmatter: {
+          title: string,
+        }
+        fields: {
+          slug: string,
+        },
+      },
+    },
+    allSitePage: {
+      nodes: {
+        path: string,
+      },
+    },
     siteMetadata: {
       title: string
       description: string
@@ -27,6 +42,7 @@ const BuyerLayout: React.FC = ({ children }) => {
       }
     }
   `);
+
   return (
     <div className="au-grid">
       <Helmet

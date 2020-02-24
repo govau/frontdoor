@@ -2,11 +2,21 @@ import AUheading from '@gov.au/headings';
 import React from 'react';
 import Events from '../../components/Events';
 import BuyerLayout from '../../layouts/buyerLayout';
+import { getSingleBreadCrumbItem } from '../../utils/BreadCrumb';
 
 const CapabilityAndCommunityPage: React.FC = () => {
   return (
     <BuyerLayout>
       <div className="container">
+        <div className="row margin-sm-top-2 margin-md-top-1">
+          <div className="col-sm-12">
+            <nav className="au-breadcrumbs" aria-label="breadcrumb">
+              <ul className="au-link-list au-link-list--inline">
+                {getSingleBreadCrumbItem('Capability and community')}
+              </ul>
+            </nav>
+          </div>
+        </div>
         <div className="row background-white margin-sm-top-2 margin-sm-bottom-2 margin-md-top-1">
           <div className="col-sm-12">
             <div className="padding-sm-top-2 padding-sm-bottom-2 padding-md-2">

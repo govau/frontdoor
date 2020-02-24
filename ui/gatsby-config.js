@@ -75,5 +75,25 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-sass`,
     `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-plugin-breadcrumb`,
+      options: {
+        useAutoGen: true,
+        autoGenHomeLabel: `Home`,
+        exclude: [
+          `/dev-404-page`,
+          `/404`,
+          `/404.html`,
+          `/offline-plugin-app-shell-fallback`,
+        ],
+        crumbLabelUpdates: [
+          {
+            pathname: '/buyer/products-and-services',
+            crumbLabel: 'Buy products and services'
+          }
+        ],
+        useClassNames: false,
+      }
+    },
   ]
 }

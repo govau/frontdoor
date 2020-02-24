@@ -24,7 +24,7 @@ const ProductsAndServicesPage: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="padding-sm-top-2 margin-sm-bottom-3 padding-md-top-3 margin-md-bottom-3">
+        <div className="padding-sm-top-2 margin-sm-bottom-3 padding-md-top-1 margin-md-bottom-3">
           <div className="container">
             <div className="row">
               <div className="col-sm-12">

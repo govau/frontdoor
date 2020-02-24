@@ -49,7 +49,7 @@ const QuickLink: React.FC = () => {
             <Link to="#">[TODO]DTA panels and portals</Link>
           </div>
           <div className="margin-sm-top-1 margin-md-top-1">
-            <Link to="/buyer/products-and-services/sourcing-arrangements">Sourcing arrangements</Link>
+            <Link to="/buyer/products-and-services/sourcing-arrangements">Whole-of-government arrangements</Link>
           </div>
           <div className="margin-sm-top-2 margin-md-top-2">Can't find what you need?</div>
           <div className="margin-sm-top-1 margin-md-top-1">

@@ -53,7 +53,7 @@ const QuickLink: React.FC = () => {
           </div>
           <div className="margin-sm-top-2 margin-md-top-2">Can't find what you need?</div>
           <div className="margin-sm-top-1 margin-md-top-1">
-            <Link to="#">[TODO]Ask sellers to help define your digital requirements</Link>
+            <Link to="/buyer/products-and-services/ask-the-market">Ask sellers to help define your digital requirements</Link>
           </div>
         </div>
       </div>

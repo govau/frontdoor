@@ -5,29 +5,29 @@ summary: 'For sourcing digital marketplace products and associated services.'
 panel: 'digital-marketplace'
 ---
 
-# Buying digital services from the Digital Marketplace
+# Selling products and services on the Digital Marketplace
 
 <nav class="au-inpage-nav-links" aria-label="in page navigation">
   <h2 class="au-inpage-nav-links__heading">On this page:</h2>
   <ul class="au-link-list">
-    <li><a href="#section1">What can you buy from the Digital Marketplace?</a></li>
-    <li><a href="#section2">Who can use this panel?</a></li>
-    <li><a href="#section3">Register or log in to source digital services</a></li>
-    <li><a href="#section4">Contact the team</a></li>
+    <li><a href="#what-service-categories-can-you-offer">What can you buy from the Digital Marketplace?</a></li>
+    <li><a href="#apply-to-sell-on-the-digital-marketplace">Who can use this panel?</a></li>
+    <li><a href="#useful-stats">Find sellers through the Digital Marketplace</a></li>
+    <li><a href="#contact-the-team">Contact the team</a></li>
   </ul>
 </nav>
 
-We established the Digital Marketplace for government buyers looking to source digital products and services.
+We established the Digital Marketplace for sellers who offer digital consultants, contractors and advisory services to government buyers.
 
 The high-level objectives of the Digital Marketplace are to increase the participation of small to medium enterprises (SMEs) and start-ups. We do this by breaking down barriers to entry, delivering better sourcing outcomes through increased competition and delivering innovative solutions for government.
 
-The Standing Offer Notice (SON) for Digital Marketplace is SON3413842.
+The Standing Offer Notice (SON) number for Digital Marketplace Panel is <a href="https://www.tenders.gov.au/Son/Show/4E10C3C3-99F9-34E1-61CD-E299C229AAEF" target="_blank">SON3413842</a>.
 
-Read the Digital Marketplace Master Agreement.
+Read the <a href="https://marketplace.service.gov.au/api/2/r/master-agreement-current.html" target="_blank">Digital Marketplace Master Agreement</a>.
 
-## <span name="section1">What can you buy from the Digital Marketplace?</span>
+## <span name="what-service-categories-can-you-offer">What service categories can you offer?</span>
 
-Approved sellers can offer digital consultants, contractors and advisory services in:
+Approved sellers can offer digital services in:
 
 - Agile delivery and governance
 - Change and transformation
@@ -45,31 +45,26 @@ Approved sellers can offer digital consultants, contractors and advisory service
 - Training, learning and development
 - User research and design
 
-## <span name="section2">Who can use this panel?</span>
+View our guide on <a href="https://marketplace1.zendesk.com/hc/en-gb/articles/360000556476" target="_blank">Digital Marketplace service categories and rates</a>.
 
-All federal, state, territory and local government agencies can use the Digital Marketplace.
+## <span name="apply-to-sell-on-the-digital-marketplace">Apply to sell on the Digital Marketplace</span>
 
-## <span name="section3">Register or log in to source digital services</span>
+New sellers can join at any time. Read more on how to <a href="https://marketplace1.zendesk.com/hc/en-gb/articles/115011258607-Become-a-seller" target="_blank">become a seller on the Digital Marketplace</a>.
 
-You must use the Digital Marketplace to:
+Once you’re listed as an approved seller on the Digital Marketplace, you can start responding to <a href="https://marketplace.service.gov.au/2/opportunities?status=live" target="_blank">opportunities posted by government buyers</a>.
 
-- seek proposals and quotes for digital outcomes
-- ask the market for innovative solutions and ideas from industry
-- hire digital specialists
+Read our guidelines on <a href="https://marketplace1.zendesk.com/hc/en-gb/articles/360000634456-Responding-to-an-opportunity" target="_blank">responding to opportunities on the Digital Marketplace</a>.
 
-We recommend to check with your organisation’s procurement team or lead in case there are users with existing accounts.
+## <span name="useful-stats">Useful stats</span>
 
-New accounts  
-Register to create a Digital Marketplace account.
+All federal, state, territory and local government organisations and tertiary institutions can use the Digital Marketplace to buy digital services.
 
-You can apply to become a buyer if your email address ends in ‘.gov.au’. Contact the Digital Marketplace team if your government email address ends in ‘.com’, ‘.edu.au’ etc.
+View <a href="https://marketplace.service.gov.au/2/insights" target="_blank">key statistics</a> on how government buyers and sellers use the Digital Marketplace.
 
-If you’re a contractor, you must also be authorised by your supervisor who is a government employee.
+## <span name="contact-the-team">Contact the team</span>
 
-Current users, log in to use the Digital Marketplace.
+For questions about using the Digital Marketplace:
 
-## <span name="section4">Contact the team</span>
+Email: [marketplace@digital.gov.au](mailto:marketplace@digital.gov.au)
 
-For questions on using the Digital Marketplace:  
-Email: marketplace@digital.gov.au  
 Call: 0447 024 113

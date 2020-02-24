@@ -10,7 +10,7 @@ title: 'Whole-of-government arrangement for Microsoft products and services'
   <ul class="au-link-list">
     <li><a href="#who-can-use-this-arrangement">Who can use this arrangement?</a></li>
     <li><a href="#fees">Fees</a></li>
-    <li><a href="#which-products-and-services-are-covered">Which AWS products and services are covered?</a></li>
+    <li><a href="#which-products-and-services-are-covered">Which Microsoft products and services are covered?</a></li>
     <li><a href="#request-access-to-this-arrangement">Request access to this arrangement?</a></li>
     <li><a href="#contact-the-team">Contact the team</a></li>
   </ul>

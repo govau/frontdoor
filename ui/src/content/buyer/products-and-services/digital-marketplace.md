@@ -54,7 +54,7 @@ All federal, state, territory and local government agencies can use the Digital 
 You must use the <a href="https://marketplace.service.gov.au" target="_blank">Digital Marketplace</a> to:
 
 - seek proposals and quotes for digital outcomes
-- [[TODO]ask the market for](#) innovative solutions and ideas from industry
+- [ask the market for](/buyer/products-and-services/ask-the-market) innovative solutions and ideas from industry
 - hire digital specialists
 
 We recommend to check with your organisation’s procurement team or lead in case there are users with existing accounts.

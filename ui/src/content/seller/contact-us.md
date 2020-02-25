@@ -17,9 +17,9 @@ title: 'Panels and contact information'
     </thead>
     <tbody class="au-table__body">
         <tr class="au-table__row">
-            <td class="au-table__cell">Cloud services panel</td>
-            <td class="au-table__cell">SON2914302</td>
-            <td class="au-table__cell">ICT Procurement Portal</td>
+            <td class="au-table__cell"><a href="/seller/products-and-services/cloud">Cloud services panel</a></td>
+            <td class="au-table__cell"><a href="https://www.tenders.gov.au/Son/Show/745895ff-e769-50c9-d860-7cecece179b4" target="_blank">SON2914302</a></td>
+            <td class="au-table__cell"><a href="https://ictprocurement.service-now.com/" target="_blank">ICT Procurement Portal</a></td>
             <td class="au-table__cell">
                 <ul>
                     <li>Software as a service</li>
@@ -30,13 +30,13 @@ title: 'Panels and contact information'
             </td>
             <td class="au-table__cell">
                 02 6120 8705<br/>
-                ictprocurement@dta.gov.au
+                <a href="mailto:ictprocurement@dta.gov.au">ictprocurement@dta.gov.au</a>
             </td>
         </tr>
         <tr class="au-table__row">
-            <td class="au-table__cell">Data centres panel</td>
-            <td class="au-table__cell">SON2402841</td>
-            <td class="au-table__cell">ICT Procurement Portal</td>
+            <td class="au-table__cell"><a href="/seller/products-and-services/data-centres">Data centres panel</a></td>
+            <td class="au-table__cell"><a href="https://www.tenders.gov.au/Son/Show/fe5fa4fb-f204-8d9e-0cf8-73240c00b6fc" target="_blank">SON2402841</a></td>
+            <td class="au-table__cell"><a href="https://ictprocurement.service-now.com/" target="_blank">ICT Procurement Portal</a></td>
             <td class="au-table__cell">
                 <ul>
                     <li>Data centres</li>
@@ -45,13 +45,13 @@ title: 'Panels and contact information'
             </td>
             <td class="au-table__cell">
                 02 6120 8705<br />
-                datacentres@dta.gov.au
+                <a href="mailto:datacentres@dta.gov.au">datacentres@dta.gov.au</a>
             </td>
         </tr>
         <tr class="au-table__row">
-            <td class="au-table__cell">Digital Marketplace panel</td>
-            <td class="au-table__cell">SON3413842</td>
-            <td class="au-table__cell">Digital Marketplace</td>
+            <td class="au-table__cell"><a href="/seller/products-and-services/digital-marketplace">Digital Marketplace panel</a></td>
+            <td class="au-table__cell"><a href="https://www.tenders.gov.au/Son/Show/4E10C3C3-99F9-34E1-61CD-E299C229AAEF" target="_blank">SON3413842</a></td>
+            <td class="au-table__cell"><a href="https://marketplace.service.gov.au">Digital Marketplace</a></td>
             <td class="au-table__cell">
                 <ul>
                     <li>Consultants</li>
@@ -59,12 +59,15 @@ title: 'Panels and contact information'
                     <li>Advisory services</li>
                 </ul>
             </td>
-            <td class="au-table__cell">0447 024 113 marketplace@digital.gov.au</td>
+            <td class="au-table__cell">
+                0447 024 113<br />
+                <a href="mailto:marketplace@digital.gov.au">marketplace@digital.gov.au</a>
+            </td>
         </tr>
         <tr class="au-table__row">
-            <td class="au-table__cell">Hardware panel</td>
-            <td class="au-table__cell">SON3541738</td>
-            <td class="au-table__cell">ICT Procurement Portal</td>
+            <td class="au-table__cell"><a href="/seller/products-and-services/hardware">Hardware panel</a></td>
+            <td class="au-table__cell"><a href="https://www.tenders.gov.au/Son/Show/61f30dd8-c7e2-ec94-2a86-c3adf5775795" target="_blank">SON3541738</a></td>
+            <td class="au-table__cell"><a href="https://ictprocurement.service-now.com/" target="_blank">ICT Procurement Portal</a></td>
             <td class="au-table__cell">
                 <ul>
                     <li>Desktops, laptops and tablets</li>
@@ -74,30 +77,13 @@ title: 'Panels and contact information'
             </td>
             <td class="au-table__cell">
                 02 6120 8705<br />
-                ictprocurement@dta.gov.au
+                <a href="mailto:ictprocurement@dta.gov.au">ictprocurement@dta.gov.au</a>
             </td>
         </tr>
         <tr class="au-table__row">
-            <td class="au-table__cell">Mobile panel</td>
-            <td class="au-table__cell">SON2589631</td>
-            <td class="au-table__cell">ICT Procurement Portal</td>
-            <td class="au-table__cell">
-                <ul>
-                    <li>Bulk SMS solutions</li>
-                    <li>Mobile handsets</li>
-                    <li>Phone accessories</li>
-                    <li>SIM plans</li>
-                </ul>
-            </td>
-            <td class="au-table__cell">
-                02 6120 8705<br />
-                ictprocurement@dta.gov.au
-            </td>
-        </tr>
-        <tr class="au-table__row">
-            <td class="au-table__cell">Software panel</td>
-            <td class="au-table__cell">SON3490955</td>
-            <td class="au-table__cell">ICT Procurement Portal</td>
+            <td class="au-table__cell"><a href="/seller/products-and-services/software">Software panel</a></td>
+            <td class="au-table__cell"><a href="https://www.tenders.gov.au/Son/Show/90c61f3b-be27-3313-bcd6-93db777921c7" target="_blank">SON3490955</a></td>
+            <td class="au-table__cell"><a href="https://ictprocurement.service-now.com/" target="_blank">ICT Procurement Portal</a></td>
             <td class="au-table__cell">
                 <ul>
                     <li>Software and associated services</li>
@@ -105,13 +91,13 @@ title: 'Panels and contact information'
             </td>
             <td class="au-table__cell">
                 02 6120 8705<br />
-                ictprocurement@dta.gov.au
+                <a href="mailto:ictprocurement@dta.gov.au">ictprocurement@dta.gov.au</a>
             </td>
         </tr>
         <tr class="au-table__row">
-            <td class="au-table__cell">Telecommunications panel</td>
-            <td class="au-table__cell">SON3386916</td>
-            <td class="au-table__cell">ICT Procurement Portal</td>
+            <td class="au-table__cell"><a href="/seller/products-and-services/telecommunications">Telecommunications panel</a></td>
+            <td class="au-table__cell"><a href="https://www.tenders.gov.au/Son/Show/fc7270c0-f972-aca0-8f96-b23046b347cf" target="_blank">SON3386916</a></td>
+            <td class="au-table__cell"><a href="https://ictprocurement.service-now.com/" target="_blank">ICT Procurement Portal</a></td>
             <td class="au-table__cell">
                 <ul>
                     <li>Mobile plans and services</li>
@@ -120,8 +106,8 @@ title: 'Panels and contact information'
             </td>
             <td class="au-table__cell">
                 02 6120 8705<br />
-                ictprocurement@dta.gov.au
-            ∂</td>
+                <a href="mailto:ictprocurement@dta.gov.au">ictprocurement@dta.gov.au</a>
+            </td>
         </tr>
     </tbody>
 </table>

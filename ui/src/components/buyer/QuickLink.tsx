@@ -14,31 +14,31 @@ const QuickLink: React.FC = () => {
         <div className="col-sm-12">
           <div>What do you need to buy?</div>
           <div className="margin-sm-top-1 margin-md-top-05">
-            <Link to="#">[TODO]Cloud services</Link>
+            <Link to="/buyer/products-and-services/cloud">Cloud services</Link>
             <span className="text-colour-grey"> (software as a service, customer relationship management, development tools)</span>
           </div>
           <div className="margin-sm-top-1 margin-md-top-1">
-            <Link to="#">[TODO]Data centres</Link>
+            <Link to="/buyer/products-and-services/data-centres">Data centres</Link>
             <span className="text-colour-grey"> (data centres and facilities, ICT floorspace)</span>
           </div>
           <div className="margin-sm-top-1 margin-md-top-1">
-            <Link to="#">[TODO]Digital services</Link>
+            <Link to="/buyer/products-and-services/digital-marketplace">Digital services</Link>
             <span className="text-colour-grey"> (contractors, consultants, advisory services)</span>
           </div>
           <div className="margin-sm-top-1 margin-md-top-1">
-            <Link to="#">[TODO]Hardware</Link>
+            <Link to="/buyer/products-and-services/hardware">Hardware</Link>
             <span className="text-colour-grey"> (desktops, laptops, storage, network equipment)</span>
           </div>
           <div className="margin-sm-top-1 margin-md-top-1">
-            <Link to="#">[TODO]Mobile</Link>
+            <Link to="/buyer/products-and-services/mobile">Mobile</Link>
             <span className="text-colour-grey"> (mobile handsets, bulk SMS, phone accessories, SIM plans)</span>
           </div>
           <div className="margin-sm-top-1 margin-md-top-1">
-            <Link to="#">[TODO]Software</Link>
+            <Link to="/buyer/products-and-services/software">Software</Link>
             <span className="text-colour-grey"> (enterprise software, development tools, associated services)</span>
           </div>
           <div className="margin-sm-top-1 margin-md-top-1">
-            <Link to="#">[TODO]Telecommunications</Link>
+            <Link to="/buyer/products-and-services/telecommunications">Telecommunications</Link>
             <span className="text-colour-grey"> (internet connections, data carriage, satellite and managed networks)</span>
           </div>
           <div className="margin-sm-top-2 margin-md-top-2">View list of:</div>

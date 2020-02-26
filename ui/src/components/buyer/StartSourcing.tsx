@@ -12,10 +12,10 @@ const StartSourcing: React.FC = () => {
       </div>
       <div className="row">
         <div className="col-xs-12 col-sm-3">
-          <div className="float-left"><a href="https://marketplace.service.gov.au" target="_blank" className="margin-sm-right-2 margin-md-right-2">Digital Marketplace</a></div>
+          <div className="float-left"><a href="https://marketplace.service.gov.au" target="_blank" rel="external" className="margin-sm-right-2 margin-md-right-2">Digital Marketplace</a></div>
         </div>
         <div className="col-xs-12 col-sm-3">
-          <div className="float-left"><a href="https://ictprocurement.service-now.com/" target="_blank" className="margin-sm-right-2 margin-md-right-2">ICT Procurement Portal</a></div>
+          <div className="float-left"><a href="https://ictprocurement.service-now.com/" target="_blank" rel="external" className="margin-sm-right-2 margin-md-right-2">ICT Procurement Portal</a></div>
         </div>
         <div className="col-xs-12 col-sm-3">
           <div className="float-left"><Link to="/buyer/contact-us">[TODO]List of DTA panels and portals</Link></div>

@@ -50,7 +50,7 @@ const Events: React.FC = () => {
                   <div className="col-xs-10 col-sm-10">
                     <div className="row">
                       <div className="col-sm-12">
-                        <a href={e.url} target="_blank">{e.name.text}</a>
+                        <a href={e.url} target="_blank" rel="external">{e.name.text}</a>
                       </div>
                     </div>
                     <div className="row padding-sm-top-05 padding-md-top-05 text-colour-grey">
@@ -68,7 +68,7 @@ const Events: React.FC = () => {
       <div className="row margin-sm-top-1 margin-md-top-05">
         <div className="col-sm-12 text-align-right">
           <div className="padding-md-top-1">
-            <a href="https://www.eventbrite.com.au/o/digital-transformation-agency-8025584572" target="_blank">[TODO]See more events</a>
+            <a href="https://www.eventbrite.com.au/o/digital-transformation-agency-8025584572" target="_blank" rel="external">[TODO]See more events</a>
           </div>
         </div>
       </div>

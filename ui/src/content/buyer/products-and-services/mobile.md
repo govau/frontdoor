@@ -1,7 +1,7 @@
 ---
 layout: buyer
 title: 'Mobile panel'
-summary: 'Buy some phones'
+summary: 'For mobile handsets, bulk SMS solutions, phone accessories and SIM plans'
 panel: 'mobile'
 ---
 

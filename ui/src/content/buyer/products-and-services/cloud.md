@@ -1,7 +1,7 @@
 ---
 layout: buyer
 title: 'Cloud Marketplace'
-summary: 'For sourcing cloud products and associated services.'
+summary: 'For sourcing software as a service, customer relationship management, development tools'
 panel: 'cloud'
 ---
 

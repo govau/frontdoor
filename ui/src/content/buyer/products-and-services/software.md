@@ -1,7 +1,7 @@
 ---
 layout: buyer
 title: 'Software Marketplace'
-summary: 'Buy software'
+summary: 'For enterprise software, development tools and associated services'
 panel: 'software'
 ---
 

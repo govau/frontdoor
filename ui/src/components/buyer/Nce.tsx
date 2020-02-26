@@ -19,8 +19,8 @@ const Nce: React.FC = () => {
             If you choose a participating vendor after a formal approach-to-market process, you must use the relevant whole-of-government arrangement.
           </div>
           <div className="margin-sm-top-05">
-            <Link to="#">
-              [TODO]Find out more about whole-of-government arrangements
+            <Link to="/buyer/products-and-services/sourcing-arrangements">
+              Find out more about whole-of-government arrangements
             </Link>
           </div>
         </div>

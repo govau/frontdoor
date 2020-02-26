@@ -6,10 +6,10 @@ module.exports = {
     url: "http://localhost:5000",
   },
   siteMetadata: {
-    title: 'Digital Sourcing Front Door',
-    description: 'Digital Sourcing Front Door',
-    keywords: 'digital sourcing',
-    siteUrl: 'https://fd-rc.apps.y.cld.gov.au/',
+    title: 'Digital Sourcing for Government',
+    description: 'Digital Sourcing for Government',
+    keywords: 'digital sourcing government',
+    siteUrl: 'https://digitalsourcing.gov.au/',
     author: {
       name: 'Sam',
       url: '',

@@ -1,6 +1,6 @@
 ---
 layout: buyer
-title: 'Data centres'
+title: 'Data Centre Facilities Supplies Panel'
 summary: 'For sourcing data centres and facilities, and ICT floorspace'
 panel: 'data-centres'
 ---

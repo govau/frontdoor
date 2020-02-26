@@ -1,6 +1,6 @@
 ---
 layout: buyer
-title: 'Mobile panel'
+title: 'Mobile Panel'
 summary: 'For mobile handsets, bulk SMS solutions, phone accessories and SIM plans'
 panel: 'mobile'
 ---

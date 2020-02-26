@@ -1,6 +1,6 @@
 ---
 layout: buyer
-title: 'Telecommunications'
+title: 'Telecommunications Marketplace'
 summary: 'For internet connections, data carriage, satellite and managed networks'
 panel: 'telecommunications'
 ---

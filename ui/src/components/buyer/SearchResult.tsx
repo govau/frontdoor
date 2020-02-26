@@ -68,7 +68,7 @@ const SearchResult: React.FC<ISearchResultProps> = ({ agency, panels, product })
             <div key={e.node.fields.slug} className="row">
               <div className="col-sm-12">
                 <div className="border-top-width-1 border-light-grey padding-sm-1 padding-sm-top-2 padding-sm-bottom-2 padding-md-2">
-                  {p.metadata.mandatory ? (
+                  {agency && agency.metadata.typeofbody === 'nce' && p.metadata.mandatory ? (
                     <span className="badge badge-red">
                       Mandatory
                     </span>

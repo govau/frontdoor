@@ -66,8 +66,7 @@ You can apply to become a buyer if your email address ends in ‘.gov.au’. Con
 
 If you’re a contractor, you must also be authorised by your supervisor who is a government employee.
 
-Current users
-
+Current users  
 Log in to <a href="https://marketplace.service.gov.au/login" target="_blank" rel="external noreferrer">use the Digital Marketplace</a>.
 
 ## <span name="contact-the-team">Contact the team</span>

@@ -31,23 +31,23 @@ This arrangement only applies after you:
 
 ## <span name="who-can-use-this-arrangement">Who can use this arrangement?</span>
 
-If your agency is a [[TODO]Non-corporate Commonwealth Entity (NCE)](#), it is mandatory to use this whole-of-government arrangement when you choose to purchase Microsoft products.
+If your agency is a <a href="https://www.finance.gov.au/about-us/glossary/pgpa/term-non-corporate-commonwealth-entity-nce" target="_blank" rel="external noreferrer">Non-corporate Commonwealth Entity (NCE)</a>, it is mandatory to use this whole-of-government arrangement when you choose to purchase Microsoft products.
 
-If your organisation is a [[TODO]Corporate Commonwealth Entity (CCE)](#), it is optional to use the Microsoft whole-of-government arrangement.
+If your organisation is a <a href="https://www.finance.gov.au/about-us/glossary/pgpa/term-corporate-commonwealth-entity-cce" target="_blank" rel="external noreferrer">Corporate Commonwealth Entity (CCE)</a>, it is optional to use the Microsoft whole-of-government arrangement.
 
 You cannot use this arrangement if your government organisation is a:
 
-- [[TODO]Government Business Enterprise (GBE)](#)
+- <a href="https://www.finance.gov.au/business/government-business-enterprises" target="_blank" rel="external noreferrer">Government Business Enterprise (GBE)</a>
 - state or territory government organisation
 - local council
 
-[[TODO]Contact us](#) if you need advice on who can use this arrangement.
+<a href="#contact-the-team">Contact us</a> if you need advice on who can use this arrangement.
 
 ## <span name="fees">Fees</span>
 
 There are fees involved to use the Microsoft whole-of-government arrangement.
 
-[[TODO]Contact us](#) if you need advice on fees.
+<a href="#contact-the-team">Contact us</a> if you need advice on fees.
 
 ## <span name="which-products-and-services-are-covered">Which Microsoft products and services are covered?</span>
 
@@ -64,7 +64,7 @@ This includes:
 
 ## <span name="request-access-to-this-arrangement">Request access to this arrangement?</span>
 
-If your agency chooses to buy [[TODO]Microsoft products or services](#) after a formal approach to market, [[TODO]contact us](#).
+If your agency chooses to buy [[TODO]Microsoft products or services](#) after a formal approach to market, <a href="#contact-the-team">Contact us</a>.
 
 <a href="https://ictprocurement.service-now.com/" target="_blank" rel="external noreferrer">Log in to the ICT Procurement Portal</a> for further details about this arrangement.
 

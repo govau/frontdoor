@@ -2,12 +2,12 @@ import React from 'react';
 
 
 interface INavigationBarDefaultProps {
-  title?: string;
+  id?: string;
 }
 
-const NavigationBarDefault: React.FC<INavigationBarDefaultProps> = () => {
+const NavigationBarDefault: React.FC<INavigationBarDefaultProps> = ({ id }) => {
   return (
-    <nav className="au-main-nav au-main-nav--dark" aria-label="main">
+    <nav id={id} className="au-main-nav au-main-nav--dark" aria-label="main">
       <div className="container">
         <div className="row">
           <div className="col-md-12">

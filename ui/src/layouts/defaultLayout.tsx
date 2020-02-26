@@ -38,11 +38,14 @@ const DefaultLayout: React.FC = ({ children }) => {
       >
         <html lang="en" />
       </Helmet>
+      <nav className="au-skip-link" aria-label="skip links navigation">
+        <a className="au-skip-link__link" href="#content">Skip to main content</a>
+      </nav>
       <Header title={data.site.siteMetadata.title} />
-      <NavigationBarDefault />
+      <NavigationBarDefault id="nav" />
       <div className="au-body">
         <div className="background-light-grey">
-          <div className="container padding-md-top-3 padding-md-bottom-3">{children}</div>
+          <div id="content" className="container padding-md-top-3 padding-md-bottom-3">{children}</div>
         </div>
       </div>
       <Footer hideFeedback />

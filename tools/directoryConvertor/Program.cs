@@ -18,7 +18,13 @@ namespace Dta.Frontdoor.Tools.DirectoryConvertor
             XElement directoryGovAu = XElement.Load(directoryGovAuFilepath);
 
             var agencies = directoryGovAu.Descendants("item")
-                                         .Where(item => item != null && item.Element("type_of_body") != null && ((string)item.Element("type_of_body")).Contains("Corporate Commonwealth Entity"))
+                                         .Where(item =>
+                                            item != null &&
+                                            item.Element("type_of_body") != null && (
+                                                ((string)item.Element("type_of_body")).Contains("Corporate Commonwealth Entity") ||
+                                                ((string)item.Element("type_of_body")).Contains("C. Commonwealth Company")
+                                            )
+                                         )
                                          .Select(i => new
                                          {
                                              title = (string)i.Element("title"),
@@ -42,6 +48,9 @@ namespace Dta.Frontdoor.Tools.DirectoryConvertor
                         break;
                     case "B. Corporate Commonwealth Entity":
                         typeOfBody = "cce";
+                        break;
+                    case "C. Commonwealth Company":
+                        typeOfBody = "gbe";
                         break;
                 }
                 foreach (var i in group) {   

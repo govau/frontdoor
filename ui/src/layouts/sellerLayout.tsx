@@ -37,10 +37,14 @@ const SellerLayout: React.FC = ({ children }) => {
       >
         <html lang="en" />
       </Helmet>
+      <nav className="au-skip-link" aria-label="skip links navigation">
+        <a className="au-skip-link__link" href="#content">Skip to main content</a>
+        <a className="au-skip-link__link" href="#nav">Skip to main navigation</a>
+      </nav>
       <Header title={data.site.siteMetadata.title} />
-      <NavigationBar />
+      <NavigationBar id="nav" />
       <div className="au-body">
-        <div className="background-light-grey">{children}</div>
+        <div id="content" className="background-light-grey">{children}</div>
       </div>
       <Footer />
     </div>

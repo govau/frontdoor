@@ -3,10 +3,10 @@ import React, { useEffect, useRef } from 'react';
 
 
 interface INavigationBarProps {
-  title?: string;
+  id?: string;
 }
 
-const NavigationBar: React.FC<INavigationBarProps> = () => {
+const NavigationBar: React.FC<INavigationBarProps> = ({id}) => {
   const productsAndServicesLinkRef = useRef(null);
   const workingWithGovernmentLinkRef = useRef(null);
   const contactUsLinkRef = useRef(null);
@@ -25,7 +25,7 @@ const NavigationBar: React.FC<INavigationBarProps> = () => {
   });
 
   return (
-    <nav className="au-main-nav au-main-nav--dark" aria-label="main">
+    <nav id={id} className="au-main-nav au-main-nav--dark" aria-label="main">
       <div className="container">
         <div className="row">
           <div className="col-md-12">

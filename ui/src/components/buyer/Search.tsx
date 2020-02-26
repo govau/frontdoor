@@ -102,9 +102,11 @@ const Search: React.FC = () => {
     if (typeOfBody) {
       switch (typeOfBody) {
         case 'cce':
-          return 'Commonwealth Corporate Entity';
+          return 'Commonwealth Corporate Entity (CCE)';
         case 'nce':
-          return 'Non-corporate Commonwealth Entity';
+          return 'Non-corporate Commonwealth Entity (NCE)';
+        case 'gbe':
+          return 'Government Business Enterprises (GBE)';
         default:
           return `${typeOfBody} unknown`;
       }

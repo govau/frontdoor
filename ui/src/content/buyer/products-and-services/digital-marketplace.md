@@ -21,9 +21,9 @@ We established the Digital Marketplace for government buyers looking to source d
 
 The high-level objectives of the Digital Marketplace are to increase the participation of small to medium enterprises (SMEs) and start-ups. We do this by breaking down barriers to entry, delivering better sourcing outcomes through increased competition and delivering innovative solutions for government.
 
-The Standing Offer Notice (SON) for Digital Marketplace is <a href="https://www.tenders.gov.au/Son/Show/4E10C3C3-99F9-34E1-61CD-E299C229AAEF" target="_blank" rel="external">SON3413842</a>.
+The Standing Offer Notice (SON) for Digital Marketplace is <a href="https://www.tenders.gov.au/Son/Show/4E10C3C3-99F9-34E1-61CD-E299C229AAEF" target="_blank" rel="external noreferrer">SON3413842</a>.
 
-Read the <a href="https://marketplace.service.gov.au/api/2/r/master-agreement-current.html" target="_blank" rel="external">Digital Marketplace Master Agreement</a>.
+Read the <a href="https://marketplace.service.gov.au/api/2/r/master-agreement-current.html" target="_blank" rel="external noreferrer">Digital Marketplace Master Agreement</a>.
 
 ## <span name="what-can-you-buy-from-the-digital-marketplace">What can you buy from the Digital Marketplace?</span>
 
@@ -51,7 +51,7 @@ All federal, state, territory and local government agencies can use the Digital 
 
 ## <span name="find-sellers-through-the-digital-marketplace">Find sellers through the Digital Marketplace</span>
 
-You must use the <a href="https://marketplace.service.gov.au" target="_blank" rel="external">Digital Marketplace</a> to:
+You must use the <a href="https://marketplace.service.gov.au" target="_blank" rel="external noreferrer">Digital Marketplace</a> to:
 
 - seek proposals and quotes for digital outcomes
 - [ask the market for](/buyer/products-and-services/ask-the-market) innovative solutions and ideas from industry
@@ -60,7 +60,7 @@ You must use the <a href="https://marketplace.service.gov.au" target="_blank" re
 We recommend to check with your organisation’s procurement team or lead in case there are users with existing accounts.
 
 New accounts  
-Register to <a href="https://marketplace.service.gov.au/2/signup" target="_blank" rel="external">create a Digital Marketplace account</a>.
+Register to <a href="https://marketplace.service.gov.au/2/signup" target="_blank" rel="external noreferrer">create a Digital Marketplace account</a>.
 
 You can apply to become a buyer if your email address ends in ‘.gov.au’. Contact the Digital Marketplace team if your government email address ends in ‘.com’, ‘.edu.au’ etc.
 
@@ -68,7 +68,7 @@ If you’re a contractor, you must also be authorised by your supervisor who is 
 
 Current users
 
-Log in to <a href="https://marketplace.service.gov.au/login" target="_blank" rel="external">use the Digital Marketplace</a>.
+Log in to <a href="https://marketplace.service.gov.au/login" target="_blank" rel="external noreferrer">use the Digital Marketplace</a>.
 
 ## <span name="contact-the-team">Contact the team</span>
 

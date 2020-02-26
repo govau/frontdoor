@@ -67,7 +67,7 @@ This arrangement does not cover Amazon Marketplace purchases.
 
 If your agency chooses to purchase AWS products or services after a formal approach to market, [[TODO]contact us](#).
 
-<a href="https://ictprocurement.service-now.com/" target="_blank" rel="external">Log in to the ICT Procurement Portal</a> for further details about this arrangement.
+<a href="https://ictprocurement.service-now.com/" target="_blank" rel="external noreferrer">Log in to the ICT Procurement Portal</a> for further details about this arrangement.
 
 ## <span name="contact-the-team">Contact the team</span>
 

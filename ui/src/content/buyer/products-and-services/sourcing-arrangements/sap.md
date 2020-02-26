@@ -57,7 +57,7 @@ All [[TODO]SAP products and services](#) covered by this arrangement.
 
 If your agency choose to purchase [[TODO]SAP products or services](#) after a formal approach to market process, [[TODO]contact us](#).
 
-<a href="https://ictprocurement.service-now.com/" target="_blank" rel="external">Log in to the ICT Procurement Portal</a> for further details about this arrangement.
+<a href="https://ictprocurement.service-now.com/" target="_blank" rel="external noreferrer">Log in to the ICT Procurement Portal</a> for further details about this arrangement.
 
 ## <span name="contact-the-team">Contact the team</span>
 

@@ -51,7 +51,7 @@ const Search: React.FC = () => {
       <div className="row margin-md-top-2">
         <div className="col-sm-8 col-sm-push-2 text-align-center">
           <AUheading size="lg" level="1">
-            What do you want to sell to government?
+            <label htmlFor="product">What do you want to sell to government?</label>
           </AUheading>
           <div className="margin-sm-top-1 margin-md-top-1">
             Find out where to sell your products or services through DTA panels.
@@ -64,7 +64,7 @@ const Search: React.FC = () => {
             searchFunc={productSearchCallback}
             itemSelectedFunc={productSelected}
             list={products}
-            label="What product or service do you want to buy?"
+            id="product"
           />
         </div>
       </div>

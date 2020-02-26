@@ -12,10 +12,10 @@ interface ISearchFieldProps {
   clearFunc?: () => void;
   itemSelectedFunc?: (item: any) => void;
   list: ISearchResult[];
-  label: string;
+  id: string;
 }
 
-const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc, label, list }) => {
+const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc, id, list }) => {
   const inputEl = useRef<HTMLInputElement>(null);
   const [modalVisible, setModalVisibility] = useState(false);
   const [searchingVisible, setSearchingVisible] = useState(false);
@@ -65,10 +65,9 @@ const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc
             aria-label="field"
             className="au-search au-search--icon"
           >
-            <label htmlFor="standard" className="au-search__label">{label}</label>
             <input
               type="search"
-              name="standard"
+              id={id}
               className="au-text-input"
               autoComplete="off"
               ref={inputEl}

@@ -153,7 +153,7 @@ const Search: React.FC = () => {
                 <div className="row margin-sm-top-2 margin-md-top-2">
                   <div className="col-sm-8 col-sm-push-2 text-align-center">
                     <AUheading size="lg" level="1">
-                      Which federal government organisation do you work for?
+                      <label htmlFor="agency">Which federal government organisation do you work for?</label>
                     </AUheading>
                     <div className="margin-sm-top-1 margin-md-top-1">
                       Some DTA panels and arrangements are mandatory for non-corporate Commonwealth entities.
@@ -165,7 +165,7 @@ const Search: React.FC = () => {
                     <SearchField
                       searchFunc={agencySearchCallback}
                       itemSelectedFunc={agencySelected}
-                      label="Which government agency do you work for?"
+                      id="agency"
                       list={agencies}
                     />
                   </div>
@@ -179,7 +179,7 @@ const Search: React.FC = () => {
           <div className="row margin-sm-top-2 margin-md-top-2">
             <div className="col-sm-8 col-sm-push-2 text-align-center">
               <AUheading size="lg" level="1">
-                What digital product or service do you need to buy?
+                <label htmlFor="product">What digital product or service do you need to buy?</label>
               </AUheading>
               <div className="margin-sm-top-1 margin-md-top-1">
                 If your requirements are not well-defined, ask sellers for innovative solutions or ideas.
@@ -192,7 +192,7 @@ const Search: React.FC = () => {
                 searchFunc={productSearchCallback}
                 itemSelectedFunc={productSelected}
                 list={products}
-                label="What product or service do you want to buy?"
+                id="product"
               />
             </div>
           </div>

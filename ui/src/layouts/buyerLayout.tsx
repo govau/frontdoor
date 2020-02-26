@@ -51,7 +51,9 @@ const BuyerLayout: React.FC = ({ children }) => {
           { name: 'description', content: data.site.siteMetadata.description },
           { name: 'keywords', content: data.site.siteMetadata.keywords },
         ]}
-      />
+      >
+        <html lang="en" />
+      </Helmet>
       <Header title={data.site.siteMetadata.title} />
       <NavigationBar />
       <div className="au-body">

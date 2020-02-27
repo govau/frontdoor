@@ -8,7 +8,7 @@ title: 'Early market research'
         <aside class="au-side-nav au-accordion margin-sm-bottom-2" aria-label="side navigation">
             <div id="nav-default" class="au-side-nav__content au-accordion--closed au-accordion__body">
                 <h2 class="au-sidenav__title">
-                <a href="#">Market research and engagement</a>
+                <a href="/buyer/resources-and-policies/early-market-research">Early market research</a>
                 </h2>
                 <ul class="au-link-list">
                     <li><a href="#">Why do early market research</a></li>

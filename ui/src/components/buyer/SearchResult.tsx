@@ -59,7 +59,7 @@ const SearchResult: React.FC<ISearchResultProps> = ({ agency, panels, product })
         <div className="row">
           <div className="col-sm-12 text-align-center padding-sm-1 padding-md-2">
             <AUheading size="lg" level="2">{product && product.text}</AUheading>
-            {product && product.metadata.summary}
+            Related searches: {product && product.metadata.summary}
           </div>
         </div>
         {panels.map((p) => (

@@ -2,6 +2,7 @@ import AUheading from '@gov.au/headings';
 import axios from 'axios';
 import moment from 'moment';
 import React, { useCallback, useEffect, useState } from 'react';
+import { getSessionObject, setSessionObject } from '../utils/Browser';
 
 
 const Events: React.FC = () => {
@@ -10,13 +11,19 @@ const Events: React.FC = () => {
   const [events, setEvents] = useState<any>(null);
 
   const getEventCallback = useCallback(() => {
-    setLoading(true);
-    return axios.get('/api/event').then((r: any) => {
-      setEvents(r.data);
-      setLoading(false);
+    const sessionEvents = getSessionObject('events');
+    if (sessionEvents) {
+      setEvents(sessionEvents);
+    } else {
+      setLoading(true);
+      return axios.get('/api/event').then((r: any) => {
+        setEvents(r.data);
+        setSessionObject('events', r.data);
+        setLoading(false);
 
-      return r;
-    });
+        return r;
+      });
+    }
   }, [events]);
 
   useEffect(() => {

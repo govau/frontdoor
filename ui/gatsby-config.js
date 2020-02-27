@@ -65,7 +65,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://fd-rc.apps.y.cld.gov.au/'
+        siteUrl: 'https://digitalsourcing.gov.au/'
       }
     },
     // 'gatsby-plugin-emotion',

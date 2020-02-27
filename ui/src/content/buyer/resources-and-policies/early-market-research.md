@@ -11,6 +11,7 @@ title: 'Early market research'
                 <a href="/buyer/resources-and-policies/early-market-research">Early market research</a>
                 </h2>
                 <ul class="au-link-list">
+                    <li><a href="/buyer/resources-and-policies/early-market-research"><b>What is early market research?</b></a></li>
                     <li><a href="#">Why do early market research</a></li>
                     <li><a href="#">Planning and prep</a></li>
                     <li><a href="#">Engaging sellers</a></li>
@@ -27,7 +28,7 @@ title: 'Early market research'
         </aside>
     </div>
     <div class="col-sm-8">
-        <h1 class="au-display-xl">Early market research</h1>
+        <h1 class="au-display-xl">What is early market research?</h1>
         <div class="margin-sm-top-1 margin-md-top-1">
             <video width="400" height="4000" controls class="width-100 height-auto">
                 <source src="/buyer/resources-and-policies/market-research-and-engagement/dta_20191216.mp4" type="video/mp4">
@@ -35,7 +36,6 @@ title: 'Early market research'
                 Your browser does not support the video tag.
             </video>
         </div>
-        <h2 class="au-display-lg">What is early market research?</h2>
         <p>Early market research describes a range of activities through which agencies consult with industry to gain information about digital products, services and solutions outside of a formal procurement process. The research may inform a future procurement activity, but it is intended to be an exploratory exercise and usually does not involve commercial commitments. It can be formal and complex or as simple as searching the internet or making a phone call.
         <p>Early market research can also be referred to as market sounding, or industry engagement.</p>
         <p>Early market research is a valuable research tool to inform any future procurement activity. It gives agencies the opportunity to challenge their assumptions about a 

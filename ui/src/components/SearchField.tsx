@@ -1,6 +1,5 @@
 import AUbutton from '@gov.au/buttons';
-import AUheading from '@gov.au/headings';
-import React, { useRef, useState } from 'react';
+import React, { ReactNode, useRef, useState } from 'react';
 
 export interface ISearchResult {
   text: string;
@@ -13,19 +12,28 @@ interface ISearchFieldProps {
   itemSelectedFunc?: (item: any) => void;
   list: ISearchResult[];
   id: string;
+  notFoundComponent?: (search?: string) => React.ReactNode;
+  helpComponent?: ReactNode;
 }
 
-const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc, id, list }) => {
+const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc, helpComponent, notFoundComponent, id, list }) => {
   const inputEl = useRef<HTMLInputElement>(null);
+  const searchValue = useRef<string>('');
+  const timer = useRef<any>(null);
   const [modalVisible, setModalVisibility] = useState(false);
   const [searchingVisible, setSearchingVisible] = useState(false);
   const [noData, setNoData] = useState(false);
-  let timer: any = null;
 
-  const search = (field?: HTMLInputElement | null): Promise<any> => {
-    setModalVisibility(true);
+  const search = (minCharacters: number, field?: HTMLInputElement | null): Promise<any> => {
     if (field) {
+      if (modalVisible && searchValue?.current === field.value) {
+        return Promise.resolve();
+      } else if (field.value.length < minCharacters) {
+        return Promise.resolve();
+      }
+      setModalVisibility(true);
       setSearchingVisible(true);
+      searchValue.current = field.value;
       return searchFunc(field.value).then((data) => {
         field.focus();
         setSearchingVisible(false);
@@ -39,18 +47,18 @@ const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc
 
   const onKeyUp = (e: any) => {
     if (timer) {
-      clearTimeout(timer);
+      clearTimeout(timer.current);
     }
     switch (e.key) {
       case 'Escape':
         setModalVisibility(false);
         break;
       case 'Enter':
-        search(inputEl.current);
+        search(0, inputEl.current);
         break;
       default:
-        timer = setTimeout(() => {
-          search(inputEl.current);
+        timer.current = setTimeout(() => {
+          search(3, inputEl.current);
         }, 1000);
         break;
     }
@@ -75,7 +83,7 @@ const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc
               onKeyUp={onKeyUp}
             />
             <div className="au-search__btn">
-              <button className="au-btn" onClick={() => search(inputEl.current)}>
+              <button className="au-btn" onClick={() => search(0, inputEl.current)}>
                 <span className="au-search__submit-btn-text">Search</span>
               </button>
             </div>
@@ -89,14 +97,11 @@ const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc
             <div className={`search-field-float-box ${modalVisible ? 'search-field-float-box-shown' : ''} z-index-5`}>
               {searchingVisible ?
                 <>Searching...</> : (
-                  noData ? (
-                    <div className="margin-md-2">
-                      <AUheading size="sm" level="3">
-                        Sorry, '{inputEl?.current?.value}' could not be found
-                      </AUheading>
-                    </div>
-                  ) : (
-                      list && list.map((l, i) => (
+                  noData ?
+                    notFoundComponent && notFoundComponent(inputEl?.current?.value)
+                   : (
+                    <>
+                      {list && list.map((l, i) => (
                         <div key={i}>
                           <AUbutton
                             block
@@ -110,8 +115,14 @@ const SearchField: React.FC<ISearchFieldProps> = ({ itemSelectedFunc, searchFunc
                             <div className="text-align-left">{l.text}</div>
                           </AUbutton>
                         </div>
-                      ))
-                    )
+                      ))}
+                      {helpComponent &&
+                        <div className="background-light-grey margin-sm-top-05 margin-md-top-05 padding-sm-1 padding-md-2">
+                          {helpComponent}
+                        </div>
+                      }
+                    </>
+                  )
                 )}
             </div>
           </div>

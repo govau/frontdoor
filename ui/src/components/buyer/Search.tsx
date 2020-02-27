@@ -169,6 +169,26 @@ const Search: React.FC = () => {
                       itemSelectedFunc={agencySelected}
                       id="agency"
                       list={agencies}
+                      helpComponent={(
+                        <>
+                          <AUheading size="sm" level="3">
+                            Can't find your organisation?
+                          </AUheading>
+                          <div className="margin-sm-top-05 margin-md-top-05"><a href="#">[TODO]Contact us</a> if your government organisation name does not appear</div>
+                        </>
+                      )}
+                      notFoundComponent={(s) => (
+                        <>
+                          <div className="padding-sm-2 padding-md-2">
+                            <AUheading size="sm" level="3">
+                              Sorry, '{s}' could not be found
+                            </AUheading>
+                            <div className="margin-sm-top-05 margin-md-top-05">
+                              Check your spelling or <a href="https://www.directory.gov.au/departments-and-agencies" target="_blank" rel="external noreferrer">search the government directory</a> to find your organisation name
+                            </div>
+                          </div>
+                        </>
+                      )}
                     />
                   </div>
                 </div>
@@ -195,6 +215,39 @@ const Search: React.FC = () => {
                 itemSelectedFunc={productSelected}
                 list={products}
                 id="product"
+                helpComponent={(
+                  <>
+                    <AUheading size="sm" level="3">
+                      Can't find what you need?
+                    </AUheading>
+                    <div className="margin-sm-top-05 margin-md-top-05">
+                      <a href="">[TODO]View the broader list of products and services</a>
+                    </div>
+                    <div className="margin-sm-top-05 margin-md-top-05">
+                      If you can't find what you need, <a href="/buyer/products-and-services/ask-the-market">ask sellers</a> to help define your digital requirements.
+                    </div>
+                  </>
+                )}
+                notFoundComponent={(s) => (
+                  <>
+                    <div className="padding-sm-2 padding-md-2">
+                      <AUheading size="sm" level="3">
+                        Sorry, '{s}' could not be found
+                      </AUheading>
+                      <div className="margin-sm-top-05 margin-md-top-05">
+                        Check your spelling or <a href="">[TODO]view the broader list of products and services</a> to help define your search.
+                      </div>
+                    </div>
+                    <div className="background-light-grey padding-sm-2 padding-md-2">
+                      <AUheading size="sm" level="3">
+                        Test the market
+                      </AUheading>
+                      <div className="margin-sm-top-05 margin-md-top-05">
+                        If you can't find what you need, <a href="/buyer/products-and-services/ask-the-market">ask sellers</a> to help define your digital requirements.
+                      </div>
+                    </div>
+                  </>
+                )}
               />
             </div>
           </div>

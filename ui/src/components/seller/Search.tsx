@@ -65,6 +65,28 @@ const Search: React.FC = () => {
             itemSelectedFunc={productSelected}
             list={products}
             id="product"
+            helpComponent={(
+              <>
+                <AUheading size="sm" level="3">
+                  Can't find what you sell?
+                </AUheading>
+                <div className="margin-sm-top-05 margin-md-top-05">
+                  <a href="">[TODO]View list of products and services</a>
+                </div>
+              </>
+            )}
+            notFoundComponent={(s) => (
+              <>
+                <div className="padding-sm-2 padding-md-2">
+                  <AUheading size="sm" level="3">
+                    Sorry, '{s}' could not be found
+                  </AUheading>
+                  <div className="margin-sm-top-05 margin-md-top-05">
+                    Check your spelling or <a href="">[TODO]view the full list of products and services</a> to help define your search.
+                  </div>
+                </div>
+              </>
+            )}
           />
         </div>
       </div>

@@ -96,15 +96,15 @@ const Feedback: React.FC<IFeedbackProps> = ({onCancel}) => {
             <div className="col-sm-12">
               <ToggleButton
                 options={[{
-                  imgComponent: <img src="/feedback/easy.svg"/>,
+                  imgComponent: <img src={`/feedback/easy${selectedEase === '1' ? '-inverse' : ''}.svg`}/>,
                   key: '1',
                   text: 'Easy',
                 }, {
-                  imgComponent: <img src="/feedback/ok.svg"/>,
+                  imgComponent: <img src={`/feedback/ok${selectedEase === '2' ? '-inverse' : ''}.svg`}/>,
                   key: '2',
                   text: 'Okay',
                 }, {
-                  imgComponent: <img src="/feedback/difficult.svg"/>,
+                  imgComponent: <img src={`/feedback/difficult${selectedEase === '3' ? '-inverse' : ''}.svg`}/>,
                   key: '3',
                   text: 'Difficult',
                 }]}

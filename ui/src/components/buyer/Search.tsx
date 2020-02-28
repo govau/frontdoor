@@ -201,9 +201,8 @@ const Search: React.FC = () => {
           {selectedAgencyType === 'state' && (
             <div className="row margin-sm-top-2 margin-md-top-2">
               <div className="col-sm-8 col-sm-push-2 text-align-center">
-                <AUheading size="md" level="2">
+                
                   You work for a state, territory or local organisation. This includes educational instututions.
-                </AUheading>
               </div>
             </div>
           )}

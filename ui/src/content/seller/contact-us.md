@@ -18,7 +18,7 @@ title: 'Panels and contact information'
         </thead>
         <tbody class="au-table__body">
             <tr class="au-table__row">
-                <td class="au-table__cell"><a href="/seller/products-and-services/cloud">Cloud services panel</a></td>
+                <td class="au-table__cell"><a href="/seller/products-and-services/cloud">Cloud Marketplace</a></td>
                 <td class="au-table__cell"><a href="https://www.tenders.gov.au/Son/Show/745895ff-e769-50c9-d860-7cecece179b4" target="_blank" rel="external noreferrer">SON2914302</a></td>
                 <td class="au-table__cell"><a href="https://ictprocurement.service-now.com/" target="_blank" rel="external noreferrer">ICT Procurement Portal</a></td>
                 <td class="au-table__cell">
@@ -35,7 +35,7 @@ title: 'Panels and contact information'
                 </td>
             </tr>
             <tr class="au-table__row">
-                <td class="au-table__cell"><a href="/seller/products-and-services/data-centres">Data centres panel</a></td>
+                <td class="au-table__cell"><a href="/seller/products-and-services/data-centres">Data Centre Facilities Supplies Panel</a></td>
                 <td class="au-table__cell"><a href="https://www.tenders.gov.au/Son/Show/fe5fa4fb-f204-8d9e-0cf8-73240c00b6fc" target="_blank" rel="external noreferrer">SON2402841</a></td>
                 <td class="au-table__cell"><a href="https://ictprocurement.service-now.com/" target="_blank" rel="external noreferrer">ICT Procurement Portal</a></td>
                 <td class="au-table__cell">
@@ -50,7 +50,7 @@ title: 'Panels and contact information'
                 </td>
             </tr>
             <tr class="au-table__row">
-                <td class="au-table__cell"><a href="/seller/products-and-services/digital-marketplace">Digital Marketplace panel</a></td>
+                <td class="au-table__cell"><a href="/seller/products-and-services/digital-marketplace">Digital Marketplace</a></td>
                 <td class="au-table__cell"><a href="https://www.tenders.gov.au/Son/Show/4E10C3C3-99F9-34E1-61CD-E299C229AAEF" target="_blank" rel="external noreferrer">SON3413842</a></td>
                 <td class="au-table__cell"><a href="https://marketplace.service.gov.au">Digital Marketplace</a></td>
                 <td class="au-table__cell">
@@ -66,7 +66,7 @@ title: 'Panels and contact information'
                 </td>
             </tr>
             <tr class="au-table__row">
-                <td class="au-table__cell"><a href="/seller/products-and-services/hardware">Hardware panel</a></td>
+                <td class="au-table__cell"><a href="/seller/products-and-services/hardware">Hardware Marketplace</a></td>
                 <td class="au-table__cell"><a href="https://www.tenders.gov.au/Son/Show/61f30dd8-c7e2-ec94-2a86-c3adf5775795" target="_blank" rel="external noreferrer">SON3541738</a></td>
                 <td class="au-table__cell"><a href="https://ictprocurement.service-now.com/" target="_blank" rel="external noreferrer">ICT Procurement Portal</a></td>
                 <td class="au-table__cell">
@@ -82,7 +82,7 @@ title: 'Panels and contact information'
                 </td>
             </tr>
             <tr class="au-table__row">
-                <td class="au-table__cell"><a href="/seller/products-and-services/software">Software panel</a></td>
+                <td class="au-table__cell"><a href="/seller/products-and-services/software">Software Marketplace</a></td>
                 <td class="au-table__cell"><a href="https://www.tenders.gov.au/Son/Show/90c61f3b-be27-3313-bcd6-93db777921c7" target="_blank" rel="external noreferrer">SON3490955</a></td>
                 <td class="au-table__cell"><a href="https://ictprocurement.service-now.com/" target="_blank" rel="external noreferrer">ICT Procurement Portal</a></td>
                 <td class="au-table__cell">
@@ -96,7 +96,7 @@ title: 'Panels and contact information'
                 </td>
             </tr>
             <tr class="au-table__row">
-                <td class="au-table__cell"><a href="/seller/products-and-services/telecommunications">Telecommunications panel</a></td>
+                <td class="au-table__cell"><a href="/seller/products-and-services/telecommunications">Telecommunications Marketplace</a></td>
                 <td class="au-table__cell"><a href="https://www.tenders.gov.au/Son/Show/fc7270c0-f972-aca0-8f96-b23046b347cf" target="_blank" rel="external noreferrer">SON3386916</a></td>
                 <td class="au-table__cell"><a href="https://ictprocurement.service-now.com/" target="_blank" rel="external noreferrer">ICT Procurement Portal</a></td>
                 <td class="au-table__cell">

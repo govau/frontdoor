@@ -146,7 +146,7 @@ const Feedback: React.FC<IFeedbackProps> = ({onCancel}) => {
           <div className="row margin-sm-top-2 margin-md-top-2">
             <div className="col-sm-12">
               <AUbutton className="margin-sm-right-1 margin-md-right-1" type="submit">Send feedback</AUbutton>
-              <AUbutton as="secondary" onClick={() => onCancelClick()}>Cancel feedback</AUbutton>
+              <AUbutton as="tertiary" onClick={() => onCancelClick()}>Cancel feedback</AUbutton>
             </div>
           </div>
         </>

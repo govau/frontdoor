@@ -15,7 +15,7 @@ const Header: React.FC<IHeaderProps> = () => (
             <div className="au-header__text">
               <h1 className="au-header__heading">Digital Sourcing for Government</h1>
               <div className="au-header__subline">
-                Initiative of the DTA
+                Initiative of the <span className="hide-md">DTA</span><span className="hide-sm">Digital Transformation Agency</span>
               </div>
             </div>
           </Link>

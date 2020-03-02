@@ -69,9 +69,12 @@ namespace Dta.Frontdoor.Api.Controllers
                 if (a.Score == 0) {
                     continue;
                 }
+                if (result.FindIndex(sr => sr.Text == a.Answer.Trim()) >= 0) {
+                    continue;
+                }
                 var searchResult = new SearchResult()
                 {
-                    Text = a.Answer,
+                    Text = a.Answer.Trim(),
                     Metadata = new Dictionary<string, string>()
                 };
                 searchResult.Metadata = new Dictionary<string, string>();

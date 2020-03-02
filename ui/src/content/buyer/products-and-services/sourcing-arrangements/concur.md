@@ -1,6 +1,8 @@
 ---
 layout: buyer
 title: 'Whole-of-government arrangement for Concur products and services'
+summary: 'For sourcing software as a service, customer relationship management, development tools'
+panel: 'concur'
 ---
 
 # Whole-of-government arrangement for Concur products and services

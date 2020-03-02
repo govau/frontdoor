@@ -21,7 +21,6 @@ interface IStaticQueryProps {
         },
       },
     ],
-
   };
 }
 
@@ -33,7 +32,7 @@ interface ISearchResultProps {
 const SearchResult: React.FC<ISearchResultProps> = ({ panels, product }) => {
   const data: IStaticQueryProps = useStaticQuery(graphql`
     query SellerSearchResult {
-      allMarkdownRemark(filter: {fields: {slug: {regex: "/seller/products-and-services/"}}}) {
+      allMarkdownRemark(filter: {frontmatter: {layout: {eq: "seller"}}}) {
         edges {
           node {
             frontmatter {

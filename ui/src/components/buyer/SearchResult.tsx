@@ -35,7 +35,7 @@ interface ISearchResultProps {
 const SearchResult: React.FC<ISearchResultProps> = ({ agency, panels, product }) => {
   const data: IStaticQueryProps = useStaticQuery(graphql`
     query SearchResult {
-      allMarkdownRemark(filter: {fields: {slug: {regex: "/buyer/products-and-services/"}}}) {
+      allMarkdownRemark(filter: {frontmatter: {layout: {eq: "buyer"}}}) {
         edges {
           node {
             frontmatter {

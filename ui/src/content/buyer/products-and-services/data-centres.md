@@ -12,7 +12,10 @@ panel: 'data-centres'
   <ul class="au-link-list">
     <li><a href="#what-can-you-buy">What can you buy from the Digital Marketplace?</a></li>
     <li><a href="#who-can-use-this-panel">Who can use this panel?</a></li>
-    <li><a href="#find-sellers-through-the-digital-marketplace">Find sellers through the Digital Marketplace</a></li>
+    <li><a href="#non-corporate-commonwealth-entities">For Non-corporate Commonwealth Entities</a></li>
+    <li><a href="#buy-services-from-the-ict-procurement-portal">Buy services from the ICT Procurement Portal</a></li>
+    <li><a href="#new-accounts">New accounts</a></li>
+    <li><a href="#current-users">Current users</a></li>
     <li><a href="#contact-the-team">Contact the team</a></li>
   </ul>
 </nav>
@@ -31,9 +34,9 @@ Under the ‘Supplier’ section, you can view the current <a href="https://www.
 
 ## <span name="who-can-use-this-panel">Who can use this panel?</span>
 
-All federal, state, territory and local government agencies can use the Digital Marketplace.
+All federal, state, territory and local government organisations can use the Data Centres Facilities Supplies Panel.
 
-## <span name="for-non-corporate-commonwealth-entities">For Non-corporate Commonwealth Entities</span>
+## <span name="non-corporate-commonwealth-entities">For Non-corporate Commonwealth Entities</span>
 
 If your agency is a Non-corporate Commonwealth Entity (NCE), it is mandatory for you to purchase data centre space and services from the Data Centre Facilities Supplies Panel.
 
@@ -54,7 +57,7 @@ You can apply to become a buyer if:
 
 If you’re a contractor, you must also complete a Deed of Confidentiality signed by your supervisor who is a government employee.
 
-## <span name="current-users">Current users</span>
+### <span name="current-users">Current users</span>
 
 Log in to <a href="https://ictprocurement.service-now.com/sp" target="_blank" rel="external noreferrer">use the ICT Procurement Portal</a>.
 

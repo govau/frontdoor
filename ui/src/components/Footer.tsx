@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import FeedbackButton from './FeedbackButton';
 
@@ -30,10 +31,10 @@ const Footer: React.FC<IFooterProps> = ({ hideFeedback }) => (
           <div className="col-sm-10">
             <div className="row">
               <div className="col-xs-12 col-sm-2"><a href="#">[TODO]Contact us</a></div>
-              <div className="col-xs-12 col-sm-2"><a href="#">[TODO]Accessibility</a></div>
-              <div className="col-xs-12 col-sm-2"><a href="#">[TODO]Cookies</a></div>
-              <div className="col-xs-12 col-sm-2"><a href="#">[TODO]Privacy</a></div>
-              <div className="col-xs-12 col-sm-4"><a href="#">[TODO]Disclaimer and copyright</a></div>
+              <div className="col-xs-12 col-sm-2"><Link to="/accessibility">Accessibility</Link></div>
+              <div className="col-xs-12 col-sm-2"><Link to="/">[TODO]Cookies</Link></div>
+              <div className="col-xs-12 col-sm-2"><Link to="/privacy">Privacy</Link></div>
+              <div className="col-xs-12 col-sm-4"><Link to="/disclaimer-and-copyright">Disclaimer and copyright</Link></div>
             </div>
             <div className="row">
               <div className="col-sm-12 au-footer__end">

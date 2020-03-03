@@ -22,7 +22,7 @@ panel: 'telecommunications'
 
 We established the Telecommunication Marketplace for government buyers looking to buy telecommunications products and services.
 
-The Standing Offer Notice (SON) for the Telecommunications Marketplace is <a href="https://www.tenders.gov.au/Son/Show/fe5fa4fb-f204-8d9e-0cf8-73240c00b6fc" target="_blank" rel="external noreferrer">SON 2402841</a>.
+The Standing Offer Notice (SON) for the Telecommunications Marketplace is <a href="https://www.tenders.gov.au/Son/Show/fc7270c0-f972-aca0-8f96-b23046b347cf" target="_blank" rel="external noreferrer">SON3386916</a>.
 
 Read the <a href="#" target="_blank" rel="external noreferrer">[TODO]Telecommunications Marketplace Head Agreement</a>.
 

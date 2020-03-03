@@ -10,7 +10,7 @@ panel: 'mobile'
 <nav class="au-inpage-nav-links" aria-label="in page navigation">
   <h2 class="au-inpage-nav-links__heading">On this page:</h2>
   <ul class="au-link-list">
-    <li><a href="#what-can-you-buy">What can you buy from the Telecommunication Marketplace?</a></li>
+    <li><a href="#what-can-you-buy">What can you buy from the Mobile Panel?</a></li>
     <li><a href="#who-can-use-this-panel">Who can use this panel?</a></li>
     <li><a href="#non-corporate-commonwealth-entities">For Non-corporate Commonwealth Entities</a></li>
     <li><a href="#buy-services-from-the-ict-procurement-portal">Buy services from the ICT Procurement Portal</a></li>

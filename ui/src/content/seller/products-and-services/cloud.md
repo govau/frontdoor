@@ -5,51 +5,66 @@ summary: 'For sourcing cloud products and associated services.'
 panel: 'cloud'
 ---
 
-We established the Cloud marketplace for government buyers looking to buy cloud products and services. The Standing Offer Notice (SON) number for Cloud Services Panel is SON2914302.
+# Selling cloud services through the Cloud Marketplace
 
-Read the Cloud Marketplace head agreement.
+<nav class="au-inpage-nav-links" aria-label="in page navigation">
+  <h2 class="au-inpage-nav-links__heading">On this page:</h2>
+  <ul class="au-link-list">
+    <li><a href="#what-can-you-sell">What products and services can you sell?</a></li>
+    <li><a href="#sell-services-on-the-cloud-marketplace">Sell services on the Cloud Marketplace</a></li>
+    <li><a href="#contact-the-team">Contact the team</a></li>
+  </ul>
+</nav>
 
-## What can you buy on the Cloud Marketplace?
+We established the Cloud Marketplace for sellers who offer cloud services to government buyers.
 
-Cloud products you can buy include:
-• Top keyword 1
-• Top keyword 2
-•
+The Standing Offer Notice (SON) number for Cloud Marketplace Panel is <a href="https://www.tenders.gov.au/Son/Show/745895ff-e769-50c9-d860-7cecece179b4" target="_blank" rel="external noreferrer">SON2914302</a>.
+
+Read the [[TODO]Cloud Marketplace Head Agreement](#).
+
+## <span name="what-can-you-sell">What products and services can you sell?</span>
+
+Cloud products you can sell include:
+
+- business, finance and accounting
+- customer relationship management (CRM)
+- database and asset management
+- development tools
+- education and training
+- geographic and geospatial information system (GIS)
+- information management
+- multimedia, graphics and audiovisual
+- reporting and analytics
+
 Cloud services covers a range of options including:
-• infrastructure as a service
-• platform as a service
-• software as a service
-• cloud-related professional services
 
-View a list of cloud products and services you can buy through the Cloud marketplace.
+- infrastructure as a service
+- platform as a service
+- software as a service
+- cloud consulting services
 
-You can find a list of 244 approved sellers on the Cloud marketplace SON page.
+Resellers can list the services they offer on this panel.
 
-## Can your government organisation use this Marketplace?
+View a <a href="https://www.tenders.gov.au/Son/Show/745895FF-E769-50C9-D860-7CECECE179B4" target="_blank" rel="external noreferrer">list of cloud products and services</a> you can sell through the Cloud marketplace.
 
-All federal, state, territory and local government organisations can use the Cloud Marketplace.
-Charges to use, CAF?
+## <span name="sell-services-on-the-cloud-marketplace">Sell services on the Cloud Marketplace</span>
 
-Register or log in to use the Cloud Marketplace
+New sellers can apply to sell on the new Cloud Marketplace 2.0. The next expected panel opening date will be in mid-2020.
 
-You must use the ICT Procurement Portal to buy products and services from the Cloud marketplace.
+Once the panel opening is announced, the requirements and application process will be listed on Austender. You can [[TODO]request to receive notifications from AusTender](#) when the Request for Tender (RFT) is released.
 
-We recommend you check with your organisation’s procurement team or lead in case there are users with existing accounts.
+You can also keep an eye out for announcements on the <a href="https://www.dta.gov.au/news-blogs/all" target="_blank" rel="external noreferrer">DTA blog</a> and the <a href="https://twitter.com/dta" target="_blank" rel="external noreferrer">DTA Twitter feed</a> feed.
 
-### Log in
+While the panel is open on Austender, new sellers are welcome to apply to be included by submitting a response to the tender.
 
-If you’re already registered, log in to use the ICT Procurement Portal.
+The list of approved sellers will be updated and displayed on Austender after the RFT is closed and successful sellers are notified.
 
-### New accounts
+Read our guide on [[TODO]selling products and services to government](#).
 
-To register as a government buyer, your email address must end in ‘gov.au’. Ask Jaklina for info
-
-If you’re a government-employed contractor, you need to complete a few more steps to request an account.
-
-Register to create an ICT Procurement Portal account.
-
-## Contact the team
+## <span name="contact-the-team">Contact the team</span>
 
 For questions on using the Cloud Marketplace:
-Email: CloudProcurement@dta.gov.au
+
+Email: ictprocurement@dta.gov.au
+
 Call: 02 6120 8705

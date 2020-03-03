@@ -52,7 +52,7 @@ const PageTemplate: React.FC<IPageTemplateProps> = ({ data, pageContext }) => {
   return (
     <DefaultLayout>
       <div className="container">
-        <div className="row margin-sm-top-2 margin-md-top-1">
+        <div className="row padding-sm-top-2 padding-md-top-1">
           <div className="col-sm-12">
             <nav className="au-breadcrumbs" aria-label="breadcrumb">
               <ul className="au-link-list au-link-list--inline">

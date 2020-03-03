@@ -6,7 +6,7 @@ import DefaultLayout from '../layouts/defaultLayout';
 
 const Index = () => (
   <DefaultLayout>
-    <div className="container margin-sm-top-2 margin-sm-bottom-2 margin-md-top-3 margin-md-bottom-3">
+    <div className="container padding-sm-top-2 padding-sm-bottom-2 padding-md-top-3 padding-md-bottom-3">
       <div className="row margin-md-top-1">
         <div className="col-xs-12 text-align-center">
           <AUheading size="xl" level="1">

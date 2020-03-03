@@ -10,7 +10,7 @@ panel: 'data-centres'
 <nav class="au-inpage-nav-links" aria-label="in page navigation">
   <h2 class="au-inpage-nav-links__heading">On this page:</h2>
   <ul class="au-link-list">
-    <li><a href="#what-can-you-buy">What can you buy from the Digital Marketplace?</a></li>
+    <li><a href="#what-can-you-buy">What can you buy from the Data Centre Facilities Supplies Panel?</a></li>
     <li><a href="#who-can-use-this-panel">Who can use this panel?</a></li>
     <li><a href="#non-corporate-commonwealth-entities">For Non-corporate Commonwealth Entities</a></li>
     <li><a href="#buy-services-from-the-ict-procurement-portal">Buy services from the ICT Procurement Portal</a></li>
@@ -36,7 +36,7 @@ Under the ‘Supplier’ section, you can view the current <a href="https://www.
 
 All federal, state, territory and local government organisations can use the Data Centres Facilities Supplies Panel.
 
-## <span name="non-corporate-commonwealth-entities">For Non-corporate Commonwealth Entities</span>
+### <span name="non-corporate-commonwealth-entities">For Non-corporate Commonwealth Entities</span>
 
 If your agency is a Non-corporate Commonwealth Entity (NCE), it is mandatory for you to purchase data centre space and services from the Data Centre Facilities Supplies Panel.
 

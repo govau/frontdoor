@@ -24,7 +24,7 @@ Help us to write content for difficult sourcing topics through our [upcoming wor
 - Engaging with risk in digital sourcing
 - Negotiating for successful digital engagements
 
-## <span name="digital-policies">Digital Policies</span>
+## <span name="digital-policies">Digital Sourcing Policies</span>
 
 It is mandatory for non-corporate Commonwealth entities to comply with whole-of-government policies. Other agencies can use them to guide their procurement process.
 

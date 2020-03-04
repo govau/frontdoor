@@ -67,7 +67,7 @@ This arrangement does not cover Amazon Marketplace purchases.
 
 ## <span name="request-access-to-this-arrangement">Request access to this arrangement?</span>
 
-If your agency chooses to purchase AWS products or services after a formal approach to market, <a href="#contact-the-team">Contact us</a>.
+If your agency chooses to purchase AWS products or services after a formal approach to market, <a href="#contact-the-team">contact us</a>.
 
 <a href="https://ictprocurement.service-now.com/" target="_blank" rel="external noreferrer">Log in to the ICT Procurement Portal</a> for further details about this arrangement.
 

@@ -51,7 +51,7 @@ You cannot use this arrangement if your government organisation is a:
 
 There are fees involved to use the Concur whole-of-government arrangement.
 
-<a href="#contact-the-team">contact us</a> if you need advice on fees.
+<a href="#contact-the-team">Contact us</a> if you need advice on fees.
 
 ## <span name="which-products-and-services-are-covered">Which Concur products and services are covered?</span>
 
@@ -59,7 +59,7 @@ All [Concur products and services](#) are covered by this arrangement.
 
 ## <span name="request-access-to-this-arrangement">Request access to this arrangement?</span>
 
-If your agency chooses to buy Concur products or services after a formal approach to market, <a href="#contact-the-team">Contact us</a>.
+If your agency chooses to buy Concur products or services after a formal approach to market, <a href="#contact-the-team">contact us</a>.
 
 <a href="https://ictprocurement.service-now.com/" target="_blank" rel="external noreferrer">Log in to the ICT Procurement Portal</a> for further details about this arrangement.
 

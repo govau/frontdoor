@@ -45,13 +45,13 @@ You cannot use this arrangement if your government organisation is a:
 - <a href="https://www.finance.gov.au/business/government-business-enterprises" target="_blank" rel="external noreferrer">Government Business Enterprise (GBE)</a>
 - local council
 
-<a href="#contact-the-team">Contact us</a> you need advice on who can use this arrangement.
+<a href="#contact-the-team">Contact us</a> if you need advice on who can use this arrangement.
 
 ## <span name="fees">Fees</span>
 
 There are fees involved to use the Concur whole-of-government arrangement.
 
-<a href="#contact-the-team">Contact us</a> if you need advice on fees.
+<a href="#contact-the-team">contact us</a> if you need advice on fees.
 
 ## <span name="which-products-and-services-are-covered">Which Concur products and services are covered?</span>
 

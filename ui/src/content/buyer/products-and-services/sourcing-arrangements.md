@@ -15,7 +15,7 @@ They are put in place to:
 
 These arrangements only apply after you conduct a formal approach to market.
 
-Read more on DTA’s whole-of-government for:
+Read more on DTA’s whole-of-government sourcing arrangements for:
 
 - [Amazon Web Services (AWS)](/buyer/products-and-services/sourcing-arrangements/aws)
 - [Concur](/buyer/products-and-services/sourcing-arrangements/concur)

@@ -21,12 +21,13 @@ panel: 'ibm'
 We established a whole-of-government arrangement with Concur to make it easier for Australian Government agencies to buy Concur products and services.
 
 Whole-of-government arrangements cover goods and services that are commonly used across government. They are put in place to:
-• maximise market benefits
-• deliver efficiencies and savings
-• provide benefits and pricing not previously available for smaller agencies.
+- maximise market benefits
+- deliver efficiencies and savings
+- provide benefits and pricing not previously available for smaller agencies.
+
 This arrangement only applies after you:
-• conducted a formal approach to market
-• selected Concur as provider of your required products and services.
+- conducted a formal approach to market
+- selected Concur as provider of your required products and services.
 
 ## <span name="who-can-use-this-arrangement">Who can use this arrangement?</span>
 
@@ -61,7 +62,7 @@ This includes:
 
 ## <span name="request-access-to-this-arrangement">Request access to this arrangement?</span>
 
-If your agency chooses to purchase IBM products or services after a formal approach to market process, <a href="#contact-the-team">Contact us</a>.
+If your agency chooses to purchase IBM products or services after a formal approach to market process, <a href="#contact-the-team">contact us</a>.
 
 <a href="https://ictprocurement.service-now.com/" target="_blank" rel="external noreferrer">Log in to the ICT Procurement Portal</a> for further details about this arrangement.
 

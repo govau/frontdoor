@@ -53,11 +53,11 @@ There are fees involved to use the SAP whole-of-government arrangement.
 
 ## <span name="which-products-and-services-are-covered">Which SAP products and services are covered?</span>
 
-All [[TODO]SAP products and services](#) covered by this arrangement.
+All <a href="https://www.sap.com/australia/index.html" target="_blank" rel="external noreferrer">SAP products and services</a> covered by this arrangement.
 
 ## <span name="request-access-to-this-arrangement">Request access to this arrangement?</span>
 
-If your agency choose to purchase [[TODO]SAP products or services](#) after a formal approach to market process, <a href="#contact-the-team">Contact us</a>.
+If your agency choose to purchase <a href="https://www.sap.com/australia/index.html" target="_blank" rel="external noreferrer">SAP products and services</a> after a formal approach to market process, <a href="#contact-the-team">contact us</a>.
 
 <a href="https://ictprocurement.service-now.com/" target="_blank" rel="external noreferrer">Log in to the ICT Procurement Portal</a> for further details about this arrangement.
 

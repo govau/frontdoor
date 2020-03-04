@@ -24,8 +24,6 @@ We established the Telecommunication Marketplace for government buyers looking t
 
 The Standing Offer Notice (SON) for the Telecommunications Marketplace is <a href="https://www.tenders.gov.au/Son/Show/fc7270c0-f972-aca0-8f96-b23046b347cf" target="_blank" rel="external noreferrer">SON3386916</a>.
 
-Read the <a href="#" target="_blank" rel="external noreferrer">[TODO]Telecommunications Marketplace Head Agreement</a>.
-
 ## <span name="what-can-you-buy">What can you buy from the Telecommunication Marketplace?</span>
 
 Telecommunications products you can buy include:
@@ -43,9 +41,7 @@ Telecommunications products you can buy include:
 
 You can also buy other associated services for telecommunications products, including installation, support and maintenance.
 
-If you need to organise small purchases of mobile handsets and broadband devices, you must use the Mobile Panel.
-
-If you need to organise small purchases of mobile handsets and broadband devices, you [use the Mobile Panel](/buyer/products-and-services/mobile).
+If you need to organise small purchases of mobile handsets and broadband devices, you [use must the Mobile Panel](/buyer/products-and-services/mobile).
 
 ## <span name="who-can-use-this-panel">Who can use this panel?</span>
 
@@ -80,6 +76,6 @@ Log in to <a href="https://ictprocurement.service-now.com/sp" target="_blank" re
 
 For questions on using the Telecommunications Marketplace:
 
-Email: [TODO]tmp@dta.gov.au
+Email: tmp@dta.gov.au
 
 Call: 0429 927 512

@@ -174,7 +174,7 @@ const Search: React.FC = () => {
                           <AUheading size="sm" level="3">
                             Can't find your organisation?
                           </AUheading>
-                          <div className="margin-sm-top-05 margin-md-top-05"><a href="#">[TODO]Contact us</a> if your government organisation name does not appear</div>
+                          <div className="margin-sm-top-05 margin-md-top-05"><a href="#footer-feedback">Send us feedback</a> if your government organisation name does not appear</div>
                         </>
                       )}
                       notFoundComponent={(s) => (

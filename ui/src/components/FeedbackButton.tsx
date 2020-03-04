@@ -13,7 +13,7 @@ const FeedbackButton: React.FC<IFeedbackButtonProps> = () => {
     <>
       <div className="row">
         <div className="col-sm-12">
-          <button className="border-radius-bottom-none au-btn au-btn--block" onClick={() => setOpened(!opened)}>
+          <button className="border-radius-bottom-none au-btn au-btn--block" id="footer-feedback" onClick={() => setOpened(!opened)}>
             <div className="text-align-left">Send us feedback</div>
           </button>
         </div>

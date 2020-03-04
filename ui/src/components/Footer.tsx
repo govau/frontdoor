@@ -13,7 +13,7 @@ const Footer: React.FC<IFooterProps> = ({ hideFeedback }) => (
       <div className="background-light-grey">
         <div className="container">
           <div className="row">
-            <div className="col-sm-12" id="footer-feedback">
+            <div className="col-sm-12">
               <FeedbackButton />
             </div>
           </div>

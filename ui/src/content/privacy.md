@@ -50,7 +50,7 @@ You can:
 
 To protect your privacy and the privacy of others, we will need evidence of your identity before we can grant you access to information about you or change it.
 
-You can [[TODO]contact us through our feedback form](#).
+You can [contact us through our feedback form](#footer-feedback).
 
 ## Website analytics
 

@@ -92,6 +92,10 @@ module.exports = {
             crumbLabel: 'Buy products and services'
           },
           {
+            pathname: '/buyer/resources-and-policies',
+            crumbLabel: 'Resources and policies'
+          },
+          {
             pathname: '/seller/products-and-services',
             crumbLabel: 'Sell products and services'
           }

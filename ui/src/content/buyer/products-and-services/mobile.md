@@ -24,9 +24,7 @@ We established the Mobile Panel for government buyers looking to buy mobile hand
 
 The Standing Offer Notice (SON) for Mobile Panel is <a href="https://www.tenders.gov.au/Son/Show/ae876f92-bb7a-6ba8-d65a-f4024fabaf23" target="_blank" rel="external noreferrer">SON2589631</a>.
 
-The current expiry date for the Mobile Panel is 31 August 2020. After this date, you will be able to purchase mobile products and services from the Hardware Marketplace and Telecommunications Marketplace. We will let you know when this occurs.
-
-Read the <a href="#" target="_blank" rel="external noreferrer">[TODO]Mobile Panel Head Agreement</a>.
+The current expiry date for the Mobile Panel is 31 August 2020. After this date, you will be able to purchase mobile products and services from the [Hardware Marketplace](/buyer/products-and-services/hardware) and [Telecommunications Marketplace](/buyer/products-and-services/telecommunications). We will let you know when this occurs.
 
 ## <span name="what-can-you-buy">What can you buy from the Mobile Panel?</span>
 
@@ -51,7 +49,7 @@ All federal, state, territory and local government organisations can use the Mob
 
 If your agency is a <a href="https://www.finance.gov.au/about-us/glossary/pgpa/term-non-corporate-commonwealth-entity-nce" target="_blank" rel="external noreferrer">Non-corporate Commonwealth Entity (NCE)</a>, it is mandatory for you to purchase some mobile products and services from the Mobile Panel.
 
-If you need to purchase enterprise-wide mobile products and services, you must use the Telecommunications Marketplace.
+If you need to purchase enterprise-wide mobile products and services, you must use the [Telecommunications Marketplace](/buyer/products-and-services/telecommunications).
 
 ## <span name="buy-services-from-the-ict-procurement-portal">Browse mobile products and services from the ICT Procurement Portal</span>
 

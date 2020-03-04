@@ -75,7 +75,7 @@ const Events: React.FC = () => {
       <div className="row margin-sm-top-1 margin-md-top-05">
         <div className="col-sm-12 text-align-right">
           <div className="padding-md-top-1">
-            <a href="https://www.eventbrite.com.au/o/digital-transformation-agency-8025584572" target="_blank" rel="external noreferrer">[TODO]See more events</a>
+            <a href="https://www.eventbrite.com.au/o/digital-transformation-agency-8025584572" target="_blank" rel="external noreferrer">See more events</a>
           </div>
         </div>
       </div>

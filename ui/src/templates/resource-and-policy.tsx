@@ -12,6 +12,9 @@ interface IResourceAndPolicyTemplateProps {
       }],
     },
   };
+  location: {
+    pathname: string,
+  };
   data: {
     allMarkdownRemark: {
       nodes: [{
@@ -43,14 +46,14 @@ interface IResourceAndPolicyTemplateProps {
   };
 }
 
-const ResourceAndPolicyTemplate: React.FC<IResourceAndPolicyTemplateProps> = ({ data, pageContext }) => {
+const ResourceAndPolicyTemplate: React.FC<IResourceAndPolicyTemplateProps> = ({ data, pageContext, location }) => {
 
   const {
     breadcrumb: { crumbs },
   } = pageContext;
 
   const getActiveClassName = (slug: string): string => {
-    if (window.location.pathname.indexOf(slug) > 0) {
+    if (location.pathname.indexOf(slug) > 0) {
       return 'font-weight-8';
     }
     return '';

@@ -22,13 +22,11 @@ panel: 'data-centres'
 
 We established the Data Centre Facilities Supplies Panel for government buyers looking to buy data centre space and services.
 
-The Standing Offer Notice (SON) for the Data Centre Facilities Supplies Panel is <a href="https://www.tenders.gov.au/Son/Show/fe5fa4fb-f204-8d9e-0cf8-73240c00b6fc" target="_blank" rel="external noreferrer">SON 2402841</a>.
-
-Read the <a href="#" target="_blank" rel="external noreferrer">[TODO]Data Centre Facilities Supplies Panel Head Agreement and Module 1</a>.
+The Standing Offer Notice (SON) for the Data Centre Facilities Supplies Panel is <a href="https://www.tenders.gov.au/Son/Show/fe5fa4fb-f204-8d9e-0cf8-73240c00b6fc" target="_blank" rel="external noreferrer">SON2402841</a>.
 
 ## <span name="what-can-you-buy">What can you buy from the Data Centre Facilities Supplies Panel?</span>
 
-You can buy data centres space and services
+You can buy data centres space and services.
 
 Under the ‘Supplier’ section, you can view the current <a href="https://www.tenders.gov.au/Son/Show/fe5fa4fb-f204-8d9e-0cf8-73240c00b6fc" target="_blank" rel="external noreferrer">list of approved sellers</a> on this panel.
 
@@ -38,7 +36,7 @@ All federal, state, territory and local government organisations can use the Dat
 
 ### <span name="non-corporate-commonwealth-entities">For Non-corporate Commonwealth Entities</span>
 
-If your agency is a Non-corporate Commonwealth Entity (NCE), it is mandatory for you to purchase data centre space and services from the Data Centre Facilities Supplies Panel.
+If your agency is a <a href="https://www.finance.gov.au/about-us/glossary/pgpa/term-non-corporate-commonwealth-entity-nce" target="_blank" rel="external noreferrer">Non-corporate Commonwealth Entity (NCE)</a>, it is mandatory for you to purchase data centre space and services from the Data Centre Facilities Supplies Panel.
 
 ## <span name="buy-services-from-the-ict-procurement-portal">Buy services from the ICT Procurement Portal</span>
 
@@ -65,6 +63,6 @@ Log in to <a href="https://ictprocurement.service-now.com/sp" target="_blank" re
 
 For questions about using the Data Centre Facilities Supplies Panel:
 
-Email: ictprocurement@dta.gov.au
+Email: [ictprocurement@dta.gov.au](mailto:ictprocurement@dta.gov.au)
 
 Call: 02 6120 8705

@@ -33,4 +33,4 @@ There may be instances where industry doesn’t currently offer a solution to ou
 
 Gaining a deeper understanding of an industry prior to a sourcing activity supports the development of robust procurement documentation relevant to the targeted industry. This reduces the need for addenda or post-tender clarifications later.
 
-[Learn how do planning and prep](/buyer/resources-and-policies/planning-and-prep)
+[Learn how do planning and preparation](/buyer/resources-and-policies/planning-and-preparation)

@@ -53,7 +53,7 @@ All federal, state, territory and local government agencies can use the Telecomm
 
 ### <span name="non-corporate-commonwealth-entities">For Non-corporate Commonwealth Entities</span>
 
-If your agency is a Non-corporate Commonwealth Entity (NCE), it is mandatory for you to purchase telecommunications products and services from the Telecommunications Marketplace.
+If your agency is a <a href="https://www.finance.gov.au/about-us/glossary/pgpa/term-non-corporate-commonwealth-entity-nce" target="_blank" rel="external noreferrer">Non-corporate Commonwealth Entity (NCE)</a>, it is mandatory for you to purchase telecommunications products and services from the Telecommunications Marketplace.
 
 ## <span name="buy-services-from-the-ict-procurement-portal">Buy services from the ICT Procurement Portal</span>
 

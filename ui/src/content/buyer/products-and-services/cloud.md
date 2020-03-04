@@ -23,8 +23,6 @@ We established the Cloud Marketplace for government buyers looking to source clo
 
 The Standing Offer Notice (SON) number for Cloud Marketplace Panel is <a href="https://www.tenders.gov.au/Son/Show/745895ff-e769-50c9-d860-7cecece179b4" target="_blank" rel="external noreferrer">SON2914302</a>.
 
-Read the [TODO] Cloud Marketplace Head Agreement.
-
 ## <span name="what-can-you-buy">What can you buy from the Cloud Marketplace?</span>
 
 Cloud products you can buy includes:
@@ -45,8 +43,6 @@ Cloud services covers a range of options including:
 - platform as a service
 - software as a service
 - cloud consulting services
-
-Browse the <a href="#" target="_blank" rel="external noreferrer">[TODO]list of cloud services</a> you can source through the Cloud Marketplace.
 
 Under the ‘Supplier’ section, you can view the current <a href="https://www.tenders.gov.au/Son/Show/745895FF-E769-50C9-D860-7CECECE179B4" target="_blank" rel="external noreferrer">list of approved sellers</a> on this panel.
 
@@ -79,6 +75,6 @@ Log in to <a href="https://ictprocurement.service-now.com/sp" target="_blank" re
 
 For questions on using the Cloud Marketplace:
 
-Email: ictprocurement@dta.gov.au
+Email: [ictprocurement@dta.gov.au](mailto:ictprocurement@dta.gov.au)
 
 Call: 02 6120 8705

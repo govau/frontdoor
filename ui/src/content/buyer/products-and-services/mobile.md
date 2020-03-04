@@ -49,7 +49,7 @@ All federal, state, territory and local government organisations can use the Mob
 
 ### <span name="non-corporate-commonwealth-entities">For Non-corporate Commonwealth Entities</span>
 
-If your agency is a Non-corporate Commonwealth Entity (NCE), it is mandatory for you to purchase some mobile products and services from the Mobile Panel.
+If your agency is a <a href="https://www.finance.gov.au/about-us/glossary/pgpa/term-non-corporate-commonwealth-entity-nce" target="_blank" rel="external noreferrer">Non-corporate Commonwealth Entity (NCE)</a>, it is mandatory for you to purchase some mobile products and services from the Mobile Panel.
 
 If you need to purchase enterprise-wide mobile products and services, you must use the Telecommunications Marketplace.
 
@@ -82,6 +82,6 @@ Log in to <a href="https://ictprocurement.service-now.com/sp" target="_blank" re
 
 For questions on using the Mobile Panel:
 
-Email: ictprocurement@dta.gov.au
+Email: [ictprocurement@dta.gov.au](mailto:ictprocurement@dta.gov.au)
 
 Call: 02 6120 8705

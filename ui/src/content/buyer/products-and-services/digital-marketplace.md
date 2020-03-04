@@ -13,6 +13,8 @@ panel: 'digital-marketplace'
     <li><a href="#what-can-you-buy-from-the-digital-marketplace">What can you buy from the Digital Marketplace?</a></li>
     <li><a href="#who-can-use-this-panel">Who can use this panel?</a></li>
     <li><a href="#find-sellers-through-the-digital-marketplace">Find sellers through the Digital Marketplace</a></li>
+    <li><a href="#new-accounts">New accounts</a></li>
+    <li><a href="#current-users">Current users</a></li>
     <li><a href="#contact-the-team">Contact the team</a></li>
   </ul>
 </nav>
@@ -59,14 +61,16 @@ You must use the <a href="https://marketplace.service.gov.au" target="_blank" re
 
 We recommend to check with your organisation’s procurement team or lead in case there are users with existing accounts.
 
-New accounts  
+### <span name="new-accounts">New accounts</span>
+
 Register to <a href="https://marketplace.service.gov.au/2/signup" target="_blank" rel="external noreferrer">create a Digital Marketplace account</a>.
 
 You can apply to become a buyer if your email address ends in ‘.gov.au’. Contact the Digital Marketplace team if your government email address ends in ‘.com’, ‘.edu.au’ etc.
 
 If you’re a contractor, you must also be authorised by your supervisor who is a government employee.
 
-Current users  
+### <span name="current-users">Current users</span>
+
 Log in to <a href="https://marketplace.service.gov.au/login" target="_blank" rel="external noreferrer">use the Digital Marketplace</a>.
 
 ## <span name="contact-the-team">Contact the team</span>

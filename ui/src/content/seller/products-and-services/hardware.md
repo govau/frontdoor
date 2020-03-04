@@ -89,6 +89,6 @@ Read our guide on [[TODO]selling products and services to government](#).
 
 For questions on using the Hardware Marketplace:
 
-Email: ictprocurement@dta.gov.au
+Email: [ictprocurement@dta.gov.au](mailto:ictprocurement@dta.gov.au)
 
 Call: 02 6120 8705

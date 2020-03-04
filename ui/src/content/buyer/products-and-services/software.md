@@ -28,8 +28,6 @@ This SON includes:
 - Category 1: the [whole-of-government sourcing arrangement for Microsoft](/buyer/products-and-services/sourcing-arrangements/microsoft/) products and services. This is separate from the Software Marketplace.
 - Category 2: Commercial-off-the-Shelf (COTS) software and services you can buy from the Software Marketplace.
 
-Read the <a href="#" target="_blank" rel="external noreferrer">[TODO]Software Marketplace Head Agreement</a>.
-
 ## <span name="what-can-you-buy">What can you buy from the Software Marketplace?</span>
 
 Software products you can buy include:
@@ -78,6 +76,6 @@ Log in to <a href="https://ictprocurement.service-now.com/sp" target="_blank" re
 
 For questions on using the Software Marketplace:
 
-Email: ictprocurement@dta.gov.au
+Email: [ictprocurement@dta.gov.au](mailto:ictprocurement@dta.gov.au)
 
 Call: 02 6120 8705

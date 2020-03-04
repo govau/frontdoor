@@ -11,18 +11,18 @@ Learn more about your whole-of-government requirements and best practice at each
 
 Find out more about:
 
-- [[TODO]How DTA panels and portals work](#)
 - [Early market research](/buyer/resources-and-policies/early-market-research)
-- [[TODO]Digital sourcing capability measurement](#)
 
 <div class="margin-md-top-2 margin-md-bottom-05"><span class="badge badge-green margin-md-bottom-05">In progress</span></div>
-Help us to write content for difficult sourcing topics through our upcoming working groups.
 
-- [[TODO]Working with digital sourcing specialists as strategic partners](#)
-- [[TODO]Contracting for interactive, outcome-based solutions](#)
-- [[TODO]Articulating value for money](#)
-- [[TODO]Engaging with risk in digital sourcing](#)
-- [[TODO]Negotiating for successful digital engagements](#)
+Help us to write content for difficult sourcing topics through our [upcoming working groups](/buyer/capability-and-community#working-groups).
+
+- Digital sourcing capability measurement
+- Working with digital sourcing specialists as strategic partners
+- Contracting for interactive, outcome-based solutions
+- Articulating value for money
+- Engaging with risk in digital sourcing
+- Negotiating for successful digital engagements
 
 ## <span name="digital-policies">Digital Policies</span>
 
@@ -30,14 +30,14 @@ It is mandatory for non-corporate Commonwealth entities to comply with whole-of-
 
 ### Planning
 
-- [[TODO]Consider first policy](#)
-- [[TODO]Digital sourcing contract limits and reviews policy](#)
+- <a href="https://www.dta.gov.au/help-and-advice/ict-procurement/digital-sourcing-framework-ict-procurement/digital-sourcing-policies#digital-sourcing-consider-first-policy" target="_blank" rel="external noreferrer">Consider first policy</a>
+- <a href="https://www.dta.gov.au/help-and-advice/ict-procurement/digital-sourcing-framework-ict-procurement/digital-sourcing-policies#digital-sourcing-contract-limits-and-reviews-policy" target="_blank" rel="external noreferrer">Digital sourcing contract limits and reviews policy</a>
 
 ### Sourcing
 
-- [[TODO]Setting fair criteria policy](#)
-- [[TODO]Creating your own panel policy](#)
+- <a href="https://www.dta.gov.au/help-and-advice/ict-procurement/digital-sourcing-framework-ict-procurement/digital-sourcing-policies#digital-sourcing-fair-criteria-policy" target="_blank" rel="external noreferrer">Setting fair criteria policy</a>
+- <a href="https://www.dta.gov.au/help-and-advice/ict-procurement/digital-sourcing-framework-ict-procurement/digital-sourcing-policies#digital-sourcing-panels-policy" target="_blank" rel="external noreferrer">Creating your own panel policy</a>
 
 ### Managing
 
-- [[TODO]Digital sourcing contract limits and reviews policy](#)
+- <a href="https://www.dta.gov.au/help-and-advice/ict-procurement/digital-sourcing-framework-ict-procurement/digital-sourcing-policies#digital-sourcing-contract-limits-and-reviews-policy" target="_blank" rel="external noreferrer">Digital sourcing contract limits and reviews policy</a>

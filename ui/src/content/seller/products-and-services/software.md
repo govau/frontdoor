@@ -84,6 +84,6 @@ Read our guide on [[TODO]selling digital products and services through the DTA](
 
 For questions on using the Software Marketplace:
 
-Email: ICTprocurement@dta.gov.au
+Email: [ictprocurement@dta.gov.au](mailto:ictprocurement@dta.gov.au)
 
 Call: 02 6120 8705

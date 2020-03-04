@@ -28,6 +28,6 @@ Read the <a href="#" target="_blank" rel="external noreferrer">[TODO]Data Centre
 
 For questions about using the Data Centre Facilities Supplies Panel:
 
-Email: ictprocurement@dta.gov.au
+Email: [ictprocurement@dta.gov.au](mailto:ictprocurement@dta.gov.au)
 
 Call: 02 6120 8705

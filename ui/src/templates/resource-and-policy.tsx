@@ -82,7 +82,7 @@ const ResourceAndPolicyTemplate: React.FC<IResourceAndPolicyTemplateProps> = ({ 
                       <ul className="au-link-list">
                         <li><Link to="/buyer/resources-and-policies/early-market-research" className={getActiveClassName('/early-market-research')}>What is early market research?</Link></li>
                         <li><Link to="/buyer/resources-and-policies/why-do-early-market-research" className={getActiveClassName('/why-do-early-market-research')}>Why do early market research</Link></li>
-                        <li><Link to="/buyer/resources-and-policies/planning-and-prep" className={getActiveClassName('/planning-and-prep')}>Planning and prep</Link></li>
+                        <li><Link to="/buyer/resources-and-policies/planning-and-preparation" className={getActiveClassName('/planning-and-preparation')}>Planning and preparation</Link></li>
                         <li><Link to="/buyer/resources-and-policies/engage-with-sellers" className={getActiveClassName('/engage-with-sellers')}>Engaging with sellers</Link></li>
                         <li><Link to="/buyer/resources-and-policies/consider-risk" className={getActiveClassName('/consider-risk')}>Consider risk</Link></li>
                         <li><Link to="/buyer/resources-and-policies/consider-probity" className={getActiveClassName('/consider-probity')}>Consider probity</Link>

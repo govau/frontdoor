@@ -24,8 +24,6 @@ We established the Hardware Marketplace for government buyers looking to source 
 
 The Standing Offer Notice (SON) for Hardware Marketplace is <a href="https://www.tenders.gov.au/Son/Show/61f30dd8-c7e2-ec94-2a86-c3adf5775795" target="_blank" rel="external noreferrer">SON3541738</a>.
 
-Read the <a href="#" target="_blank" rel="external noreferrer">[TODO]Hardware Marketplace Head Agreement</a>.
-
 ## <span name="what-can-you-buy">What can you buy from the Hardware Marketplace?</span>
 
 Hardware products you can buy include:
@@ -58,7 +56,7 @@ Fees apply if you award a contract to a seller using this panel.
 
 ### <span name="non-corporate-commonwealth-entities">For Non-corporate Commonwealth Entities</span>
 
-If your agency is a Non-corporate Commonwealth Entity (NCE), it is mandatory for you to purchase these hardware products from the Hardware Marketplace:
+If your agency is a <a href="https://www.finance.gov.au/about-us/glossary/pgpa/term-non-corporate-commonwealth-entity-nce" target="_blank" rel="external noreferrer">Non-corporate Commonwealth Entity (NCE)</a>, it is mandatory for you to purchase these hardware products from the Hardware Marketplace:
 
 - desktop computers
 - laptops
@@ -90,6 +88,6 @@ Log in to <a href="https://ictprocurement.service-now.com/sp" target="_blank" re
 
 For questions on using the Hardware Marketplace:
 
-Email: ictprocurement@dta.gov.au
+Email: [ictprocurement@dta.gov.au](mailto:ictprocurement@dta.gov.au)
 
 Call: 02 6120 8705

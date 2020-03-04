@@ -298,7 +298,7 @@ const Search: React.FC = () => {
               </div>
             </div>
           )}
-          {!loading && panels && selectedProduct && (
+          {!loading && !showProductsAndServices && panels && selectedProduct && (
             <div className="row margin-sm-top-1 margin-md-top-1">
               <div className="col-sm-12">
                 <div className="background-white border-width-1 border-light-grey">

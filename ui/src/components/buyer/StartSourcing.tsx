@@ -1,5 +1,4 @@
 import AUheading from '@gov.au/headings';
-import { Link } from 'gatsby';
 import React from 'react';
 
 const StartSourcing: React.FC = () => {
@@ -16,9 +15,6 @@ const StartSourcing: React.FC = () => {
         </div>
         <div className="col-xs-12 col-sm-3">
           <div className="float-left"><a href="https://ictprocurement.service-now.com/" target="_blank" rel="external noreferrer" className="margin-sm-right-2 margin-md-right-2">ICT Procurement Portal</a></div>
-        </div>
-        <div className="col-xs-12 col-sm-3">
-          <div className="float-left"><Link to="/buyer/contact-us">[TODO]List of DTA panels and portals</Link></div>
         </div>
       </div>
     </>

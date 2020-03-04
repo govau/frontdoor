@@ -1,5 +1,6 @@
 import AUbutton from '@gov.au/buttons';
 import AUheading from '@gov.au/headings';
+import { Link } from 'gatsby';
 import axios, { AxiosResponse } from 'axios';
 import React, { useEffect, useState } from 'react';
 import { getSessionObject, setSessionObject } from '../../utils/Browser';
@@ -174,7 +175,7 @@ const Search: React.FC = () => {
                           <AUheading size="sm" level="3">
                             Can't find your organisation?
                           </AUheading>
-                          <div className="margin-sm-top-05 margin-md-top-05"><a href="#footer-feedback">Send us feedback</a> if your government organisation name does not appear</div>
+                          <div className="margin-sm-top-05 margin-md-top-05"><a href="#footer-feedback">Send us feedback</a> if your government organisation name does not appear.</div>
                         </>
                       )}
                       notFoundComponent={(s) => (
@@ -212,7 +213,7 @@ const Search: React.FC = () => {
                 <label htmlFor="product">What digital product or service do you need to buy?</label>
               </AUheading>
               <div className="margin-sm-top-1 margin-md-top-1">
-                If your requirements are not well-defined, ask sellers for innovative solutions or ideas.
+                If your requirements are not well-defined, <Link to="/buyer/products-and-services/ask-the-market">ask sellers for innovative solutions or ideas</Link>.
               </div>
             </div>
           </div>

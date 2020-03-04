@@ -1,6 +1,6 @@
 ---
 layout: buyer
-title: 'Whole-of-government arrangement for Microsoft products and services'
+title: 'whole-of-government arrangement for Microsoft products and services'
 summary: 'For sourcing software as a service, customer relationship management, development tools'
 panel: 'microsoft'
 ---

@@ -43,10 +43,7 @@ const QuickLink: React.FC = () => {
           </div>
           <div className="margin-sm-top-2 margin-md-top-2">View list of:</div>
           <div className="margin-sm-top-1 margin-md-top-1">
-            <Link to="#">[TODO]Digital products and services</Link>
-          </div>
-          <div className="margin-sm-top-1 margin-md-top-1">
-            <Link to="#">[TODO]DTA panels and portals</Link>
+            <Link to="/buyer/contact-us">DTA panels and marketplaces</Link>
           </div>
           <div className="margin-sm-top-1 margin-md-top-1">
             <Link to="/buyer/products-and-services/sourcing-arrangements">Whole-of-government arrangements</Link>

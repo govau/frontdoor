@@ -34,8 +34,8 @@ const Nce: React.FC = () => {
             Non-corporate Commonwealth entities must comply with four mandatory policies when using DTA panels.
           </div>
           <div className="margin-sm-top-05">
-            <Link to="#">
-              [TODO]Find out more about sourcing policies
+            <Link to="/buyer/resources-and-policies#digital-policies">
+              Find out more about sourcing policies
             </Link>
           </div>
         </div>

@@ -1,6 +1,6 @@
 ---
 layout: buyer
-title: 'Whole-of-government arrangement for Amazon Web Services'
+title: 'whole-of-government arrangement for Amazon Web Services'
 summary: 'For sourcing software as a service, customer relationship management, development tools'
 panel: 'aws'
 ---

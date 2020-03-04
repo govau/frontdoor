@@ -1,7 +1,7 @@
 import AUbutton from '@gov.au/buttons';
 import AUheading from '@gov.au/headings';
-import { Link } from 'gatsby';
 import axios, { AxiosResponse } from 'axios';
+import { Link } from 'gatsby';
 import React, { useEffect, useState } from 'react';
 import { getSessionObject, setSessionObject } from '../../utils/Browser';
 import SearchField, { ISearchResult } from '../SearchField';

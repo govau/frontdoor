@@ -9,7 +9,7 @@ export interface ISearchResult {
 interface ISearchFieldProps {
   searchFunc: (text: string) => Promise<ISearchResult[]>;
   clearFunc?: () => void;
-  itemSelectedFunc?: (item: any) => void;
+  itemSelectedFunc?: (item: ISearchResult) => void;
   list: ISearchResult[];
   id: string;
   notFoundComponent?: (search?: string) => React.ReactNode;

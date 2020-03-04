@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react';
 import { getSessionObject, setSessionObject } from '../../utils/Browser';
 import SearchField, { ISearchResult } from '../SearchField';
 import ToggleButton, { IOption } from '../ToggleButton';
+import ProductsAndServicesList from './ProductsAndServicesList';
 import SearchResult from './SearchResult';
 
 const Search: React.FC = () => {
@@ -17,6 +18,7 @@ const Search: React.FC = () => {
   const [selectedAgency, setSelectedAgency] = useState<ISearchResult | null>();
   const [selectedProduct, setSelectedProduct] = useState<ISearchResult | null>();
   const [panels, setPanels] = useState<ISearchResult[]>();
+  const [showProductsAndServices, setShowProductsAndServices] = useState<boolean>(false);
 
   useEffect(() => {
     if (!loaded) {
@@ -53,12 +55,15 @@ const Search: React.FC = () => {
 
   const productSearchCallback = (searchValue: string): Promise<ISearchResult[]> => {
     if ((selectedAgency && selectedAgencyType === 'federal') || selectedAgencyType === 'state') {
+      setLoading(true);
+      setShowProductsAndServices(false);
       return searchCallback({
         query: searchValue,
         top: 10,
         type: 'product',
       }).then((r) => {
         setProducts(r.data);
+        setLoading(false);
         return r.data;
       });
     }
@@ -68,6 +73,7 @@ const Search: React.FC = () => {
   const panelSearchCallback = (product: ISearchResult): Promise<ISearchResult[]> => {
     if ((selectedAgency && selectedAgencyType === 'federal') || selectedAgencyType === 'state') {
       setLoading(true);
+      setShowProductsAndServices(false);
       return searchCallback({
         query: product.text,
         top: 10,
@@ -89,6 +95,14 @@ const Search: React.FC = () => {
   const productSelected = (product: ISearchResult) => {
     panelSearchCallback(product);
     setSelectedProduct(product);
+  };
+
+  const productsAndServicesListItemSelected = (searchValue: string) => {
+    productSearchCallback(searchValue).then((data) => {
+      if (data.length > 0) {
+        productSelected(data[0]);
+      }
+    });
   };
 
   const toggleSelected = (option: IOption) => {
@@ -202,7 +216,6 @@ const Search: React.FC = () => {
           {selectedAgencyType === 'state' && (
             <div className="row margin-sm-top-2 margin-md-top-2">
               <div className="col-sm-8 col-sm-push-2 text-align-center">
-
                   You work for a state, territory or local organisation. This includes educational instututions.
               </div>
             </div>
@@ -260,6 +273,15 @@ const Search: React.FC = () => {
               />
             </div>
           </div>
+          <div className="row margin-sm-top-1 margin-md-top-05">
+            <div className="col-sm-6 col-sm-push-4">
+              <AUbutton
+                  onClick={() => setShowProductsAndServices(!showProductsAndServices)}
+                  as="tertiary">
+                  Browse avaliable products and services
+                </AUbutton>
+            </div>
+          </div>
           {loading &&
             <div className="row margin-sm-top-1 margin-md-top-1">
               <div className="col-sm-8 col-sm-push-2">
@@ -267,7 +289,16 @@ const Search: React.FC = () => {
               </div>
             </div>
           }
-          {panels && selectedProduct && (
+          {showProductsAndServices && (
+            <div className="row margin-sm-top-1 margin-md-top-1">
+              <div className="col-sm-12">
+                <div className="background-white border-width-1 border-light-grey">
+                  <ProductsAndServicesList itemSelectedFunc={productsAndServicesListItemSelected} />
+                </div>
+              </div>
+            </div>
+          )}
+          {!loading && panels && selectedProduct && (
             <div className="row margin-sm-top-1 margin-md-top-1">
               <div className="col-sm-12">
                 <div className="background-white border-width-1 border-light-grey">

@@ -5,12 +5,9 @@ using System.Xml.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Dta.Frontdoor.Tools.DirectoryConvertor
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Dta.Frontdoor.Tools.DirectoryConvertor {
+    class Program {
+        static void Main(string[] args) {
             var filename = "data/export.xml";
             var currentDirectory = Directory.GetCurrentDirectory();
             var directoryGovAuFilepath = Path.Combine(currentDirectory, filename);
@@ -25,8 +22,7 @@ namespace Dta.Frontdoor.Tools.DirectoryConvertor
                                                 ((string)item.Element("type_of_body")).Contains("C. Commonwealth Company")
                                             )
                                          )
-                                         .Select(i => new
-                                         {
+                                         .Select(i => new {
                                              title = (string)i.Element("title"),
                                              typeOfBody = (string)i.Element("type_of_body"),
                                              website = (string)i.Element("website"),
@@ -38,11 +34,10 @@ namespace Dta.Frontdoor.Tools.DirectoryConvertor
             var sb = new StringBuilder();
             sb.AppendLine(string.Join("\t", "Question", "Answer", "Metadata"));
             var regex = new Regex(@"(https?:\/\/)?(w{0,3}\.){0,1}(.*?)(\..*)", RegexOptions.IgnoreCase);
-            foreach (var group in agencies)
-            {
+            foreach (var group in agencies) {
                 Console.WriteLine(group.Key);
                 var typeOfBody = "";
-                switch(group.Key) {
+                switch (group.Key) {
                     case "A. Non Corporate Commonwealth Entity":
                         typeOfBody = "nce";
                         break;
@@ -53,7 +48,7 @@ namespace Dta.Frontdoor.Tools.DirectoryConvertor
                         typeOfBody = "gbe";
                         break;
                 }
-                foreach (var i in group) {   
+                foreach (var i in group) {
                     sb.AppendLine(
                         string.Join(
                             "\t",

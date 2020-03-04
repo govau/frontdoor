@@ -10,39 +10,32 @@ using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json;
 using Dta.Frontdoor.Api.Models;
 
-namespace Dta.Frontdoor.Api.Controllers
-{
+namespace Dta.Frontdoor.Api.Controllers {
     [Route("api/[controller]")]
     [ApiController]
-    public class EventController : ControllerBase
-    {
+    public class EventController : ControllerBase {
         private readonly IConfiguration _configuration;
         private IMemoryCache _cache;
         private const string CACHE_KEY = "EventbriteCache";
 
-        public EventController(IConfiguration configuration, IMemoryCache cache)
-        {
+        public EventController(IConfiguration configuration, IMemoryCache cache) {
             _configuration = configuration;
             _cache = cache;
         }
 
         [HttpGet]
-        public async Task<List<EventGroup>> Get()
-        {
-            if (_cache.TryGetValue(CACHE_KEY, out List<EventGroup> cacheEntry))
-            {
+        public async Task<List<EventGroup>> Get() {
+            if (_cache.TryGetValue(CACHE_KEY, out List<EventGroup> cacheEntry)) {
                 return cacheEntry;
             }
             var eventbriteToken = _configuration["EventbriteToken"];
-            if (string.IsNullOrWhiteSpace(eventbriteToken) == true)
-            {
+            if (string.IsNullOrWhiteSpace(eventbriteToken) == true) {
                 return new List<EventGroup>();
             }
 
             using (var client = new HttpClient())
             using (var stream = await client.GetStreamAsync(new Uri($"https://www.eventbriteapi.com/v3/users/me/events?token={eventbriteToken}&status=live&expand=venue,format")))
-            using (var reader = new StreamReader(stream))
-            {
+            using (var reader = new StreamReader(stream)) {
                 string s = reader.ReadToEnd();
                 var events = JsonConvert.DeserializeObject<Events>(s);
                 var result = events.EventList.Where(e => e.Listed).Take(4).ToList();
@@ -50,12 +43,12 @@ namespace Dta.Frontdoor.Api.Controllers
                     e => string.Format("{0:MMMM}", e.Start.Local),
                     e => e,
                     (g, e) => new EventGroup {
-                        Key=g,
-                        Events=e
+                        Key = g,
+                        Events = e
                     }).ToList();
                 var cacheEntryOptions = new MemoryCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromMinutes(20));
                 _cache.Set<List<EventGroup>>(CACHE_KEY, grouped, cacheEntryOptions);
-                
+
                 return grouped;
             }
         }

@@ -1,12 +1,10 @@
 using System;
 using Newtonsoft.Json;
 
-namespace Dta.Frontdoor.Api.Models
-{
-    public class Event
-    {
+namespace Dta.Frontdoor.Api.Models {
+    public class Event {
         public string Id { get; set; }
-        
+
         public StringValue Name { get; set; }
 
         [JsonProperty("online_event")]

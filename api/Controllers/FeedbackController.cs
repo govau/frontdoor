@@ -5,29 +5,24 @@ using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Dta.Frontdoor.Api.Models;
 
-namespace Dta.Frontdoor.Api.Controllers
-{
+namespace Dta.Frontdoor.Api.Controllers {
     [Route("api/[controller]")]
     [ApiController]
-    public class FeedbackController : ControllerBase
-    {
+    public class FeedbackController : ControllerBase {
         private readonly IConfiguration _configuration;
 
-        public FeedbackController(IConfiguration configuration)
-        {
+        public FeedbackController(IConfiguration configuration) {
             _configuration = configuration;
         }
 
         [HttpPost]
-        public async Task<dynamic> Post(Feedback feedback)
-        {
+        public async Task<dynamic> Post(Feedback feedback) {
             var slackFeedbackURL = _configuration["SlackFeedbackURL"];
-            if (string.IsNullOrWhiteSpace(slackFeedbackURL) == true)
-            {
+            if (string.IsNullOrWhiteSpace(slackFeedbackURL) == true) {
                 return new object();
             }
             var face = "";
-            switch(feedback.Ease) {
+            switch (feedback.Ease) {
                 case 1:
                     face = ":smile:";
                     break;
@@ -58,7 +53,7 @@ location: {feedback.Location}";
                 );
                 var result = await client.PostAsync(slackFeedbackURL, content);
                 return result.IsSuccessStatusCode;
-           }
+            }
         }
     }
 }

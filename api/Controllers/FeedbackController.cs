@@ -43,7 +43,8 @@ namespace Dta.Frontdoor.Api.Controllers
 $@":rotating_light:*Feedback has been recieved*:rotating_light:
 ease: {face}
 improvements: {feedback.SuggestedImprovement}
-email: {feedback.Email}";
+email: {feedback.Email}
+location: {feedback.Location}";
 
             using (var client = new HttpClient()) {
                 var content = new StringContent(

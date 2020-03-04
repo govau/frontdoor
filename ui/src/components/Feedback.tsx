@@ -10,6 +10,7 @@ interface IFeedback {
   ease: number;
   suggestedImprovement: string;
   email: string;
+  location: string;
 }
 
 interface IFeedbackProps {
@@ -38,6 +39,7 @@ const Feedback: React.FC<IFeedbackProps> = ({onCancel}) => {
       ease: parseInt(selectedEase, 10),
       email: `${formData.get('email')}`,
       suggestedImprovement: `${formData.get('suggestedImprovement')}`,
+      location: window.location.pathname,
     };
     postFeedback(feedback);
   };

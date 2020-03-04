@@ -38,8 +38,8 @@ const Feedback: React.FC<IFeedbackProps> = ({onCancel}) => {
     const feedback: IFeedback = {
       ease: parseInt(selectedEase, 10),
       email: `${formData.get('email')}`,
-      suggestedImprovement: `${formData.get('suggestedImprovement')}`,
       location: window.location.pathname,
+      suggestedImprovement: `${formData.get('suggestedImprovement')}`,
     };
     postFeedback(feedback);
   };

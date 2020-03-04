@@ -36,6 +36,7 @@ const SellerLayout: React.FC = ({ children }) => {
         ]}
       >
         <html lang="en" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Helmet>
       <nav className="au-skip-link" aria-label="skip links navigation">
         <a className="au-skip-link__link" href="#content">Skip to main content</a>

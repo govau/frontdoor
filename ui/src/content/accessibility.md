@@ -11,4 +11,4 @@ Our website aims to meet the Australian Government’s web accessibility require
 
 We want to provide our information for everyone, including people with a disability.
 
-Please <a href="#" target="_blank" rel="external noreferrer">[TODO]get in touch with us</a> if anything on this site is inaccessible to you or you experience problems accessing our content.
+Please <a href="#footer-feedback">send us feedback</a> if anything on this site is inaccessible to you or you experience problems accessing our content.

@@ -66,14 +66,14 @@ const CapabilityAndCommunityPage: React.FC = () => {
                 </div>
               </div>
               <div className="row margin-sm-top-2 margin-md-top-3">
-                <div className="col-sm-6">
+                <div className="col-sm-12">
                   <AUheading size="lg" level="2" id="working-groups">Working Groups</AUheading>
                   <p>Working Groups bring sourcing practitioners together to address sourcing challenges or opportunities identified through user research completed by the Digital Sourcing Centre of Excellence.</p>
                   <p><a href="https://www.dta.gov.au/help-and-advice/uplifting-digital-sourcing-capability/working-groups" target="_blank" rel="external noreferrer">Read more about Working Groups</a></p>
                 </div>
               </div>
               <div className="row margin-sm-top-2 margin-md-top-3">
-                <div className="col-sm-6">
+                <div className="col-sm-12">
                   <AUheading size="lg" level="2" id="common-interest-groups">Common Interest Groups</AUheading>
                   <p>Common Interest Groups (CIGs) create networks of practitioners across the Australian Public Service who have shared experiences and want to exchange knowledge and resources around specific sourcing topics. CIGs comprise an online forum supported by informational and networking events.</p>
                   <AUheading size="md" level="3">Digital Sourcing Policy Group</AUheading>
@@ -84,13 +84,13 @@ const CapabilityAndCommunityPage: React.FC = () => {
                 </div>
               </div>
               <div className="row margin-sm-top-2 margin-md-top-3">
-                <div className="col-sm-6">
+                <div className="col-sm-12">
                   <AUheading size="lg" level="2" id="sourcing-professionalisation">Sourcing professionalisation</AUheading>
                   <p>We aim to promote digital sourcing career development and build a clear career path from entry to advancement. We'll do this by identifying key capabilities and supporting the Australian Public Service (APS) to attract, develop and retain high performing staff. This work includes programs to uplift leader capability to drive digital sourcing transformation in their organisations.</p>
                 </div>
               </div>
               <div className="row margin-sm-top-2 margin-md-top-3">
-                <div className="col-sm-6">
+                <div className="col-sm-12">
                   <AUheading size="lg" level="2" id="contact-us">Contact us</AUheading>
                   <p><a href="mailto:dsn@digital.gov.au">Email us</a> for more details on all programs or to be added to Digital Sourcing Network mailing list for updates.</p>
                 </div>

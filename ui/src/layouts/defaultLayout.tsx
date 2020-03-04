@@ -47,7 +47,7 @@ const DefaultLayout: React.FC = ({ children }) => {
       <div className="au-body">
         <div id="content" className="background-light-grey">{children}</div>
       </div>
-      <Footer hideFeedback />
+      <Footer />
     </div>
   );
 };

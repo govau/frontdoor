@@ -52,7 +52,7 @@ View a [[TODO]list of software products and services](#) you can sell through th
 
 New sellers can apply to sell on the Software Marketplace during the next expected panel opening by mid-2020.
 
-Once the panel opening is announced, the requirements and application process will be listed on AusTender. You can [[TODO]request to receive notifications from AusTender](#) when the request for tender (RFT) is released.
+Once the panel opening is announced, the requirements and application process will be listed on AusTender. You can <a href="https://www.tenders.gov.au/RegisteredUser/Register" target="_blank" rel="external noreferrer">request to receive notifications from AusTender</a> when the request for tender (RFT) is released.
 
 You can also keep an eye out for announcements on the <a href="https://www.dta.gov.au/news-blogs/all" target="_blank" rel="external noreferrer">DTA blog</a> and the <a href="https://twitter.com/dta" target="_blank" rel="external noreferrer">DTA Twitter feed</a>.
 

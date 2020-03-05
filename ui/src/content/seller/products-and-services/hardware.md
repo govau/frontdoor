@@ -57,7 +57,7 @@ There are fees involved to use the Hardware Marketplace.
 
 New sellers can apply to sell on the Hardware Marketplace during the next expected panel opening date this year.
 
-Once the panel opening is announced, the requirements and application process will be listed on AusTender. You can [TODO] request to receive notifications from AusTender when the request for tender (RFT) is released.
+Once the panel opening is announced, the requirements and application process will be listed on AusTender. You can <a href="https://www.tenders.gov.au/RegisteredUser/Register" target="_blank" rel="external noreferrer">request to receive notifications from AusTender</a> when the request for tender (RFT) is released.
 
 You can also keep an eye out for announcements on the DTA blog and the DTA Twitter feed.
 
@@ -83,7 +83,7 @@ The list of approved sellers will be updated and displayed on AusTender after:
 
 This process may take up to 12 weeks.
 
-Read our guide on [[TODO]selling products and services to government](#).
+Read our guide on [selling products and services to government](/seller/selling-through-the-dta).
 
 ## <span name="contact-the-team">Contact the team</span>
 

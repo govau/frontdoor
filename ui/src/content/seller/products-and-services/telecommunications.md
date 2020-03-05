@@ -47,7 +47,7 @@ View the current [[TODO]list of telecommunication products and services](#) you 
 
 New sellers can apply to sell on the Telecommunications Marketplace during the next expected panel opening date.
 
-Once the panel opening is announced, the requirements and application process will be listed on Austender. You can [[TODO]request to receive notifications from AusTender](#) when the Request for Tender (RFT) is released.
+Once the panel opening is announced, the requirements and application process will be listed on Austender. You can <a href="https://www.tenders.gov.au/RegisteredUser/Register" target="_blank" rel="external noreferrer">request to receive notifications from AusTender</a> when the Request for Tender (RFT) is released.
 
 You can also keep an eye out for announcements on the <a href="https://www.dta.gov.au/news-blogs/all" target="_blank" rel="external noreferrer">DTA blog</a> and the <a href="https://twitter.com/dta" target="_blank" rel="external noreferrer">DTA Twitter feed</a> feed.
 
@@ -63,7 +63,7 @@ Once you have your login details, you can start selling your products and servic
 
 The list of approved sellers will be updated and displayed on Austender after the RFT is closed and successful sellers are notified.
 
-Read our guide on [[TODO]selling products and services to government](#).
+Read our guide on [selling products and services to government](/seller/selling-through-the-dta).
 
 ## <span name="contact-the-team">Contact the team</span>
 

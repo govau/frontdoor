@@ -1,6 +1,7 @@
 import AUheading from '@gov.au/headings';
 import axios from 'axios';
 import React, { useCallback, useEffect, useState } from 'react';
+import { getSessionObject, setSessionObject } from '../utils/Browser';
 
 interface IProductsAndServicesListProps {
   itemSelectedFunc?: (item: any) => void;
@@ -19,13 +20,19 @@ const ProductsAndServicesList: React.FC<IProductsAndServicesListProps> = ({ item
 
 
   const getProductsAndServices = useCallback(() => {
-    setLoading(true);
-    return axios.get(`/${userType}/products-and-services.json`).then((r: any) => {
-      setProductsAndServices(r.data);
-      setLoading(false);
+    const cached = getSessionObject(`${userType}-products-and-services`);
+    if (cached) {
+      setProductsAndServices(cached);
+    } else {
+      setLoading(true);
+      return axios.get(`/${userType}/products-and-services.json`).then((r: any) => {
+        setProductsAndServices(r.data);
+        setSessionObject(`${userType}-products-and-services`, r.data);
+        setLoading(false);
 
-      return r;
-    });
+        return r;
+      });
+    }
   }, [productsAndServices]);
 
   useEffect(() => {
@@ -75,7 +82,7 @@ const ProductsAndServicesList: React.FC<IProductsAndServicesListProps> = ({ item
                 <React.Fragment key={d.group}>
                   <div className="margin-sm-top-1 margin-md-top-1 font-weight-7">{d.group}</div>
                   <div>
-                    {d.terms.map((t: string) => (
+                    {d.terms.sort((a: string, b: string) => a.localeCompare(b)).map((t: string) => (
                       <React.Fragment key={`${d.group}${t}`}>
                         <a href="" onClick={(e) => onClick(e)}>{t}</a><br />
                       </React.Fragment>

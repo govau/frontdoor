@@ -1,7 +1,7 @@
 ---
 layout: seller
 title: 'Hardware Marketplace'
-summary: 'Buy some hardware'
+summary: 'For desktops, laptops, storage and network equipment'
 panel: 'hardware'
 ---
 

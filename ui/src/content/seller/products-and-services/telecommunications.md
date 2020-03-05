@@ -1,7 +1,7 @@
 ---
 layout: seller
 title: 'Telecommunications'
-summary: 'Buy your latest mobile here'
+summary: 'For internet connections, data carriage, satellite and managed networks'
 panel: 'telecommunications'
 ---
 

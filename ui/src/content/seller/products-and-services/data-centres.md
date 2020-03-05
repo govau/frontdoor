@@ -1,7 +1,7 @@
 ---
 layout: seller
 title: 'Data centres'
-summary: 'Data centres summary'
+summary: 'For data centres and facilities, and ICT floorspace'
 panel: 'data-centres'
 ---
 

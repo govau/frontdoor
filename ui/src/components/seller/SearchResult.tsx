@@ -27,9 +27,10 @@ interface IStaticQueryProps {
 interface ISearchResultProps {
   panels: ISearchResult[];
   product: ISearchResult | null;
+  viewProductsAndServicesClicked?: () => void;
 }
 
-const SearchResult: React.FC<ISearchResultProps> = ({ panels, product }) => {
+const SearchResult: React.FC<ISearchResultProps> = ({ panels, product, viewProductsAndServicesClicked }) => {
   const data: IStaticQueryProps = useStaticQuery(graphql`
     query SellerSearchResult {
       allMarkdownRemark(filter: {frontmatter: {layout: {eq: "seller"}}}) {
@@ -82,7 +83,7 @@ const SearchResult: React.FC<ISearchResultProps> = ({ panels, product }) => {
       <div className="row">
         <div className="col-sm-12">
           <div className="border-top-width-1 border-light-grey padding-sm-1 padding-md-2 background-light-grey">
-            <CannotFind />
+            <CannotFind viewProductsAndServicesClicked={viewProductsAndServicesClicked}  />
           </div>
         </div>
       </div>

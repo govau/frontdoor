@@ -1,7 +1,7 @@
 ---
 layout: seller
 title: 'Software Marketplace'
-summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
+summary: 'For enterprise software, development tools and associated services'
 panel: 'software'
 ---
 
@@ -78,7 +78,7 @@ The list of approved sellers will be updated and displayed on Austender after:
 
 This process may take up to 12 weeks.
 
-Read our guide on [[TODO]selling digital products and services through the DTA](#).
+Read our guide on [selling digital products and services through the DTA](/seller/working-with-government).
 
 ## <span name="contact-the-team">Contact the team</span>
 

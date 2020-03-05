@@ -1,8 +1,12 @@
+import AUbutton from '@gov.au/buttons';
 import AUheading from '@gov.au/headings';
-import { Link } from 'gatsby';
 import React from 'react';
 
-const CannotFind: React.FC = () => {
+interface ICannotFindProps {
+  viewProductsAndServicesClicked?: () => void;
+}
+
+const CannotFind: React.FC<ICannotFindProps> = ({ viewProductsAndServicesClicked }) => {
   return (
     <>
       <div className="row">
@@ -14,7 +18,14 @@ const CannotFind: React.FC = () => {
             If you can’t find the product or service you offer, you can browse through a categorised list of government digital needs.
           </div>
           <div className="margin-sm-top-1 margin-md-top-1">
-            <Link to="#" className="au-btn">[TODO]View digital products and services</Link>
+            <AUbutton
+              onClick={() => {
+                if (viewProductsAndServicesClicked) {
+                  viewProductsAndServicesClicked();
+                }
+              }}>
+              View digital products and services
+            </AUbutton>
           </div>
         </div>
       </div>

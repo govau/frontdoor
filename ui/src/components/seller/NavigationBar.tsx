@@ -8,7 +8,7 @@ interface INavigationBarProps {
 
 const NavigationBar: React.FC<INavigationBarProps> = ({id}) => {
   const productsAndServicesLinkRef = useRef(null);
-  const workingWithGovernmentLinkRef = useRef(null);
+  const sellingThroughTheDtaLinkRef = useRef(null);
   const contactUsLinkRef = useRef(null);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const NavigationBar: React.FC<INavigationBarProps> = ({id}) => {
       }
     };
     updateParent(productsAndServicesLinkRef);
-    updateParent(workingWithGovernmentLinkRef);
+    updateParent(sellingThroughTheDtaLinkRef);
     updateParent(contactUsLinkRef);
   });
 
@@ -38,7 +38,7 @@ const NavigationBar: React.FC<INavigationBarProps> = ({id}) => {
                       <Link to="/seller/products-and-services" ref={productsAndServicesLinkRef} activeClassName="active" partiallyActive={true}>Sell products and services</Link>
                     </li>
                     <li>
-                      <Link to="/seller/working-with-government" ref={workingWithGovernmentLinkRef} activeClassName="active" partiallyActive={true}>Working with government</Link>
+                      <Link to="/seller/selling-through-the-dta" ref={sellingThroughTheDtaLinkRef} activeClassName="active" partiallyActive={true}>Selling through the DTA</Link>
                     </li>
                     <li>
                       <Link to="/seller/contact-us" ref={contactUsLinkRef} activeClassName="active" partiallyActive={true}>Contact us</Link>

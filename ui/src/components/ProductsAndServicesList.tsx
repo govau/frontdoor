@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 
 interface IProductsAndServicesListProps {
   itemSelectedFunc?: (item: any) => void;
+  userType: string;
 }
 
 interface IProductsAndServicesList {
@@ -11,7 +12,7 @@ interface IProductsAndServicesList {
   terms: string[];
 }
 
-const ProductsAndServicesList: React.FC<IProductsAndServicesListProps> = ({ itemSelectedFunc }) => {
+const ProductsAndServicesList: React.FC<IProductsAndServicesListProps> = ({ itemSelectedFunc, userType }) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [loaded, setLoaded] = useState<boolean>(false);
   const [productsAndServices, setProductsAndServices] = useState<IProductsAndServicesList[]>();
@@ -19,7 +20,7 @@ const ProductsAndServicesList: React.FC<IProductsAndServicesListProps> = ({ item
 
   const getProductsAndServices = useCallback(() => {
     setLoading(true);
-    return axios.get('/products-and-services.json').then((r: any) => {
+    return axios.get(`/${userType}/products-and-services.json`).then((r: any) => {
       setProductsAndServices(r.data);
       setLoading(false);
 

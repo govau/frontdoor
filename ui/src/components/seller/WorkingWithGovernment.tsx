@@ -18,10 +18,12 @@ const WorkingWithGovernment: React.FC = () => {
             Before you join a panel
           </AUheading>
           <div className="margin-sm-top-1 margin-md-top-1">
-            <div className="margin-sm-top-1 margin-md-top-05"><Link to="#">[TODO]How to work with government through panels</Link></div>
+            <div className="margin-sm-top-1 margin-md-top-05">
+              <a href="https://sellingtogov.finance.gov.au/guide" target="_blank" rel="external noreferrer">General advice on selling products and services to the Australian Government</a>
+            </div>
+            <div className="margin-sm-top-1 margin-md-top-05"><Link to="/seller/selling-through-the-dta">Selling digital products and services through the DTA</Link></div>
             <div className="margin-sm-top-1 margin-md-top-05"><Link to="/seller/contact-us">List of DTA panels and portals</Link></div>
-            <div className="margin-sm-top-1 margin-md-top-05"><Link to="#">[TODO]Preparing to join a panel</Link></div>
-            <div className="margin-sm-top-1 margin-md-top-05"><Link to="#">[TODO]What are government priorities?</Link></div>
+            <div className="margin-sm-top-1 margin-md-top-05"><a href="https://ictprocurement.service-now.com/sp" target="_blank" rel="external noreferrer">Register to use the ICT Procurement Portal</a></div>
           </div>
 
           <div className="row margin-sm-top-3 margin-md-top-2">
@@ -30,8 +32,8 @@ const WorkingWithGovernment: React.FC = () => {
                 Once you are on a panel
               </AUheading>
               <div className="margin-sm-top-2 margin-md-top-1">
-                <div className="margin-sm-top-2 margin-md-top-05"><Link to="#">[TODO]Winning work with government</Link></div>
-                <div className="margin-sm-top-2 margin-md-top-05"><Link to="#">[TODO]Current opportunities on the Digital Marketplace</Link></div>
+                <div className="margin-sm-top-2 margin-md-top-05"><Link to="/seller/selling-through-the-dta#winning-work-with-government">Winning work with government</Link></div>
+                <div className="margin-sm-top-1 margin-md-top-05"><a href="https://marketplace.service.gov.au/2/opportunities?status=live" target="_blank" rel="external noreferrer">Current opportunities on the Digital Marketplace</a></div>
               </div>
             </div>
           </div>

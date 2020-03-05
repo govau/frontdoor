@@ -4,9 +4,9 @@ import axios, { AxiosResponse } from 'axios';
 import { Link } from 'gatsby';
 import React, { useEffect, useRef, useState } from 'react';
 import { getSessionObject, setSessionObject } from '../../utils/Browser';
+import ProductsAndServicesList from '../ProductsAndServicesList';
 import SearchField, { ISearchResult } from '../SearchField';
 import ToggleButton, { IOption } from '../ToggleButton';
-import ProductsAndServicesList from './ProductsAndServicesList';
 import SearchResult from './SearchResult';
 
 const Search: React.FC = () => {
@@ -314,7 +314,7 @@ const Search: React.FC = () => {
             <div className="row margin-sm-top-1 margin-md-top-1">
               <div className="col-sm-12">
                 <div className="background-white border-width-1 border-light-grey">
-                  <ProductsAndServicesList itemSelectedFunc={productsAndServicesListItemSelected} />
+                  <ProductsAndServicesList itemSelectedFunc={productsAndServicesListItemSelected} userType="buyer" />
                 </div>
               </div>
             </div>

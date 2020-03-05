@@ -1,6 +1,8 @@
+import AUbutton from '@gov.au/buttons';
 import AUheading from '@gov.au/headings';
 import axios, { AxiosResponse } from 'axios';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import ProductsAndServicesList from '../ProductsAndServicesList';
 import SearchField, { ISearchResult } from '../SearchField';
 import SearchResult from './SearchResult';
 
@@ -9,6 +11,9 @@ const Search: React.FC = () => {
   const [products, setProducts] = useState<ISearchResult[]>([]);
   const [selectedProduct, setSelectedProduct] = useState<ISearchResult | null>();
   const [panels, setPanels] = useState<ISearchResult[]>();
+  const [showProductsAndServices, setShowProductsAndServices] = useState<boolean>(false);
+  const searchResultEl = useRef<HTMLDivElement>(null);
+  const productSearchField = useRef<SearchField>(null);
 
   const searchCallback = (search: any): Promise<AxiosResponse<ISearchResult[]>> => {
     if (search) {
@@ -18,18 +23,22 @@ const Search: React.FC = () => {
   };
 
   const productSearchCallback = (searchValue: string): Promise<ISearchResult[]> => {
+    setLoading(true);
+    setShowProductsAndServices(false);
     return searchCallback({
       query: searchValue,
       top: 10,
       type: 'product',
     }).then((r) => {
       setProducts(r.data);
+      setLoading(false);
       return r.data;
     });
   };
 
   const panelSearchCallback = (product: ISearchResult): Promise<ISearchResult[]> => {
     setLoading(true);
+    setShowProductsAndServices(false);
     return searchCallback({
       query: product.text,
       top: 10,
@@ -44,11 +53,29 @@ const Search: React.FC = () => {
   const productSelected = (product: ISearchResult) => {
     panelSearchCallback(product);
     setSelectedProduct(product);
+    scrollSearchIntoView();
+  };
+
+  const productsAndServicesListItemSelected = (searchValue: string) => {
+    productSearchCallback(searchValue).then((data) => {
+      if (data.length > 0) {
+        productSelected(data[0]);
+      }
+    });
+  };
+
+  const scrollSearchIntoView = () => {
+    if (searchResultEl && window) {
+      searchResultEl.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
   };
 
   return (
     <>
-      <div className="row margin-md-top-2">
+      <div className="row margin-md-top-2" ref={searchResultEl}>
         <div className="col-sm-8 col-sm-push-2 text-align-center">
           <AUheading size="lg" level="1">
             <label htmlFor="product">What do you want to sell to government?</label>
@@ -65,13 +92,18 @@ const Search: React.FC = () => {
             itemSelectedFunc={productSelected}
             list={products}
             id="product"
+            ref={productSearchField}
             helpComponent={(
               <>
                 <AUheading size="sm" level="3">
                   Can't find what you sell?
                 </AUheading>
                 <div className="margin-sm-top-05 margin-md-top-05">
-                  <a href="">[TODO]View list of products and services</a>
+                  <a href="" onClick={(e) => {
+                    e.preventDefault();
+                    setShowProductsAndServices(true);
+                    productSearchField.current?.setModalVisible(false);
+                  }}>View list of products and services</a>
                 </div>
               </>
             )}
@@ -82,12 +114,25 @@ const Search: React.FC = () => {
                     Sorry, '{s}' could not be found
                   </AUheading>
                   <div className="margin-sm-top-05 margin-md-top-05">
-                    Check your spelling or <a href="">[TODO]view the full list of products and services</a> to help define your search.
+                    Check your spelling or <a href="" onClick={(e) => {
+                      e.preventDefault();
+                      setShowProductsAndServices(true);
+                      productSearchField.current?.setModalVisible(false);
+                    }}>view the full list of products and services</a> to help define your search.
                   </div>
                 </div>
               </>
             )}
           />
+        </div>
+      </div>
+      <div className="row margin-sm-top-1 margin-md-top-05">
+        <div className="col-sm-6 col-sm-push-4">
+          <AUbutton
+            onClick={() => setShowProductsAndServices(!showProductsAndServices)}
+            as="tertiary">
+            Browse avaliable products and services
+          </AUbutton>
         </div>
       </div>
       {loading &&
@@ -97,13 +142,26 @@ const Search: React.FC = () => {
           </div>
         </div>
       }
-      {panels && selectedProduct && (
+      {showProductsAndServices && (
+        <div className="row margin-sm-top-1 margin-md-top-1">
+          <div className="col-sm-12">
+            <div className="background-white border-width-1 border-light-grey">
+              <ProductsAndServicesList itemSelectedFunc={productsAndServicesListItemSelected} userType="seller" />
+            </div>
+          </div>
+        </div>
+      )}
+      {!loading && !showProductsAndServices && panels && selectedProduct && (
         <div className="row margin-sm-top-1 margin-md-top-1">
           <div className="col-sm-12">
             <div className="background-white border-width-1 border-light-grey">
               <SearchResult
                 panels={panels}
-                product={selectedProduct} />
+                product={selectedProduct}
+                viewProductsAndServicesClicked={() => {
+                  setShowProductsAndServices(true);
+                  scrollSearchIntoView();
+                }} />
             </div>
           </div>
         </div>

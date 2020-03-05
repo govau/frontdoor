@@ -1,7 +1,7 @@
 ---
 layout: seller
 title: 'Digital Marketplace'
-summary: 'For sourcing digital marketplace products and associated services.'
+summary: 'For contractors, consultants and advisory services to assist with digital projects, operations or requirements'
 panel: 'digital-marketplace'
 ---
 

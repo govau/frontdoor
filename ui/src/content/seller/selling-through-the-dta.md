@@ -28,13 +28,12 @@ Panels are set up to ensure government buyers follow <a href="https://www.financ
 
 We manage the following panels and marketplaces:
 
-- <a href="https://www.dta.gov.au/help-and-advice/ict-procurement/tools-sourcing-digital-products-and-services/marketplaces-panels-and-arrangements/buying-cloud-services" target="_blank" rel="external noreferrer">Cloud Marketplace</a>
-- <a href="https://www.dta.gov.au/help-and-advice/ict-procurement/tools-sourcing-digital-products-and-services/marketplaces-panels-and-arrangements/buying-data-centre-space-and-services" target="_blank" rel="external noreferrer">Data Centre Facilities Supplies Panel</a>
-- <a href="https://www.dta.gov.au/our-projects/about-digital-marketplace" target="_blank" rel="external noreferrer">Digital Marketplace</a>
-- <a href="https://www.dta.gov.au/help-and-advice/ict-procurement/tools-sourcing-digital-products-and-services/marketplaces-panels-and-arrangements/buying-ict-hardware-and-services" target="_blank" rel="external noreferrer">Hardware Marketplace</a>
-- <a href="https://www.dta.gov.au/help-and-advice/ict-procurement/tools-sourcing-digital-products-and-services/ict-panels-and-arrangements/buying-mobile-products-and-services" target="_blank" rel="external noreferrer">Mobile Panel</a>
-- <a href="https://www.dta.gov.au/help-and-advice/ict-procurement/tools-sourcing-digital-products-and-services/ict-panels-and-arrangements/buying-software" target="_blank" rel="external noreferrer">Software Marketplace</a>
-- <a href="https://www.dta.gov.au/help-and-advice/ict-procurement/tools-sourcing-digital-products-and-services/marketplaces-panels-and-arrangements/buying-telecommunications-services" target="_blank" rel="external noreferrer">Telecommunications Marketplace</a>
+- [Cloud Marketplace](/seller/products-and-services/cloud)
+- [Data Centre Facilities Supplies Panel](/seller/products-and-services/data-centres)
+- [Digital Marketplace](/seller/products-and-services/digital-marketplace)
+- [Hardware Marketplace](/seller/products-and-services/hardware)
+- [Software Marketplace](/seller/products-and-services/software)
+- [Telecommunications Marketplace](/seller/products-and-services/telecommunications)
 
 View details and contact information of [DTA sourcing panels](/seller/contact-us).
 

@@ -56,7 +56,11 @@ const BuyerTemplate: React.FC<IBuyerTemplateProps> = ({ data, pageContext }) => 
           <div className="col-sm-12">
             <nav className="au-breadcrumbs" aria-label="breadcrumb">
               <ul className="au-link-list au-link-list--inline">
-                {crumbs.map((c, i) => getBreadCrumbItem(crumbs, data, c, i))}
+                {crumbs.map((c, i) => (
+                  <React.Fragment key={i}>
+                    {getBreadCrumbItem(crumbs, data, c, i)}
+                  </React.Fragment>)
+                )}
               </ul>
             </nav>
           </div>

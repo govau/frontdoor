@@ -2,7 +2,7 @@ import AUbutton from '@gov.au/buttons';
 import AUheading from '@gov.au/headings';
 import axios, { AxiosResponse } from 'axios';
 import { Link } from 'gatsby';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { getSessionObject, setSessionObject } from '../../utils/Browser';
 import SearchField, { ISearchResult } from '../SearchField';
 import ToggleButton, { IOption } from '../ToggleButton';
@@ -19,6 +19,8 @@ const Search: React.FC = () => {
   const [selectedProduct, setSelectedProduct] = useState<ISearchResult | null>();
   const [panels, setPanels] = useState<ISearchResult[]>();
   const [showProductsAndServices, setShowProductsAndServices] = useState<boolean>(false);
+  const searchResultEl = useRef<HTMLDivElement>(null);
+  const productSearchField = useRef<SearchField>(null);
 
   useEffect(() => {
     if (!loaded) {
@@ -95,6 +97,12 @@ const Search: React.FC = () => {
   const productSelected = (product: ISearchResult) => {
     panelSearchCallback(product);
     setSelectedProduct(product);
+    if (searchResultEl && window) {
+      searchResultEl.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
   };
 
   const productsAndServicesListItemSelected = (searchValue: string) => {
@@ -237,13 +245,18 @@ const Search: React.FC = () => {
                 itemSelectedFunc={productSelected}
                 list={products}
                 id="product"
+                ref={productSearchField}
                 helpComponent={(
                   <>
                     <AUheading size="sm" level="3">
                       Can't find what you need?
                     </AUheading>
                     <div className="margin-sm-top-05 margin-md-top-05">
-                      <a href="">[TODO]View the broader list of products and services</a>
+                      <a href="" onClick={(e) => {
+                          e.preventDefault();
+                          setShowProductsAndServices(true);
+                          productSearchField.current?.setModalVisible(false);
+                        }}>View the broader list of products and services</a>
                     </div>
                     <div className="margin-sm-top-05 margin-md-top-05">
                       If you can't find what you need, <a href="/buyer/products-and-services/ask-the-market">ask sellers</a> to help define your digital requirements.
@@ -257,7 +270,11 @@ const Search: React.FC = () => {
                         Sorry, '{s}' could not be found
                       </AUheading>
                       <div className="margin-sm-top-05 margin-md-top-05">
-                        Check your spelling or <a href="">[TODO]view the broader list of products and services</a> to help define your search.
+                        Check your spelling or <a href="" onClick={(e) => {
+                          e.preventDefault();
+                          setShowProductsAndServices(true);
+                          productSearchField.current?.setModalVisible(false);
+                        }}>view the broader list of products and services</a> to help define your search.
                       </div>
                     </div>
                     <div className="background-light-grey padding-sm-2 padding-md-2">
@@ -273,13 +290,13 @@ const Search: React.FC = () => {
               />
             </div>
           </div>
-          <div className="row margin-sm-top-1 margin-md-top-05">
+          <div className="row margin-sm-top-1 margin-md-top-05" ref={searchResultEl}>
             <div className="col-sm-6 col-sm-push-4">
               <AUbutton
-                  onClick={() => setShowProductsAndServices(!showProductsAndServices)}
-                  as="tertiary">
-                  Browse avaliable products and services
-                </AUbutton>
+                onClick={() => setShowProductsAndServices(!showProductsAndServices)}
+                as="tertiary">
+                Browse avaliable products and services
+              </AUbutton>
             </div>
           </div>
           {loading &&

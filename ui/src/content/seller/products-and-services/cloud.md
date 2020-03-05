@@ -20,8 +20,6 @@ We established the Cloud Marketplace for sellers who offer cloud services to gov
 
 The Standing Offer Notice (SON) number for Cloud Marketplace Panel is <a href="https://www.tenders.gov.au/Son/Show/745895ff-e769-50c9-d860-7cecece179b4" target="_blank" rel="external noreferrer">SON2914302</a>.
 
-Read the [[TODO]Cloud Marketplace Head Agreement](#).
-
 ## <span name="what-can-you-sell">What products and services can you sell?</span>
 
 Cloud products you can sell include:

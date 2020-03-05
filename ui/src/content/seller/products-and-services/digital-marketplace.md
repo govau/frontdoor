@@ -10,9 +10,9 @@ panel: 'digital-marketplace'
 <nav class="au-inpage-nav-links" aria-label="in page navigation">
   <h2 class="au-inpage-nav-links__heading">On this page:</h2>
   <ul class="au-link-list">
-    <li><a href="#what-service-categories-can-you-offer">What can you buy from the Digital Marketplace?</a></li>
-    <li><a href="#apply-to-sell-on-the-digital-marketplace">Who can use this panel?</a></li>
-    <li><a href="#useful-stats">Find sellers through the Digital Marketplace</a></li>
+    <li><a href="#what-service-categories-can-you-offer">What service categories can you offer?</a></li>
+    <li><a href="#apply-to-sell-on-the-digital-marketplace">Apply to sell on the Digital Marketplace</a></li>
+    <li><a href="#useful-stats">Useful stats</a></li>
     <li><a href="#contact-the-team">Contact the team</a></li>
   </ul>
 </nav>

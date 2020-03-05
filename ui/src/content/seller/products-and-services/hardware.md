@@ -21,8 +21,6 @@ We established the Hardware Marketplace for sellers who offer hardware products 
 
 The Standing Offer Notice (SON) number for the Hardware Marketplace Panel is <a href="https://www.tenders.gov.au/Son/Show/61f30dd8-c7e2-ec94-2a86-c3adf5775795" target="_blank" rel="external noreferrer">SON3541738</a>.
 
-Read the [[TODO]Hardware Marketplace Head Agreement](#).
-
 Under the ‘Suppliers’ section, you can view the current <a href="https://www.tenders.gov.au/Son/Show/61f30dd8-c7e2-ec94-2a86-c3adf5775795" target="_blank" rel="external noreferrer">list of approved sellers </a>on this panel.
 
 ## <span name="what-can-you-sell">What products and services can you sell?</span>
@@ -45,15 +43,13 @@ You can also sell associated services for the products, including:
 - sanitisation and disposal
 - support and maintenance services.
 
-View a [[TODO]list of hardware products and services](#) you can sell through the Hardware Marketplace.
-
 ## <span name="fees">Fees</span>
 
 There are fees involved to use the Hardware Marketplace.
 
 [Contact us](#contact-the-team) if you need advice on fees.
 
-### <span name="sell-products-and-services-on-the-ict-procurement-portal">Sell products and services on the ICT Procurement Portal</span>
+## <span name="sell-products-and-services-on-the-ict-procurement-portal">Sell products and services on the ICT Procurement Portal</span>
 
 New sellers can apply to sell on the Hardware Marketplace during the next expected panel opening date this year.
 

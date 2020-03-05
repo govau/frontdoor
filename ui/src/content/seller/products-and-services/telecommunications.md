@@ -20,8 +20,6 @@ We established the Telecommunications Marketplace for sellers who offer internet
 
 The Standing Offer Notice (SON) number for the Telecommunications Marketplace is <a href="https://www.tenders.gov.au/Son/Show/fc7270c0-f972-aca0-8f96-b23046b347cf" target="_blank" rel="external noreferrer">SON3386916</a>.
 
-Read the <a href="" target="_blank" rel="external noreferrer">[TODO]Telecommunications Marketplace Head Agreement</a>.
-
 View the current <a href="https://www.tenders.gov.au/Son/Show/fc7270c0-f972-aca0-8f96-b23046b347cf" target="_blank" rel="external noreferrer">list of approved sellers</a> on the Telecommunications Marketplace.
 
 ## <span name="what-can-you-sell">What products and services can you sell?</span>
@@ -40,8 +38,6 @@ Telecommunications products you can sell include:
 - voice services
 
 You can also sell associated services for telecommunications products, including installation, support and maintenance.
-
-View the current [[TODO]list of telecommunication products and services](#) you can sell through the Telecommunication Marketplace.
 
 ## <span name="apply-to-sell-on-the-telecommunications-marketplace">Apply to sell on the Telecommunications Marketplace</span>
 
@@ -69,6 +65,6 @@ Read our guide on [selling products and services to government](/seller/selling-
 
 For questions on using the Telecommunications Marketplace:
 
-Email: [TODO]tmp@dta.gov.au
+Email: tmp@dta.gov.au
 
 Call: 0429 927 512

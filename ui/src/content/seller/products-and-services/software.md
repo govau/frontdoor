@@ -11,10 +11,7 @@ panel: 'software'
   <h2 class="au-inpage-nav-links__heading">On this page:</h2>
   <ul class="au-link-list">
     <li><a href="#what-can-you-sell">What products and services can you sell?</a></li>
-    <li><a href="#who-can-use-this-panel">Who can use this panel?</a></li>
     <li><a href="#sell-services-on-the-ict-procurement-portal">Sell products and services on the ICT Procurement Portal</a></li>
-    <li><a href="#new-accounts">New accounts</a></li>
-    <li><a href="#current-users">Current users</a></li>
     <li><a href="#contact-the-team">Contact the team</a></li>
   </ul>
 </nav>
@@ -27,8 +24,6 @@ This SON includes:
 
 - Category 1: the [whole-of-government sourcing arrangement for Microsoft](/seller/products-and-services/sourcing-arrangements/microsoft/) products and services. This is separate from the Software Marketplace.
 - Category 2: Commercial-off-the-Shelf (COTS) software and services you can sell on the Software Marketplace.
-
-Read the <a href="#" target="_blank" rel="external noreferrer">[TODO]Software Marketplace Head Agreement</a>.
 
 ## <span name="what-can-you-sell">What products and services can you sell?</span>
 
@@ -45,8 +40,6 @@ Software products you can sell include:
 - reporting and analytics
 
 You can also sell associated services for the software, including support and system maintenance.
-
-View a [[TODO]list of software products and services](#) you can sell through the Software Marketplace.
 
 ## <span name="sell-services-on-the-ict-procurement-portal">Sell products and services on the ICT Procurement Portal</span>
 

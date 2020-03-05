@@ -52,7 +52,7 @@ There are fees involved to use the IBM whole-of-government arrangement.
 
 ## <span name="which-products-and-services-are-covered">Which IBM products are covered?</span>
 
-All [[TODO]IBM products and services](#) are covered by this arrangement.
+All <a href="https://www.ibm.com/au-en" target="_blank" rel="external noreferrer">IBM products and services</a> are covered by this arrangement.
 
 This includes:
 

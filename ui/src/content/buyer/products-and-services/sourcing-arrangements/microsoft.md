@@ -66,7 +66,7 @@ This includes:
 
 ## <span name="request-access-to-this-arrangement">Request access to this arrangement?</span>
 
-If your agency chooses to buy [[TODO]Microsoft products or services](#) after a formal approach to market, <a href="#contact-the-team">Contact us</a>.
+If your agency chooses to buy <a href="https://www.microsoft.com/en-au/industry/government?rtc=1" target="_blank" rel="external noreferrer">Microsoft products or services</a> after a formal approach to market, <a href="#contact-the-team">Contact us</a>.
 
 <a href="https://ictprocurement.service-now.com/" target="_blank" rel="external noreferrer">Log in to the ICT Procurement Portal</a> for further details about this arrangement.
 

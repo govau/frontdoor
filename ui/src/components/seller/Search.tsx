@@ -131,7 +131,7 @@ const Search: React.FC = () => {
           <AUbutton
             onClick={() => setShowProductsAndServices(!showProductsAndServices)}
             as="tertiary">
-            Browse avaliable products and services
+            Browse available products and services
           </AUbutton>
         </div>
       </div>

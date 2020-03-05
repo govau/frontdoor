@@ -15,6 +15,7 @@ interface ISearchFieldProps {
   notFoundComponent?: (search?: string) => React.ReactNode;
   helpComponent?: ReactNode;
 }
+
 interface ISearchFieldState {
   modalVisible: boolean;
   searchingVisible: boolean;

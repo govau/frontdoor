@@ -59,8 +59,8 @@ const BuyerTemplate: React.FC<IBuyerTemplateProps> = ({ data, pageContext }) => 
                 {crumbs.map((c, i) => (
                   <React.Fragment key={i}>
                     {getBreadCrumbItem(crumbs, data, c, i)}
-                  </React.Fragment>)
-                )}
+                  </React.Fragment>
+                ))}
               </ul>
             </nav>
           </div>

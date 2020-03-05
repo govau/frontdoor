@@ -97,6 +97,10 @@ const Search: React.FC = () => {
   const productSelected = (product: ISearchResult) => {
     panelSearchCallback(product);
     setSelectedProduct(product);
+    scrollSearchIntoView();
+  };
+
+  const scrollSearchIntoView = () => {
     if (searchResultEl && window) {
       searchResultEl.current?.scrollIntoView({
         behavior: 'smooth',
@@ -238,7 +242,7 @@ const Search: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="row margin-sm-top-1 margin-md-top-05">
+          <div className="row margin-sm-top-1 margin-md-top-05" ref={searchResultEl}>
             <div className="col-sm-8 col-sm-push-2">
               <SearchField
                 searchFunc={productSearchCallback}
@@ -290,7 +294,7 @@ const Search: React.FC = () => {
               />
             </div>
           </div>
-          <div className="row margin-sm-top-1 margin-md-top-05" ref={searchResultEl}>
+          <div className="row margin-sm-top-1 margin-md-top-05">
             <div className="col-sm-6 col-sm-push-4">
               <AUbutton
                 onClick={() => setShowProductsAndServices(!showProductsAndServices)}
@@ -322,7 +326,11 @@ const Search: React.FC = () => {
                   <SearchResult
                     agency={selectedAgency}
                     panels={panels}
-                    product={selectedProduct} />
+                    product={selectedProduct}
+                    viewProductsAndServicesClicked={() => {
+                      setShowProductsAndServices(true);
+                      scrollSearchIntoView();
+                    }} />
                 </div>
               </div>
             </div>

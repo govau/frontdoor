@@ -57,6 +57,9 @@ commands:
         type: string
       cf_path:
         type: string
+      cf_space:
+        type: string
+        default: marketplace
     steps:
       - attach_workspace:
           at: .
@@ -72,7 +75,7 @@ commands:
           name: Deploy
           command: |
             cd << parameters.cf_path >>
-            cf login -a << parameters.cf_url >> -o dta -s marketplace -u << parameters.cf_user >> -p << parameters.cf_password >>
+            cf login -a << parameters.cf_url >> -o dta -s << parameters.cf_space >> -u << parameters.cf_user >> -p << parameters.cf_password >>
             cf zero-downtime-push << parameters.cf_app_name >> -f << parameters.cf_manifest >> --show-app-log
 
 jobs:
@@ -170,6 +173,7 @@ jobs:
           cf_app_name: fd-ui
           cf_manifest: ../manifest.prod.yml
           cf_path: ui/public
+          cf_space: digitalsourcing
       - cf_deploy:
           cf_url: https://api.system.b.cld.gov.au
           cf_user: $CF_USER_PROD
@@ -177,6 +181,7 @@ jobs:
           cf_app_name: fd-api
           cf_manifest: manifest.prod.yml
           cf_path: api
+          cf_space: digitalsourcing
 
 workflows:
   version: 2

@@ -30,8 +30,8 @@ const Footer: React.FC<IFooterProps> = ({ hideFeedback }) => (
           </div>
           <div className="col-sm-10">
             <div className="row">
-              <div className="col-xs-12 col-sm-2 max-width-6"><Link to="/accessibility">Accessibility</Link></div>
-              <div className="col-xs-12 col-sm-2 max-width-4"><Link to="/privacy">Privacy</Link></div>
+              <div className="col-xs-12 col-sm-2 max-width-md-6"><Link to="/accessibility">Accessibility</Link></div>
+              <div className="col-xs-12 col-sm-2 max-width-md-4"><Link to="/privacy">Privacy</Link></div>
               <div className="col-xs-12 col-sm-4"><Link to="/disclaimer-and-copyright">Disclaimer and copyright</Link></div>
             </div>
             <div className="row">

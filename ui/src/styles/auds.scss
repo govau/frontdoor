@@ -10,3 +10,33 @@ $AU-colordark-background:        #313131;
 .au-body.au-body--dark {
     background-color: $AU-colordark-background !important;
 }
+
+@media screen and (max-width: 768px) {    
+    .au-table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    .au-table .au-table__cell {
+      border-bottom-width: 0px;
+      display: block;
+    }
+
+    .au-table .au-table__cell:last-child {
+        margin-bottom: 2rem;
+    }
+
+    .au-table td::before {
+      content: attr(data-label)"\A";
+      font-weight: bold;
+      text-transform: uppercase;
+      white-space: pre-line;
+      
+    }
+  }

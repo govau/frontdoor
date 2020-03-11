@@ -25,7 +25,7 @@ const Footer: React.FC<IFooterProps> = ({ hideFeedback }) => (
         <div className="row">
           <div className="col-sm-2">
             <a href="https://dta.gov.au">
-              <img className="au-responsive-media-img dta-image" src="/dta-wordmark-white.png" alt="DTA website" />
+              <img className="au-responsive-media-img dta-image" src="/dta-wordmark-white.svg" alt="DTA website" />
             </a>
           </div>
           <div className="col-sm-10">

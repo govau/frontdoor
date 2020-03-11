@@ -13,7 +13,7 @@ Find out more about:
 
 - [Early market research](/buyer/resources-and-policies/early-market-research)
 
-<div class="margin-md-top-2 margin-md-bottom-05"><span class="badge badge-green margin-md-bottom-05">In progress</span></div>
+<div class="margin-sm-top-2 margin-sm-bottom-05 margin-md-top-2 margin-md-bottom-05"><span class="badge badge-green margin-md-bottom-05">In progress</span></div>
 
 Help us to write content for difficult sourcing topics through our [upcoming working groups](/buyer/capability-and-community#working-groups).
 

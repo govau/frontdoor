@@ -81,7 +81,7 @@ commands:
 jobs:
   get_code:
     docker:
-      - image: circleci/node:10-stretch
+      - image: circleci/node:12-stretch
     steps:
       - attach_workspace:
           at: .
@@ -107,7 +107,7 @@ jobs:
 
   run_npm_builds:
     docker:
-      - image: circleci/node:10-stretch
+      - image: circleci/node:12-stretch
     steps:
       - attach_workspace:
           at: .
@@ -120,7 +120,7 @@ jobs:
     
   deploy_ui_to_rc:
     docker:
-      - image: circleci/node:10-stretch
+      - image: circleci/node:12-stretch
     steps:
       - cf_deploy:
           cf_app_name: fd-rc-ui
@@ -129,7 +129,7 @@ jobs:
     
   deploy_api_to_rc:
     docker:
-      - image: circleci/node:10-stretch
+      - image: circleci/node:12-stretch
     steps:
       - cf_deploy:
           cf_app_name: fd-rc-api
@@ -138,7 +138,7 @@ jobs:
 
   deploy_to_pc:
     docker:
-      - image: circleci/node:10-stretch
+      - image: circleci/node:12-stretch
     steps:
       - cf_deploy:
           cf_app_name: fd-pc-ui
@@ -151,7 +151,7 @@ jobs:
 
   deploy_to_alpha:
     docker:
-      - image: circleci/node:10-stretch
+      - image: circleci/node:12-stretch
     steps:
       - cf_deploy:
           cf_app_name: fd-alpha-ui
@@ -164,7 +164,7 @@ jobs:
 
   deploy_to_production:
     docker:
-      - image: circleci/node:10-stretch
+      - image: circleci/node:12-stretch
     steps:
       - cf_deploy:
           cf_url: https://api.system.b.cld.gov.au

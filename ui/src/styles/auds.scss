@@ -35,7 +35,6 @@ $AU-colordark-background:        #313131;
     .au-table td::before {
       content: attr(data-label)"\A";
       font-weight: bold;
-      text-transform: uppercase;
       white-space: pre-line;
       
     }

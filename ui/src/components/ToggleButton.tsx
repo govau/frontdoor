@@ -11,9 +11,10 @@ interface IToggleButtonProps {
   optionSelectedFunc?: (option: IOption) => void;
   initialKey: string;
   options: IOption[];
+  id?: string;
 }
 
-const ToggleButton: React.FC<IToggleButtonProps> = ({ optionSelectedFunc, options, initialKey }) => {
+const ToggleButton: React.FC<IToggleButtonProps> = ({ id, optionSelectedFunc, options, initialKey }) => {
   const [selectedOption, setSelectedOption] = useState<IOption>();
 
   const selected = (option: IOption) => {
@@ -52,7 +53,7 @@ const ToggleButton: React.FC<IToggleButtonProps> = ({ optionSelectedFunc, option
         ))}
       </div>
       <div className="hide-md">
-        <select className="au-select" onChange={onChange}>
+        <select id={id} className="au-select" onChange={onChange}>
           {options.map((o, i) => (
               <option key={i} value={o.key}>{o.text}</option>
           ))}

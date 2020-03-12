@@ -11,6 +11,10 @@ $AU-colordark-background:        #313131;
     background-color: $AU-colordark-background !important;
 }
 
+li {
+    max-width: $AU-maxwidth;
+}
+
 @media screen and (max-width: 768px) {    
     .au-table thead {
       border: none;

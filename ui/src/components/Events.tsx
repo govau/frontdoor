@@ -62,7 +62,7 @@ const Events: React.FC = () => {
                     </div>
                     <div className="row padding-sm-top-05 padding-md-top-05 text-colour-grey">
                       <div className="col-sm-12">
-                        {`${e.format.shortName}, ${e.venue.address.city}${e.onlineEvent ? '/Online' : ''}`}
+                        {`${e.format.shortName}, ${e.venue ? e.venue.address.city : ''}${e.onlineEvent ? '/Online' : ''}`}
                       </div>
                     </div>
                   </div>

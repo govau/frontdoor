@@ -33,7 +33,6 @@ namespace Dta.Frontdoor.Api
                         .AllowAnyMethod();
                 });
             });
-            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddRazorPages();
             services.AddOptions();
             
@@ -53,11 +52,10 @@ namespace Dta.Frontdoor.Api
                 app.UseHsts();
                 app.UseHttpsRedirection();
             }
-            app.UseCors(_devOrigins);
             app.UseRouting();
-            //app.UseMvc();
+            app.UseCors(_devOrigins);
             app.UseEndpoints(e => {
-                e.MapRazorPages();
+                e.MapControllers();
             });
         }
     }

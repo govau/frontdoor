@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Hosting;
 
 namespace Dta.Frontdoor.Api
 {
@@ -32,15 +33,15 @@ namespace Dta.Frontdoor.Api
                         .AllowAnyMethod();
                 });
             });
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
+            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            services.AddRazorPages();
             services.AddOptions();
             
             // services.AddConfiguration(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -53,7 +54,11 @@ namespace Dta.Frontdoor.Api
                 app.UseHttpsRedirection();
             }
             app.UseCors(_devOrigins);
-            app.UseMvc();
+            app.UseRouting();
+            //app.UseMvc();
+            app.UseEndpoints(e => {
+                e.MapRazorPages();
+            });
         }
     }
 }

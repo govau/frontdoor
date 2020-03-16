@@ -24,18 +24,20 @@ namespace Dta.Frontdoor.Api {
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) {
-            var builder = WebHost.CreateDefaultBuilder(args)
+            var builder = WebHost.CreateDefaultBuilder(args)                
                 .ConfigureAppConfiguration((hc, c) => {
                     c.AddEnvironmentVariables();
                     if (args != null) {
                         c.AddCommandLine(args);
                     }
                 })
+                .UseSentry()
                 .UseStartup<Startup>();
 
             if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("PORT"))) {
                 builder = builder.UseUrls($"http://*:{Environment.GetEnvironmentVariable("PORT")}");
             }
+
             return builder;
         }
     }

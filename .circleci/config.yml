@@ -93,7 +93,7 @@ jobs:
 
   run_dot_net_builds:
     docker:
-      - image: microsoft/dotnet:3.1
+      - image: mcr.microsoft.com/dotnet/core/sdk:3.1
     steps:
       - attach_workspace:
           at: .

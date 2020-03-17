@@ -1,34 +1,35 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Azure.CognitiveServices.Knowledge.QnAMaker;
 using Microsoft.Azure.CognitiveServices.Knowledge.QnAMaker.Models;
 using Dta.Frontdoor.Api.Models;
 
-namespace Dta.Frontdoor.Api.Controllers {
-    public class BaseSearchController : ControllerBase {
+namespace Dta.Frontdoor.Api.Services {
+    public class QnAMakerService : IQnAMakerService {
         private readonly IConfiguration _configuration;
         private IMemoryCache _cache;
-        private readonly string _cacheKey;
-        private readonly string _kbIdEnvName;
-        public BaseSearchController(IConfiguration configuration, IMemoryCache cache, string kbIdEnvName, string cacheKey) {
+
+        public QnAMakerService(IConfiguration configuration, IMemoryCache cache) {
             _configuration = configuration;
             _cache = cache;
-            _kbIdEnvName = kbIdEnvName;
-            _cacheKey = cacheKey;
         }
 
-        public async Task<IEnumerable<SearchResult>> Search(SearchQuery searchQuery) {
-            var cacheKey = $"{_cacheKey}-{searchQuery.ToString()}";
+        public async Task<IEnumerable<SearchResult>> BuyerSearch(SearchQuery searchQuery) {
+            return await Search(searchQuery, _configuration["QnAMakerBuyerKbId"]);
+        }
+        public async Task<IEnumerable<SearchResult>> SellerSearch(SearchQuery searchQuery) {
+            return await Search(searchQuery, _configuration["QnAMakerSellerKbId"]);
+        }
+        private async Task<IEnumerable<SearchResult>> Search(SearchQuery searchQuery, string kbId) {
+            var cacheKey = $"{kbId}-{searchQuery.ToString()}";
             if (_cache.TryGetValue(cacheKey, out List<SearchResult> cacheEntry)) {
                 return cacheEntry;
             }
             var endpointKey = _configuration["QnAMakerEndpointKey"];
-            var endpoint = Environment.GetEnvironmentVariable("QnAMakerEndpoint");
-            var kbId = Environment.GetEnvironmentVariable(_kbIdEnvName);
+            var endpoint = _configuration["QnAMakerEndpoint"];
             var client = new QnAMakerRuntimeClient(new EndpointKeyServiceClientCredentials(endpointKey)) {
                 RuntimeEndpoint = endpoint
             };

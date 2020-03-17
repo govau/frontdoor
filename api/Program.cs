@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Lamar;
+using Lamar.Microsoft.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.AspNetCore;
+//using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -20,23 +23,35 @@ namespace Dta.Frontdoor.Api {
                     }
                 }
             }
-            CreateWebHostBuilder(args).Build().Run();
+            CreateHostBuilder(args).Build().Run();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) {
-            var builder = WebHost.CreateDefaultBuilder(args)                
+        public static IHostBuilder CreateHostBuilder(string[] args) {
+            var registry = new ServiceRegistry();
+            registry.Scan(x => {
+                x.Assembly(typeof(Program).Assembly);
+                x.WithDefaultConventions();
+            });
+
+            var builder = Host
+                .CreateDefaultBuilder(args)
                 .ConfigureAppConfiguration((hc, c) => {
                     c.AddEnvironmentVariables();
                     if (args != null) {
                         c.AddCommandLine(args);
                     }
                 })
-                .UseSentry()
-                .UseStartup<Startup>();
+                .UseLamar(registry)
+                .ConfigureWebHostDefaults(webBuilder => {
+                    webBuilder.CaptureStartupErrors(true);
+                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseSentry();
 
-            if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("PORT"))) {
-                builder = builder.UseUrls($"http://*:{Environment.GetEnvironmentVariable("PORT")}");
-            }
+                    if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("PORT"))) {
+                        webBuilder = webBuilder.UseUrls($"http://*:{Environment.GetEnvironmentVariable("PORT")}");
+                    }
+                });
+
 
             return builder;
         }

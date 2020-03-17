@@ -1,26 +1,20 @@
-﻿using System.Net.Http;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
 using Dta.Frontdoor.Api.Models;
+using Dta.Frontdoor.Api.Services;
 
 namespace Dta.Frontdoor.Api.Controllers {
     [Route("api/[controller]")]
     [ApiController]
     public class FeedbackController : ControllerBase {
-        private readonly IConfiguration _configuration;
+        private readonly ISlackService _slackService;
 
-        public FeedbackController(IConfiguration configuration) {
-            _configuration = configuration;
+        public FeedbackController(ISlackService slackService) {
+            _slackService = slackService;
         }
 
         [HttpPost]
         public async Task<dynamic> Post(Feedback feedback) {
-            var slackFeedbackURL = _configuration["SlackFeedbackURL"];
-            if (string.IsNullOrWhiteSpace(slackFeedbackURL) == true) {
-                return new object();
-            }
             var face = "";
             switch (feedback.Ease) {
                 case 1:
@@ -41,19 +35,7 @@ improvements: {feedback.SuggestedImprovement}
 email: {feedback.Email}
 location: {feedback.Location}";
 
-            using (var client = new HttpClient()) {
-                var content = new StringContent(
-                    JsonConvert.SerializeObject(
-                        new {
-                            text = slackMessage
-                        }
-                    ),
-                    System.Text.Encoding.Default,
-                    "application/json"
-                );
-                var result = await client.PostAsync(slackFeedbackURL, content);
-                return result.IsSuccessStatusCode;
-            }
+            return await _slackService.PostMessage(slackMessage);
         }
     }
 }

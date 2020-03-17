@@ -14,7 +14,7 @@ namespace Dta.Frontdoor.Api.Controllers {
         }
 
         [HttpPost]
-        public async Task<dynamic> Post(Feedback feedback) {
+        public async Task<bool> Post(Feedback feedback) {
             var face = "";
             switch (feedback.Ease) {
                 case 1:

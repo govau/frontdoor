@@ -1,29 +1,28 @@
-using System;
-using System.IO;
 using System.Net.Http;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using Dta.Frontdoor.Api.Models;
 
 namespace Dta.Frontdoor.Api.Services {
     public class SlackService : ISlackService {
         private readonly IConfiguration _configuration;
-        private IMemoryCache _cache;
+        private readonly ILogger<SlackService> _logger;
+        private readonly IMemoryCache _cache;
         private const string CACHE_KEY = "EventbriteCache";
 
-        public SlackService(IConfiguration configuration, IMemoryCache cache) {
+        public SlackService(IConfiguration configuration, IMemoryCache cache, ILogger<SlackService> logger) {
             _configuration = configuration;
             _cache = cache;
+            _logger = logger;
         }
 
-        public async Task<dynamic> PostMessage(string message) {
+        public async Task<bool> PostMessage(string message) {
             var slackFeedbackURL = _configuration["SlackFeedbackURL"];
             if (string.IsNullOrWhiteSpace(slackFeedbackURL) == true) {
-                return new object();
+                _logger.LogInformation(message);
+                return true;
             }
             using (var client = new HttpClient()) {
                 var content = new StringContent(

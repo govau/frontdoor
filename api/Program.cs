@@ -1,11 +1,10 @@
-﻿using Lamar;
-using Lamar.Microsoft.DependencyInjection;
+﻿using Lamar.Microsoft.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-//using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -27,12 +26,6 @@ namespace Dta.Frontdoor.Api {
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) {
-            var registry = new ServiceRegistry();
-            registry.Scan(x => {
-                x.Assembly(typeof(Program).Assembly);
-                x.WithDefaultConventions();
-            });
-
             var builder = Host
                 .CreateDefaultBuilder(args)
                 .ConfigureAppConfiguration((hc, c) => {
@@ -41,7 +34,7 @@ namespace Dta.Frontdoor.Api {
                         c.AddCommandLine(args);
                     }
                 })
-                .UseLamar(registry)
+                .UseLamar(new SelfServiceRegistry())
                 .ConfigureWebHostDefaults(webBuilder => {
                     webBuilder.CaptureStartupErrors(true);
                     webBuilder.UseStartup<Startup>();

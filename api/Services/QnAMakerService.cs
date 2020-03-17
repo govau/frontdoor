@@ -30,6 +30,9 @@ namespace Dta.Frontdoor.Api.Services {
             }
             var endpointKey = _configuration["QnAMakerEndpointKey"];
             var endpoint = _configuration["QnAMakerEndpoint"];
+            if (string.IsNullOrWhiteSpace(endpointKey) || string.IsNullOrWhiteSpace(endpoint)) {
+                return new List<SearchResult>();
+            }
             var client = new QnAMakerRuntimeClient(new EndpointKeyServiceClientCredentials(endpointKey)) {
                 RuntimeEndpoint = endpoint
             };

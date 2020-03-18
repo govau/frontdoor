@@ -24,14 +24,14 @@ namespace Dta.Frontdoor.Api.Services {
             return await Search(searchQuery, _configuration["QnAMakerSellerKbId"]);
         }
         private async Task<IEnumerable<SearchResult>> Search(SearchQuery searchQuery, string kbId) {
+            var endpointKey = _configuration["QnAMakerEndpointKey"];
+            var endpoint = _configuration["QnAMakerEndpoint"];
+            if (string.IsNullOrWhiteSpace(searchQuery.Query) || string.IsNullOrWhiteSpace(endpointKey) || string.IsNullOrWhiteSpace(endpoint)) {
+                return new List<SearchResult>();
+            }
             var cacheKey = $"{kbId}-{searchQuery.ToString()}";
             if (_cache.TryGetValue(cacheKey, out List<SearchResult> cacheEntry)) {
                 return cacheEntry;
-            }
-            var endpointKey = _configuration["QnAMakerEndpointKey"];
-            var endpoint = _configuration["QnAMakerEndpoint"];
-            if (string.IsNullOrWhiteSpace(endpointKey) || string.IsNullOrWhiteSpace(endpoint)) {
-                return new List<SearchResult>();
             }
             var client = new QnAMakerRuntimeClient(new EndpointKeyServiceClientCredentials(endpointKey)) {
                 RuntimeEndpoint = endpoint

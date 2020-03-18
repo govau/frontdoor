@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -36,6 +35,10 @@ namespace Dta.Frontdoor.Api {
                 })
                 .UseLamar(new SelfServiceRegistry())
                 .ConfigureWebHostDefaults(webBuilder => {
+                    webBuilder.ConfigureKestrel((c, k) => {
+                        k.Limits.MinRequestBodyDataRate = null;
+                        k.Limits.RequestHeadersTimeout = new TimeSpan(0, 0, 60);
+                    });
                     webBuilder.CaptureStartupErrors(true);
                     webBuilder.UseStartup<Startup>();
                     webBuilder.UseSentry();

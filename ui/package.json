@@ -45,7 +45,7 @@
     "@gov.au/skip-link": "^2.0.16",
     "@gov.au/table": "^0.2.0",
     "@gov.au/text-inputs": "^2.1.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "gatsby": "^2.20.12",
     "gatsby-image": "^2.3.1",
